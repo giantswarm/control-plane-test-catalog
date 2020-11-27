@@ -336,6 +336,22 @@ entries:
     urls:
     - https://giantswarm.github.com/control-plane-test-catalog/azure-tools-operator-0.0.0-53b6ee7fa3dccb968d732f0219effb9c60fcee1f.tgz
     version: 0.0.0-53b6ee7fa3dccb968d732f0219effb9c60fcee1f
+  cert-manager-app:
+  - annotations:
+      application.giantswarm.io/values-schema: https://raw.githubusercontent.com/giantswarm/cert-manager-app/v2.3.3-ad98138d86cecc9c6a84eb13465f93682823ad02/helm/cert-manager-app/values.schema.json
+    apiVersion: v1
+    appVersion: 1.0.4
+    created: "2020-11-27T08:28:01.091511921Z"
+    description: A Helm chart for cert-manager
+    digest: a4dbe0a5fadee0a27c457ae04453e75cb437540f73afc8719b49309ba22387c6
+    home: https://github.com/giantswarm/cert-manager-app
+    icon: https://s.giantswarm.io/app-icons/1/png/cert-manager-app-light.png
+    name: cert-manager-app
+    sources:
+    - https://github.com/jetstack/cert-manager
+    urls:
+    - https://giantswarm.github.com/control-plane-test-catalog/cert-manager-app-2.3.3-ad98138d86cecc9c6a84eb13465f93682823ad02.tgz
+    version: 2.3.3-ad98138d86cecc9c6a84eb13465f93682823ad02
   cert-operator:
   - apiVersion: v1
     appVersion: 0.1.0
@@ -1619,4 +1635,4 @@ entries:
     urls:
     - https://giantswarm.github.com/control-plane-test-catalog/promxy-app-0.0.4-0fd88cfe4d51cbd2394d8676daae9453e90e918f.tgz
     version: 0.0.4-0fd88cfe4d51cbd2394d8676daae9453e90e918f
-generated: "2020-11-27T08:04:27.880181365Z"
+generated: "2020-11-27T08:28:01.081407846Z"
