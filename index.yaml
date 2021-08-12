@@ -1634,6 +1634,23 @@ entries:
     urls:
     - https://giantswarm.github.io/control-plane-test-catalog/cluster-autoscaler-app-1.22.0-63873da873147fe03519cfd3f189721af2c95dc9.tgz
     version: 1.22.0-63873da873147fe03519cfd3f189721af2c95dc9
+  - annotations:
+      application.giantswarm.io/owners: |
+        - catalog: control-plane-catalog
+          team: biscuit
+        - catalog: control-plane-test-catalog
+          team: biscuit
+      config.giantswarm.io/version: 1.x.x
+    apiVersion: v1
+    appVersion: v1.20.0
+    created: "2021-08-12T13:22:26.105030762Z"
+    description: A Helm chart for the cluster autoscaler.
+    digest: fd913dc12c40fcad9a2a2f23c3a6196c256a725654564244e727cd6e1460c722
+    home: https://github.com/giantswarm/cluster-autoscaler-app
+    name: cluster-autoscaler-app
+    urls:
+    - https://giantswarm.github.io/control-plane-test-catalog/cluster-autoscaler-app-1.22.0-2f248b2e53312c80e0b9201de43e2bc5bca1ad0c.tgz
+    version: 1.22.0-2f248b2e53312c80e0b9201de43e2bc5bca1ad0c
   cluster-operator:
   - annotations:
       config.giantswarm.io/version: 1.x.x
@@ -3367,4 +3384,4 @@ entries:
     urls:
     - https://giantswarm.github.io/control-plane-test-catalog/vertical-pod-autoscaler-app-1.1.1-9244e99519ebcc79a155719be11ccc72708c866b.tgz
     version: 1.1.1-9244e99519ebcc79a155719be11ccc72708c866b
-generated: "2021-08-12T13:22:04.989405153Z"
+generated: "2021-08-12T13:22:26.104353223Z"
