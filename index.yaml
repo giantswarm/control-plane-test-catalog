@@ -4638,6 +4638,36 @@ entries:
     urls:
     - https://giantswarm.github.io/control-plane-test-catalog/event-exporter-app-0.3.2-4a1c3b36cc0913da84330b26b8912e016cb4211b.tgz
     version: 0.3.2-4a1c3b36cc0913da84330b26b8912e016cb4211b
+  falco-app:
+  - annotations:
+      application.giantswarm.io/team: ludacris
+      config.giantswarm.io/version: 1.x.x
+    apiVersion: v2
+    appVersion: 0.0.1
+    created: "2021-08-13T07:23:48.359831268Z"
+    dependencies:
+    - name: falco
+      repository: ""
+      version: 1.15.3
+    - name: falco-exporter
+      repository: ""
+      version: 0.5.2
+    - name: falcosidekick
+      repository: ""
+      version: 0.3.11
+    description: A Helm chart for falco
+    digest: 3dc0686bc2eb79cf28ce16d926bca2fa75c848b95e21be9e16bb9db48625c87c
+    home: https://github.com/giantswarm/falco-app
+    icon: https://s.giantswarm.io/app-icons/1/png/default-app-light.png
+    maintainers:
+    - name: Giant Swarm applications team
+      url: https://github.com/giantswarm/falco-app
+    name: falco-app
+    sources:
+    - https://github.com/giantswarm/falco-app
+    urls:
+    - https://giantswarm.github.io/control-plane-test-catalog/falco-app-0.1.0-70a7bd70eaf6f5901273974ba1e9fe5b170ff3b7.tgz
+    version: 0.1.0-70a7bd70eaf6f5901273974ba1e9fe5b170ff3b7
   g8s-efk:
   - annotations:
       config.giantswarm.io/version: 1.x.x
@@ -7413,4 +7443,4 @@ entries:
     urls:
     - https://giantswarm.github.io/control-plane-test-catalog/vertical-pod-autoscaler-app-1.1.1-2b3acea403200d04ee2bced7cfa00f837dbb0b74.tgz
     version: 1.1.1-2b3acea403200d04ee2bced7cfa00f837dbb0b74
-generated: "2021-08-13T07:23:42.126072867Z"
+generated: "2021-08-13T07:23:48.354109938Z"
