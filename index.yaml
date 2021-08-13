@@ -2199,6 +2199,30 @@ entries:
     - https://giantswarm.github.io/control-plane-test-catalog/cert-manager-app-2.8.0-e73d0ce1ce32de9c06fc99521ffcf316df05a87c.tgz
     version: 2.8.0-e73d0ce1ce32de9c06fc99521ffcf316df05a87c
   - annotations:
+      application.giantswarm.io/metadata: https://giantswarm.github.io/control-plane-test-catalog/cert-manager-app-2.8.0-e362cbe378f80d842e7e95ddc20cbbaa07cd7ea9.tgz-meta/main.yaml
+      application.giantswarm.io/readme: https://giantswarm.github.io/control-plane-test-catalog/cert-manager-app-2.8.0-e362cbe378f80d842e7e95ddc20cbbaa07cd7ea9.tgz-meta/README.md
+      application.giantswarm.io/team: halo
+      application.giantswarm.io/values-schema: https://giantswarm.github.io/control-plane-test-catalog/cert-manager-app-2.8.0-e362cbe378f80d842e7e95ddc20cbbaa07cd7ea9.tgz-meta/values.schema.json
+      config.giantswarm.io/version: 1.x.x
+    apiVersion: v1
+    appVersion: 1.3.1
+    created: "2021-08-13T07:22:39.551554021Z"
+    dependencies:
+    - name: cert-manager-giantswarm-clusterissuer
+      repository: ""
+      version: 1.1.0
+    description: A Helm chart for cert-manager
+    digest: 20112a27b58d220bf7a3010e630abc93b69a66c8411f521e98295be41c3fe075
+    home: https://github.com/giantswarm/cert-manager-app
+    icon: https://s.giantswarm.io/app-icons/1/png/cert-manager-app-light.png
+    kubeVersion: '>=1.16.0-0'
+    name: cert-manager-app
+    sources:
+    - https://github.com/jetstack/cert-manager
+    urls:
+    - https://giantswarm.github.io/control-plane-test-catalog/cert-manager-app-2.8.0-e362cbe378f80d842e7e95ddc20cbbaa07cd7ea9.tgz
+    version: 2.8.0-e362cbe378f80d842e7e95ddc20cbbaa07cd7ea9
+  - annotations:
       application.giantswarm.io/metadata: https://giantswarm.github.io/control-plane-test-catalog/cert-manager-app-2.8.0-b334e785c67601aa639b1acbeba5a1e3d08734d3.tgz-meta/main.yaml
       application.giantswarm.io/readme: https://giantswarm.github.io/control-plane-test-catalog/cert-manager-app-2.8.0-b334e785c67601aa639b1acbeba5a1e3d08734d3.tgz-meta/README.md
       application.giantswarm.io/team: halo
@@ -7209,4 +7233,4 @@ entries:
     urls:
     - https://giantswarm.github.io/control-plane-test-catalog/vertical-pod-autoscaler-app-1.1.1-2b3acea403200d04ee2bced7cfa00f837dbb0b74.tgz
     version: 1.1.1-2b3acea403200d04ee2bced7cfa00f837dbb0b74
-generated: "2021-08-13T07:22:37.859805592Z"
+generated: "2021-08-13T07:22:39.541385189Z"
