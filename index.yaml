@@ -23300,6 +23300,31 @@ entries:
     version: 2.3.2-127a239e50f4d7a26a110721f0e66dee4b17fb3f
   rook-operator:
   - annotations:
+      application.giantswarm.io/metadata: https://giantswarm.github.io/control-plane-test-catalog/rook-operator-2.0.0.tgz-meta/main.yaml
+      application.giantswarm.io/readme: https://giantswarm.github.io/control-plane-test-catalog/rook-operator-2.0.0.tgz-meta/README.md
+      application.giantswarm.io/team: rocket
+      application.giantswarm.io/values-schema: https://giantswarm.github.io/control-plane-test-catalog/rook-operator-2.0.0.tgz-meta/values.schema.json
+      config.giantswarm.io/version: 1.x.x
+    apiVersion: v2
+    appVersion: 1.7.0
+    created: "2021-08-20T10:27:22.861315841Z"
+    dependencies:
+    - name: monitoring
+      repository: ""
+      version: 0.2.0
+    - name: rook-ceph-cluster
+      repository: ""
+      version: 0.0.1
+    description: File, Block, and Object Storage Services for your Cloud-Native Environment
+    digest: 21e13b16a38655bf5cbe21a9b6a19f05adad8a875c1eac0d8408649f73358104
+    icon: https://s.giantswarm.io/app-icons/2/svg/rook-dark.svg
+    name: rook-operator
+    sources:
+    - https://github.com/rook/rook
+    urls:
+    - https://giantswarm.github.io/control-plane-test-catalog/rook-operator-2.0.0.tgz
+    version: 2.0.0
+  - annotations:
       application.giantswarm.io/metadata: https://giantswarm.github.io/control-plane-test-catalog/rook-operator-1.1.0-fe45b62c1f87577ab35c8e3ec565163eb4035d72.tgz-meta/main.yaml
       application.giantswarm.io/readme: https://giantswarm.github.io/control-plane-test-catalog/rook-operator-1.1.0-fe45b62c1f87577ab35c8e3ec565163eb4035d72.tgz-meta/README.md
       application.giantswarm.io/team: rocket
@@ -25247,4 +25272,4 @@ entries:
     urls:
     - https://giantswarm.github.io/control-plane-test-catalog/vertical-pod-autoscaler-app-1.1.1-2b3acea403200d04ee2bced7cfa00f837dbb0b74.tgz
     version: 1.1.1-2b3acea403200d04ee2bced7cfa00f837dbb0b74
-generated: "2021-08-20T10:26:17.483465309Z"
+generated: "2021-08-20T10:27:22.855026704Z"
