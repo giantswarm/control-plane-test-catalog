@@ -15249,6 +15249,30 @@ entries:
     version: 1.7.1-09ab50eb3f33dee44279d2ffe347f7f32799ef29
   cert-manager-app:
   - annotations:
+      application.giantswarm.io/metadata: https://giantswarm.github.io/control-plane-test-catalog/cert-manager-app-2.11.0-7a2887461751c63417a9b541cf803782811d1f5d.tgz-meta/main.yaml
+      application.giantswarm.io/readme: https://giantswarm.github.io/control-plane-test-catalog/cert-manager-app-2.11.0-7a2887461751c63417a9b541cf803782811d1f5d.tgz-meta/README.md
+      application.giantswarm.io/team: halo
+      application.giantswarm.io/values-schema: https://giantswarm.github.io/control-plane-test-catalog/cert-manager-app-2.11.0-7a2887461751c63417a9b541cf803782811d1f5d.tgz-meta/values.schema.json
+      config.giantswarm.io/version: 1.x.x
+    apiVersion: v1
+    appVersion: 1.5.4
+    created: "2021-10-02T09:32:26.941458951Z"
+    dependencies:
+    - name: cert-manager-giantswarm-clusterissuer
+      repository: ""
+      version: 1.1.0
+    description: A Helm chart for cert-manager
+    digest: 8fc799718f82e9a8f740614843fbe8487433cff6ca74949980a0c7f4f5e498df
+    home: https://github.com/giantswarm/cert-manager-app
+    icon: https://s.giantswarm.io/app-icons/1/png/cert-manager-app-light.png
+    kubeVersion: '>=1.16.0-0'
+    name: cert-manager-app
+    sources:
+    - https://github.com/jetstack/cert-manager
+    urls:
+    - https://giantswarm.github.io/control-plane-test-catalog/cert-manager-app-2.11.0-7a2887461751c63417a9b541cf803782811d1f5d.tgz
+    version: 2.11.0-7a2887461751c63417a9b541cf803782811d1f5d
+  - annotations:
       application.giantswarm.io/metadata: https://giantswarm.github.io/control-plane-test-catalog/cert-manager-app-2.10.0.tgz-meta/main.yaml
       application.giantswarm.io/readme: https://giantswarm.github.io/control-plane-test-catalog/cert-manager-app-2.10.0.tgz-meta/README.md
       application.giantswarm.io/team: halo
@@ -69959,4 +69983,4 @@ entries:
     urls:
     - https://giantswarm.github.io/control-plane-test-catalog/vertical-pod-autoscaler-app-1.1.1-2b3acea403200d04ee2bced7cfa00f837dbb0b74.tgz
     version: 1.1.1-2b3acea403200d04ee2bced7cfa00f837dbb0b74
-generated: "2021-10-02T09:31:56.44115474Z"
+generated: "2021-10-02T09:32:26.933719446Z"
