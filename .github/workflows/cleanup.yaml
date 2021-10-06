@@ -1,0 +1,9 @@
+name: Control Plane Test Catalog Cleanup
+
+on: [push]
+
+jobs:
+  cleanup:
+    uses: giantswarm/app-catalog-cleanup-tool/.github/workflows/cleanup.yaml@feature/cleanup-workflow
+    with:
+      keep-since: "2021-10-01"
