@@ -6,4 +6,6 @@ jobs:
   cleanup:
     uses: giantswarm/app-catalog-cleanup-tool/.github/workflows/cleanup.yaml@feature/cleanup-workflow
     with:
-      delete-before: "1 month"
+      delete-before: "2 months"
+    secrets:
+      token: ${{ secrets.GITHUB_TOKEN }}
