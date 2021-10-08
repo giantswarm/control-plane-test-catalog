@@ -1,0 +1,16 @@
+{
+  "extends": [
+    "config:base",
+    ":reviewer(team:giantswarm/team-honeybadger)"
+  ],
+  "assigneesFromCodeOwners": false,
+  "dependencyDashboard": false,
+  "includePaths": [
+    ".github/workflows"
+  ],
+  "packageRules": [
+    {
+      "matchManagers": ["github-actions"]
+    }
+  ]
+}
