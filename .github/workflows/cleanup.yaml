@@ -3,10 +3,11 @@ name: Control Plane Test Catalog Cleanup
 on:
   schedule:
     - cron: '0 0 1 * *'
+  workflow_dispatch:
 
 jobs:
   cleanup:
     uses: giantswarm/app-catalog-cleanup-tool/.github/workflows/cleanup.yaml@v0.2.0
     with:
       delete-before: "1 month"
-      dry-run: true
+      dry-run: false
