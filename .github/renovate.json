@@ -1,17 +1,17 @@
 {
   "extends": [
-    "config:base",
-    ":reviewer(team:giantswarm/team-honeybadger)"
+    "config:base"
   ],
   "assigneesFromCodeOwners": false,
   "dependencyDashboard": false,
   "includePaths": [
     ".github/workflows/*"
   ],
-  "packageRules": [
-    {
-      "matchManagers": ["github-actions"]
-    }
+  "reviewers" : [
+      "team:team-honeybadger"
+  ],
+  "enabledManagers": [
+      "github-actions"
   ],
   "schedule": [ "after 9am on thursday" ]
 }
