@@ -1,14 +1,12 @@
 {
   "extends": [
-    "config:base"
+    "config:base",
+    ":reviewer(team:team-honeybadger)"
   ],
   "assigneesFromCodeOwners": false,
   "dependencyDashboard": false,
   "includePaths": [
     ".github/workflows/*"
-  ],
-  "reviewers" : [
-      "team:team-honeybadger"
   ],
   "enabledManagers": [
       "github-actions"
