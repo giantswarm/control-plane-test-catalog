@@ -7194,6 +7194,22 @@ entries:
     - https://giantswarm.github.io/control-plane-test-catalog/cluster-api-0.0.0-0b9c3dfc2d22f7c512fde6f35dec068365dc6314.tgz
     version: 0.0.0-0b9c3dfc2d22f7c512fde6f35dec068365dc6314
   cluster-api-bootstrap-provider-kubeadm:
+  - annotations:
+      application.giantswarm.io/owners: |
+        - catalog: default
+          provider: aws
+          team: firecracker
+      config.giantswarm.io/version: 1.x.x
+    apiVersion: v1
+    appVersion: 0.3.22-gs2
+    created: "2021-10-15T11:00:53.254136475Z"
+    description: Cluster API bootstrap provider Kubeadm (CABPK) is a component of Cluster API that is responsible of generating a cloud-init script to turn a Machine into a Kubernetes Node; this implementation uses kubeadm for kubernetes bootstrap.
+    digest: f6b0db2ae85ba0b9dcbcc08dbb53de7ce64982795a4f2b8baf59af913bc9d978
+    home: https://github.com/giantswarm/cluster-api-bootstrap-provider-kubeadm-app
+    name: cluster-api-bootstrap-provider-kubeadm
+    urls:
+    - https://giantswarm.github.io/control-plane-test-catalog/cluster-api-bootstrap-provider-kubeadm-0.3.22-gs2.tgz
+    version: 0.3.22-gs2
   - apiVersion: v1
     appVersion: 0.3.22-gs1-fa6eb8d6d27311ffb7dd62b27c491eec48b08fda
     created: "2021-09-29T10:58:41.74353323Z"
@@ -31138,4 +31154,4 @@ entries:
     urls:
     - https://giantswarm.github.io/control-plane-test-catalog/vertical-pod-autoscaler-app-1.2.0-446dac2ac6e9e00d3c46c6f11b7506cee133ed95.tgz
     version: 1.2.0-446dac2ac6e9e00d3c46c6f11b7506cee133ed95
-generated: "2021-10-15T10:48:18.567525155Z"
+generated: "2021-10-15T11:00:53.253115803Z"
