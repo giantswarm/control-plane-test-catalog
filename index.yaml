@@ -24753,6 +24753,25 @@ entries:
     urls:
     - https://giantswarm.github.io/control-plane-test-catalog/g8s-prometheus-5.8.0-08691051fc7122759d1b1cddde7348aef26cef1a.tgz
     version: 5.8.0-08691051fc7122759d1b1cddde7348aef26cef1a
+  goldilocks-app:
+  - apiVersion: v2
+    appVersion: v3.1.4
+    created: "2021-11-03T14:17:47.432489418Z"
+    dependencies:
+    - condition: vpa.enabled
+      name: vertical-pod-autoscaler-app
+      repository: https://giantswarm.github.io/giantswarm-playground-catalog
+      version: 1.0.3
+    description: A Helm chart for the goldilocks-app
+    digest: e27b8e278fd08c0e885cd032fead0b03f59e2e0c5e1a4ad3b0ea63f4119b3ef1
+    home: https://github.com/giantswarm/goldilocks-app
+    icon: https://raw.githubusercontent.com/FairwindsOps/goldilocks/master/pkg/dashboard/assets/images/goldilocks.svg
+    name: goldilocks-app
+    sources:
+    - https://raw.githubusercontent.com/giantswarm/goldilocks-app/v0.1.0-07a2510d4e0ffbd3236af2dc7382c45b440e7c67/README.md
+    urls:
+    - https://giantswarm.github.io/control-plane-test-catalog/goldilocks-app-0.1.0-07a2510d4e0ffbd3236af2dc7382c45b440e7c67.tgz
+    version: 0.1.0-07a2510d4e0ffbd3236af2dc7382c45b440e7c67
   happa:
   - annotations:
       config.giantswarm.io/version: 1.x.x
@@ -56250,4 +56269,4 @@ entries:
     urls:
     - https://giantswarm.github.io/control-plane-test-catalog/vertical-pod-autoscaler-app-1.2.0-031a68f5270a53c05337417e53db2a8a9159f132.tgz
     version: 1.2.0-031a68f5270a53c05337417e53db2a8a9159f132
-generated: "2021-11-03T14:15:44.736896057Z"
+generated: "2021-11-03T14:17:47.429912597Z"
