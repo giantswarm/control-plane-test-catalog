@@ -51232,6 +51232,32 @@ entries:
     urls:
     - https://giantswarm.github.io/control-plane-test-catalog/rook-operator-2.0.1-03e71f84cc1147da1efaa8a42b7bad9ca4aaa214.tgz
     version: 2.0.1-03e71f84cc1147da1efaa8a42b7bad9ca4aaa214
+  - annotations:
+      application.giantswarm.io/metadata: https://giantswarm.github.io/control-plane-test-catalog/rook-operator-0.2.4.tgz-meta/main.yaml
+      application.giantswarm.io/readme: https://giantswarm.github.io/control-plane-test-catalog/rook-operator-0.2.4.tgz-meta/README.md
+      application.giantswarm.io/team: team-rocket
+      application.giantswarm.io/values-schema: https://giantswarm.github.io/control-plane-test-catalog/rook-operator-0.2.4.tgz-meta/values.schema.json
+      config.giantswarm.io/version: 1.x.x
+    apiVersion: v2
+    appVersion: 1.7.0
+    created: "2021-11-03T17:28:17.481978514Z"
+    dependencies:
+    - name: monitoring
+      repository: ""
+      version: 0.2.0
+    - name: rook-ceph-cluster
+      repository: ""
+      version: 0.0.1
+    description: File, Block, and Object Storage Services for your Cloud-Native Environment
+    digest: c4fa4768586da202a1f5d6d426a87994a6205c664ecfd63212d794b8fa865a1c
+    home: https://github.com/giantswarm/rook-operator-app
+    icon: https://s.giantswarm.io/app-icons/2/svg/rook-dark.svg
+    name: rook-operator
+    sources:
+    - https://github.com/rook/rook
+    urls:
+    - https://giantswarm.github.io/control-plane-test-catalog/rook-operator-0.2.4.tgz
+    version: 0.2.4
   route53-manager:
   - annotations:
       application.giantswarm.io/team: phoenix
@@ -57720,4 +57746,4 @@ entries:
     urls:
     - https://giantswarm.github.io/control-plane-test-catalog/vertical-pod-autoscaler-app-1.2.0-031a68f5270a53c05337417e53db2a8a9159f132.tgz
     version: 1.2.0-031a68f5270a53c05337417e53db2a8a9159f132
-generated: "2021-11-03T17:21:31.715278658Z"
+generated: "2021-11-03T17:28:17.473008215Z"
