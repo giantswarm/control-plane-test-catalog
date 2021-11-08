@@ -24702,6 +24702,38 @@ entries:
       application.giantswarm.io/team: team-honeybadger
       config.giantswarm.io/version: 1.x.x
     apiVersion: v2
+    appVersion: v1.5.1
+    created: "2021-11-08T12:50:32.988517103Z"
+    dependencies:
+    - name: policy-reporter
+      repository: ""
+      version: 1.12.5
+    - name: kyverno
+      repository: ""
+      version: v2.1.3
+    - name: kyverno-policies
+      repository: ""
+      version: v2.1.3
+    description: 'Kyverno is a policy engine designed for Kubernetes. It can validate, mutate, and generate configurations using admission controls and background scans. Kyverno policies are Kubernetes resources and do not require learning a new language. '
+    digest: f3589466a084456814d9026ea4a5f1b85a3c0db2e25f8051e9a6a9b6052157c8
+    home: https://github.com/giantswarm/kyverno-app
+    icon: https://s.giantswarm.io/app-icons/kyverno/1/light.svg
+    keywords:
+    - kubernetes
+    - policy agent
+    - validating webhook
+    - admissions controller
+    name: kyverno
+    sources:
+    - https://github.com/kyverno/kyverno
+    type: application
+    urls:
+    - https://giantswarm.github.io/control-plane-test-catalog/kyverno-0.6.3-cadd4babb83364ae61277e97695c339740bb63e4.tgz
+    version: 0.6.3-cadd4babb83364ae61277e97695c339740bb63e4
+  - annotations:
+      application.giantswarm.io/team: team-honeybadger
+      config.giantswarm.io/version: 1.x.x
+    apiVersion: v2
     appVersion: v1.4.1
     created: "2021-11-04T09:06:38.887328307Z"
     dependencies:
@@ -46651,4 +46683,4 @@ entries:
     urls:
     - https://giantswarm.github.io/control-plane-test-catalog/vertical-pod-autoscaler-app-1.2.0-031a68f5270a53c05337417e53db2a8a9159f132.tgz
     version: 1.2.0-031a68f5270a53c05337417e53db2a8a9159f132
-generated: "2021-11-08T12:47:03.124194528Z"
+generated: "2021-11-08T12:50:32.978807493Z"
