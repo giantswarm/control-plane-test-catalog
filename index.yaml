@@ -25946,6 +25946,31 @@ entries:
     - https://giantswarm.github.io/control-plane-test-catalog/kyverno-0.8.1-073bf69c02226c4938cf0cc27784a2fa46ca65d4.tgz
     version: 0.8.1-073bf69c02226c4938cf0cc27784a2fa46ca65d4
   kyverno-policies:
+  - annotations:
+      application.giantswarm.io/team: team-honeybadger
+      config.giantswarm.io/version: 1.x.x
+    apiVersion: v2
+    appVersion: v1.6.2
+    created: "2022-04-05T15:05:09.220526116Z"
+    dependencies:
+    - name: kyverno-policies
+      repository: ""
+      version: v2.3.2
+    description: 'Kubernetes Pod Security Standards implemented as Kyverno policies '
+    digest: 34554afadd93f7f2cc38975c83e0a29ebd36abc0ab7ee1ac18a6b1d5bf581547
+    home: https://github.com/giantswarm/kyverno-policies
+    icon: https://s.giantswarm.io/app-icons/kyverno/1/light.svg
+    keywords:
+    - kubernetes
+    - policy agent
+    - validating webhook
+    - admissions controller
+    name: kyverno-policies
+    sources:
+    - https://github.com/giantswarm/kyverno-policies
+    urls:
+    - https://giantswarm.github.io/control-plane-test-catalog/kyverno-policies-0.17.0.tgz
+    version: 0.17.0
   - apiVersion: v1
     appVersion: v1.6.2
     created: "2022-04-04T14:07:43.655803813Z"
@@ -40457,4 +40482,4 @@ entries:
     urls:
     - https://giantswarm.github.io/control-plane-test-catalog/vertical-pod-autoscaler-crd-1.0.0-05b409fed433e0b57e5222fece74cb4e39379e0a.tgz
     version: 1.0.0-05b409fed433e0b57e5222fece74cb4e39379e0a
-generated: "2022-04-05T15:03:07.57676501Z"
+generated: "2022-04-05T15:05:09.218332686Z"
