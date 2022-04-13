@@ -1,0 +1,64 @@
+{
+    "$schema": "http://json-schema.org/schema#",
+    "type": "object",
+    "properties": {
+        "crdConvertOnly": {
+            "type": "boolean"
+        },
+        "infrastructure": {
+            "type": "object",
+            "properties": {
+                "image": {
+                    "type": "object",
+                    "properties": {
+                        "name": {
+                            "type": "string"
+                        }
+                    }
+                }
+            }
+        },
+        "ports": {
+            "type": "object",
+            "properties": {
+                "healthz": {
+                    "type": "integer"
+                },
+                "metrics": {
+                    "type": "integer"
+                },
+                "webhook": {
+                    "type": "integer"
+                }
+            }
+        },
+        "project": {
+            "type": "object",
+            "properties": {
+                "branch": {
+                    "type": "string"
+                },
+                "commit": {
+                    "type": "string"
+                }
+            }
+        },
+        "registry": {
+            "type": "object",
+            "properties": {
+                "domain": {
+                    "type": "string"
+                }
+            }
+        },
+        "serviceType": {
+            "type": "string"
+        },
+        "tag": {
+            "type": "string"
+        },
+        "watchfilter": {
+            "type": "string"
+        }
+    }
+}
