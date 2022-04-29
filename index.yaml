@@ -52938,6 +52938,31 @@ entries:
     urls:
     - https://giantswarm.github.io/control-plane-test-catalog/silence-operator-0.4.0-06c911545a9d34a8dab1f13276341553837f0109.tgz
     version: 0.4.0-06c911545a9d34a8dab1f13276341553837f0109
+  starboard:
+  - annotations:
+      application.giantswarm.io/team: honeybadger
+      config.giantswarm.io/version: 1.x.x
+    apiVersion: v2
+    appVersion: 0.15.3
+    created: "2022-04-29T16:45:00.561602844Z"
+    dependencies:
+    - alias: starboard-app
+      name: starboard-operator
+      repository: ""
+      version: 0.10.3
+    description: A Helm chart for aqua Starboard. Starboard attempts to integrate heterogeneous security tools by incorporating their outputs into Kubernetes CRDs.
+    digest: 2f16f27b14b84c5f99bc46543b5d23597866f3bf7832498f2f1c4a2e29f41b80
+    home: https://github.com/giantswarm/starboard-app
+    icon: https://s.giantswarm.io/app-icons/starboard/1/dark.png
+    maintainers:
+    - name: Giant Swarm applications team
+      url: https://github.com/giantswarm/starboard-app
+    name: starboard
+    sources:
+    - https://github.com/aquasecurity/starboard
+    urls:
+    - https://giantswarm.github.io/control-plane-test-catalog/starboard-0.7.1-d8060aade84f2952a6e065af826c0ff8c5bfa455.tgz
+    version: 0.7.1-d8060aade84f2952a6e065af826c0ff8c5bfa455
   starboard-app:
   - annotations:
       application.giantswarm.io/team: honeybadger
@@ -57642,4 +57667,4 @@ entries:
     urls:
     - https://giantswarm.github.io/control-plane-test-catalog/vertical-pod-autoscaler-crd-1.0.0-05b409fed433e0b57e5222fece74cb4e39379e0a.tgz
     version: 1.0.0-05b409fed433e0b57e5222fece74cb4e39379e0a
-generated: "2022-04-29T16:44:38.703278283Z"
+generated: "2022-04-29T16:45:00.558845634Z"
