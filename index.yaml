@@ -3973,6 +3973,30 @@ entries:
     version: 0.0.0-2e21a8487f42e548c8ebc53a125f82e47410c3a2
   cert-manager-app:
   - annotations:
+      application.giantswarm.io/metadata: https://giantswarm.github.io/control-plane-test-catalog/cert-manager-app-2.13.0-f59b5c1150f7ac4ad647194b842decf4af17f369.tgz-meta/main.yaml
+      application.giantswarm.io/readme: https://giantswarm.github.io/control-plane-test-catalog/cert-manager-app-2.13.0-f59b5c1150f7ac4ad647194b842decf4af17f369.tgz-meta/README.md
+      application.giantswarm.io/team: team-cabbage
+      application.giantswarm.io/values-schema: https://giantswarm.github.io/control-plane-test-catalog/cert-manager-app-2.13.0-f59b5c1150f7ac4ad647194b842decf4af17f369.tgz-meta/values.schema.json
+      config.giantswarm.io/version: 1.x.x
+    apiVersion: v1
+    appVersion: 1.6.1
+    created: "2022-06-09T12:23:05.372715073Z"
+    dependencies:
+    - name: cert-manager-giantswarm-clusterissuer
+      repository: ""
+      version: 1.1.0
+    description: Simplifies the process of obtaining, renewing and using certificates
+    digest: 7c40c2a2c3eb2227d9933e51afc9d3775c906a12bc274b7ded46045b1cc22a66
+    home: https://github.com/giantswarm/cert-manager-app
+    icon: https://s.giantswarm.io/app-icons/cert-manager/1/light.svg
+    kubeVersion: '>=1.16.0-0'
+    name: cert-manager-app
+    sources:
+    - https://github.com/jetstack/cert-manager
+    urls:
+    - https://giantswarm.github.io/control-plane-test-catalog/cert-manager-app-2.13.0-f59b5c1150f7ac4ad647194b842decf4af17f369.tgz
+    version: 2.13.0-f59b5c1150f7ac4ad647194b842decf4af17f369
+  - annotations:
       application.giantswarm.io/metadata: https://giantswarm.github.io/control-plane-test-catalog/cert-manager-app-2.13.0-f1484d896d494d625e727f417aa4e00a198a0a46.tgz-meta/main.yaml
       application.giantswarm.io/readme: https://giantswarm.github.io/control-plane-test-catalog/cert-manager-app-2.13.0-f1484d896d494d625e727f417aa4e00a198a0a46.tgz-meta/README.md
       application.giantswarm.io/team: team-cabbage
@@ -23651,4 +23675,4 @@ entries:
     urls:
     - https://giantswarm.github.io/control-plane-test-catalog/webhook-exporter-0.0.0-613af58ff1d49d63b73f82efb5f2ee0f7475b919.tgz
     version: 0.0.0-613af58ff1d49d63b73f82efb5f2ee0f7475b919
-generated: "2022-06-09T12:16:22.666752423Z"
+generated: "2022-06-09T12:23:05.361255702Z"
