@@ -28557,6 +28557,63 @@ entries:
     - https://giantswarm.github.io/control-plane-test-catalog/prometheus-operator-app-1.2.1-fbc2bbccb55444e9caec9116bf2dd5fdff2f2393.tgz
     version: 1.2.1-fbc2bbccb55444e9caec9116bf2dd5fdff2f2393
   - annotations:
+      application.giantswarm.io/metadata: https://giantswarm.github.io/control-plane-test-catalog/prometheus-operator-app-1.2.1-f378141241f8fb6dbe3fcea61963a8b3716b78dd.tgz-meta/main.yaml
+      application.giantswarm.io/readme: https://giantswarm.github.io/control-plane-test-catalog/prometheus-operator-app-1.2.1-f378141241f8fb6dbe3fcea61963a8b3716b78dd.tgz-meta/README.md
+      application.giantswarm.io/team: atlas
+      artifacthub.io/links: |
+        - name: Chart Source
+          url: https://github.com/prometheus-community/helm-charts
+        - name: Upstream Project
+          url: https://github.com/prometheus-operator/kube-prometheus
+      artifacthub.io/operator: "true"
+      config.giantswarm.io/version: 1.x.x
+    apiVersion: v2
+    appVersion: 0.52.1
+    created: "2022-06-28T08:48:16.61609086Z"
+    dependencies:
+    - condition: kubeStateMetrics.enabled
+      name: kube-state-metrics
+      repository: https://prometheus-community.github.io/helm-charts
+      version: 4.1.*
+    - condition: nodeExporter.enabled
+      name: prometheus-node-exporter
+      repository: https://prometheus-community.github.io/helm-charts
+      version: 2.2.*
+    - condition: grafana.enabled
+      name: grafana
+      repository: https://grafana.github.io/helm-charts
+      version: 6.19.*
+    description: kube-prometheus-stack collects Kubernetes manifests, Grafana dashboards,
+      and Prometheus rules combined with documentation and scripts to provide easy
+      to operate end-to-end Kubernetes cluster monitoring with Prometheus using the
+      Prometheus Operator.
+    digest: 095881e05d4af099c7d4f11edf73a90c961d03d2f6f7224e7d462c4933d38897
+    home: https://github.com/giantswarm/prometheus-operator-app
+    icon: https://s.giantswarm.io/app-icons/prometheus-operator/2/light.svg
+    keywords:
+    - operator
+    - prometheus
+    - kube-prometheus
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - name: bismarck
+    - email: gianrubio@gmail.com
+      name: gianrubio
+    - email: github.gkarthiks@gmail.com
+      name: gkarthiks
+    - email: scott@r6by.com
+      name: scottrigby
+    - email: miroslav.hadzhiev@gmail.com
+      name: Xtigyro
+    name: prometheus-operator-app
+    sources:
+    - https://github.com/prometheus-community/helm-charts
+    - https://github.com/prometheus-operator/kube-prometheus
+    type: application
+    urls:
+    - https://giantswarm.github.io/control-plane-test-catalog/prometheus-operator-app-1.2.1-f378141241f8fb6dbe3fcea61963a8b3716b78dd.tgz
+    version: 1.2.1-f378141241f8fb6dbe3fcea61963a8b3716b78dd
+  - annotations:
       application.giantswarm.io/metadata: https://giantswarm.github.io/control-plane-test-catalog/prometheus-operator-app-1.2.1-e250a2592f0458bf8a63f53bd2fed85e019f937d.tgz-meta/main.yaml
       application.giantswarm.io/readme: https://giantswarm.github.io/control-plane-test-catalog/prometheus-operator-app-1.2.1-e250a2592f0458bf8a63f53bd2fed85e019f937d.tgz-meta/README.md
       application.giantswarm.io/team: atlas
@@ -39360,4 +39417,4 @@ entries:
     urls:
     - https://giantswarm.github.io/control-plane-test-catalog/workload-identity-operator-gcp-0.0.0-68e9c9c140837edfa8c346591f1d66960c568939.tgz
     version: 0.0.0-68e9c9c140837edfa8c346591f1d66960c568939
-generated: "2022-06-28T08:46:53.119627965Z"
+generated: "2022-06-28T08:48:16.599345012Z"
