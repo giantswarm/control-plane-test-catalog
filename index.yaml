@@ -10381,6 +10381,30 @@ entries:
     version: 0.0.0-2e21a8487f42e548c8ebc53a125f82e47410c3a2
   cert-manager-app:
   - annotations:
+      application.giantswarm.io/metadata: https://giantswarm.github.io/control-plane-test-catalog/cert-manager-app-2.15.1-fd601c059ad8b118d3fcac0052e5c77d5d082e10.tgz-meta/main.yaml
+      application.giantswarm.io/readme: https://giantswarm.github.io/control-plane-test-catalog/cert-manager-app-2.15.1-fd601c059ad8b118d3fcac0052e5c77d5d082e10.tgz-meta/README.md
+      application.giantswarm.io/team: team-cabbage
+      application.giantswarm.io/values-schema: https://giantswarm.github.io/control-plane-test-catalog/cert-manager-app-2.15.1-fd601c059ad8b118d3fcac0052e5c77d5d082e10.tgz-meta/values.schema.json
+      config.giantswarm.io/version: 1.x.x
+    apiVersion: v1
+    appVersion: 1.7.3
+    created: "2022-07-12T12:02:18.360918468Z"
+    dependencies:
+    - name: cert-manager-giantswarm-clusterissuer
+      repository: ""
+      version: 1.1.0
+    description: Simplifies the process of obtaining, renewing and using certificates
+    digest: 8bdbb441f9f3367c0feddf8d1814eb81fc5fa6ea7e7e538a29248dc15f63240b
+    home: https://github.com/giantswarm/cert-manager-app
+    icon: https://s.giantswarm.io/app-icons/cert-manager/1/light.svg
+    kubeVersion: '>=1.18.0-0'
+    name: cert-manager-app
+    sources:
+    - https://github.com/cert-manager/cert-manager
+    urls:
+    - https://giantswarm.github.io/control-plane-test-catalog/cert-manager-app-2.15.1-fd601c059ad8b118d3fcac0052e5c77d5d082e10.tgz
+    version: 2.15.1-fd601c059ad8b118d3fcac0052e5c77d5d082e10
+  - annotations:
       application.giantswarm.io/metadata: https://giantswarm.github.io/control-plane-test-catalog/cert-manager-app-2.15.1-bc5dbef3c852e2a9449c30b9fc7cd3351894f98b.tgz-meta/main.yaml
       application.giantswarm.io/readme: https://giantswarm.github.io/control-plane-test-catalog/cert-manager-app-2.15.1-bc5dbef3c852e2a9449c30b9fc7cd3351894f98b.tgz-meta/README.md
       application.giantswarm.io/team: team-cabbage
@@ -36095,4 +36119,4 @@ entries:
     urls:
     - https://giantswarm.github.io/control-plane-test-catalog/workload-identity-operator-gcp-0.0.0-68e9c9c140837edfa8c346591f1d66960c568939.tgz
     version: 0.0.0-68e9c9c140837edfa8c346591f1d66960c568939
-generated: "2022-07-12T12:01:28.255618161Z"
+generated: "2022-07-12T12:02:18.357675581Z"
