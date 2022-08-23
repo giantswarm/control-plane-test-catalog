@@ -21566,6 +21566,24 @@ entries:
   goldilocks-app:
   - apiVersion: v2
     appVersion: v3.1.4
+    created: "2022-08-23T12:14:51.825121876Z"
+    dependencies:
+    - condition: vpa.enabled
+      name: vertical-pod-autoscaler-app
+      repository: https://giantswarm.github.io/giantswarm-playground-catalog
+      version: 1.0.3
+    description: A Helm chart for the goldilocks-app
+    digest: d1d90c7cdf288e4e924ae5228552bad7762a8a26fe833876942376942d90a41d
+    home: https://github.com/giantswarm/goldilocks-app
+    icon: https://raw.githubusercontent.com/FairwindsOps/goldilocks/master/pkg/dashboard/assets/images/goldilocks.svg
+    name: goldilocks-app
+    sources:
+    - https://raw.githubusercontent.com/giantswarm/goldilocks-app/v0.1.0-fd0ea35411fa51d114ed657967bf16c26fec8945/README.md
+    urls:
+    - https://giantswarm.github.io/control-plane-test-catalog/goldilocks-app-0.1.0-fd0ea35411fa51d114ed657967bf16c26fec8945.tgz
+    version: 0.1.0-fd0ea35411fa51d114ed657967bf16c26fec8945
+  - apiVersion: v2
+    appVersion: v3.1.4
     created: "2022-08-22T16:46:56.446497173Z"
     dependencies:
     - condition: vpa.enabled
@@ -43749,4 +43767,4 @@ entries:
     urls:
     - https://giantswarm.github.io/control-plane-test-catalog/workload-identity-operator-gcp-0.1.0-02febf2bf9ad41f333f7fafc33b7cbda393f685c.tgz
     version: 0.1.0-02febf2bf9ad41f333f7fafc33b7cbda393f685c
-generated: "2022-08-23T12:08:48.037847775Z"
+generated: "2022-08-23T12:14:51.822642024Z"
