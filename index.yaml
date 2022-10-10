@@ -20611,6 +20611,41 @@ entries:
     - https://giantswarm.github.io/control-plane-test-catalog/kyverno-0.11.3-2ac01cf27e2d6815a87b79d7f4be1c482110b816.tgz
     version: 0.11.3-2ac01cf27e2d6815a87b79d7f4be1c482110b816
   - annotations:
+      application.giantswarm.io/metadata: https://giantswarm.github.io/control-plane-test-catalog/kyverno-0.11.3-244b425fb55c37191bf49e90a80eedbf61226c3e.tgz-meta/main.yaml
+      application.giantswarm.io/readme: https://giantswarm.github.io/control-plane-test-catalog/kyverno-0.11.3-244b425fb55c37191bf49e90a80eedbf61226c3e.tgz-meta/README.md
+      application.giantswarm.io/team: team-shield
+      application.giantswarm.io/values-schema: https://giantswarm.github.io/control-plane-test-catalog/kyverno-0.11.3-244b425fb55c37191bf49e90a80eedbf61226c3e.tgz-meta/values.schema.json
+      config.giantswarm.io/version: 1.x.x
+    apiVersion: v2
+    appVersion: v1.7.4
+    created: "2022-10-10T23:05:49.726061285Z"
+    dependencies:
+    - name: policy-reporter
+      repository: ""
+      version: 2.13.0
+    - name: kyverno
+      repository: ""
+      version: v2.5.4
+    description: 'Kyverno is a policy engine designed for Kubernetes. It can validate,
+      mutate, and generate configurations using admission controls and background
+      scans. Kyverno policies are Kubernetes resources and do not require learning
+      a new language. '
+    digest: 95ea85bf790a7207021a07aa1dc46602fd935979f9f911b03e92774bfb4b9c6d
+    home: https://github.com/giantswarm/kyverno-app
+    icon: https://s.giantswarm.io/app-icons/kyverno/1/light.svg
+    keywords:
+    - kubernetes
+    - policy agent
+    - validating webhook
+    - admissions controller
+    name: kyverno
+    sources:
+    - https://github.com/kyverno/kyverno
+    type: application
+    urls:
+    - https://giantswarm.github.io/control-plane-test-catalog/kyverno-0.11.3-244b425fb55c37191bf49e90a80eedbf61226c3e.tgz
+    version: 0.11.3-244b425fb55c37191bf49e90a80eedbf61226c3e
+  - annotations:
       application.giantswarm.io/team: team-shield
       config.giantswarm.io/version: 1.x.x
     apiVersion: v2
@@ -32815,4 +32850,4 @@ entries:
     urls:
     - https://giantswarm.github.io/control-plane-test-catalog/vertical-pod-autoscaler-crd-1.0.1-415687680d971c81d148137cb7a6e24ad464ffe0.tgz
     version: 1.0.1-415687680d971c81d148137cb7a6e24ad464ffe0
-generated: "2022-10-10T22:58:53.464391788Z"
+generated: "2022-10-10T23:05:49.713804592Z"
