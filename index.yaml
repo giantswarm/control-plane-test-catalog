@@ -32746,6 +32746,28 @@ entries:
     - https://giantswarm.github.io/control-plane-test-catalog/prometheus-operator-app-1.3.1-5733ea648e9e71e2182f3364d1ed78433629173c.tgz
     version: 1.3.1-5733ea648e9e71e2182f3364d1ed78433629173c
   - annotations:
+      application.giantswarm.io/team: atlas
+    apiVersion: v2
+    appVersion: v0.54.0
+    created: "2022-10-20T10:11:03.883289503Z"
+    dependencies:
+    - alias: prometheus-operator-app
+      name: kube-prometheus-stack
+      repository: https://prometheus-community.github.io/helm-charts
+      version: 32.4.0
+    description: Giant Swarm's Prometheus Operator Deployment
+    digest: a317d529b753c4cb5a888c9f22da4007ed5a5dafde7a97f817636a0d12f5e1bc
+    home: https://github.com/giantswarm/prometheus-operator-app
+    maintainers:
+    - email: mohamed@giantswarm.io
+      name: Mohamed Chiheb Ben Jemaa
+    name: prometheus-operator-app
+    sources:
+    - https://github.com/prometheus-community/helm-charts/tree/main/charts/kube-prometheus-stack
+    urls:
+    - https://giantswarm.github.io/control-plane-test-catalog/prometheus-operator-app-1.3.1-55650f0d7fd94a578ae2f1c48b963a3e0dcbf967.tgz
+    version: 1.3.1-55650f0d7fd94a578ae2f1c48b963a3e0dcbf967
+  - annotations:
       application.giantswarm.io/metadata: https://giantswarm.github.io/control-plane-test-catalog/prometheus-operator-app-1.3.1-453cd4fc0fa3d800fd45fcf795254413a2546223.tgz-meta/main.yaml
       application.giantswarm.io/readme: https://giantswarm.github.io/control-plane-test-catalog/prometheus-operator-app-1.3.1-453cd4fc0fa3d800fd45fcf795254413a2546223.tgz-meta/README.md
       application.giantswarm.io/team: atlas
@@ -40190,4 +40212,4 @@ entries:
     urls:
     - https://giantswarm.github.io/control-plane-test-catalog/vertical-pod-autoscaler-crd-1.0.1-415687680d971c81d148137cb7a6e24ad464ffe0.tgz
     version: 1.0.1-415687680d971c81d148137cb7a6e24ad464ffe0
-generated: "2022-10-20T10:07:17.533853041Z"
+generated: "2022-10-20T10:11:03.850870637Z"
