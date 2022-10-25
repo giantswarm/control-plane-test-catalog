@@ -43033,6 +43033,33 @@ entries:
     urls:
     - https://giantswarm.github.io/control-plane-test-catalog/test-infra-1.2.1-067c691a99307fbe6bf246173840617b139ebe3e.tgz
     version: 1.2.1-067c691a99307fbe6bf246173840617b139ebe3e
+  trivy:
+  - annotations:
+      application.giantswarm.io/metadata: https://giantswarm.github.io/control-plane-test-catalog/trivy-0.6.0-061ea86036b2031cb83fe88e5f8b5d94fdfb0ca0.tgz-meta/main.yaml
+      application.giantswarm.io/readme: https://giantswarm.github.io/control-plane-test-catalog/trivy-0.6.0-061ea86036b2031cb83fe88e5f8b5d94fdfb0ca0.tgz-meta/README.md
+      application.giantswarm.io/team: shield
+      application.giantswarm.io/values-schema: https://giantswarm.github.io/control-plane-test-catalog/trivy-0.6.0-061ea86036b2031cb83fe88e5f8b5d94fdfb0ca0.tgz-meta/values.schema.json
+      config.giantswarm.io/version: 1.x.x
+    apiVersion: v2
+    appVersion: 0.30.4
+    created: "2022-10-25T20:06:53.06445172Z"
+    dependencies:
+    - name: trivy
+      repository: ""
+      version: 0.4.17
+    description: A Helm chart for trivy
+    digest: 3b100846d93d49b2973bf2b03dd862454e2927c9bfbcd829bf8682f5ff6415ac
+    home: https://github.com/giantswarm/trivy-app
+    icon: https://s.giantswarm.io/app-icons/trivy/1/light.svg
+    maintainers:
+    - name: Giant Swarm applications team
+      url: https://github.com/giantswarm/trivy-app
+    name: trivy
+    sources:
+    - https://github.com/giantswarm/trivy-app
+    urls:
+    - https://giantswarm.github.io/control-plane-test-catalog/trivy-0.6.0-061ea86036b2031cb83fe88e5f8b5d94fdfb0ca0.tgz
+    version: 0.6.0-061ea86036b2031cb83fe88e5f8b5d94fdfb0ca0
   trivy-app:
   - annotations:
       application.giantswarm.io/metadata: https://giantswarm.github.io/control-plane-test-catalog/trivy-app-0.6.0-f69b764aee86b487154a7da2119d333348d47c15.tgz-meta/main.yaml
@@ -45029,4 +45056,4 @@ entries:
     urls:
     - https://giantswarm.github.io/control-plane-test-catalog/vertical-pod-autoscaler-crd-1.0.1-415687680d971c81d148137cb7a6e24ad464ffe0.tgz
     version: 1.0.1-415687680d971c81d148137cb7a6e24ad464ffe0
-generated: "2022-10-25T19:57:09.068673504Z"
+generated: "2022-10-25T20:06:53.063262803Z"
