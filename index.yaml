@@ -38038,6 +38038,28 @@ entries:
   prometheus-operator-app:
   - annotations:
       application.giantswarm.io/team: atlas
+    apiVersion: v2
+    appVersion: v0.54.0
+    created: "2022-10-31T10:37:55.676025759Z"
+    dependencies:
+    - alias: prometheus-operator-app
+      name: kube-prometheus-stack
+      repository: https://prometheus-community.github.io/helm-charts
+      version: 32.4.0
+    description: Giant Swarm's Prometheus Operator Deployment
+    digest: 0e71b044026297966251006224b6485b4d0f52895368833a2101fc1c58495eba
+    home: https://github.com/giantswarm/prometheus-operator-app
+    maintainers:
+    - email: mohamed@giantswarm.io
+      name: Mohamed Chiheb Ben Jemaa
+    name: prometheus-operator-app
+    sources:
+    - https://github.com/prometheus-community/helm-charts/tree/main/charts/kube-prometheus-stack
+    urls:
+    - https://giantswarm.github.io/control-plane-test-catalog/prometheus-operator-app-2.0.1-f23538325fb60e2e47681ddd29435a7600f1e564.tgz
+    version: 2.0.1-f23538325fb60e2e47681ddd29435a7600f1e564
+  - annotations:
+      application.giantswarm.io/team: atlas
       config.giantswarm.io/version: 1.x.x
     apiVersion: v2
     appVersion: v0.60.1
@@ -48324,4 +48346,4 @@ entries:
     urls:
     - https://giantswarm.github.io/control-plane-test-catalog/vertical-pod-autoscaler-crd-1.0.1-06241088c9b09729b9297ca17612115d5758e0bd.tgz
     version: 1.0.1-06241088c9b09729b9297ca17612115d5758e0bd
-generated: "2022-10-31T10:37:32.081689856Z"
+generated: "2022-10-31T10:37:55.641305985Z"
