@@ -3329,6 +3329,32 @@ entries:
     urls:
     - https://giantswarm.github.io/control-plane-test-catalog/azurefile-csi-driver-app-1.20.0-gs1-95cd5742bdf18af0921d4d47030a14638023dfeb.tgz
     version: 1.20.0-gs1-95cd5742bdf18af0921d4d47030a14638023dfeb
+  caicloud-event-exporter-app:
+  - annotations:
+      application.giantswarm.io/metadata: https://giantswarm.github.io/control-plane-test-catalog/caicloud-event-exporter-app-0.1.0.tgz-meta/main.yaml
+      application.giantswarm.io/readme: https://giantswarm.github.io/control-plane-test-catalog/caicloud-event-exporter-app-0.1.0.tgz-meta/README.md
+      application.giantswarm.io/team: team-honeybadger
+      application.giantswarm.io/two-step-install: "false"
+      application.giantswarm.io/values-schema: https://giantswarm.github.io/control-plane-test-catalog/caicloud-event-exporter-app-0.1.0.tgz-meta/values.schema.json
+    apiVersion: v2
+    appVersion: 1.0.0
+    created: "2022-11-08T11:50:34.438278339Z"
+    description: 'Kubernetes events to Prometheus bridge. A Collector that can list
+      and watch Kubernetes events, and according to events'' occurrence, determine
+      how long the event lasts. The information is then translated into metrics. '
+    digest: 1b41d991c114c97c0ae2ea342bfcc6a15acf3230f342035d5a5a62dc6aede02a
+    home: https://github.com/giantswarm/caicloud-event-exporter-app
+    icon: https://s.giantswarm.io/app-icons/flux/1/dark.svg
+    keywords:
+    - gitops
+    - flux
+    name: caicloud-event-exporter-app
+    sources:
+    - https://github.com/caicloud/event_exporter
+    type: application
+    urls:
+    - https://giantswarm.github.io/control-plane-test-catalog/caicloud-event-exporter-app-0.1.0.tgz
+    version: 0.1.0
   capa-iam-operator:
   - annotations:
       application.giantswarm.io/team: phoenix
@@ -28533,4 +28559,4 @@ entries:
     urls:
     - https://giantswarm.github.io/control-plane-test-catalog/vertical-pod-autoscaler-crd-1.0.1-06241088c9b09729b9297ca17612115d5758e0bd.tgz
     version: 1.0.1-06241088c9b09729b9297ca17612115d5758e0bd
-generated: "2022-11-08T11:04:06.974000446Z"
+generated: "2022-11-08T11:50:34.437347612Z"
