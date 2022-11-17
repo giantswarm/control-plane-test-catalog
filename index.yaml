@@ -12934,6 +12934,35 @@ entries:
   falco-app:
   - annotations:
       application.giantswarm.io/team: shield
+      config.giantswarm.io/version: localize-falco-loader-image
+    apiVersion: v2
+    appVersion: 0.4.1-9576dafcf30faa9d2a6b27de8c193a817b35073e
+    created: "2022-11-17T15:53:36.533994195Z"
+    dependencies:
+    - name: falco
+      repository: ""
+      version: 2.2.0
+    - name: falco-exporter
+      repository: ""
+      version: 0.9.1
+    - name: falcosidekick
+      repository: ""
+      version: 0.5.9
+    description: A Helm chart for falco
+    digest: 35be42ca31bc37c377e7392e59c1fd9ce0e4460ff7cb8eb183ceb81c697d35c0
+    home: https://github.com/giantswarm/falco-app
+    icon: https://s.giantswarm.io/app-icons/falco/1/dark.svg
+    maintainers:
+    - name: Giant Swarm applications team
+      url: https://github.com/giantswarm/falco-app
+    name: falco-app
+    sources:
+    - https://github.com/giantswarm/falco-app
+    urls:
+    - https://giantswarm.github.io/control-plane-test-catalog/falco-app-0.4.1-9576dafcf30faa9d2a6b27de8c193a817b35073e.tgz
+    version: 0.4.1-9576dafcf30faa9d2a6b27de8c193a817b35073e
+  - annotations:
+      application.giantswarm.io/team: shield
       config.giantswarm.io/version: 1.x.x
     apiVersion: v2
     appVersion: 0.4.1-78f060fa8533bf0cdd45b93b6a2c9871a327b0c7
@@ -40661,4 +40690,4 @@ entries:
     urls:
     - https://giantswarm.github.io/control-plane-test-catalog/vertical-pod-autoscaler-crd-1.0.1-06241088c9b09729b9297ca17612115d5758e0bd.tgz
     version: 1.0.1-06241088c9b09729b9297ca17612115d5758e0bd
-generated: "2022-11-17T15:45:55.743139773Z"
+generated: "2022-11-17T15:53:36.525507313Z"
