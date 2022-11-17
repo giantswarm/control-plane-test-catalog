@@ -14650,6 +14650,33 @@ entries:
     - https://giantswarm.github.io/control-plane-test-catalog/grafana-1.1.0-394ed4e94887918dc06c2c50270d0d5bc7a7894b.tgz
     version: 1.1.0-394ed4e94887918dc06c2c50270d0d5bc7a7894b
   - annotations:
+      application.giantswarm.io/metadata: https://giantswarm.github.io/control-plane-test-catalog/grafana-1.1.0-337f586c38e286710a13e06910adfbe4a78b3d63.tgz-meta/main.yaml
+      application.giantswarm.io/readme: https://giantswarm.github.io/control-plane-test-catalog/grafana-1.1.0-337f586c38e286710a13e06910adfbe4a78b3d63.tgz-meta/README.md
+      application.giantswarm.io/team: atlas
+      application.giantswarm.io/values-schema: https://giantswarm.github.io/control-plane-test-catalog/grafana-1.1.0-337f586c38e286710a13e06910adfbe4a78b3d63.tgz-meta/values.schema.json
+    apiVersion: v2
+    appVersion: 9.1.1
+    created: "2022-11-17T13:19:55.638383531Z"
+    dependencies:
+    - name: grafana
+      repository: https://grafana.github.io/helm-charts
+      version: 6.37.0
+    description: The leading tool for querying and visualizing time series and metrics.
+    digest: e8268caecd98fdd4322772d109109b92cae9ecd94ef4a76bd0bb0017549a9bad
+    home: https://github.com/giantswarm/grafana-app
+    icon: https://s.giantswarm.io/app-icons/grafana/1/light.svg
+    kubeVersion: ^1.8.0-0
+    maintainers:
+    - email: team-atlas@giantswarm.io
+      name: giantswarm/team-atlas
+    name: grafana
+    sources:
+    - https://github.com/grafana/helm-charts/tree/main/charts/grafana
+    type: application
+    urls:
+    - https://giantswarm.github.io/control-plane-test-catalog/grafana-1.1.0-337f586c38e286710a13e06910adfbe4a78b3d63.tgz
+    version: 1.1.0-337f586c38e286710a13e06910adfbe4a78b3d63
+  - annotations:
       application.giantswarm.io/team: atlas
     apiVersion: v2
     appVersion: 9.1.1
@@ -40167,4 +40194,4 @@ entries:
     urls:
     - https://giantswarm.github.io/control-plane-test-catalog/vertical-pod-autoscaler-crd-1.0.1-06241088c9b09729b9297ca17612115d5758e0bd.tgz
     version: 1.0.1-06241088c9b09729b9297ca17612115d5758e0bd
-generated: "2022-11-17T13:19:47.788776378Z"
+generated: "2022-11-17T13:19:55.629514781Z"
