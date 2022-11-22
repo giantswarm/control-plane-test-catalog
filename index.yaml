@@ -7431,6 +7431,37 @@ entries:
   - annotations:
       application.giantswarm.io/owners: |
         - catalog: default
+          provider: capa
+          team: hydra
+        - catalog: default
+          provider: gcp
+          team: hydra
+        - catalog: default
+          provider: azure
+          team: clippy
+        - catalog: default
+          provider: openstack
+          team: rocket
+        - catalog: default
+          provider: cloud-director
+          team: rocket
+        - catalog: default
+          provider: vsphere
+          team: rocket
+      config.giantswarm.io/version: 1.x.x
+    apiVersion: v1
+    appVersion: 1.8.1-326d6d86bb06f136309b6a0b2df96b343009c782
+    created: "2022-11-22T09:20:01.03865289Z"
+    description: Helm chart for cluster api.
+    digest: eac104e0e343fe521765a5cbe35f423c83c398985028e9c926246b2361116429
+    home: https://github.com/giantswarm/cluster-api-app
+    name: cluster-api
+    urls:
+    - https://giantswarm.github.io/control-plane-test-catalog/cluster-api-1.8.1-326d6d86bb06f136309b6a0b2df96b343009c782.tgz
+    version: 1.8.1-326d6d86bb06f136309b6a0b2df96b343009c782
+  - annotations:
+      application.giantswarm.io/owners: |
+        - catalog: default
           provider: aws
           team: phoenix
         - catalog: default
@@ -43659,4 +43690,4 @@ entries:
     urls:
     - https://giantswarm.github.io/control-plane-test-catalog/vertical-pod-autoscaler-crd-1.0.1-06241088c9b09729b9297ca17612115d5758e0bd.tgz
     version: 1.0.1-06241088c9b09729b9297ca17612115d5758e0bd
-generated: "2022-11-22T09:19:26.692609134Z"
+generated: "2022-11-22T09:20:01.03212935Z"
