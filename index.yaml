@@ -39220,6 +39220,33 @@ entries:
     version: 4.6.2-00e7046ff709757d102bdf9bb5b2cc1f1050ffd5
   prometheus-operator-app:
   - annotations:
+      application.giantswarm.io/metadata: https://giantswarm.github.io/control-plane-test-catalog/prometheus-operator-app-2.1.1-a96d9375f685da0fa0dfe4128225306132cd2bac.tgz-meta/main.yaml
+      application.giantswarm.io/readme: https://giantswarm.github.io/control-plane-test-catalog/prometheus-operator-app-2.1.1-a96d9375f685da0fa0dfe4128225306132cd2bac.tgz-meta/README.md
+      application.giantswarm.io/team: atlas
+      application.giantswarm.io/values-schema: https://giantswarm.github.io/control-plane-test-catalog/prometheus-operator-app-2.1.1-a96d9375f685da0fa0dfe4128225306132cd2bac.tgz-meta/values.schema.json
+      config.giantswarm.io/version: 1.x.x
+    apiVersion: v2
+    appVersion: v0.60.1
+    created: "2022-11-24T15:54:23.92910113Z"
+    dependencies:
+    - alias: prometheus-operator-app
+      name: kube-prometheus-stack
+      repository: https://prometheus-community.github.io/helm-charts
+      version: 41.6.0
+    description: Giant Swarm's Prometheus Operator Deployment
+    digest: ca4f5d4f2bb0a017a7d38d72defbb84f5944cc8362e18a565534e76bd42a10a3
+    home: https://github.com/giantswarm/prometheus-operator-app
+    icon: https://s.giantswarm.io/app-icons/prometheus-operator/2/light.svg
+    maintainers:
+    - email: team-atlas@giantswarm.io
+      name: giantswarm/team-atlas
+    name: prometheus-operator-app
+    sources:
+    - https://github.com/prometheus-community/helm-charts/tree/main/charts/kube-prometheus-stack
+    urls:
+    - https://giantswarm.github.io/control-plane-test-catalog/prometheus-operator-app-2.1.1-a96d9375f685da0fa0dfe4128225306132cd2bac.tgz
+    version: 2.1.1-a96d9375f685da0fa0dfe4128225306132cd2bac
+  - annotations:
       application.giantswarm.io/team: atlas
     apiVersion: v2
     appVersion: v0.54.0
@@ -50235,4 +50262,4 @@ entries:
     urls:
     - https://giantswarm.github.io/control-plane-test-catalog/vertical-pod-autoscaler-crd-1.0.1-06241088c9b09729b9297ca17612115d5758e0bd.tgz
     version: 1.0.1-06241088c9b09729b9297ca17612115d5758e0bd
-generated: "2022-11-24T15:44:10.414632123Z"
+generated: "2022-11-24T15:54:23.904942094Z"
