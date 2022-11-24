@@ -39318,6 +39318,29 @@ entries:
     - https://giantswarm.github.io/control-plane-test-catalog/prometheus-operator-app-2.0.2-3d9ad6cb62701f7b936a3da2ad476f63ef8f5396.tgz
     version: 2.0.2-3d9ad6cb62701f7b936a3da2ad476f63ef8f5396
   - annotations:
+      application.giantswarm.io/team: atlas
+    apiVersion: v2
+    appVersion: v0.54.0
+    created: "2022-11-24T12:39:56.415463842Z"
+    dependencies:
+    - alias: prometheus-operator-app
+      name: kube-prometheus-stack
+      repository: https://prometheus-community.github.io/helm-charts
+      version: 32.4.0
+    description: Giant Swarm's Prometheus Operator Deployment
+    digest: 204233d7c673920cd11e983663d34c34f6daf651e8fd7f14ab7d0ff4cbbc2362
+    home: https://github.com/giantswarm/prometheus-operator-app
+    icon: https://s.giantswarm.io/app-icons/prometheus-operator/2/light.svg
+    maintainers:
+    - email: mohamed@giantswarm.io
+      name: Mohamed Chiheb Ben Jemaa
+    name: prometheus-operator-app
+    sources:
+    - https://github.com/prometheus-community/helm-charts/tree/main/charts/kube-prometheus-stack
+    urls:
+    - https://giantswarm.github.io/control-plane-test-catalog/prometheus-operator-app-2.0.2-347701343ec7e7c9ecf571d5a8dc7ca49c12a102.tgz
+    version: 2.0.2-347701343ec7e7c9ecf571d5a8dc7ca49c12a102
+  - annotations:
       application.giantswarm.io/metadata: https://giantswarm.github.io/control-plane-test-catalog/prometheus-operator-app-2.0.2-24a47c33656ce2c0a5fab2714a35ceeba468b30c.tgz-meta/main.yaml
       application.giantswarm.io/readme: https://giantswarm.github.io/control-plane-test-catalog/prometheus-operator-app-2.0.2-24a47c33656ce2c0a5fab2714a35ceeba468b30c.tgz-meta/README.md
       application.giantswarm.io/team: atlas
@@ -49606,4 +49629,4 @@ entries:
     urls:
     - https://giantswarm.github.io/control-plane-test-catalog/vertical-pod-autoscaler-crd-1.0.1-06241088c9b09729b9297ca17612115d5758e0bd.tgz
     version: 1.0.1-06241088c9b09729b9297ca17612115d5758e0bd
-generated: "2022-11-24T12:34:40.660045151Z"
+generated: "2022-11-24T12:39:56.392444433Z"
