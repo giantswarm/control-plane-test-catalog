@@ -39566,6 +39566,32 @@ entries:
     - https://giantswarm.github.io/control-plane-test-catalog/prometheus-operator-app-2.1.1-514d9809f6ef6c9a624b1294dc6fe2050f8a392c.tgz
     version: 2.1.1-514d9809f6ef6c9a624b1294dc6fe2050f8a392c
   - annotations:
+      application.giantswarm.io/metadata: https://giantswarm.github.io/control-plane-test-catalog/prometheus-operator-app-2.1.1-4dcf6d7d1b457ec55905210bc31dd568b13bcd42.tgz-meta/main.yaml
+      application.giantswarm.io/readme: https://giantswarm.github.io/control-plane-test-catalog/prometheus-operator-app-2.1.1-4dcf6d7d1b457ec55905210bc31dd568b13bcd42.tgz-meta/README.md
+      application.giantswarm.io/team: atlas
+      application.giantswarm.io/values-schema: https://giantswarm.github.io/control-plane-test-catalog/prometheus-operator-app-2.1.1-4dcf6d7d1b457ec55905210bc31dd568b13bcd42.tgz-meta/values.schema.json
+    apiVersion: v2
+    appVersion: v0.60.1
+    created: "2022-11-24T21:24:17.029384288Z"
+    dependencies:
+    - alias: prometheus-operator-app
+      name: kube-prometheus-stack
+      repository: https://prometheus-community.github.io/helm-charts
+      version: 42.0.2
+    description: Giant Swarm's Prometheus Operator Deployment
+    digest: 807e92d25ad675efb18ffd153bbeb51f4d3675fcfe5159a8d8ac314342340af1
+    home: https://github.com/giantswarm/prometheus-operator-app
+    icon: https://s.giantswarm.io/app-icons/prometheus-operator/2/light.svg
+    maintainers:
+    - email: team-atlas@giantswarm.io
+      name: giantswarm/team-atlas
+    name: prometheus-operator-app
+    sources:
+    - https://github.com/prometheus-community/helm-charts/tree/main/charts/kube-prometheus-stack
+    urls:
+    - https://giantswarm.github.io/control-plane-test-catalog/prometheus-operator-app-2.1.1-4dcf6d7d1b457ec55905210bc31dd568b13bcd42.tgz
+    version: 2.1.1-4dcf6d7d1b457ec55905210bc31dd568b13bcd42
+  - annotations:
       application.giantswarm.io/team: atlas
     apiVersion: v2
     appVersion: v0.54.0
@@ -50637,4 +50663,4 @@ entries:
     urls:
     - https://giantswarm.github.io/control-plane-test-catalog/vertical-pod-autoscaler-crd-1.0.1-06241088c9b09729b9297ca17612115d5758e0bd.tgz
     version: 1.0.1-06241088c9b09729b9297ca17612115d5758e0bd
-generated: "2022-11-24T21:23:08.989875503Z"
+generated: "2022-11-24T21:24:16.996794757Z"
