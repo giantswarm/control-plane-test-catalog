@@ -1,0 +1,284 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "properties": {
+        "client": {
+            "properties": {
+                "image": {
+                    "$ref": "https://schema.giantswarm.io/image/v0.0.1"
+                }
+            },
+            "type": "object"
+        },
+        "dex": {
+            "properties": {
+                "image": {
+                    "$ref": "https://schema.giantswarm.io/image/v0.0.1"
+                }
+            },
+            "type": "object"
+        },
+        "extraVolumeMounts": {
+            "type": "array"
+        },
+        "extraVolumes": {
+            "type": "array"
+        },
+        "ingress": {
+            "properties": {
+                "tls": {
+                    "properties": {
+                        "caPemB64": {
+                            "type": "string"
+                        },
+                        "clusterIssuer": {
+                            "type": "string"
+                        },
+                        "crtPemB64": {
+                            "type": "string"
+                        },
+                        "keyPemB64": {
+                            "type": "string"
+                        },
+                        "letsencrypt": {
+                            "type": "boolean"
+                        }
+                    },
+                    "type": "object"
+                }
+            },
+            "type": "object"
+        },
+        "isManagementCluster": {
+            "type": "boolean"
+        },
+        "isWorkloadCluster": {
+            "type": "boolean"
+        },
+        "logoURI": {
+            "type": "string"
+        },
+        "managementCluster": {
+            "properties": {
+                "name": {
+                    "type": "string"
+                }
+            },
+            "type": [
+                "object",
+                "string"
+            ]
+        },
+        "oidc": {
+            "properties": {
+                "customer": {
+                    "properties": {
+                        "connectorConfig": {
+                            "type": "string"
+                        },
+                        "connectorName": {
+                            "type": "string"
+                        },
+                        "connectorType": {
+                            "type": "string"
+                        },
+                        "connectors": {
+                            "items": {
+                                "properties": {
+                                    "connectorConfig": {
+                                        "type": "string"
+                                    },
+                                    "connectorName": {
+                                        "type": "string"
+                                    },
+                                    "connectorType": {
+                                        "type": "string"
+                                    },
+                                    "id": {
+                                        "type": "string"
+                                    },
+                                    "write_all_group": {
+                                        "type": "string"
+                                    }
+                                },
+                                "type": "object"
+                            },
+                            "type": "array"
+                        },
+                        "enabled": {
+                            "type": "boolean"
+                        },
+                        "write_all_group": {
+                            "type": "string"
+                        }
+                    },
+                    "type": "object"
+                },
+                "expiry": {
+                    "properties": {
+                        "idTokens": {
+                            "type": "string"
+                        },
+                        "signingKeys": {
+                            "type": "string"
+                        }
+                    },
+                    "type": "object"
+                },
+                "giantswarm": {
+                    "properties": {
+                        "connectorConfig": {
+                            "properties": {
+                                "clientID": {
+                                    "type": "string"
+                                },
+                                "clientSecret": {
+                                    "type": "string"
+                                },
+                                "team": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        },
+                        "connectors": {
+                            "items": {
+                                "properties": {
+                                    "connectorConfig": {
+                                        "type": "string"
+                                    },
+                                    "connectorName": {
+                                        "type": "string"
+                                    },
+                                    "connectorType": {
+                                        "type": "string"
+                                    },
+                                    "id": {
+                                        "type": "string"
+                                    },
+                                    "write_all_group": {
+                                        "type": "string"
+                                    }
+                                },
+                                "type": "object"
+                            },
+                            "type": "array"
+                        },
+                        "write_all_group": {
+                            "type": "string"
+                        }
+                    },
+                    "type": "object"
+                },
+                "issuerAddress": {
+                    "type": "string"
+                },
+                "staticClients": {
+                    "properties": {
+                        "dexK8SAuthenticator": {
+                            "properties": {
+                                "clientAddress": {
+                                    "type": "string"
+                                },
+                                "clientSecret": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        },
+                        "grafana": {
+                            "properties": {
+                                "cliendID": {
+                                    "type": "string"
+                                },
+                                "redirectURI": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        },
+                        "gsCLIAuth": {
+                            "properties": {
+                                "address": {
+                                    "type": "string"
+                                },
+                                "clientID": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        },
+                        "happa": {
+                            "properties": {
+                                "clientID": {
+                                    "type": "string"
+                                },
+                                "redirectURI": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    },
+                    "type": "object"
+                }
+            },
+            "type": "object"
+        },
+        "registry": {
+            "properties": {
+                "domain": {
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        },
+        "services": {
+            "properties": {
+                "grafana": {
+                    "properties": {
+                        "address": {
+                            "type": "string"
+                        }
+                    },
+                    "type": "object"
+                },
+                "happa": {
+                    "properties": {
+                        "address": {
+                            "type": "string"
+                        }
+                    },
+                    "type": "object"
+                },
+                "kubernetes": {
+                    "properties": {
+                        "api": {
+                            "properties": {
+                                "address": {
+                                    "type": "string"
+                                },
+                                "caPem": {
+                                    "type": "string"
+                                },
+                                "internalAddress": {
+                                    "type": "string"
+                                },
+                                "port": {
+                                    "type": "integer"
+                                },
+                                "public": {
+                                    "type": "boolean"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    },
+                    "type": "object"
+                }
+            },
+            "type": "object"
+        }
+    },
+    "type": "object"
+}
+
