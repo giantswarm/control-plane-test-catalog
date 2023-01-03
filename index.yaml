@@ -22607,6 +22607,33 @@ entries:
     version: 1.9.0-159aa506b0a613932e503d27c65a4fbbb8f2ec4c
   trivy-operator:
   - annotations:
+      application.giantswarm.io/metadata: https://giantswarm.github.io/control-plane-test-catalog/trivy-operator-0.3.2-ed5ada8fb8f306d54f8425b196d764e858146d33.tgz-meta/main.yaml
+      application.giantswarm.io/readme: https://giantswarm.github.io/control-plane-test-catalog/trivy-operator-0.3.2-ed5ada8fb8f306d54f8425b196d764e858146d33.tgz-meta/README.md
+      application.giantswarm.io/team: shield
+      application.giantswarm.io/values-schema: https://giantswarm.github.io/control-plane-test-catalog/trivy-operator-0.3.2-ed5ada8fb8f306d54f8425b196d764e858146d33.tgz-meta/values.schema.json
+      config.giantswarm.io/version: 1.x.x
+    apiVersion: v2
+    appVersion: 0.2.1
+    created: "2023-01-03T11:16:49.526388286Z"
+    dependencies:
+    - name: trivy-operator
+      repository: ""
+      version: 0.7.1
+    description: A Giant Swarm App for trivy-operator, the cluster security tool from
+      Aqua Security.
+    digest: ea28fe79f2b5727f18f401b6eb424b109e8a714b3829e638b266e2f7bac4e1be
+    home: https://github.com/giantswarm/trivy-operator-app
+    icon: https://s.giantswarm.io/app-icons/trivy/1/light.svg
+    maintainers:
+    - name: Giant Swarm applications team
+      url: https://github.com/giantswarm/trivy-operator-app
+    name: trivy-operator
+    sources:
+    - https://github.com/aquasecurity/trivy-operator
+    urls:
+    - https://giantswarm.github.io/control-plane-test-catalog/trivy-operator-0.3.2-ed5ada8fb8f306d54f8425b196d764e858146d33.tgz
+    version: 0.3.2-ed5ada8fb8f306d54f8425b196d764e858146d33
+  - annotations:
       application.giantswarm.io/metadata: https://giantswarm.github.io/control-plane-test-catalog/trivy-operator-0.3.1-f9b51cb291d7cbbcc6d4e980590004a01e0e4e28.tgz-meta/main.yaml
       application.giantswarm.io/readme: https://giantswarm.github.io/control-plane-test-catalog/trivy-operator-0.3.1-f9b51cb291d7cbbcc6d4e980590004a01e0e4e28.tgz-meta/README.md
       application.giantswarm.io/team: shield
@@ -23263,4 +23290,4 @@ entries:
     urls:
     - https://giantswarm.github.io/control-plane-test-catalog/vertical-pod-autoscaler-crd-1.0.1-693b2a70bd9c352090c5f0f01572c71445711ea5.tgz
     version: 1.0.1-693b2a70bd9c352090c5f0f01572c71445711ea5
-generated: "2023-01-03T10:23:40.414526136Z"
+generated: "2023-01-03T11:16:49.522394516Z"
