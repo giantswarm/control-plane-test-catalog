@@ -24051,6 +24051,33 @@ entries:
     urls:
     - https://giantswarm.github.io/control-plane-test-catalog/test-infra-1.9.0-159aa506b0a613932e503d27c65a4fbbb8f2ec4c.tgz
     version: 1.9.0-159aa506b0a613932e503d27c65a4fbbb8f2ec4c
+  trivy:
+  - annotations:
+      application.giantswarm.io/metadata: https://giantswarm.github.io/control-plane-test-catalog/trivy-0.7.1-277a3814953d2753a8fc53ffc1f89a20bee52ae0.tgz-meta/main.yaml
+      application.giantswarm.io/readme: https://giantswarm.github.io/control-plane-test-catalog/trivy-0.7.1-277a3814953d2753a8fc53ffc1f89a20bee52ae0.tgz-meta/README.md
+      application.giantswarm.io/team: shield
+      application.giantswarm.io/values-schema: https://giantswarm.github.io/control-plane-test-catalog/trivy-0.7.1-277a3814953d2753a8fc53ffc1f89a20bee52ae0.tgz-meta/values.schema.json
+      config.giantswarm.io/version: 1.x.x
+    apiVersion: v2
+    appVersion: 0.30.4
+    created: "2023-01-04T18:08:41.564484779Z"
+    dependencies:
+    - name: trivy
+      repository: ""
+      version: 0.4.17
+    description: A Helm chart for trivy
+    digest: 7a1eda89a633cb2b48b83946373c5fb3f71be7c9ad8a43f4184ad4a915c51b07
+    home: https://github.com/giantswarm/trivy-app
+    icon: https://s.giantswarm.io/app-icons/trivy/1/light.svg
+    maintainers:
+    - name: Giant Swarm applications team
+      url: https://github.com/giantswarm/trivy-app
+    name: trivy
+    sources:
+    - https://github.com/giantswarm/trivy-app
+    urls:
+    - https://giantswarm.github.io/control-plane-test-catalog/trivy-0.7.1-277a3814953d2753a8fc53ffc1f89a20bee52ae0.tgz
+    version: 0.7.1-277a3814953d2753a8fc53ffc1f89a20bee52ae0
   trivy-operator:
   - annotations:
       application.giantswarm.io/metadata: https://giantswarm.github.io/control-plane-test-catalog/trivy-operator-0.3.2-ed5ada8fb8f306d54f8425b196d764e858146d33.tgz-meta/main.yaml
@@ -24952,4 +24979,4 @@ entries:
     urls:
     - https://giantswarm.github.io/control-plane-test-catalog/vertical-pod-autoscaler-crd-1.0.1-693b2a70bd9c352090c5f0f01572c71445711ea5.tgz
     version: 1.0.1-693b2a70bd9c352090c5f0f01572c71445711ea5
-generated: "2023-01-04T17:45:45.772170871Z"
+generated: "2023-01-04T18:08:41.562443407Z"
