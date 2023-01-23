@@ -39077,6 +39077,35 @@ entries:
     urls:
     - https://giantswarm.github.io/control-plane-test-catalog/silence-operator-0.8.0-1e9e00e4b457bb54e16ad050c5047d949ad28ffb.tgz
     version: 0.8.0-1e9e00e4b457bb54e16ad050c5047d949ad28ffb
+  starboard-app:
+  - annotations:
+      application.giantswarm.io/metadata: https://giantswarm.github.io/control-plane-test-catalog/starboard-app-0.8.0-50be7f653176575ecc7206f714c98141c419728c.tgz-meta/main.yaml
+      application.giantswarm.io/readme: https://giantswarm.github.io/control-plane-test-catalog/starboard-app-0.8.0-50be7f653176575ecc7206f714c98141c419728c.tgz-meta/README.md
+      application.giantswarm.io/team: honeybadger
+      application.giantswarm.io/values-schema: https://giantswarm.github.io/control-plane-test-catalog/starboard-app-0.8.0-50be7f653176575ecc7206f714c98141c419728c.tgz-meta/values.schema.json
+      config.giantswarm.io/version: 1.x.x
+      ui.giantswarm.io/logo: https://s.giantswarm.io/app-icons/starboard/2/logo_dark.png
+    apiVersion: v2
+    appVersion: 0.15.3
+    created: "2023-01-23T04:03:45.032167013Z"
+    dependencies:
+    - alias: starboard-app
+      name: starboard-operator
+      repository: ""
+      version: 0.10.3
+    description: A Helm chart for aqua starboard
+    digest: 46a59aabb4c2e81c3f3db1ee35bf6a4d0b166867119f3ab87fb119afc2480285
+    home: https://github.com/giantswarm/starboard-app
+    icon: https://s.giantswarm.io/app-icons/starboard/2/icon_dark.svg
+    maintainers:
+    - name: Giant Swarm applications team
+      url: https://github.com/giantswarm/starboard-app
+    name: starboard-app
+    sources:
+    - https://github.com/giantswarm/starboard-app
+    urls:
+    - https://giantswarm.github.io/control-plane-test-catalog/starboard-app-0.8.0-50be7f653176575ecc7206f714c98141c419728c.tgz
+    version: 0.8.0-50be7f653176575ecc7206f714c98141c419728c
   starboard-exporter:
   - annotations:
       application.giantswarm.io/metadata: https://giantswarm.github.io/control-plane-test-catalog/starboard-exporter-0.7.0.tgz-meta/main.yaml
@@ -43021,4 +43050,4 @@ entries:
     urls:
     - https://giantswarm.github.io/control-plane-test-catalog/vertical-pod-autoscaler-crd-1.0.1-693b2a70bd9c352090c5f0f01572c71445711ea5.tgz
     version: 1.0.1-693b2a70bd9c352090c5f0f01572c71445711ea5
-generated: "2023-01-23T04:03:37.930893432Z"
+generated: "2023-01-23T04:03:45.029042024Z"
