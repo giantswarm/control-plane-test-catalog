@@ -1,0 +1,421 @@
+{
+    "$schema": "http://json-schema.org/schema#",
+    "type": "object",
+    "properties": {
+        "affinity": {
+            "type": "object"
+        },
+        "args": {
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },
+        "configuration": {
+            "type": "object",
+            "properties": {
+                "packages": {
+                    "type": "array"
+                }
+            }
+        },
+        "customAnnotations": {
+            "type": "object"
+        },
+        "customLabels": {
+            "type": "object"
+        },
+        "deploymentStrategy": {
+            "type": "string"
+        },
+        "extraEnvVarsCrossplane": {
+            "type": "object"
+        },
+        "extraEnvVarsRBACManager": {
+            "type": "object"
+        },
+        "giantswarm": {
+            "type": "object",
+            "properties": {
+                "crds": {
+                    "type": "object",
+                    "properties": {
+                        "install": {
+                            "type": "boolean"
+                        },
+                        "resources": {
+                            "type": "object",
+                            "properties": {
+                                "limits": {
+                                    "type": "object",
+                                    "properties": {
+                                        "cpu": {
+                                            "type": "string"
+                                        },
+                                        "memory": {
+                                            "type": "string"
+                                        }
+                                    }
+                                },
+                                "requests": {
+                                    "type": "object",
+                                    "properties": {
+                                        "cpu": {
+                                            "type": "string"
+                                        },
+                                        "memory": {
+                                            "type": "string"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "crossplane": {
+                    "type": "object",
+                    "properties": {
+                        "providers": {
+                            "type": "object",
+                            "properties": {
+                                "config": {
+                                    "type": "object",
+                                    "properties": {
+                                        "ignoreCrossplaneConstraints": {
+                                            "type": "boolean"
+                                        },
+                                        "packagePullPolicy": {
+                                            "type": "string"
+                                        },
+                                        "revisionActivationPolicy": {
+                                            "type": "string"
+                                        },
+                                        "revisionHistoryLimit": {
+                                            "type": "integer"
+                                        },
+                                        "skipDependencyResolution": {
+                                            "type": "boolean"
+                                        }
+                                    }
+                                },
+                                "contribAws": {
+                                    "type": "object",
+                                    "properties": {
+                                        "controllerConfig": {
+                                            "type": "object",
+                                            "properties": {
+                                                "args": {
+                                                    "type": "array",
+                                                    "items": {
+                                                        "type": "string"
+                                                    }
+                                                },
+                                                "image": {
+                                                    "type": "string"
+                                                }
+                                            }
+                                        },
+                                        "version": {
+                                            "type": "string"
+                                        }
+                                    }
+                                },
+                                "upboundAws": {
+                                    "type": "object",
+                                    "properties": {
+                                        "controllerConfig": {
+                                            "type": "object",
+                                            "properties": {
+                                                "args": {
+                                                    "type": "array",
+                                                    "items": {
+                                                        "type": "string"
+                                                    }
+                                                },
+                                                "image": {
+                                                    "type": "string"
+                                                }
+                                            }
+                                        },
+                                        "version": {
+                                            "type": "string"
+                                        }
+                                    }
+                                },
+                                "upboundAzure": {
+                                    "type": "object",
+                                    "properties": {
+                                        "controllerConfig": {
+                                            "type": "object",
+                                            "properties": {
+                                                "args": {
+                                                    "type": "array",
+                                                    "items": {
+                                                        "type": "string"
+                                                    }
+                                                },
+                                                "image": {
+                                                    "type": "string"
+                                                }
+                                            }
+                                        },
+                                        "version": {
+                                            "type": "string"
+                                        }
+                                    }
+                                },
+                                "upboundGcp": {
+                                    "type": "object",
+                                    "properties": {
+                                        "controllerConfig": {
+                                            "type": "object",
+                                            "properties": {
+                                                "args": {
+                                                    "type": "array",
+                                                    "items": {
+                                                        "type": "string"
+                                                    }
+                                                },
+                                                "image": {
+                                                    "type": "string"
+                                                }
+                                            }
+                                        },
+                                        "version": {
+                                            "type": "string"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "images": {
+                    "type": "object",
+                    "properties": {
+                        "crossplane": {
+                            "type": "object",
+                            "properties": {
+                                "image": {
+                                    "type": "string"
+                                }
+                            }
+                        },
+                        "pullPolicy": {
+                            "type": "string"
+                        },
+                        "registry": {
+                            "type": "string"
+                        }
+                    }
+                },
+                "kubernetes": {
+                    "type": "object",
+                    "properties": {
+                        "provider": {
+                            "type": "object",
+                            "properties": {
+                                "kind": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "imagePullSecrets": {
+            "type": "object"
+        },
+        "leaderElection": {
+            "type": "boolean"
+        },
+        "metrics": {
+            "type": "object",
+            "properties": {
+                "enabled": {
+                    "type": "boolean"
+                }
+            }
+        },
+        "nodeSelector": {
+            "type": "object"
+        },
+        "packageCache": {
+            "type": "object",
+            "properties": {
+                "medium": {
+                    "type": "string"
+                },
+                "pvc": {
+                    "type": "string"
+                },
+                "sizeLimit": {
+                    "type": "string"
+                }
+            }
+        },
+        "podSecurityContextCrossplane": {
+            "type": "object"
+        },
+        "podSecurityContextRBACManager": {
+            "type": "object"
+        },
+        "priorityClassName": {
+            "type": "string"
+        },
+        "provider": {
+            "type": "object",
+            "properties": {
+                "packages": {
+                    "type": "array"
+                }
+            }
+        },
+        "rbacManager": {
+            "type": "object",
+            "properties": {
+                "affinity": {
+                    "type": "object"
+                },
+                "args": {
+                    "type": "object"
+                },
+                "deploy": {
+                    "type": "boolean"
+                },
+                "leaderElection": {
+                    "type": "boolean"
+                },
+                "managementPolicy": {
+                    "type": "string"
+                },
+                "nodeSelector": {
+                    "type": "object"
+                },
+                "replicas": {
+                    "type": "integer"
+                },
+                "skipAggregatedClusterRoles": {
+                    "type": "boolean"
+                },
+                "tolerations": {
+                    "type": "object"
+                }
+            }
+        },
+        "registryCaBundleConfig": {
+            "type": "object"
+        },
+        "replicas": {
+            "type": "integer"
+        },
+        "resourcesCrossplane": {
+            "type": "object",
+            "properties": {
+                "limits": {
+                    "type": "object",
+                    "properties": {
+                        "cpu": {
+                            "type": "string"
+                        },
+                        "memory": {
+                            "type": "string"
+                        }
+                    }
+                },
+                "requests": {
+                    "type": "object",
+                    "properties": {
+                        "cpu": {
+                            "type": "string"
+                        },
+                        "memory": {
+                            "type": "string"
+                        }
+                    }
+                }
+            }
+        },
+        "resourcesRBACManager": {
+            "type": "object",
+            "properties": {
+                "limits": {
+                    "type": "object",
+                    "properties": {
+                        "cpu": {
+                            "type": "string"
+                        },
+                        "memory": {
+                            "type": "string"
+                        }
+                    }
+                },
+                "requests": {
+                    "type": "object",
+                    "properties": {
+                        "cpu": {
+                            "type": "string"
+                        },
+                        "memory": {
+                            "type": "string"
+                        }
+                    }
+                }
+            }
+        },
+        "securityContextCrossplane": {
+            "type": "object",
+            "properties": {
+                "allowPrivilegeEscalation": {
+                    "type": "boolean"
+                },
+                "readOnlyRootFilesystem": {
+                    "type": "boolean"
+                },
+                "runAsGroup": {
+                    "type": "integer"
+                },
+                "runAsUser": {
+                    "type": "integer"
+                }
+            }
+        },
+        "securityContextRBACManager": {
+            "type": "object",
+            "properties": {
+                "allowPrivilegeEscalation": {
+                    "type": "boolean"
+                },
+                "readOnlyRootFilesystem": {
+                    "type": "boolean"
+                },
+                "runAsGroup": {
+                    "type": "integer"
+                },
+                "runAsUser": {
+                    "type": "integer"
+                }
+            }
+        },
+        "serviceAccount": {
+            "type": "object",
+            "properties": {
+                "customAnnotations": {
+                    "type": "object"
+                }
+            }
+        },
+        "tolerations": {
+            "type": "object"
+        },
+        "webhooks": {
+            "type": "object",
+            "properties": {
+                "enabled": {
+                    "type": "boolean"
+                }
+            }
+        }
+    }
+}
