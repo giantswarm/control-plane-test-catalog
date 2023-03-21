@@ -8221,6 +8221,29 @@ entries:
     version: 2.3.1-b9571bf01457268b0624fc0f771c1df6b66f3b80
   cert-manager-app:
   - annotations:
+      application.giantswarm.io/metadata: https://giantswarm.github.io/control-plane-test-catalog/cert-manager-app-2.20.2-cdd15bd849e4d5589e2a5a33407e1d61f437f96d.tgz-meta/main.yaml
+      application.giantswarm.io/readme: https://giantswarm.github.io/control-plane-test-catalog/cert-manager-app-2.20.2-cdd15bd849e4d5589e2a5a33407e1d61f437f96d.tgz-meta/README.md
+      application.giantswarm.io/team: team-cabbage
+      application.giantswarm.io/values-schema: https://giantswarm.github.io/control-plane-test-catalog/cert-manager-app-2.20.2-cdd15bd849e4d5589e2a5a33407e1d61f437f96d.tgz-meta/values.schema.json
+    apiVersion: v2
+    appVersion: 1.8.2
+    created: "2023-03-21T13:11:33.550968717Z"
+    dependencies:
+    - name: cert-manager-giantswarm-clusterissuer
+      repository: ""
+      version: 1.2.0
+    description: Simplifies the process of obtaining, renewing and using certificates.
+    digest: 683d18a5c6eb5c89ed6462264100950d3f4b3ec87e3bf432cfd559e8fc980617
+    home: https://github.com/giantswarm/cert-manager-app
+    icon: https://s.giantswarm.io/app-icons/cert-manager/1/light.svg
+    kubeVersion: '>=1.18.0-0'
+    name: cert-manager-app
+    sources:
+    - https://github.com/cert-manager/cert-manager
+    urls:
+    - https://giantswarm.github.io/control-plane-test-catalog/cert-manager-app-2.20.2-cdd15bd849e4d5589e2a5a33407e1d61f437f96d.tgz
+    version: 2.20.2-cdd15bd849e4d5589e2a5a33407e1d61f437f96d
+  - annotations:
       application.giantswarm.io/metadata: https://giantswarm.github.io/control-plane-test-catalog/cert-manager-app-2.20.2-a53657ce2a409c630fe9102dc3f98178921c9fd7.tgz-meta/main.yaml
       application.giantswarm.io/readme: https://giantswarm.github.io/control-plane-test-catalog/cert-manager-app-2.20.2-a53657ce2a409c630fe9102dc3f98178921c9fd7.tgz-meta/README.md
       application.giantswarm.io/team: team-cabbage
@@ -56592,4 +56615,4 @@ entries:
     urls:
     - https://giantswarm.github.io/control-plane-test-catalog/vertical-pod-autoscaler-crd-1.0.1-3862f35c0471277053cedef5f9d8fcc9c50b355b.tgz
     version: 1.0.1-3862f35c0471277053cedef5f9d8fcc9c50b355b
-generated: "2023-03-21T13:09:39.758533511Z"
+generated: "2023-03-21T13:11:33.547618545Z"
