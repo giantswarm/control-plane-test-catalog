@@ -36678,6 +36678,29 @@ entries:
     version: 1.13.0-156b4a7ca57f54b9af4ca67f49e6ff93f1e18d48
   nginx-ingress-controller-app:
   - annotations:
+      application.giantswarm.io/metadata: https://giantswarm.github.io/control-plane-test-catalog/nginx-ingress-controller-app-2.27.0.tgz-meta/main.yaml
+      application.giantswarm.io/readme: https://giantswarm.github.io/control-plane-test-catalog/nginx-ingress-controller-app-2.27.0.tgz-meta/README.md
+      application.giantswarm.io/team: team-cabbage
+      application.giantswarm.io/values-schema: https://giantswarm.github.io/control-plane-test-catalog/nginx-ingress-controller-app-2.27.0.tgz-meta/values.schema.json
+    apiVersion: v2
+    appVersion: 1.6.4
+    created: "2023-03-23T11:48:50.37251633Z"
+    description: Ingress controller for Kubernetes using NGINX as a reverse proxy
+      and load balancer
+    digest: 182abd3b3ac64dfab2ba5aa41819d8d04d14be147fabaf35775bc5c0d2ec3d24
+    home: https://github.com/giantswarm/nginx-ingress-controller-app
+    icon: https://s.giantswarm.io/app-icons/nginx-ingress-controller/2/icon_dark.svg
+    keywords:
+    - ingress
+    - nginx
+    kubeVersion: '>=1.20.0-0'
+    name: nginx-ingress-controller-app
+    sources:
+    - https://github.com/kubernetes/ingress-nginx
+    urls:
+    - https://giantswarm.github.io/control-plane-test-catalog/nginx-ingress-controller-app-2.27.0.tgz
+    version: 2.27.0
+  - annotations:
       application.giantswarm.io/metadata: https://giantswarm.github.io/control-plane-test-catalog/nginx-ingress-controller-app-2.27.0-ebbc1ab57f9ef84d2c2e26391d62acfc01dd575d.tgz-meta/main.yaml
       application.giantswarm.io/readme: https://giantswarm.github.io/control-plane-test-catalog/nginx-ingress-controller-app-2.27.0-ebbc1ab57f9ef84d2c2e26391d62acfc01dd575d.tgz-meta/README.md
       application.giantswarm.io/team: team-cabbage
@@ -60942,4 +60965,4 @@ entries:
     urls:
     - https://giantswarm.github.io/control-plane-test-catalog/vertical-pod-autoscaler-crd-1.0.1-3862f35c0471277053cedef5f9d8fcc9c50b355b.tgz
     version: 1.0.1-3862f35c0471277053cedef5f9d8fcc9c50b355b
-generated: "2023-03-23T11:45:04.354381153Z"
+generated: "2023-03-23T11:48:50.369024259Z"
