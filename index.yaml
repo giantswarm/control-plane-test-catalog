@@ -52481,6 +52481,42 @@ entries:
     urls:
     - https://giantswarm.github.io/control-plane-test-catalog/release-operator-3.2.0-262a90a786fe44b1ff4305e796a2e5a5a5b2e61e.tgz
     version: 3.2.0-262a90a786fe44b1ff4305e796a2e5a5a5b2e61e
+  rook-operator:
+  - annotations:
+      application.giantswarm.io/metadata: https://giantswarm.github.io/control-plane-test-catalog/rook-operator-2.4.0.tgz-meta/main.yaml
+      application.giantswarm.io/readme: https://giantswarm.github.io/control-plane-test-catalog/rook-operator-2.4.0.tgz-meta/README.md
+      application.giantswarm.io/team: team-rocket
+      application.giantswarm.io/values-schema: https://giantswarm.github.io/control-plane-test-catalog/rook-operator-2.4.0.tgz-meta/values.schema.json
+      config.giantswarm.io/version: 1.x.x
+    apiVersion: v2
+    appVersion: 1.7.11
+    created: "2023-03-23T10:35:31.18485738Z"
+    dependencies:
+    - name: monitoring
+      repository: ""
+      version: 0.2.0
+    - name: rook-ceph-cluster
+      repository: ""
+      version: 0.0.1
+    description: File, Block, and Object Storage Services for your Cloud-Native Environment
+    digest: 295f36ee91ec455325152cea210d99b8e81a7801233fc41679e409eca0a005d5
+    home: https://github.com/giantswarm/rook-operator-app
+    icon: https://s.giantswarm.io/app-icons/2/svg/rook-dark.svg
+    keywords:
+    - operator
+    - rook
+    - ceph
+    kubeVersion: '>=1.16.0'
+    maintainers:
+    - name: travisn
+    - name: galexrt
+    - name: jbw976
+    name: rook-operator
+    sources:
+    - https://github.com/rook/rook
+    urls:
+    - https://giantswarm.github.io/control-plane-test-catalog/rook-operator-2.4.0.tgz
+    version: 2.4.0
   route53-manager:
   - annotations:
       application.giantswarm.io/team: phoenix
@@ -60691,4 +60727,4 @@ entries:
     urls:
     - https://giantswarm.github.io/control-plane-test-catalog/vertical-pod-autoscaler-crd-1.0.1-3862f35c0471277053cedef5f9d8fcc9c50b355b.tgz
     version: 1.0.1-3862f35c0471277053cedef5f9d8fcc9c50b355b
-generated: "2023-03-23T10:35:13.535629103Z"
+generated: "2023-03-23T10:35:31.178741741Z"
