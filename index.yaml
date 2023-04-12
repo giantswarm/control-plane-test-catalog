@@ -26855,6 +26855,31 @@ entries:
     urls:
     - https://giantswarm.github.io/control-plane-test-catalog/mimir-0.1.0-8afef0578650f993f6d4b43134d026b4e39de417.tgz
     version: 0.1.0-8afef0578650f993f6d4b43134d026b4e39de417
+  - annotations:
+      application.giantswarm.io/metadata: https://giantswarm.github.io/control-plane-test-catalog/mimir-0.1.0-52eb215fbd5732d220ed259cc50e6fa210ba2040.tgz-meta/main.yaml
+      application.giantswarm.io/readme: https://giantswarm.github.io/control-plane-test-catalog/mimir-0.1.0-52eb215fbd5732d220ed259cc50e6fa210ba2040.tgz-meta/README.md
+      application.giantswarm.io/team: atlas
+      application.giantswarm.io/values-schema: https://giantswarm.github.io/control-plane-test-catalog/mimir-0.1.0-52eb215fbd5732d220ed259cc50e6fa210ba2040.tgz-meta/values.schema.json
+    apiVersion: v2
+    appVersion: 2.7.1
+    created: "2023-04-12T08:47:12.339138998Z"
+    dependencies:
+    - name: mimir-distributed
+      repository: https://grafana.github.io/helm-charts
+      version: 4.3.0
+    description: A Helm chart for grafana's Mimir
+    digest: 996467094cf23b19f564a5a11862a5b84ee2c684a6a58c232799eb94a9e66053
+    home: https://github.com/giantswarm/mimir-app
+    icon: https://s.giantswarm.io/app-icons/grafana-mimir/1/light-icon.svg
+    maintainers:
+    - email: team-atlas@giantswarm.io
+      name: giantswarm/team-atlas
+    name: mimir
+    sources:
+    - https://github.com/grafana/mimir/tree/main/operations/helm/charts/mimir-distributed
+    urls:
+    - https://giantswarm.github.io/control-plane-test-catalog/mimir-0.1.0-52eb215fbd5732d220ed259cc50e6fa210ba2040.tgz
+    version: 0.1.0-52eb215fbd5732d220ed259cc50e6fa210ba2040
   net-exporter:
   - annotations:
       config.giantswarm.io/version: 1.x.x
@@ -49097,4 +49122,4 @@ entries:
     urls:
     - https://giantswarm.github.io/control-plane-test-catalog/vertical-pod-autoscaler-crd-1.0.1-3862f35c0471277053cedef5f9d8fcc9c50b355b.tgz
     version: 1.0.1-3862f35c0471277053cedef5f9d8fcc9c50b355b
-generated: "2023-04-12T08:45:57.051021927Z"
+generated: "2023-04-12T08:47:12.324279514Z"
