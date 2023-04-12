@@ -42897,6 +42897,33 @@ entries:
     version: 0.7.1-23a7e18f489a5546a50152faec53aeed1da7af7e
   trivy-operator:
   - annotations:
+      application.giantswarm.io/metadata: https://giantswarm.github.io/control-plane-test-catalog/trivy-operator-0.3.7.tgz-meta/main.yaml
+      application.giantswarm.io/readme: https://giantswarm.github.io/control-plane-test-catalog/trivy-operator-0.3.7.tgz-meta/README.md
+      application.giantswarm.io/team: shield
+      application.giantswarm.io/values-schema: https://giantswarm.github.io/control-plane-test-catalog/trivy-operator-0.3.7.tgz-meta/values.schema.json
+      config.giantswarm.io/version: 1.x.x
+    apiVersion: v2
+    appVersion: 0.2.1
+    created: "2023-04-12T06:02:15.29305098Z"
+    dependencies:
+    - name: trivy-operator
+      repository: ""
+      version: 0.12.0
+    description: A Giant Swarm App for trivy-operator, the cluster security tool from
+      Aqua Security.
+    digest: cfa9445aee4feee6e8c01c1e1d450689ef8241c2ecf64cc2e25db38e8473d904
+    home: https://github.com/giantswarm/trivy-operator-app
+    icon: https://s.giantswarm.io/app-icons/trivy/1/light.svg
+    maintainers:
+    - name: Giant Swarm applications team
+      url: https://github.com/giantswarm/trivy-operator-app
+    name: trivy-operator
+    sources:
+    - https://github.com/aquasecurity/trivy-operator
+    urls:
+    - https://giantswarm.github.io/control-plane-test-catalog/trivy-operator-0.3.7.tgz
+    version: 0.3.7
+  - annotations:
       application.giantswarm.io/metadata: https://giantswarm.github.io/control-plane-test-catalog/trivy-operator-0.3.6-f36d7b72ac24212f0e5b2b2223c706c1e4f932e1.tgz-meta/main.yaml
       application.giantswarm.io/readme: https://giantswarm.github.io/control-plane-test-catalog/trivy-operator-0.3.6-f36d7b72ac24212f0e5b2b2223c706c1e4f932e1.tgz-meta/README.md
       application.giantswarm.io/team: shield
@@ -48447,4 +48474,4 @@ entries:
     urls:
     - https://giantswarm.github.io/control-plane-test-catalog/vertical-pod-autoscaler-crd-1.0.1-3862f35c0471277053cedef5f9d8fcc9c50b355b.tgz
     version: 1.0.1-3862f35c0471277053cedef5f9d8fcc9c50b355b
-generated: "2023-04-12T05:53:30.434071171Z"
+generated: "2023-04-12T06:02:15.289976487Z"
