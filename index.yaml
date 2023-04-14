@@ -27909,6 +27909,31 @@ entries:
     version: 2.0.0-06b6ca7fdd806406fcf459250cbf4e7a3cb4d255
   mimir:
   - annotations:
+      application.giantswarm.io/metadata: https://giantswarm.github.io/control-plane-test-catalog/mimir-0.1.0-f79f5ad5388086149a166a45b5b200da4b205517.tgz-meta/main.yaml
+      application.giantswarm.io/readme: https://giantswarm.github.io/control-plane-test-catalog/mimir-0.1.0-f79f5ad5388086149a166a45b5b200da4b205517.tgz-meta/README.md
+      application.giantswarm.io/team: atlas
+      application.giantswarm.io/values-schema: https://giantswarm.github.io/control-plane-test-catalog/mimir-0.1.0-f79f5ad5388086149a166a45b5b200da4b205517.tgz-meta/values.schema.json
+    apiVersion: v2
+    appVersion: 2.7.1
+    created: "2023-04-14T07:53:19.200447699Z"
+    dependencies:
+    - name: mimir-distributed
+      repository: https://grafana.github.io/helm-charts
+      version: 4.3.0
+    description: A Helm chart for grafana's Mimir
+    digest: f258f6a03c264b327e4053a91caea6ec3b1147c2ff15b031442ac04341783cc1
+    home: https://github.com/giantswarm/mimir-app
+    icon: https://s.giantswarm.io/app-icons/grafana-mimir/1/light-icon.svg
+    maintainers:
+    - email: team-atlas@giantswarm.io
+      name: giantswarm/team-atlas
+    name: mimir
+    sources:
+    - https://github.com/grafana/mimir/tree/main/operations/helm/charts/mimir-distributed
+    urls:
+    - https://giantswarm.github.io/control-plane-test-catalog/mimir-0.1.0-f79f5ad5388086149a166a45b5b200da4b205517.tgz
+    version: 0.1.0-f79f5ad5388086149a166a45b5b200da4b205517
+  - annotations:
       application.giantswarm.io/metadata: https://giantswarm.github.io/control-plane-test-catalog/mimir-0.1.0-f02fb2e9122b98e7fd65385414c85e36b2ecd467.tgz-meta/main.yaml
       application.giantswarm.io/readme: https://giantswarm.github.io/control-plane-test-catalog/mimir-0.1.0-f02fb2e9122b98e7fd65385414c85e36b2ecd467.tgz-meta/README.md
       application.giantswarm.io/team: atlas
@@ -51588,4 +51613,4 @@ entries:
     urls:
     - https://giantswarm.github.io/control-plane-test-catalog/vertical-pod-autoscaler-crd-1.0.1-3862f35c0471277053cedef5f9d8fcc9c50b355b.tgz
     version: 1.0.1-3862f35c0471277053cedef5f9d8fcc9c50b355b
-generated: "2023-04-14T07:53:08.384021492Z"
+generated: "2023-04-14T07:53:19.183606027Z"
