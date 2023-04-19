@@ -32373,6 +32373,32 @@ entries:
     - https://giantswarm.github.io/control-plane-test-catalog/mimir-0.1.0-44d9ae71aef69a752660140ba9688869192f8b4f.tgz
     version: 0.1.0-44d9ae71aef69a752660140ba9688869192f8b4f
   - annotations:
+      application.giantswarm.io/metadata: https://giantswarm.github.io/control-plane-test-catalog/mimir-0.1.0-3f6b97ba0b72ef492fe447658f4f1112eb2a4a06.tgz-meta/main.yaml
+      application.giantswarm.io/readme: https://giantswarm.github.io/control-plane-test-catalog/mimir-0.1.0-3f6b97ba0b72ef492fe447658f4f1112eb2a4a06.tgz-meta/README.md
+      application.giantswarm.io/team: atlas
+      application.giantswarm.io/values-schema: https://giantswarm.github.io/control-plane-test-catalog/mimir-0.1.0-3f6b97ba0b72ef492fe447658f4f1112eb2a4a06.tgz-meta/values.schema.json
+    apiVersion: v2
+    appVersion: 2.7.1
+    created: "2023-04-19T08:35:41.924058703Z"
+    dependencies:
+    - alias: mimir
+      name: mimir-distributed
+      repository: https://grafana.github.io/helm-charts
+      version: 4.3.0
+    description: A Helm chart for grafana's Mimir
+    digest: aeb9218eaa4129606f1510071766a0e774fa186ea520452586b97b760194fcd7
+    home: https://github.com/giantswarm/mimir-app
+    icon: https://s.giantswarm.io/app-icons/grafana-mimir/1/light-icon.svg
+    maintainers:
+    - email: team-atlas@giantswarm.io
+      name: giantswarm/team-atlas
+    name: mimir
+    sources:
+    - https://github.com/grafana/mimir/tree/main/operations/helm/charts/mimir-distributed
+    urls:
+    - https://giantswarm.github.io/control-plane-test-catalog/mimir-0.1.0-3f6b97ba0b72ef492fe447658f4f1112eb2a4a06.tgz
+    version: 0.1.0-3f6b97ba0b72ef492fe447658f4f1112eb2a4a06
+  - annotations:
       application.giantswarm.io/metadata: https://giantswarm.github.io/control-plane-test-catalog/mimir-0.1.0-0dac63716ab0bf2af50a29d7f3b1f160212a5162.tgz-meta/main.yaml
       application.giantswarm.io/readme: https://giantswarm.github.io/control-plane-test-catalog/mimir-0.1.0-0dac63716ab0bf2af50a29d7f3b1f160212a5162.tgz-meta/README.md
       application.giantswarm.io/team: atlas
@@ -58266,4 +58292,4 @@ entries:
     urls:
     - https://giantswarm.github.io/control-plane-test-catalog/vertical-pod-autoscaler-crd-1.0.1-3862f35c0471277053cedef5f9d8fcc9c50b355b.tgz
     version: 1.0.1-3862f35c0471277053cedef5f9d8fcc9c50b355b
-generated: "2023-04-19T08:19:52.482120463Z"
+generated: "2023-04-19T08:35:41.908825331Z"
