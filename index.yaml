@@ -24221,6 +24221,29 @@ entries:
     version: 1.1.7-05142cbcad065ffbbdf8494e2a431430ead711a6
   ingress-nginx:
   - annotations:
+      application.giantswarm.io/metadata: https://giantswarm.github.io/control-plane-test-catalog/ingress-nginx-3.0.0-alpha1-fc9b20c897f5fcba7e695197eebb1d8a3bb9b970.tgz-meta/main.yaml
+      application.giantswarm.io/readme: https://giantswarm.github.io/control-plane-test-catalog/ingress-nginx-3.0.0-alpha1-fc9b20c897f5fcba7e695197eebb1d8a3bb9b970.tgz-meta/README.md
+      application.giantswarm.io/team: team-cabbage
+      application.giantswarm.io/values-schema: https://giantswarm.github.io/control-plane-test-catalog/ingress-nginx-3.0.0-alpha1-fc9b20c897f5fcba7e695197eebb1d8a3bb9b970.tgz-meta/values.schema.json
+    apiVersion: v2
+    appVersion: 1.7.1
+    created: "2023-05-11T08:46:49.896819903Z"
+    description: Ingress controller for Kubernetes using NGINX as a reverse proxy
+      and load balancer
+    digest: b58925d56e184aa12227f0214930bc43e1a733e398615543ce373a3657855d3a
+    home: https://github.com/giantswarm/ingress-nginx-app
+    icon: https://s.giantswarm.io/app-icons/ingress-nginx/2/icon_dark.svg
+    keywords:
+    - ingress
+    - nginx
+    kubeVersion: '>=1.20.0-0'
+    name: ingress-nginx
+    sources:
+    - https://github.com/kubernetes/ingress-nginx
+    urls:
+    - https://giantswarm.github.io/control-plane-test-catalog/ingress-nginx-3.0.0-alpha1-fc9b20c897f5fcba7e695197eebb1d8a3bb9b970.tgz
+    version: 3.0.0-alpha1-fc9b20c897f5fcba7e695197eebb1d8a3bb9b970
+  - annotations:
       application.giantswarm.io/metadata: https://giantswarm.github.io/control-plane-test-catalog/ingress-nginx-3.0.0-alpha1-fb474369918d4606757df5d9abdb941e4d5c6e43.tgz-meta/main.yaml
       application.giantswarm.io/readme: https://giantswarm.github.io/control-plane-test-catalog/ingress-nginx-3.0.0-alpha1-fb474369918d4606757df5d9abdb941e4d5c6e43.tgz-meta/README.md
       application.giantswarm.io/team: team-cabbage
@@ -48919,4 +48942,4 @@ entries:
     urls:
     - https://giantswarm.github.io/control-plane-test-catalog/vertical-pod-autoscaler-crd-2.0.1-0e067e6bd5dc6ab8a541d189fac3e3502dfc215f.tgz
     version: 2.0.1-0e067e6bd5dc6ab8a541d189fac3e3502dfc215f
-generated: "2023-05-11T08:44:30.129378039Z"
+generated: "2023-05-11T08:46:49.891009363Z"
