@@ -21257,6 +21257,35 @@ entries:
     version: 6.2.1-88b2fe9f68af0a86ae2b4330fc450b07b86a3863
   - apiVersion: v2
     appVersion: v4.4.0
+    created: "2023-05-22T08:30:01.240528187Z"
+    dependencies:
+    - condition: vpa.enabled
+      name: vertical-pod-autoscaler-app
+      repository: https://giantswarm.github.io/default-catalog
+      version: 2.5.0
+    - condition: metrics-server.enabled
+      name: metrics-server-app
+      repository: https://giantswarm.github.io/default-catalog
+      version: 1.8.0
+    description: 'Fairwinds Goldilocks is a tool to automatically adjust resource
+      requests and limits. '
+    digest: d50764ab3db1e4aef39d78023241c44c6bf507ac226a993d3f0e294b023ada38
+    home: https://github.com/giantswarm/goldilocks-app
+    icon: https://s.giantswarm.io/app-icons/goldilocks/1/icon_light.svg
+    keywords:
+    - goldilocks
+    - resources
+    - kubernetes
+    maintainers:
+    - name: sudermanjr
+    name: goldilocks-app
+    sources:
+    - https://github.com/FairwindsOps/goldilocks
+    urls:
+    - https://giantswarm.github.io/control-plane-test-catalog/goldilocks-app-6.2.1-08c23d34bf75319d753474ebca03e15e99196410.tgz
+    version: 6.2.1-08c23d34bf75319d753474ebca03e15e99196410
+  - apiVersion: v2
+    appVersion: v4.4.0
     created: "2023-04-24T07:59:05.980478899Z"
     dependencies:
     - condition: vpa.enabled
@@ -55462,4 +55491,4 @@ entries:
     urls:
     - https://giantswarm.github.io/control-plane-test-catalog/vertical-pod-autoscaler-crd-2.0.1-0e067e6bd5dc6ab8a541d189fac3e3502dfc215f.tgz
     version: 2.0.1-0e067e6bd5dc6ab8a541d189fac3e3502dfc215f
-generated: "2023-05-22T08:29:53.407825135Z"
+generated: "2023-05-22T08:30:01.236119234Z"
