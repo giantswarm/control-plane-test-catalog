@@ -33863,6 +33863,35 @@ entries:
     urls:
     - https://giantswarm.github.io/control-plane-test-catalog/kyverno-policies-ux-0.2.3-05fdb728bc5a6d3e4aefb8f447062efbb74ed6fb.tgz
     version: 0.2.3-05fdb728bc5a6d3e4aefb8f447062efbb74ed6fb
+  loki:
+  - annotations:
+      application.giantswarm.io/metadata: https://giantswarm.github.io/control-plane-test-catalog/loki-0.9.2-eb5f0042e2a1f9656e0fba1007c531f3cda7e08c.tgz-meta/main.yaml
+      application.giantswarm.io/readme: https://giantswarm.github.io/control-plane-test-catalog/loki-0.9.2-eb5f0042e2a1f9656e0fba1007c531f3cda7e08c.tgz-meta/README.md
+      application.giantswarm.io/team: atlas
+      application.giantswarm.io/values-schema: https://giantswarm.github.io/control-plane-test-catalog/loki-0.9.2-eb5f0042e2a1f9656e0fba1007c531f3cda7e08c.tgz-meta/values.schema.json
+      ui.giantswarm.io/logo: https://s.giantswarm.io/app-icons/grafana-loki/2/dark.svg
+    apiVersion: v2
+    appVersion: 2.8.2
+    created: "2023-06-13T13:39:53.96690217Z"
+    dependencies:
+    - condition: loki.enabled
+      name: loki
+      repository: https://grafana.github.io/helm-charts
+      version: 5.6.4
+    description: Helm chart for Grafana Loki in simple, scalable mode
+    digest: 06678879c4e40cc35fdc52ac8fe220ed6f0976ee005c5ae16c1511d87bb5826e
+    home: https://github.com/giantswarm/loki-app
+    icon: https://s.giantswarm.io/app-icons/loki-stack/1/dark.svg
+    maintainers:
+    - email: team-atlas@giantswarm.io
+      name: giantswarm/team-atlas
+    name: loki
+    sources:
+    - https://github.com/giantswarm/loki-app
+    type: application
+    urls:
+    - https://giantswarm.github.io/control-plane-test-catalog/loki-0.9.2-eb5f0042e2a1f9656e0fba1007c531f3cda7e08c.tgz
+    version: 0.9.2-eb5f0042e2a1f9656e0fba1007c531f3cda7e08c
   macropower-analytics-panel-server:
   - annotations:
       application.giantswarm.io/team: atlas
@@ -48368,4 +48397,4 @@ entries:
     urls:
     - https://giantswarm.github.io/control-plane-test-catalog/vertical-pod-autoscaler-crd-2.0.1-1707b8254b180134b96da3cb109b6508e947988c.tgz
     version: 2.0.1-1707b8254b180134b96da3cb109b6508e947988c
-generated: "2023-06-13T13:21:12.781951879Z"
+generated: "2023-06-13T13:39:53.952848881Z"
