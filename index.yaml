@@ -33920,6 +33920,34 @@ entries:
     urls:
     - https://giantswarm.github.io/control-plane-test-catalog/loki-0.9.2-62c3d272dfa64518e6f24113f50ec7624e544f89.tgz
     version: 0.9.2-62c3d272dfa64518e6f24113f50ec7624e544f89
+  - annotations:
+      application.giantswarm.io/metadata: https://giantswarm.github.io/control-plane-test-catalog/loki-0.9.2-0c6a700184079035620cce78cd2b8ccc95f0acd5.tgz-meta/main.yaml
+      application.giantswarm.io/readme: https://giantswarm.github.io/control-plane-test-catalog/loki-0.9.2-0c6a700184079035620cce78cd2b8ccc95f0acd5.tgz-meta/README.md
+      application.giantswarm.io/team: atlas
+      application.giantswarm.io/values-schema: https://giantswarm.github.io/control-plane-test-catalog/loki-0.9.2-0c6a700184079035620cce78cd2b8ccc95f0acd5.tgz-meta/values.schema.json
+      ui.giantswarm.io/logo: https://s.giantswarm.io/app-icons/grafana-loki/2/dark.svg
+    apiVersion: v2
+    appVersion: 2.8.2
+    created: "2023-06-13T13:53:42.400216553Z"
+    dependencies:
+    - condition: loki.enabled
+      name: loki
+      repository: https://grafana.github.io/helm-charts
+      version: 5.6.4
+    description: Helm chart for Grafana Loki in simple, scalable mode
+    digest: d0fa7c92bd36c216b149be235a090a4a8d2f8774ce7c57f07520cf763ddc1175
+    home: https://github.com/giantswarm/loki-app
+    icon: https://s.giantswarm.io/app-icons/loki-stack/1/dark.svg
+    maintainers:
+    - email: team-atlas@giantswarm.io
+      name: giantswarm/team-atlas
+    name: loki
+    sources:
+    - https://github.com/giantswarm/loki-app
+    type: application
+    urls:
+    - https://giantswarm.github.io/control-plane-test-catalog/loki-0.9.2-0c6a700184079035620cce78cd2b8ccc95f0acd5.tgz
+    version: 0.9.2-0c6a700184079035620cce78cd2b8ccc95f0acd5
   macropower-analytics-panel-server:
   - annotations:
       application.giantswarm.io/team: atlas
@@ -48425,4 +48453,4 @@ entries:
     urls:
     - https://giantswarm.github.io/control-plane-test-catalog/vertical-pod-autoscaler-crd-2.0.1-1707b8254b180134b96da3cb109b6508e947988c.tgz
     version: 2.0.1-1707b8254b180134b96da3cb109b6508e947988c
-generated: "2023-06-13T13:53:02.868515253Z"
+generated: "2023-06-13T13:53:42.385519767Z"
