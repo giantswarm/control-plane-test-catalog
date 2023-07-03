@@ -15130,6 +15130,34 @@ entries:
     urls:
     - https://giantswarm.github.io/control-plane-test-catalog/fluent-logshipping-app-2.2.0-1e7858c750c4724ffec010f5de17d87cda21a765.tgz
     version: 2.2.0-1e7858c750c4724ffec010f5de17d87cda21a765
+  goldilocks:
+  - apiVersion: v2
+    appVersion: v4.8.3
+    created: "2023-07-03T10:10:43.861796247Z"
+    dependencies:
+    - condition: vpa.enabled
+      name: vpa
+      repository: https://charts.fairwinds.com/stable
+      version: 1.7.5
+    - condition: metrics-server.enabled
+      name: metrics-server
+      repository: https://charts.bitnami.com/bitnami
+      version: 6.4.1
+    description: 'A Helm chart for running Fairwinds Goldilocks. See https://github.com/FairwindsOps/goldilocks '
+    digest: 8f91fe604fe60210d115c18146227f954ab973da3f1cd16befde418c2174f766
+    icon: https://raw.githubusercontent.com/FairwindsOps/charts/master/stable/goldilocks/icon.png
+    keywords:
+    - goldilocks
+    - resources
+    - kubernetes
+    maintainers:
+    - name: sudermanjr
+    name: goldilocks
+    sources:
+    - https://github.com/FairwindsOps/goldilocks
+    urls:
+    - https://giantswarm.github.io/control-plane-test-catalog/goldilocks-6.2.1-40f80dbf3c3cbec7c1261e3a0781101e4dad81f0.tgz
+    version: 6.2.1-40f80dbf3c3cbec7c1261e3a0781101e4dad81f0
   goldilocks-app:
   - apiVersion: v2
     appVersion: v4.4.0
@@ -37981,4 +38009,4 @@ entries:
     urls:
     - https://giantswarm.github.io/control-plane-test-catalog/vertical-pod-autoscaler-crd-2.0.1-429027a2afab5255f7dd04bd6a802a0367377fac.tgz
     version: 2.0.1-429027a2afab5255f7dd04bd6a802a0367377fac
-generated: "2023-07-03T09:57:30.003760814Z"
+generated: "2023-07-03T10:10:43.854140827Z"
