@@ -15145,6 +15145,33 @@ entries:
   goldilocks:
   - apiVersion: v2
     appVersion: v4.8.3
+    created: "2023-07-03T11:21:04.854128883Z"
+    dependencies:
+    - condition: vpa.enabled
+      name: vpa
+      repository: https://charts.fairwinds.com/stable
+      version: 1.7.5
+    - condition: metrics-server.enabled
+      name: metrics-server
+      repository: https://charts.bitnami.com/bitnami
+      version: 6.4.1
+    description: 'A Helm chart for running Fairwinds Goldilocks. See https://github.com/FairwindsOps/goldilocks '
+    digest: 8012427c922ba2d7b54fba69dbbef53599cf5fb7674e2c532f3442c21a8dd29b
+    icon: https://raw.githubusercontent.com/FairwindsOps/charts/master/stable/goldilocks/icon.png
+    keywords:
+    - goldilocks
+    - resources
+    - kubernetes
+    maintainers:
+    - name: sudermanjr
+    name: goldilocks
+    sources:
+    - https://github.com/FairwindsOps/goldilocks
+    urls:
+    - https://giantswarm.github.io/control-plane-test-catalog/goldilocks-6.2.1-cc3bf6a1db569ad24d59f5d8c3a2dc035a7b3494.tgz
+    version: 6.2.1-cc3bf6a1db569ad24d59f5d8c3a2dc035a7b3494
+  - apiVersion: v2
+    appVersion: v4.8.3
     created: "2023-07-03T10:10:43.861796247Z"
     dependencies:
     - condition: vpa.enabled
@@ -38089,4 +38116,4 @@ entries:
     urls:
     - https://giantswarm.github.io/control-plane-test-catalog/vertical-pod-autoscaler-crd-2.0.1-429027a2afab5255f7dd04bd6a802a0367377fac.tgz
     version: 2.0.1-429027a2afab5255f7dd04bd6a802a0367377fac
-generated: "2023-07-03T11:10:59.965753467Z"
+generated: "2023-07-03T11:21:04.848813074Z"
