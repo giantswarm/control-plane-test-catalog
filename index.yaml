@@ -11248,6 +11248,34 @@ entries:
     - https://giantswarm.github.io/control-plane-test-catalog/cert-manager-app-3.0.1-a7fb8eb1df88751670996c7d6bf8f96ae98f4937.tgz
     version: 3.0.1-a7fb8eb1df88751670996c7d6bf8f96ae98f4937
   - annotations:
+      application.giantswarm.io/metadata: https://giantswarm.github.io/control-plane-test-catalog/cert-manager-app-3.0.1-982892e80a7ffb6b02f144185dbfcf68afd176a2.tgz-meta/main.yaml
+      application.giantswarm.io/readme: https://giantswarm.github.io/control-plane-test-catalog/cert-manager-app-3.0.1-982892e80a7ffb6b02f144185dbfcf68afd176a2.tgz-meta/README.md
+      application.giantswarm.io/team: team-cabbage
+      application.giantswarm.io/values-schema: https://giantswarm.github.io/control-plane-test-catalog/cert-manager-app-3.0.1-982892e80a7ffb6b02f144185dbfcf68afd176a2.tgz-meta/values.schema.json
+    apiVersion: v2
+    appVersion: v1.12.3
+    created: "2023-07-26T15:36:16.571389266Z"
+    dependencies:
+    - alias: giantSwarmClusterIssuer
+      name: cert-manager-giantswarm-clusterissuer
+      repository: ""
+      version: 2.0.0
+    - condition: ciliumNetworkPolicy.enabled
+      name: cert-manager-giantswarm-netpol
+      repository: ""
+      version: 0.1.0
+    description: Simplifies the process of obtaining, renewing and using certificates.
+    digest: 1254c80767f3859814ef910d1325649ed0560c542d9f7f0d0babe3a211217a8b
+    home: https://github.com/giantswarm/cert-manager-app
+    icon: https://s.giantswarm.io/app-icons/cert-manager/1/light.svg
+    kubeVersion: '>=1.22.0-0'
+    name: cert-manager-app
+    sources:
+    - https://github.com/cert-manager/cert-manager
+    urls:
+    - https://giantswarm.github.io/control-plane-test-catalog/cert-manager-app-3.0.1-982892e80a7ffb6b02f144185dbfcf68afd176a2.tgz
+    version: 3.0.1-982892e80a7ffb6b02f144185dbfcf68afd176a2
+  - annotations:
       application.giantswarm.io/metadata: https://giantswarm.github.io/control-plane-test-catalog/cert-manager-app-3.0.1-87f0449ea4763dd125116ce2e888b01b530e9584.tgz-meta/main.yaml
       application.giantswarm.io/readme: https://giantswarm.github.io/control-plane-test-catalog/cert-manager-app-3.0.1-87f0449ea4763dd125116ce2e888b01b530e9584.tgz-meta/README.md
       application.giantswarm.io/team: team-cabbage
@@ -63818,4 +63846,4 @@ entries:
     urls:
     - https://giantswarm.github.io/control-plane-test-catalog/vertical-pod-autoscaler-crd-2.0.1-02395a915195fbd1e6db7e11291754036552b393.tgz
     version: 2.0.1-02395a915195fbd1e6db7e11291754036552b393
-generated: "2023-07-26T15:04:20.158106868Z"
+generated: "2023-07-26T15:36:16.56673597Z"
