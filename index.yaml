@@ -22211,6 +22211,41 @@ entries:
     - https://giantswarm.github.io/control-plane-test-catalog/kyverno-0.14.10-813d1f1bfde21b95a8fd2e410981c41e2b1e245e.tgz
     version: 0.14.10-813d1f1bfde21b95a8fd2e410981c41e2b1e245e
   - annotations:
+      application.giantswarm.io/metadata: https://giantswarm.github.io/control-plane-test-catalog/kyverno-0.14.10-6a877e2180eb15e879d5c269d488426925f9ef6c.tgz-meta/main.yaml
+      application.giantswarm.io/readme: https://giantswarm.github.io/control-plane-test-catalog/kyverno-0.14.10-6a877e2180eb15e879d5c269d488426925f9ef6c.tgz-meta/README.md
+      application.giantswarm.io/team: shield
+      application.giantswarm.io/values-schema: https://giantswarm.github.io/control-plane-test-catalog/kyverno-0.14.10-6a877e2180eb15e879d5c269d488426925f9ef6c.tgz-meta/values.schema.json
+      config.giantswarm.io/version: 1.x.x
+    apiVersion: v2
+    appVersion: v1.9.2
+    created: "2023-08-03T12:00:30.131641185Z"
+    dependencies:
+    - name: policy-reporter
+      repository: ""
+      version: 2.19.4
+    - name: kyverno
+      repository: ""
+      version: 3.0.3
+    description: 'Kyverno is a policy engine designed for Kubernetes. It can validate,
+      mutate, and generate configurations using admission controls and background
+      scans. Kyverno policies are Kubernetes resources and do not require learning
+      a new language. '
+    digest: 9d7904b60d1cb9e3e39aa8db8a55596604f753b4c4a26c35c2d70f198bf78e37
+    home: https://github.com/giantswarm/kyverno-app
+    icon: https://s.giantswarm.io/app-icons/kyverno/1/light.svg
+    keywords:
+    - kubernetes
+    - policy agent
+    - validating webhook
+    - admissions controller
+    name: kyverno
+    sources:
+    - https://github.com/kyverno/kyverno
+    type: application
+    urls:
+    - https://giantswarm.github.io/control-plane-test-catalog/kyverno-0.14.10-6a877e2180eb15e879d5c269d488426925f9ef6c.tgz
+    version: 0.14.10-6a877e2180eb15e879d5c269d488426925f9ef6c
+  - annotations:
       application.giantswarm.io/metadata: https://giantswarm.github.io/control-plane-test-catalog/kyverno-0.14.10-6a188c409d942817573e4e2b3f1089da88e79bf8.tgz-meta/main.yaml
       application.giantswarm.io/readme: https://giantswarm.github.io/control-plane-test-catalog/kyverno-0.14.10-6a188c409d942817573e4e2b3f1089da88e79bf8.tgz-meta/README.md
       application.giantswarm.io/team: shield
@@ -34914,4 +34949,4 @@ entries:
     urls:
     - https://giantswarm.github.io/control-plane-test-catalog/vertical-pod-autoscaler-crd-2.0.1-02395a915195fbd1e6db7e11291754036552b393.tgz
     version: 2.0.1-02395a915195fbd1e6db7e11291754036552b393
-generated: "2023-08-03T12:00:26.136859842Z"
+generated: "2023-08-03T12:00:30.091369538Z"
