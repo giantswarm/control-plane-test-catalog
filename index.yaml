@@ -38606,6 +38606,41 @@ entries:
     urls:
     - https://giantswarm.github.io/control-plane-test-catalog/rook-operator-2.4.1-205155c3d30f623bf79bee48f54acc5f24ee1b09.tgz
     version: 2.4.1-205155c3d30f623bf79bee48f54acc5f24ee1b09
+  - annotations:
+      application.giantswarm.io/metadata: https://giantswarm.github.io/control-plane-test-catalog/rook-operator-2.4.1-10d4567bea72da08b2cd4ede9a57180b7cd7eb82.tgz-meta/main.yaml
+      application.giantswarm.io/readme: https://giantswarm.github.io/control-plane-test-catalog/rook-operator-2.4.1-10d4567bea72da08b2cd4ede9a57180b7cd7eb82.tgz-meta/README.md
+      application.giantswarm.io/team: team-rocket
+      application.giantswarm.io/values-schema: https://giantswarm.github.io/control-plane-test-catalog/rook-operator-2.4.1-10d4567bea72da08b2cd4ede9a57180b7cd7eb82.tgz-meta/values.schema.json
+      config.giantswarm.io/version: 1.x.x
+    apiVersion: v2
+    appVersion: 1.7.11
+    created: "2023-09-18T09:55:40.769678953Z"
+    dependencies:
+    - name: monitoring
+      repository: ""
+      version: 0.2.0
+    - name: rook-ceph-cluster
+      repository: ""
+      version: 0.0.1
+    description: File, Block, and Object Storage Services for your Cloud-Native Environment
+    digest: f0437a15c4514bbbdba65843d357b1c110f94c81d440fd0ea276d1bc50ad63a9
+    home: https://github.com/giantswarm/rook-operator-app
+    icon: https://s.giantswarm.io/app-icons/2/svg/rook-dark.svg
+    keywords:
+    - operator
+    - rook
+    - ceph
+    kubeVersion: '>=1.16.0'
+    maintainers:
+    - name: travisn
+    - name: galexrt
+    - name: jbw976
+    name: rook-operator
+    sources:
+    - https://github.com/rook/rook
+    urls:
+    - https://giantswarm.github.io/control-plane-test-catalog/rook-operator-2.4.1-10d4567bea72da08b2cd4ede9a57180b7cd7eb82.tgz
+    version: 2.4.1-10d4567bea72da08b2cd4ede9a57180b7cd7eb82
   route53-manager:
   - annotations:
       application.giantswarm.io/team: phoenix
@@ -44887,4 +44922,4 @@ entries:
     urls:
     - https://giantswarm.github.io/control-plane-test-catalog/vertical-pod-autoscaler-crd-2.0.1-26fb2ef9f02e57e4dad5c48b1c37708aad60819f.tgz
     version: 2.0.1-26fb2ef9f02e57e4dad5c48b1c37708aad60819f
-generated: "2023-09-18T09:55:34.414275294Z"
+generated: "2023-09-18T09:55:40.764229855Z"
