@@ -30800,6 +30800,30 @@ entries:
     urls:
     - https://giantswarm.github.io/control-plane-test-catalog/mimir-0.2.0-22b04e6008eb36d29301e3427b91cb3af50cd579.tgz
     version: 0.2.0-22b04e6008eb36d29301e3427b91cb3af50cd579
+  nginx-ingress-controller-app:
+  - annotations:
+      application.giantswarm.io/metadata: https://giantswarm.github.io/control-plane-test-catalog/nginx-ingress-controller-app-3.0.0-cafa8d02b146c30f2f88f21cf61f25ec726a2e63.tgz-meta/main.yaml
+      application.giantswarm.io/readme: https://giantswarm.github.io/control-plane-test-catalog/nginx-ingress-controller-app-3.0.0-cafa8d02b146c30f2f88f21cf61f25ec726a2e63.tgz-meta/README.md
+      application.giantswarm.io/team: team-cabbage
+      application.giantswarm.io/values-schema: https://giantswarm.github.io/control-plane-test-catalog/nginx-ingress-controller-app-3.0.0-cafa8d02b146c30f2f88f21cf61f25ec726a2e63.tgz-meta/values.schema.json
+    apiVersion: v2
+    appVersion: 1.7.1
+    created: "2023-09-18T06:45:57.407097282Z"
+    description: Ingress controller for Kubernetes using NGINX as a reverse proxy
+      and load balancer
+    digest: 48ef10e6d762db8dbd705b344dafb995a538021fc870b4b0287d26728339d32a
+    home: https://github.com/giantswarm/nginx-ingress-controller-app
+    icon: https://s.giantswarm.io/app-icons/nginx-ingress-controller/2/icon_dark.svg
+    keywords:
+    - ingress
+    - nginx
+    kubeVersion: '>=1.20.0-0'
+    name: nginx-ingress-controller-app
+    sources:
+    - https://github.com/kubernetes/ingress-nginx
+    urls:
+    - https://giantswarm.github.io/control-plane-test-catalog/nginx-ingress-controller-app-3.0.0-cafa8d02b146c30f2f88f21cf61f25ec726a2e63.tgz
+    version: 3.0.0-cafa8d02b146c30f2f88f21cf61f25ec726a2e63
   node-exporter-app:
   - annotations:
       application.giantswarm.io/team: phoenix
@@ -44150,4 +44174,4 @@ entries:
     urls:
     - https://giantswarm.github.io/control-plane-test-catalog/vertical-pod-autoscaler-crd-2.0.1-26fb2ef9f02e57e4dad5c48b1c37708aad60819f.tgz
     version: 2.0.1-26fb2ef9f02e57e4dad5c48b1c37708aad60819f
-generated: "2023-09-18T04:45:25.080530408Z"
+generated: "2023-09-18T06:45:57.403357976Z"
