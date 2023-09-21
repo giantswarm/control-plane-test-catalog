@@ -1,0 +1,83 @@
+{
+    "$schema": "http://json-schema.org/schema#",
+    "type": "object",
+    "properties": {
+        "ciliumNetworkPolicy": {
+            "type": "object",
+            "properties": {
+                "enabled": {
+                    "type": "boolean"
+                }
+            }
+        },
+        "config": {
+            "type": "object",
+            "properties": {
+                "daemonset": {
+                    "type": "object",
+                    "properties": {
+                        "monitorCertificates": {
+                            "type": "boolean"
+                        },
+                        "monitorFiles": {
+                            "type": "boolean"
+                        },
+                        "monitorSecrets": {
+                            "type": "boolean"
+                        }
+                    }
+                },
+                "deployment": {
+                    "type": "object",
+                    "properties": {
+                        "monitorCertificates": {
+                            "type": "boolean"
+                        },
+                        "monitorFiles": {
+                            "type": "boolean"
+                        },
+                        "monitorSecrets": {
+                            "type": "boolean"
+                        }
+                    }
+                }
+            }
+        },
+        "exporter": {
+            "type": "object",
+            "properties": {
+                "capiCertPath": {
+                    "type": "string"
+                },
+                "certPath": {
+                    "type": "string"
+                },
+                "tokenPath": {
+                    "type": "string"
+                }
+            }
+        },
+        "image": {
+            "type": "object",
+            "properties": {
+                "repository": {
+                    "type": "string"
+                },
+                "tag": {
+                    "type": "string"
+                }
+            }
+        },
+        "registry": {
+            "type": "object",
+            "properties": {
+                "domain": {
+                    "type": "string"
+                }
+            }
+        },
+        "vaultAddress": {
+            "type": "string"
+        }
+    }
+}
