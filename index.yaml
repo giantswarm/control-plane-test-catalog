@@ -21034,6 +21034,32 @@ entries:
     urls:
     - https://giantswarm.github.io/control-plane-test-catalog/mimir-0.2.0-435b54784c677775f8a09eac6fd47ed57424c2dd.tgz
     version: 0.2.0-435b54784c677775f8a09eac6fd47ed57424c2dd
+  - annotations:
+      application.giantswarm.io/metadata: https://giantswarm.github.io/control-plane-test-catalog/mimir-0.2.0-36af35525837dc66c488a967b75ad0fe23eb1656.tgz-meta/main.yaml
+      application.giantswarm.io/readme: https://giantswarm.github.io/control-plane-test-catalog/mimir-0.2.0-36af35525837dc66c488a967b75ad0fe23eb1656.tgz-meta/README.md
+      application.giantswarm.io/team: atlas
+      application.giantswarm.io/values-schema: https://giantswarm.github.io/control-plane-test-catalog/mimir-0.2.0-36af35525837dc66c488a967b75ad0fe23eb1656.tgz-meta/values.schema.json
+    apiVersion: v2
+    appVersion: 2.8.0
+    created: "2023-10-05T13:20:28.807859205Z"
+    dependencies:
+    - alias: mimir
+      name: mimir-distributed
+      repository: https://grafana.github.io/helm-charts
+      version: 4.4.1
+    description: A Helm chart for grafana's Mimir
+    digest: 8552ff2154bce71fce8de05e8a608ac5198db1d4cfbffba07ad3765c47f0eb13
+    home: https://github.com/giantswarm/mimir-app
+    icon: https://s.giantswarm.io/app-icons/grafana-mimir/1/light-icon.svg
+    maintainers:
+    - email: team-atlas@giantswarm.io
+      name: giantswarm/team-atlas
+    name: mimir
+    sources:
+    - https://github.com/grafana/mimir/tree/main/operations/helm/charts/mimir-distributed
+    urls:
+    - https://giantswarm.github.io/control-plane-test-catalog/mimir-0.2.0-36af35525837dc66c488a967b75ad0fe23eb1656.tgz
+    version: 0.2.0-36af35525837dc66c488a967b75ad0fe23eb1656
   net-exporter:
   - annotations:
       application.giantswarm.io/team: cabbage
@@ -31427,4 +31453,4 @@ entries:
     urls:
     - https://giantswarm.github.io/control-plane-test-catalog/vertical-pod-autoscaler-crd-2.0.1-8a4b22ce6c9ac0e5a552b543f769730f2ef57a5b.tgz
     version: 2.0.1-8a4b22ce6c9ac0e5a552b543f769730f2ef57a5b
-generated: "2023-10-05T13:20:14.166053358Z"
+generated: "2023-10-05T13:20:28.782643858Z"
