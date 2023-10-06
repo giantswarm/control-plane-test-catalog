@@ -7220,6 +7220,27 @@ entries:
     urls:
     - https://giantswarm.github.io/control-plane-test-catalog/cert-manager-app-2.25.0-11c11abfed1c3d16811efa3009d4776ccff42da6.tgz
     version: 2.25.0-11c11abfed1c3d16811efa3009d4776ccff42da6
+  cert-operator:
+  - annotations:
+      application.giantswarm.io/owners: |
+        - provider: aws
+          team: phoenix
+        - provider: azure
+          team: phoenix
+        - provider: kvm
+          team: rocket
+      config.giantswarm.io/version: 1.x.x
+    apiVersion: v1
+    appVersion: 3.2.2-dev
+    created: "2023-10-06T15:25:06.487066719Z"
+    description: cert-operator creates/manages certificates for Kubernetes clusters
+      running on Giantnetes
+    digest: 78a3b507734b71541d850b37e8856fae03adead5b1212252be125f51e429ade4
+    home: https://github.com/giantswarm/cert-operator
+    name: cert-operator
+    urls:
+    - https://giantswarm.github.io/control-plane-test-catalog/cert-operator-3.2.1-c32cb14d430ef05d13d2a8063f7f9723428f5197.tgz
+    version: 3.2.1-c32cb14d430ef05d13d2a8063f7f9723428f5197
   chart-operator:
   - annotations:
       application.giantswarm.io/team: honeybadger
@@ -33929,4 +33950,4 @@ entries:
     urls:
     - https://giantswarm.github.io/control-plane-test-catalog/vertical-pod-autoscaler-crd-2.0.1-303d428a6c04ef9a78b48b00bc163e0f5d420f00.tgz
     version: 2.0.1-303d428a6c04ef9a78b48b00bc163e0f5d420f00
-generated: "2023-10-06T14:54:08.53183117Z"
+generated: "2023-10-06T15:25:06.485845904Z"
