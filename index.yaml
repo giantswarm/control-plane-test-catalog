@@ -21517,6 +21517,30 @@ entries:
     version: 1.1.14-00d83921e49dfcd07815252ba481bec551014ec7
   ingress-nginx:
   - annotations:
+      application.giantswarm.io/metadata: https://giantswarm.github.io/control-plane-test-catalog/ingress-nginx-3.0.1.tgz-meta/main.yaml
+      application.giantswarm.io/readme: https://giantswarm.github.io/control-plane-test-catalog/ingress-nginx-3.0.1.tgz-meta/README.md
+      application.giantswarm.io/team: team-cabbage
+      application.giantswarm.io/values-schema: https://giantswarm.github.io/control-plane-test-catalog/ingress-nginx-3.0.1.tgz-meta/values.schema.json
+      ui.giantswarm.io/logo: https://s.giantswarm.io/app-icons/ingress-nginx/2/logo_dark.svg
+    apiVersion: v2
+    appVersion: 1.8.2
+    created: "2023-10-12T21:18:25.663687268Z"
+    description: Ingress controller for Kubernetes using NGINX as a reverse proxy
+      and load balancer
+    digest: c29af51cf6a0d6fa55066dab2b08a2106c1dae0d9e612b1949d02b55a6b6ec0b
+    home: https://github.com/giantswarm/ingress-nginx-app
+    icon: https://s.giantswarm.io/app-icons/ingress-nginx/2/icon_dark.svg
+    keywords:
+    - ingress
+    - nginx
+    kubeVersion: '>=1.20.0-0'
+    name: ingress-nginx
+    sources:
+    - https://github.com/kubernetes/ingress-nginx
+    urls:
+    - https://giantswarm.github.io/control-plane-test-catalog/ingress-nginx-3.0.1.tgz
+    version: 3.0.1
+  - annotations:
       application.giantswarm.io/metadata: https://giantswarm.github.io/control-plane-test-catalog/ingress-nginx-3.0.1-ff06bb8a1d7b2b225fc31c2ffa5d204bcb995447.tgz-meta/main.yaml
       application.giantswarm.io/readme: https://giantswarm.github.io/control-plane-test-catalog/ingress-nginx-3.0.1-ff06bb8a1d7b2b225fc31c2ffa5d204bcb995447.tgz-meta/README.md
       application.giantswarm.io/team: team-cabbage
@@ -44297,4 +44321,4 @@ entries:
     urls:
     - https://giantswarm.github.io/control-plane-test-catalog/vertical-pod-autoscaler-crd-2.0.1-303d428a6c04ef9a78b48b00bc163e0f5d420f00.tgz
     version: 2.0.1-303d428a6c04ef9a78b48b00bc163e0f5d420f00
-generated: "2023-10-12T20:10:39.979290485Z"
+generated: "2023-10-12T21:18:25.658146015Z"
