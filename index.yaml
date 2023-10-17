@@ -31934,6 +31934,31 @@ entries:
     version: 0.6.1-1e70e280f61582b69587ea086463afafca7f811e
   memcached:
   - annotations:
+      application.giantswarm.io/metadata: https://giantswarm.github.io/control-plane-test-catalog/memcached-0.1.0-f733252b0e0f212496a516baa6ffcbb484b2c472.tgz-meta/main.yaml
+      application.giantswarm.io/readme: https://giantswarm.github.io/control-plane-test-catalog/memcached-0.1.0-f733252b0e0f212496a516baa6ffcbb484b2c472.tgz-meta/README.md
+      application.giantswarm.io/team: atlas
+      application.giantswarm.io/values-schema: https://giantswarm.github.io/control-plane-test-catalog/memcached-0.1.0-f733252b0e0f212496a516baa6ffcbb484b2c472.tgz-meta/values.schema.json
+    apiVersion: v2
+    appVersion: 1.6.21
+    created: "2023-10-17T09:52:55.410326126Z"
+    dependencies:
+    - name: memcached
+      repository: oci://registry-1.docker.io/bitnamicharts
+      version: 6.6.2
+    description: Caching solution
+    digest: 86f5c63667fb9199eaea8b028f96d2eb263661fb5f032829592c39ec7fe99f00
+    home: https://github.com/giantswarm/memcached
+    maintainers:
+    - email: team-atlas@giantswarm.io
+      name: giantswarm/team-atlas
+    name: memcached
+    sources:
+    - https://github.com/bitnami/charts/tree/main/bitnami/memcached
+    type: application
+    urls:
+    - https://giantswarm.github.io/control-plane-test-catalog/memcached-0.1.0-f733252b0e0f212496a516baa6ffcbb484b2c472.tgz
+    version: 0.1.0-f733252b0e0f212496a516baa6ffcbb484b2c472
+  - annotations:
       application.giantswarm.io/metadata: https://giantswarm.github.io/control-plane-test-catalog/memcached-0.0.0-d7308467806e8114f14eccaab72fdb321259ca33.tgz-meta/main.yaml
       application.giantswarm.io/readme: https://giantswarm.github.io/control-plane-test-catalog/memcached-0.0.0-d7308467806e8114f14eccaab72fdb321259ca33.tgz-meta/README.md
       application.giantswarm.io/team: atlas
@@ -47011,4 +47036,4 @@ entries:
     urls:
     - https://giantswarm.github.io/control-plane-test-catalog/vertical-pod-autoscaler-crd-2.0.1-303d428a6c04ef9a78b48b00bc163e0f5d420f00.tgz
     version: 2.0.1-303d428a6c04ef9a78b48b00bc163e0f5d420f00
-generated: "2023-10-17T09:49:30.647703402Z"
+generated: "2023-10-17T09:52:55.406675154Z"
