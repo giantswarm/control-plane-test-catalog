@@ -34278,6 +34278,31 @@ entries:
     version: 2.5.0-0a7e8ed616b1c1ad1bb4b3a10faf54549c1312a7
   grafana-agent:
   - annotations:
+      application.giantswarm.io/metadata: https://giantswarm.github.io/control-plane-test-catalog/grafana-agent-0.2.1-a2680733f6ae27b992051b52777c2188000a19ee.tgz-meta/main.yaml
+      application.giantswarm.io/readme: https://giantswarm.github.io/control-plane-test-catalog/grafana-agent-0.2.1-a2680733f6ae27b992051b52777c2188000a19ee.tgz-meta/README.md
+      application.giantswarm.io/team: atlas
+      application.giantswarm.io/values-schema: https://giantswarm.github.io/control-plane-test-catalog/grafana-agent-0.2.1-a2680733f6ae27b992051b52777c2188000a19ee.tgz-meta/values.schema.json
+    apiVersion: v2
+    appVersion: v0.37.0
+    created: "2023-11-07T12:58:02.51667199Z"
+    dependencies:
+    - name: grafana-agent
+      repository: https://grafana.github.io/helm-charts
+      version: 0.27.2
+    description: Giant Swarm's Grafana Agent Deployment
+    digest: 1a12771bd9b3111e6b45f1b9faf1eaa7af4dfdb80f342f391d91a4c91d2831e2
+    home: https://github.com/giantswarm/grafana-agent-app
+    icon: https://s.giantswarm.io/app-icons/grafana/1/light.svg
+    maintainers:
+    - email: team-atlas@giantswarm.io
+      name: giantswarm/team-atlas
+    name: grafana-agent
+    sources:
+    - https://github.com/grafana/agent/tree/main/operations/helm/charts/grafana-agent
+    urls:
+    - https://giantswarm.github.io/control-plane-test-catalog/grafana-agent-0.2.1-a2680733f6ae27b992051b52777c2188000a19ee.tgz
+    version: 0.2.1-a2680733f6ae27b992051b52777c2188000a19ee
+  - annotations:
       application.giantswarm.io/metadata: https://giantswarm.github.io/control-plane-test-catalog/grafana-agent-0.2.1-4a43fa8966226dd6b9c618a3ad27b33c5ffc82aa.tgz-meta/main.yaml
       application.giantswarm.io/readme: https://giantswarm.github.io/control-plane-test-catalog/grafana-agent-0.2.1-4a43fa8966226dd6b9c618a3ad27b33c5ffc82aa.tgz-meta/README.md
       application.giantswarm.io/team: atlas
@@ -68255,4 +68280,4 @@ entries:
     urls:
     - https://giantswarm.github.io/control-plane-test-catalog/vertical-pod-autoscaler-crd-2.0.1-066c2f418783cdee6ed2671981b4e6885cbb164e.tgz
     version: 2.0.1-066c2f418783cdee6ed2671981b4e6885cbb164e
-generated: "2023-11-07T12:51:09.877292604Z"
+generated: "2023-11-07T12:58:02.514647495Z"
