@@ -46065,6 +46065,42 @@ entries:
     urls:
     - https://giantswarm.github.io/control-plane-test-catalog/release-operator-4.1.1-052df30880177627bb5570a6b7882aee3debb28e.tgz
     version: 4.1.1-052df30880177627bb5570a6b7882aee3debb28e
+  rook-operator:
+  - annotations:
+      application.giantswarm.io/metadata: https://giantswarm.github.io/control-plane-test-catalog/rook-operator-2.4.1-3778215eb55f82a3dea891efc845e68dc06b8c3d.tgz-meta/main.yaml
+      application.giantswarm.io/readme: https://giantswarm.github.io/control-plane-test-catalog/rook-operator-2.4.1-3778215eb55f82a3dea891efc845e68dc06b8c3d.tgz-meta/README.md
+      application.giantswarm.io/team: team-rocket
+      application.giantswarm.io/values-schema: https://giantswarm.github.io/control-plane-test-catalog/rook-operator-2.4.1-3778215eb55f82a3dea891efc845e68dc06b8c3d.tgz-meta/values.schema.json
+      config.giantswarm.io/version: 1.x.x
+    apiVersion: v2
+    appVersion: 1.7.11
+    created: "2024-02-05T04:31:33.825772074Z"
+    dependencies:
+    - name: monitoring
+      repository: ""
+      version: 0.2.0
+    - name: rook-ceph-cluster
+      repository: ""
+      version: 0.0.1
+    description: File, Block, and Object Storage Services for your Cloud-Native Environment
+    digest: c24ae65a1ab91896eecd23e256370a781a92ea4f10189e5164a592287eeda22f
+    home: https://github.com/giantswarm/rook-operator-app
+    icon: https://s.giantswarm.io/app-icons/2/svg/rook-dark.svg
+    keywords:
+    - operator
+    - rook
+    - ceph
+    kubeVersion: '>=1.16.0'
+    maintainers:
+    - name: travisn
+    - name: galexrt
+    - name: jbw976
+    name: rook-operator
+    sources:
+    - https://github.com/rook/rook
+    urls:
+    - https://giantswarm.github.io/control-plane-test-catalog/rook-operator-2.4.1-3778215eb55f82a3dea891efc845e68dc06b8c3d.tgz
+    version: 2.4.1-3778215eb55f82a3dea891efc845e68dc06b8c3d
   route53-manager:
   - annotations:
       application.giantswarm.io/team: phoenix
@@ -55791,4 +55827,4 @@ entries:
     urls:
     - https://giantswarm.github.io/control-plane-test-catalog/vertical-pod-autoscaler-crd-2.0.1-03aaf184a9547454049fd3c00a435102c894192f.tgz
     version: 2.0.1-03aaf184a9547454049fd3c00a435102c894192f
-generated: "2024-02-05T04:24:14.654015465Z"
+generated: "2024-02-05T04:31:33.819386163Z"
