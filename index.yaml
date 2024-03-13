@@ -28270,6 +28270,32 @@ entries:
     - https://giantswarm.github.io/control-plane-test-catalog/grafana-agent-0.4.1-6bd1d729cc4434f909d7e6ee85b716d677c04847.tgz
     version: 0.4.1-6bd1d729cc4434f909d7e6ee85b716d677c04847
   - annotations:
+      application.giantswarm.io/metadata: https://giantswarm.github.io/control-plane-test-catalog/grafana-agent-0.4.1-484ff6766bb54fb44cef8bf35575255af9b48779.tgz-meta/main.yaml
+      application.giantswarm.io/readme: https://giantswarm.github.io/control-plane-test-catalog/grafana-agent-0.4.1-484ff6766bb54fb44cef8bf35575255af9b48779.tgz-meta/README.md
+      application.giantswarm.io/team: atlas
+      application.giantswarm.io/values-schema: https://giantswarm.github.io/control-plane-test-catalog/grafana-agent-0.4.1-484ff6766bb54fb44cef8bf35575255af9b48779.tgz-meta/values.schema.json
+    apiVersion: v2
+    appVersion: v0.37.0
+    created: "2024-03-13T10:34:50.003404755Z"
+    dependencies:
+    - condition: grafana-agent.enabled
+      name: grafana-agent
+      repository: https://grafana.github.io/helm-charts
+      version: 0.27.0
+    description: Giant Swarm's Grafana Agent Deployment
+    digest: 6c7057db271d6f04f24de0c593a2024ee46ee7f2f5dad63aa2ee705545379413
+    home: https://github.com/giantswarm/grafana-agent-app
+    icon: https://s.giantswarm.io/app-icons/grafana/1/light.svg
+    maintainers:
+    - email: team-atlas@giantswarm.io
+      name: giantswarm/team-atlas
+    name: grafana-agent
+    sources:
+    - https://github.com/grafana/agent/tree/main/operations/helm/charts/grafana-agent
+    urls:
+    - https://giantswarm.github.io/control-plane-test-catalog/grafana-agent-0.4.1-484ff6766bb54fb44cef8bf35575255af9b48779.tgz
+    version: 0.4.1-484ff6766bb54fb44cef8bf35575255af9b48779
+  - annotations:
       application.giantswarm.io/metadata: https://giantswarm.github.io/control-plane-test-catalog/grafana-agent-0.4.1-41c0dcf1573f0ded2ff8f1d594255ccf66d1c5cf.tgz-meta/main.yaml
       application.giantswarm.io/readme: https://giantswarm.github.io/control-plane-test-catalog/grafana-agent-0.4.1-41c0dcf1573f0ded2ff8f1d594255ccf66d1c5cf.tgz-meta/README.md
       application.giantswarm.io/team: atlas
@@ -60952,4 +60978,4 @@ entries:
     urls:
     - https://giantswarm.github.io/control-plane-test-catalog/vertical-pod-autoscaler-crd-3.0.0-24c89a311fa9547d3c3b663e46b1b1b21b00a8b1.tgz
     version: 3.0.0-24c89a311fa9547d3c3b663e46b1b1b21b00a8b1
-generated: "2024-03-13T10:33:10.43697491Z"
+generated: "2024-03-13T10:34:50.001294815Z"
