@@ -1,0 +1,45 @@
+{
+    "$schema": "http://json-schema.org/schema#",
+    "type": "object",
+    "properties": {
+        "mimir": {
+            "type": "object",
+            "properties": {
+                "enabled": {
+                    "type": "boolean"
+                },
+                "prometheusVersion": {
+                    "type": "string"
+                }
+            }
+        },
+        "name": {
+            "type": "string"
+        },
+        "remoteWrite": {
+            "type": "object",
+            "properties": {
+                "grafanaCloud": {
+                    "type": "object",
+                    "properties": {
+                        "apiKey": {
+                            "type": "string"
+                        },
+                        "insecureSkipVerify": {
+                            "type": "boolean"
+                        },
+                        "url": {
+                            "type": "string"
+                        },
+                        "username": {
+                            "type": "string"
+                        }
+                    }
+                }
+            }
+        },
+        "serviceType": {
+            "type": "string"
+        }
+    }
+}
