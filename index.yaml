@@ -61003,6 +61003,41 @@ entries:
     version: 4.1.1-0e4be54c08a70d80752595770b9c6c29095effc6
   rook-operator:
   - annotations:
+      application.giantswarm.io/metadata: https://giantswarm.github.io/control-plane-test-catalog/rook-operator-2.4.1-f0ff70d8691d843e2a68cb1b40fccca97b9c3d8f.tgz-meta/main.yaml
+      application.giantswarm.io/readme: https://giantswarm.github.io/control-plane-test-catalog/rook-operator-2.4.1-f0ff70d8691d843e2a68cb1b40fccca97b9c3d8f.tgz-meta/README.md
+      application.giantswarm.io/team: team-rocket
+      application.giantswarm.io/values-schema: https://giantswarm.github.io/control-plane-test-catalog/rook-operator-2.4.1-f0ff70d8691d843e2a68cb1b40fccca97b9c3d8f.tgz-meta/values.schema.json
+      config.giantswarm.io/version: 1.x.x
+    apiVersion: v2
+    appVersion: 1.7.11
+    created: "2024-03-18T11:31:04.484979297Z"
+    dependencies:
+    - name: monitoring
+      repository: ""
+      version: 0.2.0
+    - name: rook-ceph-cluster
+      repository: ""
+      version: 0.0.1
+    description: File, Block, and Object Storage Services for your Cloud-Native Environment
+    digest: 47ad5c81fc53d93641ff52efde5ef3c87445e981c7f003cbbf56f867addd8ee5
+    home: https://github.com/giantswarm/rook-operator-app
+    icon: https://s.giantswarm.io/app-icons/2/svg/rook-dark.svg
+    keywords:
+    - operator
+    - rook
+    - ceph
+    kubeVersion: '>=1.16.0'
+    maintainers:
+    - name: travisn
+    - name: galexrt
+    - name: jbw976
+    name: rook-operator
+    sources:
+    - https://github.com/rook/rook
+    urls:
+    - https://giantswarm.github.io/control-plane-test-catalog/rook-operator-2.4.1-f0ff70d8691d843e2a68cb1b40fccca97b9c3d8f.tgz
+    version: 2.4.1-f0ff70d8691d843e2a68cb1b40fccca97b9c3d8f
+  - annotations:
       application.giantswarm.io/metadata: https://giantswarm.github.io/control-plane-test-catalog/rook-operator-2.4.1-c12a010e3076c5ef841131d014882a6adc8c66e1.tgz-meta/main.yaml
       application.giantswarm.io/readme: https://giantswarm.github.io/control-plane-test-catalog/rook-operator-2.4.1-c12a010e3076c5ef841131d014882a6adc8c66e1.tgz-meta/README.md
       application.giantswarm.io/team: team-rocket
@@ -69215,4 +69250,4 @@ entries:
     urls:
     - https://giantswarm.github.io/control-plane-test-catalog/vertical-pod-autoscaler-crd-3.0.0-24c89a311fa9547d3c3b663e46b1b1b21b00a8b1.tgz
     version: 3.0.0-24c89a311fa9547d3c3b663e46b1b1b21b00a8b1
-generated: "2024-03-18T11:30:38.659017799Z"
+generated: "2024-03-18T11:31:04.478648504Z"
