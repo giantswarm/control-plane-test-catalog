@@ -1,0 +1,100 @@
+{
+    "$schema": "http://json-schema.org/schema#",
+    "type": "object",
+    "properties": {
+        "mimir": {
+            "type": "object",
+            "properties": {
+                "enabled": {
+                    "type": "boolean"
+                },
+                "prometheusVersion": {
+                    "type": "string"
+                }
+            }
+        },
+        "name": {
+            "type": "string"
+        },
+        "remoteWrite": {
+            "type": "object",
+            "properties": {
+                "grafanaCloud": {
+                    "type": "object",
+                    "properties": {
+                        "apiKey": {
+                            "type": "string"
+                        },
+                        "filteredMetrics": {
+                            "type": "string"
+                        },
+                        "insecureSkipVerify": {
+                            "type": "boolean"
+                        },
+                        "url": {
+                            "type": "string"
+                        },
+                        "username": {
+                            "type": "string"
+                        }
+                    }
+                },
+                "mimir": {
+                    "type": "object",
+                    "properties": {
+                        "enabled": {
+                            "type": "boolean"
+                        },
+                        "filteredMetrics": {
+                            "type": "string"
+                        },
+                        "prometheus": {
+                            "type": "object",
+                            "properties": {
+                                "resources": {
+                                    "type": "object",
+                                    "properties": {
+                                        "limits": {
+                                            "type": "object",
+                                            "properties": {
+                                                "cpu": {
+                                                    "type": "string"
+                                                },
+                                                "memory": {
+                                                    "type": "string"
+                                                }
+                                            }
+                                        },
+                                        "requests": {
+                                            "type": "object",
+                                            "properties": {
+                                                "cpu": {
+                                                    "type": "string"
+                                                },
+                                                "memory": {
+                                                    "type": "string"
+                                                }
+                                            }
+                                        }
+                                    }
+                                },
+                                "version": {
+                                    "type": "string"
+                                }
+                            }
+                        },
+                        "pushUrl": {
+                            "type": "string"
+                        },
+                        "readUrl": {
+                            "type": "string"
+                        }
+                    }
+                }
+            }
+        },
+        "serviceType": {
+            "type": "string"
+        }
+    }
+}
