@@ -28925,6 +28925,33 @@ entries:
     urls:
     - https://giantswarm.github.io/control-plane-test-catalog/mimir-0.4.3-2cd81ee670afd96bc8bfce4f6da299a79dfb376e.tgz
     version: 0.4.3-2cd81ee670afd96bc8bfce4f6da299a79dfb376e
+  - annotations:
+      application.giantswarm.io/metadata: https://giantswarm.github.io/control-plane-test-catalog/mimir-0.4.3-0d3299c7bb6e9fedc2c76a49b152d3cd2f17358a.tgz-meta/main.yaml
+      application.giantswarm.io/readme: https://giantswarm.github.io/control-plane-test-catalog/mimir-0.4.3-0d3299c7bb6e9fedc2c76a49b152d3cd2f17358a.tgz-meta/README.md
+      application.giantswarm.io/team: atlas
+      application.giantswarm.io/values-schema: https://giantswarm.github.io/control-plane-test-catalog/mimir-0.4.3-0d3299c7bb6e9fedc2c76a49b152d3cd2f17358a.tgz-meta/values.schema.json
+    apiVersion: v2
+    appVersion: 2.11.0
+    created: "2024-04-02T12:13:16.912484095Z"
+    dependencies:
+    - alias: mimir
+      condition: mimir.enabled
+      name: mimir-distributed
+      repository: https://grafana.github.io/helm-charts
+      version: 5.3.0-weekly.283
+    description: A Helm chart for grafana's Mimir
+    digest: b3f80b30b371bd26310b0ee902b75368c18919c5c754d2e32a4a29386fc1c17c
+    home: https://github.com/giantswarm/mimir-app
+    icon: https://s.giantswarm.io/app-icons/grafana-mimir/1/light-icon.svg
+    maintainers:
+    - email: team-atlas@giantswarm.io
+      name: giantswarm/team-atlas
+    name: mimir
+    sources:
+    - https://github.com/grafana/mimir/tree/main/operations/helm/charts/mimir-distributed
+    urls:
+    - https://giantswarm.github.io/control-plane-test-catalog/mimir-0.4.3-0d3299c7bb6e9fedc2c76a49b152d3cd2f17358a.tgz
+    version: 0.4.3-0d3299c7bb6e9fedc2c76a49b152d3cd2f17358a
   net-exporter:
   - annotations:
       application.giantswarm.io/team: cabbage
@@ -43267,4 +43294,4 @@ entries:
     urls:
     - https://giantswarm.github.io/control-plane-test-catalog/vertical-pod-autoscaler-crd-3.0.0-2ccd8d9ecc17818d9edafa94a483045c6a35167e.tgz
     version: 3.0.0-2ccd8d9ecc17818d9edafa94a483045c6a35167e
-generated: "2024-04-02T12:12:51.562156462Z"
+generated: "2024-04-02T12:13:16.892943162Z"
