@@ -45759,6 +45759,32 @@ entries:
     version: 0.6.3-276bc9c0087efc58bb2abbe47ec24cc1078a9519
   memcached:
   - annotations:
+      application.giantswarm.io/metadata: https://giantswarm.github.io/control-plane-test-catalog/memcached-0.1.4-ec7664247826bfcd8e4e8f84e65699abfcd1eb0d.tgz-meta/main.yaml
+      application.giantswarm.io/readme: https://giantswarm.github.io/control-plane-test-catalog/memcached-0.1.4-ec7664247826bfcd8e4e8f84e65699abfcd1eb0d.tgz-meta/README.md
+      application.giantswarm.io/team: atlas
+      application.giantswarm.io/values-schema: https://giantswarm.github.io/control-plane-test-catalog/memcached-0.1.4-ec7664247826bfcd8e4e8f84e65699abfcd1eb0d.tgz-meta/values.schema.json
+    apiVersion: v2
+    appVersion: 1.6.21
+    created: "2024-05-08T14:35:33.605788923Z"
+    dependencies:
+    - name: memcached
+      repository: oci://registry-1.docker.io/bitnamicharts
+      version: 7.0.3
+    description: Caching solution
+    digest: f3e875e8461cb6c200b44781ccf68e223edf7e48b66da05b70e3509ce2a29a91
+    home: https://github.com/giantswarm/memcached
+    icon: https://s.giantswarm.io/app-icons/giantswarm/1/light.svg
+    maintainers:
+    - email: team-atlas@giantswarm.io
+      name: giantswarm/team-atlas
+    name: memcached
+    sources:
+    - https://github.com/bitnami/charts/tree/main/bitnami/memcached
+    type: application
+    urls:
+    - https://giantswarm.github.io/control-plane-test-catalog/memcached-0.1.4-ec7664247826bfcd8e4e8f84e65699abfcd1eb0d.tgz
+    version: 0.1.4-ec7664247826bfcd8e4e8f84e65699abfcd1eb0d
+  - annotations:
       application.giantswarm.io/metadata: https://giantswarm.github.io/control-plane-test-catalog/memcached-0.1.4-6b54caa2d1eec087580f1a55c6b04b94e4b0116a.tgz-meta/main.yaml
       application.giantswarm.io/readme: https://giantswarm.github.io/control-plane-test-catalog/memcached-0.1.4-6b54caa2d1eec087580f1a55c6b04b94e4b0116a.tgz-meta/README.md
       application.giantswarm.io/team: atlas
@@ -67465,4 +67491,4 @@ entries:
     urls:
     - https://giantswarm.github.io/control-plane-test-catalog/vertical-pod-autoscaler-crd-3.0.0-1b1fa3c2e4572fdd9e702fc6deb3de6376471512.tgz
     version: 3.0.0-1b1fa3c2e4572fdd9e702fc6deb3de6376471512
-generated: "2024-05-08T14:31:54.433826909Z"
+generated: "2024-05-08T14:35:33.601428346Z"
