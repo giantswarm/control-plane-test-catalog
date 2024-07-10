@@ -38332,6 +38332,33 @@ entries:
     version: 2.4.2-0360b34f63b077d51ff027753f9be371cc2112ca
   mimir:
   - annotations:
+      application.giantswarm.io/metadata: https://giantswarm.github.io/control-plane-test-catalog/mimir-0.8.0-a2eac77f8f4521c810c465564d38e969bacfad6c.tgz-meta/main.yaml
+      application.giantswarm.io/readme: https://giantswarm.github.io/control-plane-test-catalog/mimir-0.8.0-a2eac77f8f4521c810c465564d38e969bacfad6c.tgz-meta/README.md
+      application.giantswarm.io/team: atlas
+      application.giantswarm.io/values-schema: https://giantswarm.github.io/control-plane-test-catalog/mimir-0.8.0-a2eac77f8f4521c810c465564d38e969bacfad6c.tgz-meta/values.schema.json
+    apiVersion: v2
+    appVersion: 2.12.0
+    created: "2024-07-10T15:22:32.227410097Z"
+    dependencies:
+    - alias: mimir
+      condition: mimir.enabled
+      name: mimir-distributed
+      repository: https://grafana.github.io/helm-charts
+      version: 5.3.0
+    description: A Helm chart for grafana's Mimir
+    digest: efc776dbe5fee403e491c7919a15ee7b82055c4b533f2a3c0ec8c3b68dbc06f7
+    home: https://github.com/giantswarm/mimir-app
+    icon: https://s.giantswarm.io/app-icons/grafana-mimir/1/light-icon.svg
+    maintainers:
+    - email: team-atlas@giantswarm.io
+      name: giantswarm/team-atlas
+    name: mimir
+    sources:
+    - https://github.com/grafana/mimir/tree/main/operations/helm/charts/mimir-distributed
+    urls:
+    - https://giantswarm.github.io/control-plane-test-catalog/mimir-0.8.0-a2eac77f8f4521c810c465564d38e969bacfad6c.tgz
+    version: 0.8.0-a2eac77f8f4521c810c465564d38e969bacfad6c
+  - annotations:
       application.giantswarm.io/metadata: https://giantswarm.github.io/control-plane-test-catalog/mimir-0.7.0.tgz-meta/main.yaml
       application.giantswarm.io/readme: https://giantswarm.github.io/control-plane-test-catalog/mimir-0.7.0.tgz-meta/README.md
       application.giantswarm.io/team: atlas
@@ -63343,4 +63370,4 @@ entries:
     urls:
     - https://giantswarm.github.io/control-plane-test-catalog/vertical-pod-autoscaler-crd-3.1.0-14854e7aa4cbb0157c6699d6b5865c59e8825d1b.tgz
     version: 3.1.0-14854e7aa4cbb0157c6699d6b5865c59e8825d1b
-generated: "2024-07-10T15:22:03.648905458Z"
+generated: "2024-07-10T15:22:32.199547027Z"
