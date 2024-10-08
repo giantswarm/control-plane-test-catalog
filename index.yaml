@@ -18724,6 +18724,32 @@ entries:
     urls:
     - https://giantswarm.github.io/control-plane-test-catalog/grafana-agent-0.0.0-977581c2bc36382e28c9acb5e8940fdfa8df2d98.tgz
     version: 0.0.0-977581c2bc36382e28c9acb5e8940fdfa8df2d98
+  - annotations:
+      application.giantswarm.io/metadata: https://giantswarm.github.io/control-plane-test-catalog/grafana-agent-0.0.0-7686aece7686f72089913f0161a93272c77b0e32.tgz-meta/main.yaml
+      application.giantswarm.io/readme: https://giantswarm.github.io/control-plane-test-catalog/grafana-agent-0.0.0-7686aece7686f72089913f0161a93272c77b0e32.tgz-meta/README.md
+      application.giantswarm.io/team: atlas
+      application.giantswarm.io/values-schema: https://giantswarm.github.io/control-plane-test-catalog/grafana-agent-0.0.0-7686aece7686f72089913f0161a93272c77b0e32.tgz-meta/values.schema.json
+    apiVersion: v2
+    appVersion: v0.37.0
+    created: "2024-10-08T10:18:31.836351748Z"
+    dependencies:
+    - condition: grafana-agent.enabled
+      name: grafana-agent
+      repository: https://grafana.github.io/helm-charts
+      version: 0.27.0
+    description: Giant Swarm's Grafana Agent Deployment
+    digest: 7cd064aafd4233b815d3b0d31098887bbdbc78233076022ee1d702908d722c46
+    home: https://github.com/giantswarm/grafana-agent-app
+    icon: https://s.giantswarm.io/app-icons/grafana/1/light.svg
+    maintainers:
+    - email: team-atlas@giantswarm.io
+      name: giantswarm/team-atlas
+    name: grafana-agent
+    sources:
+    - https://github.com/grafana/agent/tree/main/operations/helm/charts/grafana-agent
+    urls:
+    - https://giantswarm.github.io/control-plane-test-catalog/grafana-agent-0.0.0-7686aece7686f72089913f0161a93272c77b0e32.tgz
+    version: 0.0.0-7686aece7686f72089913f0161a93272c77b0e32
   grafana-multi-tenant-proxy:
   - annotations:
       application.giantswarm.io/metadata: https://giantswarm.github.io/control-plane-test-catalog/grafana-multi-tenant-proxy-0.8.0.tgz-meta/main.yaml
@@ -45611,4 +45637,4 @@ entries:
     urls:
     - https://giantswarm.github.io/control-plane-test-catalog/vertical-pod-autoscaler-crd-3.1.0-1dd8e32a92d1918c58a86265a368324d3fe22563.tgz
     version: 3.1.0-1dd8e32a92d1918c58a86265a368324d3fe22563
-generated: "2024-10-08T10:18:20.716003789Z"
+generated: "2024-10-08T10:18:31.833793324Z"
