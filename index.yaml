@@ -46509,6 +46509,30 @@ entries:
     - https://giantswarm.github.io/control-plane-test-catalog/observability-operator-0.8.1-a0ac585b65d97aa1cf438cc784e23a389bca771c.tgz
     version: 0.8.1-a0ac585b65d97aa1cf438cc784e23a389bca771c
   - annotations:
+      application.giantswarm.io/metadata: https://giantswarm.github.io/control-plane-test-catalog/observability-operator-0.8.1-900c190f615e519c7ef6074cbb37673a37cb36de.tgz-meta/main.yaml
+      application.giantswarm.io/readme: https://giantswarm.github.io/control-plane-test-catalog/observability-operator-0.8.1-900c190f615e519c7ef6074cbb37673a37cb36de.tgz-meta/README.md
+      application.giantswarm.io/team: atlas
+      application.giantswarm.io/values-schema: https://giantswarm.github.io/control-plane-test-catalog/observability-operator-0.8.1-900c190f615e519c7ef6074cbb37673a37cb36de.tgz-meta/values.schema.json
+      config.giantswarm.io/version: 1.x.x
+    apiVersion: v2
+    appVersion: 0.8.1-900c190f615e519c7ef6074cbb37673a37cb36de
+    created: "2024-10-22T08:31:16.215697985Z"
+    dependencies:
+    - alias: grafana
+      condition: grafana.enabled
+      name: grafana
+      repository: https://giantswarm.github.io/control-plane-catalog/
+      version: 2.16.3
+    description: The observability-operator manages the Giant Swarm observability
+      platform.
+    digest: 3bf507caef61daaab428867d11dea1b6f25ad589afb387afed3d298d07581caa
+    home: https://github.com/giantswarm/observability-operator
+    icon: https://s.giantswarm.io/app-icons/giantswarm/1/light.svg
+    name: observability-operator
+    urls:
+    - https://giantswarm.github.io/control-plane-test-catalog/observability-operator-0.8.1-900c190f615e519c7ef6074cbb37673a37cb36de.tgz
+    version: 0.8.1-900c190f615e519c7ef6074cbb37673a37cb36de
+  - annotations:
       application.giantswarm.io/metadata: https://giantswarm.github.io/control-plane-test-catalog/observability-operator-0.8.1-8b6620f2e532ba53ba638776ed5549ec7cb8e818.tgz-meta/main.yaml
       application.giantswarm.io/readme: https://giantswarm.github.io/control-plane-test-catalog/observability-operator-0.8.1-8b6620f2e532ba53ba638776ed5549ec7cb8e818.tgz-meta/README.md
       application.giantswarm.io/team: atlas
@@ -67019,4 +67043,4 @@ entries:
     urls:
     - https://giantswarm.github.io/control-plane-test-catalog/vertical-pod-autoscaler-crd-0.0.0-9925886a8b029918200779e160c758cfb3c660dc.tgz
     version: 0.0.0-9925886a8b029918200779e160c758cfb3c660dc
-generated: "2024-10-22T08:12:19.250310943Z"
+generated: "2024-10-22T08:31:16.208059032Z"
