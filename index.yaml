@@ -23287,6 +23287,46 @@ entries:
     - https://giantswarm.github.io/control-plane-test-catalog/falco-0.9.1-6289f9294e1ed32d692c60d526629930fae453e2.tgz
     version: 0.9.1-6289f9294e1ed32d692c60d526629930fae453e2
   - annotations:
+      application.giantswarm.io/metadata: https://giantswarm.github.io/control-plane-test-catalog/falco-0.9.1-6278165611052bd92ad50162fb17d7a5e4572654.tgz-meta/main.yaml
+      application.giantswarm.io/readme: https://giantswarm.github.io/control-plane-test-catalog/falco-0.9.1-6278165611052bd92ad50162fb17d7a5e4572654.tgz-meta/README.md
+      application.giantswarm.io/team: shield
+      application.giantswarm.io/values-schema: https://giantswarm.github.io/control-plane-test-catalog/falco-0.9.1-6278165611052bd92ad50162fb17d7a5e4572654.tgz-meta/values.schema.json
+      config.giantswarm.io/version: 1.x.x
+      ui.giantswarm.io/logo: https://s.giantswarm.io/app-icons/falco/2/logo_dark.svg
+    apiVersion: v2
+    appVersion: 0.38.1
+    created: "2024-11-21T12:40:51.634459448Z"
+    dependencies:
+    - condition: falco.enabled
+      name: falco
+      repository: ""
+      version: 4.6.1
+    - condition: falco-exporter.enabled
+      name: falco-exporter
+      repository: ""
+      version: 0.11.0
+    - condition: falcosidekick.enabled
+      name: falcosidekick
+      repository: ""
+      version: 0.8.2
+    - condition: k8s-metacollector.enabled
+      name: k8s-metacollector
+      repository: ""
+      version: 0.1.8
+    description: A Helm chart for falco
+    digest: cac6fe07c40635bf21c31b652f46b3d20bc8ede70de9cea87695b82178c30b89
+    home: https://github.com/giantswarm/falco-app
+    icon: https://s.giantswarm.io/app-icons/falco/2/icon_dark.svg
+    maintainers:
+    - name: Giant Swarm applications team
+      url: https://github.com/giantswarm/falco-app
+    name: falco
+    sources:
+    - https://github.com/giantswarm/falco-app
+    urls:
+    - https://giantswarm.github.io/control-plane-test-catalog/falco-0.9.1-6278165611052bd92ad50162fb17d7a5e4572654.tgz
+    version: 0.9.1-6278165611052bd92ad50162fb17d7a5e4572654
+  - annotations:
       application.giantswarm.io/metadata: https://giantswarm.github.io/control-plane-test-catalog/falco-0.9.1-59dfc405f56a908e982831fa709d4bacb02d9e00.tgz-meta/main.yaml
       application.giantswarm.io/readme: https://giantswarm.github.io/control-plane-test-catalog/falco-0.9.1-59dfc405f56a908e982831fa709d4bacb02d9e00.tgz-meta/README.md
       application.giantswarm.io/team: shield
@@ -67317,4 +67357,4 @@ entries:
     urls:
     - https://giantswarm.github.io/control-plane-test-catalog/vertical-pod-autoscaler-crd-0.0.0-9925886a8b029918200779e160c758cfb3c660dc.tgz
     version: 0.0.0-9925886a8b029918200779e160c758cfb3c660dc
-generated: "2024-11-21T12:30:59.66916767Z"
+generated: "2024-11-21T12:40:51.624055807Z"
