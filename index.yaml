@@ -24370,6 +24370,35 @@ entries:
     - https://giantswarm.github.io/control-plane-test-catalog/tempo-0.1.2-2bc0159cc0d07ac4b7cbba7061312895e1eb7c3d.tgz
     version: 0.1.2-2bc0159cc0d07ac4b7cbba7061312895e1eb7c3d
   - annotations:
+      application.giantswarm.io/metadata: https://giantswarm.github.io/control-plane-test-catalog/tempo-0.1.2-2939e3c24b5cd430755691d238d579b73aa62c38.tgz-meta/main.yaml
+      application.giantswarm.io/readme: https://giantswarm.github.io/control-plane-test-catalog/tempo-0.1.2-2939e3c24b5cd430755691d238d579b73aa62c38.tgz-meta/README.md
+      application.giantswarm.io/team: atlas
+      application.giantswarm.io/values-schema: https://giantswarm.github.io/control-plane-test-catalog/tempo-0.1.2-2939e3c24b5cd430755691d238d579b73aa62c38.tgz-meta/values.schema.json
+    apiVersion: v2
+    appVersion: 2.2.3
+    created: "2024-12-03T16:36:02.598492876Z"
+    dependencies:
+    - alias: tempo
+      condition: tempo.enabled
+      name: tempo-distributed
+      repository: https://grafana.github.io/helm-charts
+      version: 1.23.2
+    description: Helm chart for Grafana Tempo in microservice mode
+    digest: ca11b310a98d57cdb55eb095d8739ca38518859a2902018f165b4823a92654d4
+    home: https://github.com/giantswarm/tempo-app
+    icon: https://s.giantswarm.io/app-icons/grafana-tempo/1/light.svg
+    maintainers:
+    - email: team-atlas@giantswarm.io
+      name: giantswarm/team-atlas
+    name: tempo
+    sources:
+    - https://github.com/giantswarm/tempo-app
+    - https://github.com/grafana/helm-charts/blob/main/charts/tempo-distributed
+    type: application
+    urls:
+    - https://giantswarm.github.io/control-plane-test-catalog/tempo-0.1.2-2939e3c24b5cd430755691d238d579b73aa62c38.tgz
+    version: 0.1.2-2939e3c24b5cd430755691d238d579b73aa62c38
+  - annotations:
       application.giantswarm.io/metadata: https://giantswarm.github.io/control-plane-test-catalog/tempo-0.1.2-25416a8cca513e00204901be91e6bfe7b1e1f940.tgz-meta/main.yaml
       application.giantswarm.io/readme: https://giantswarm.github.io/control-plane-test-catalog/tempo-0.1.2-25416a8cca513e00204901be91e6bfe7b1e1f940.tgz-meta/README.md
       application.giantswarm.io/team: atlas
@@ -25010,4 +25039,4 @@ entries:
     urls:
     - https://giantswarm.github.io/control-plane-test-catalog/upgrade-schedule-operator-0.10.1-17c4ddf67d67ea38e86d9a8a38da4e326f403904.tgz
     version: 0.10.1-17c4ddf67d67ea38e86d9a8a38da4e326f403904
-generated: "2024-12-03T16:07:38.674635866Z"
+generated: "2024-12-03T16:36:02.583791159Z"
