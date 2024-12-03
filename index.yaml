@@ -15729,6 +15729,33 @@ entries:
     - https://giantswarm.github.io/control-plane-test-catalog/mimir-0.14.0-72119b45016cc66a664ae96c7b1eb092db77e315.tgz
     version: 0.14.0-72119b45016cc66a664ae96c7b1eb092db77e315
   - annotations:
+      application.giantswarm.io/metadata: https://giantswarm.github.io/control-plane-test-catalog/mimir-0.14.0-6b3fe6a2f3c819b2373813b48156af3f3d904d1b.tgz-meta/main.yaml
+      application.giantswarm.io/readme: https://giantswarm.github.io/control-plane-test-catalog/mimir-0.14.0-6b3fe6a2f3c819b2373813b48156af3f3d904d1b.tgz-meta/README.md
+      application.giantswarm.io/team: atlas
+      application.giantswarm.io/values-schema: https://giantswarm.github.io/control-plane-test-catalog/mimir-0.14.0-6b3fe6a2f3c819b2373813b48156af3f3d904d1b.tgz-meta/values.schema.json
+    apiVersion: v2
+    appVersion: 2.14.0
+    created: "2024-12-03T13:27:24.414460419Z"
+    dependencies:
+    - alias: mimir
+      condition: mimir.enabled
+      name: mimir-distributed
+      repository: https://grafana.github.io/helm-charts
+      version: 5.6.0-weekly.319
+    description: A Helm chart for grafana's Mimir
+    digest: 59a3655f13c2080d85ab471fe32bc82d4f2a4552225ea8bd6ac97ae848b48a35
+    home: https://github.com/giantswarm/mimir-app
+    icon: https://s.giantswarm.io/app-icons/grafana-mimir/1/light-icon.svg
+    maintainers:
+    - email: team-atlas@giantswarm.io
+      name: giantswarm/team-atlas
+    name: mimir
+    sources:
+    - https://github.com/grafana/mimir/tree/main/operations/helm/charts/mimir-distributed
+    urls:
+    - https://giantswarm.github.io/control-plane-test-catalog/mimir-0.14.0-6b3fe6a2f3c819b2373813b48156af3f3d904d1b.tgz
+    version: 0.14.0-6b3fe6a2f3c819b2373813b48156af3f3d904d1b
+  - annotations:
       application.giantswarm.io/metadata: https://giantswarm.github.io/control-plane-test-catalog/mimir-0.14.0-53e747fe647855a603f8ba1b386d60704b2a46f9.tgz-meta/main.yaml
       application.giantswarm.io/readme: https://giantswarm.github.io/control-plane-test-catalog/mimir-0.14.0-53e747fe647855a603f8ba1b386d60704b2a46f9.tgz-meta/README.md
       application.giantswarm.io/team: atlas
@@ -24902,4 +24929,4 @@ entries:
     urls:
     - https://giantswarm.github.io/control-plane-test-catalog/upgrade-schedule-operator-0.10.1-17c4ddf67d67ea38e86d9a8a38da4e326f403904.tgz
     version: 0.10.1-17c4ddf67d67ea38e86d9a8a38da4e326f403904
-generated: "2024-12-03T12:56:22.541445046Z"
+generated: "2024-12-03T13:27:24.383036282Z"
