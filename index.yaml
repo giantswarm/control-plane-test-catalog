@@ -10089,6 +10089,34 @@ entries:
     version: 5.3.0-23909f741bbd03bc5f6a5e27fb1622d239d8273a
   grafana:
   - annotations:
+      application.giantswarm.io/metadata: https://giantswarm.github.io/control-plane-test-catalog/grafana-2.18.0.tgz-meta/main.yaml
+      application.giantswarm.io/readme: https://giantswarm.github.io/control-plane-test-catalog/grafana-2.18.0.tgz-meta/README.md
+      application.giantswarm.io/team: atlas
+      application.giantswarm.io/values-schema: https://giantswarm.github.io/control-plane-test-catalog/grafana-2.18.0.tgz-meta/values.schema.json
+      config.giantswarm.io/version: 1.x.x
+    apiVersion: v2
+    appVersion: 11.3.0
+    created: "2024-12-03T10:23:37.611778981Z"
+    dependencies:
+    - name: grafana
+      repository: https://grafana.github.io/helm-charts
+      version: 8.6.4
+    description: The leading tool for querying and visualizing time series and metrics.
+    digest: 63d0d30162a42a5f698d54394c5041012b400be0f98136d14a63bca1b7276a91
+    home: https://github.com/giantswarm/grafana-app
+    icon: https://s.giantswarm.io/app-icons/grafana/1/light.svg
+    kubeVersion: ^1.8.0-0
+    maintainers:
+    - email: team-atlas@giantswarm.io
+      name: giantswarm/team-atlas
+    name: grafana
+    sources:
+    - https://github.com/grafana/helm-charts/tree/main/charts/grafana
+    type: application
+    urls:
+    - https://giantswarm.github.io/control-plane-test-catalog/grafana-2.18.0.tgz
+    version: 2.18.0
+  - annotations:
       application.giantswarm.io/metadata: https://giantswarm.github.io/control-plane-test-catalog/grafana-2.17.0-f14098d2be6259dc30ce56549d222495e300d79f.tgz-meta/main.yaml
       application.giantswarm.io/readme: https://giantswarm.github.io/control-plane-test-catalog/grafana-2.17.0-f14098d2be6259dc30ce56549d222495e300d79f.tgz-meta/README.md
       application.giantswarm.io/team: atlas
@@ -24557,4 +24585,4 @@ entries:
     urls:
     - https://giantswarm.github.io/control-plane-test-catalog/upgrade-schedule-operator-0.10.1-17c4ddf67d67ea38e86d9a8a38da4e326f403904.tgz
     version: 0.10.1-17c4ddf67d67ea38e86d9a8a38da4e326f403904
-generated: "2024-12-03T10:14:33.716510644Z"
+generated: "2024-12-03T10:23:37.606096241Z"
