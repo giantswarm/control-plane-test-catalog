@@ -5802,6 +5802,40 @@ entries:
     urls:
     - https://giantswarm.github.io/control-plane-test-catalog/cert-manager-app-3.8.1-388162cd5413d6ad386ab8caafe00a15f7cba4e1.tgz
     version: 3.8.1-388162cd5413d6ad386ab8caafe00a15f7cba4e1
+  - annotations:
+      application.giantswarm.io/metadata: https://giantswarm.github.io/control-plane-test-catalog/cert-manager-app-3.8.1-233a93c824819e3a2c7adb0dc6cb54896b96bd67.tgz-meta/main.yaml
+      application.giantswarm.io/readme: https://giantswarm.github.io/control-plane-test-catalog/cert-manager-app-3.8.1-233a93c824819e3a2c7adb0dc6cb54896b96bd67.tgz-meta/README.md
+      application.giantswarm.io/team: shield
+      application.giantswarm.io/values-schema: https://giantswarm.github.io/control-plane-test-catalog/cert-manager-app-3.8.1-233a93c824819e3a2c7adb0dc6cb54896b96bd67.tgz-meta/values.schema.json
+    apiVersion: v2
+    appVersion: v1.14.2
+    created: "2024-12-03T12:56:02.112006412Z"
+    dependencies:
+    - alias: giantSwarmClusterIssuer
+      name: cert-manager-giantswarm-clusterissuer
+      repository: ""
+      version: 2.0.0
+    - condition: giantswarmNetworkPolicy.enabled
+      name: cert-manager-giantswarm-netpol
+      repository: ""
+      version: 0.1.0
+    - condition: ciliumNetworkPolicy.enabled
+      name: cert-manager-giantswarm-ciliumnetworkpolicies
+      repository: ""
+      version: 0.1.0
+    description: Simplifies the process of obtaining, renewing and using certificates.
+    digest: 0d9dd3df0cb77eddc2023e9413a9ad22d04cb29cc2238b8aa79e9f06e32364a3
+    home: https://github.com/giantswarm/cert-manager-app
+    icon: https://s.giantswarm.io/app-icons/cert-manager/1/light.svg
+    kubeVersion: '>=1.22.0-0'
+    maintainers:
+    - name: Shield
+    name: cert-manager-app
+    sources:
+    - https://github.com/cert-manager/cert-manager
+    urls:
+    - https://giantswarm.github.io/control-plane-test-catalog/cert-manager-app-3.8.1-233a93c824819e3a2c7adb0dc6cb54896b96bd67.tgz
+    version: 3.8.1-233a93c824819e3a2c7adb0dc6cb54896b96bd67
   chart-operator:
   - annotations:
       application.giantswarm.io/metadata: https://giantswarm.github.io/control-plane-test-catalog/chart-operator-4.0.0-6c38d9b91d8b0f374ddc2840d49c26631aec5a65.tgz-meta/main.yaml
@@ -24868,4 +24902,4 @@ entries:
     urls:
     - https://giantswarm.github.io/control-plane-test-catalog/upgrade-schedule-operator-0.10.1-17c4ddf67d67ea38e86d9a8a38da4e326f403904.tgz
     version: 0.10.1-17c4ddf67d67ea38e86d9a8a38da4e326f403904
-generated: "2024-12-03T12:55:57.763706027Z"
+generated: "2024-12-03T12:56:02.105125201Z"
