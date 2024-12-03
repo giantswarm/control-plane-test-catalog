@@ -10089,6 +10089,34 @@ entries:
     version: 5.3.0-23909f741bbd03bc5f6a5e27fb1622d239d8273a
   grafana:
   - annotations:
+      application.giantswarm.io/metadata: https://giantswarm.github.io/control-plane-test-catalog/grafana-2.17.0-f14098d2be6259dc30ce56549d222495e300d79f.tgz-meta/main.yaml
+      application.giantswarm.io/readme: https://giantswarm.github.io/control-plane-test-catalog/grafana-2.17.0-f14098d2be6259dc30ce56549d222495e300d79f.tgz-meta/README.md
+      application.giantswarm.io/team: atlas
+      application.giantswarm.io/values-schema: https://giantswarm.github.io/control-plane-test-catalog/grafana-2.17.0-f14098d2be6259dc30ce56549d222495e300d79f.tgz-meta/values.schema.json
+      config.giantswarm.io/version: 1.x.x
+    apiVersion: v2
+    appVersion: 11.3.0
+    created: "2024-12-03T09:53:55.611622674Z"
+    dependencies:
+    - name: grafana
+      repository: https://grafana.github.io/helm-charts
+      version: 8.6.3
+    description: The leading tool for querying and visualizing time series and metrics.
+    digest: ac7f30783d739d4277bc41dd324c36f3fee25cffe565b0f68cf9a526384a6143
+    home: https://github.com/giantswarm/grafana-app
+    icon: https://s.giantswarm.io/app-icons/grafana/1/light.svg
+    kubeVersion: ^1.8.0-0
+    maintainers:
+    - email: team-atlas@giantswarm.io
+      name: giantswarm/team-atlas
+    name: grafana
+    sources:
+    - https://github.com/grafana/helm-charts/tree/main/charts/grafana
+    type: application
+    urls:
+    - https://giantswarm.github.io/control-plane-test-catalog/grafana-2.17.0-f14098d2be6259dc30ce56549d222495e300d79f.tgz
+    version: 2.17.0-f14098d2be6259dc30ce56549d222495e300d79f
+  - annotations:
       application.giantswarm.io/metadata: https://giantswarm.github.io/control-plane-test-catalog/grafana-2.17.0-f0ae9d411aabe2e778a0af75cc7f4de214e244fe.tgz-meta/main.yaml
       application.giantswarm.io/readme: https://giantswarm.github.io/control-plane-test-catalog/grafana-2.17.0-f0ae9d411aabe2e778a0af75cc7f4de214e244fe.tgz-meta/README.md
       application.giantswarm.io/team: atlas
@@ -24429,4 +24457,4 @@ entries:
     urls:
     - https://giantswarm.github.io/control-plane-test-catalog/upgrade-schedule-operator-0.10.1-17c4ddf67d67ea38e86d9a8a38da4e326f403904.tgz
     version: 0.10.1-17c4ddf67d67ea38e86d9a8a38da4e326f403904
-generated: "2024-12-03T09:53:12.301113446Z"
+generated: "2024-12-03T09:53:55.605495046Z"
