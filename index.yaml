@@ -5175,6 +5175,34 @@ entries:
     urls:
     - https://giantswarm.github.io/control-plane-test-catalog/backstage-0.41.0-060bd9ef603a4de24f3c612c48a324510161f5d5.tgz
     version: 0.41.0-060bd9ef603a4de24f3c612c48a324510161f5d5
+  caicloud-event-exporter-app:
+  - annotations:
+      application.giantswarm.io/metadata: https://giantswarm.github.io/control-plane-test-catalog/caicloud-event-exporter-app-0.2.2-477ee7b494e1fbbdd8601aee951cf1f5ca4388d1.tgz-meta/main.yaml
+      application.giantswarm.io/readme: https://giantswarm.github.io/control-plane-test-catalog/caicloud-event-exporter-app-0.2.2-477ee7b494e1fbbdd8601aee951cf1f5ca4388d1.tgz-meta/README.md
+      application.giantswarm.io/team: honeybadger
+      application.giantswarm.io/two-step-install: "false"
+      application.giantswarm.io/values-schema: https://giantswarm.github.io/control-plane-test-catalog/caicloud-event-exporter-app-0.2.2-477ee7b494e1fbbdd8601aee951cf1f5ca4388d1.tgz-meta/values.schema.json
+    apiVersion: v2
+    appVersion: 1.0.0
+    created: "2024-12-04T16:40:31.784586478Z"
+    description: 'Kubernetes events to Prometheus bridge. A Collector that can list
+      and watch Kubernetes events, and according to events'' occurrence, determine
+      how long the event lasts. The information is then translated into metrics. '
+    digest: 9b54f7b57999f95b56030295f652b71175f56126b1815630f7089c003a557243
+    home: https://github.com/giantswarm/caicloud-event-exporter-app
+    icon: https://s.giantswarm.io/app-icons/prometheus/1/light.svg
+    keywords:
+    - event-exporter
+    - exporter
+    - metrics
+    - crossplane
+    name: caicloud-event-exporter-app
+    sources:
+    - https://github.com/caicloud/event_exporter
+    type: application
+    urls:
+    - https://giantswarm.github.io/control-plane-test-catalog/caicloud-event-exporter-app-0.2.2-477ee7b494e1fbbdd8601aee951cf1f5ca4388d1.tgz
+    version: 0.2.2-477ee7b494e1fbbdd8601aee951cf1f5ca4388d1
   capa-iam-operator:
   - annotations:
       application.giantswarm.io/team: phoenix
@@ -27119,4 +27147,4 @@ entries:
     urls:
     - https://giantswarm.github.io/control-plane-test-catalog/vertical-pod-autoscaler-crd-3.1.1-210f7d852240f260929631c2436c30b32e897589.tgz
     version: 3.1.1-210f7d852240f260929631c2436c30b32e897589
-generated: "2024-12-04T16:39:50.406182206Z"
+generated: "2024-12-04T16:40:31.783684989Z"
