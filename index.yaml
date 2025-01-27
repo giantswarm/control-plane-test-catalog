@@ -11721,6 +11721,40 @@ entries:
     - https://giantswarm.github.io/control-plane-test-catalog/cert-manager-app-3.8.2-c2416f18ef4f36bdc5ab27d22d9e741c97822f92.tgz
     version: 3.8.2-c2416f18ef4f36bdc5ab27d22d9e741c97822f92
   - annotations:
+      application.giantswarm.io/metadata: https://giantswarm.github.io/control-plane-test-catalog/cert-manager-app-3.8.2-bbee3a4eaf0ed35cd0fe1dc4cd15545e6dfcf6e3.tgz-meta/main.yaml
+      application.giantswarm.io/readme: https://giantswarm.github.io/control-plane-test-catalog/cert-manager-app-3.8.2-bbee3a4eaf0ed35cd0fe1dc4cd15545e6dfcf6e3.tgz-meta/README.md
+      application.giantswarm.io/team: shield
+      application.giantswarm.io/values-schema: https://giantswarm.github.io/control-plane-test-catalog/cert-manager-app-3.8.2-bbee3a4eaf0ed35cd0fe1dc4cd15545e6dfcf6e3.tgz-meta/values.schema.json
+    apiVersion: v2
+    appVersion: v1.14.2
+    created: "2025-01-27T04:19:02.255545355Z"
+    dependencies:
+    - alias: giantSwarmClusterIssuer
+      name: cert-manager-giantswarm-clusterissuer
+      repository: ""
+      version: 2.0.0
+    - condition: giantswarmNetworkPolicy.enabled
+      name: cert-manager-giantswarm-netpol
+      repository: ""
+      version: 0.1.0
+    - condition: ciliumNetworkPolicy.enabled
+      name: cert-manager-giantswarm-ciliumnetworkpolicies
+      repository: ""
+      version: 0.1.0
+    description: Simplifies the process of obtaining, renewing and using certificates.
+    digest: 6b747b66c74472d6eeaa672f7cd4ccd52ee3452e2343d91439d4ae64791f5f1e
+    home: https://github.com/giantswarm/cert-manager-app
+    icon: https://s.giantswarm.io/app-icons/cert-manager/1/light.svg
+    kubeVersion: '>=1.22.0-0'
+    maintainers:
+    - name: Shield
+    name: cert-manager-app
+    sources:
+    - https://github.com/cert-manager/cert-manager
+    urls:
+    - https://giantswarm.github.io/control-plane-test-catalog/cert-manager-app-3.8.2-bbee3a4eaf0ed35cd0fe1dc4cd15545e6dfcf6e3.tgz
+    version: 3.8.2-bbee3a4eaf0ed35cd0fe1dc4cd15545e6dfcf6e3
+  - annotations:
       application.giantswarm.io/metadata: https://giantswarm.github.io/control-plane-test-catalog/cert-manager-app-3.8.2-abeb1e96f011c23aca1d6e9fb21378564c07b31d.tgz-meta/main.yaml
       application.giantswarm.io/readme: https://giantswarm.github.io/control-plane-test-catalog/cert-manager-app-3.8.2-abeb1e96f011c23aca1d6e9fb21378564c07b31d.tgz-meta/README.md
       application.giantswarm.io/team: shield
@@ -48906,4 +48940,4 @@ entries:
     urls:
     - https://giantswarm.github.io/control-plane-test-catalog/vertical-pod-autoscaler-crd-3.1.1-05d778a740e0919e1ad9a8700db30f2169705a6d.tgz
     version: 3.1.1-05d778a740e0919e1ad9a8700db30f2169705a6d
-generated: "2025-01-26T10:26:59.55109345Z"
+generated: "2025-01-27T04:19:02.246918094Z"
