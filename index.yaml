@@ -24823,6 +24823,35 @@ entries:
     version: 1.70.0-0ec63049dd7c610820f6111a21442a8089f55b28
   ingress-nginx:
   - annotations:
+      application.giantswarm.io/metadata: https://giantswarm.github.io/control-plane-test-catalog/ingress-nginx-3.9.4-ff5edf28a55cf696bc1af915aae4c4944c850ff1.tgz-meta/main.yaml
+      application.giantswarm.io/readme: https://giantswarm.github.io/control-plane-test-catalog/ingress-nginx-3.9.4-ff5edf28a55cf696bc1af915aae4c4944c850ff1.tgz-meta/README.md
+      application.giantswarm.io/team: team-cabbage
+      application.giantswarm.io/values-schema: https://giantswarm.github.io/control-plane-test-catalog/ingress-nginx-3.9.4-ff5edf28a55cf696bc1af915aae4c4944c850ff1.tgz-meta/values.schema.json
+      ui.giantswarm.io/logo: https://s.giantswarm.io/app-icons/ingress-nginx/2/logo_dark.svg
+    apiVersion: v2
+    appVersion: 1.12.0
+    created: "2025-01-31T10:50:21.92426936Z"
+    description: Ingress controller for Kubernetes using NGINX as a reverse proxy
+      and load balancer
+    digest: 8d32cfeced17b2c67b0e68f5a5baa492da79d80d3b6a8fe7b90349ac12b781d7
+    home: https://github.com/giantswarm/ingress-nginx-app
+    icon: https://s.giantswarm.io/app-icons/ingress-nginx/2/icon_dark.svg
+    keywords:
+    - ingress
+    - nginx
+    kubeVersion: '>=1.21.0-0'
+    maintainers:
+    - name: cpanato
+    - name: Gacko
+    - name: strongjz
+    - name: tao12345666333
+    name: ingress-nginx
+    sources:
+    - https://github.com/kubernetes/ingress-nginx
+    urls:
+    - https://giantswarm.github.io/control-plane-test-catalog/ingress-nginx-3.9.4-ff5edf28a55cf696bc1af915aae4c4944c850ff1.tgz
+    version: 3.9.4-ff5edf28a55cf696bc1af915aae4c4944c850ff1
+  - annotations:
       application.giantswarm.io/metadata: https://giantswarm.github.io/control-plane-test-catalog/ingress-nginx-3.9.4-efa8230e7464b021bebfb50e8092d4c79894610a.tgz-meta/main.yaml
       application.giantswarm.io/readme: https://giantswarm.github.io/control-plane-test-catalog/ingress-nginx-3.9.4-efa8230e7464b021bebfb50e8092d4c79894610a.tgz-meta/README.md
       application.giantswarm.io/team: team-cabbage
@@ -53160,4 +53189,4 @@ entries:
     urls:
     - https://giantswarm.github.io/control-plane-test-catalog/vertical-pod-autoscaler-crd-3.1.1-05d778a740e0919e1ad9a8700db30f2169705a6d.tgz
     version: 3.1.1-05d778a740e0919e1ad9a8700db30f2169705a6d
-generated: "2025-01-31T10:43:42.077384043Z"
+generated: "2025-01-31T10:50:21.920357436Z"
