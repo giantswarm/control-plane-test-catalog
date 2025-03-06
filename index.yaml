@@ -17222,6 +17222,30 @@ entries:
     urls:
     - https://giantswarm.github.io/control-plane-test-catalog/kube-downscaler-0.4.0-14613ee2687e35241513d52bbd568d4dbc9d9e55.tgz
     version: 0.4.0-14613ee2687e35241513d52bbd568d4dbc9d9e55
+  - annotations:
+      application.giantswarm.io/metadata: https://giantswarm.github.io/control-plane-test-catalog/kube-downscaler-0.4.0-024b3a4f98a79a4ce853e921a9d9db38779b38fb.tgz-meta/main.yaml
+      application.giantswarm.io/readme: https://giantswarm.github.io/control-plane-test-catalog/kube-downscaler-0.4.0-024b3a4f98a79a4ce853e921a9d9db38779b38fb.tgz-meta/README.md
+      application.giantswarm.io/team: planeteers
+      application.giantswarm.io/values-schema: https://giantswarm.github.io/control-plane-test-catalog/kube-downscaler-0.4.0-024b3a4f98a79a4ce853e921a9d9db38779b38fb.tgz-meta/values.schema.json
+    apiVersion: v2
+    appVersion: 24.12.0
+    created: "2025-03-06T13:54:16.729457482Z"
+    dependencies:
+    - alias: kube-downscaler
+      condition: enabled
+      name: py-kube-downscaler
+      repository: https://caas-team.github.io/helm-charts/
+      version: 0.2.12
+    description: Downscaling tool to save on resources with dev clusters when they
+      are not used
+    digest: c8c607b7c865d54b0edba16a365885396d5e10af82b158c993ae4802d26b2267
+    home: https://github.com/giantswarm/kube-downscaler
+    name: kube-downscaler
+    sources:
+    - https://github.com/caas-team/py-kube-downscaler
+    urls:
+    - https://giantswarm.github.io/control-plane-test-catalog/kube-downscaler-0.4.0-024b3a4f98a79a4ce853e921a9d9db38779b38fb.tgz
+    version: 0.4.0-024b3a4f98a79a4ce853e921a9d9db38779b38fb
   kyverno:
   - annotations:
       application.giantswarm.io/metadata: https://giantswarm.github.io/control-plane-test-catalog/kyverno-0.19.0-fcf2c8f72a74efcd9e3b84a32a179f0f5afdeeff.tgz-meta/main.yaml
@@ -35004,4 +35028,4 @@ entries:
     urls:
     - https://giantswarm.github.io/control-plane-test-catalog/vertical-pod-autoscaler-crd-3.1.2-19e4e274b795898e7414b6e422439527ecd70dae.tgz
     version: 3.1.2-19e4e274b795898e7414b6e422439527ecd70dae
-generated: "2025-03-06T13:49:21.346875026Z"
+generated: "2025-03-06T13:54:16.727486327Z"
