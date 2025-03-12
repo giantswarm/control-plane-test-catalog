@@ -18588,6 +18588,30 @@ entries:
     - https://giantswarm.github.io/control-plane-test-catalog/kube-downscaler-0.5.0-dc833aba6a09134a5e9d13d18d5a8de1d43a80ee.tgz
     version: 0.5.0-dc833aba6a09134a5e9d13d18d5a8de1d43a80ee
   - annotations:
+      application.giantswarm.io/metadata: https://giantswarm.github.io/control-plane-test-catalog/kube-downscaler-0.5.0-d70c0a61c2a338fee8b145e3d65cf370c33d9224.tgz-meta/main.yaml
+      application.giantswarm.io/readme: https://giantswarm.github.io/control-plane-test-catalog/kube-downscaler-0.5.0-d70c0a61c2a338fee8b145e3d65cf370c33d9224.tgz-meta/README.md
+      application.giantswarm.io/team: planeteers
+      application.giantswarm.io/values-schema: https://giantswarm.github.io/control-plane-test-catalog/kube-downscaler-0.5.0-d70c0a61c2a338fee8b145e3d65cf370c33d9224.tgz-meta/values.schema.json
+    apiVersion: v2
+    appVersion: 25.3.0
+    created: "2025-03-12T13:18:33.880228723Z"
+    dependencies:
+    - alias: kube-downscaler
+      condition: enabled
+      name: py-kube-downscaler
+      repository: https://caas-team.github.io/helm-charts/
+      version: 0.2.12
+    description: Downscaling tool to save on resources with dev clusters when they
+      are not used
+    digest: 6eed8149ff7651b701b57df0e6ae09dc8fba7162e8e5e3f5207130c71d7e1a7b
+    home: https://github.com/giantswarm/kube-downscaler
+    name: kube-downscaler
+    sources:
+    - https://github.com/caas-team/py-kube-downscaler
+    urls:
+    - https://giantswarm.github.io/control-plane-test-catalog/kube-downscaler-0.5.0-d70c0a61c2a338fee8b145e3d65cf370c33d9224.tgz
+    version: 0.5.0-d70c0a61c2a338fee8b145e3d65cf370c33d9224
+  - annotations:
       application.giantswarm.io/metadata: https://giantswarm.github.io/control-plane-test-catalog/kube-downscaler-0.4.0-e0914993c90792b79e94a8ad93645bc32b6747d3.tgz-meta/main.yaml
       application.giantswarm.io/readme: https://giantswarm.github.io/control-plane-test-catalog/kube-downscaler-0.4.0-e0914993c90792b79e94a8ad93645bc32b6747d3.tgz-meta/README.md
       application.giantswarm.io/team: planeteers
@@ -39025,4 +39049,4 @@ entries:
     urls:
     - https://giantswarm.github.io/control-plane-test-catalog/vertical-pod-autoscaler-crd-3.1.2-19e4e274b795898e7414b6e422439527ecd70dae.tgz
     version: 3.1.2-19e4e274b795898e7414b6e422439527ecd70dae
-generated: "2025-03-12T13:17:34.831851713Z"
+generated: "2025-03-12T13:18:33.87681536Z"
