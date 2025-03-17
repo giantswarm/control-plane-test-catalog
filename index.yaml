@@ -21169,6 +21169,30 @@ entries:
     version: 0.10.0-025179bc086d165aacd21669fe498c10e6469e1a
   kube-downscaler:
   - annotations:
+      application.giantswarm.io/metadata: https://giantswarm.github.io/control-plane-test-catalog/kube-downscaler-0.6.0.tgz-meta/main.yaml
+      application.giantswarm.io/readme: https://giantswarm.github.io/control-plane-test-catalog/kube-downscaler-0.6.0.tgz-meta/README.md
+      application.giantswarm.io/team: planeteers
+      application.giantswarm.io/values-schema: https://giantswarm.github.io/control-plane-test-catalog/kube-downscaler-0.6.0.tgz-meta/values.schema.json
+    apiVersion: v2
+    appVersion: 25.3.0
+    created: "2025-03-17T13:46:19.232482031Z"
+    dependencies:
+    - alias: kube-downscaler
+      condition: enabled
+      name: py-kube-downscaler
+      repository: https://caas-team.github.io/helm-charts/
+      version: 0.2.12
+    description: Downscaling tool to save on resources with dev clusters when they
+      are not used
+    digest: ad944c13894f58c7faa95bfdd6013ff5e3aa3bb583ca219c9d0dfb140484bd20
+    home: https://github.com/giantswarm/kube-downscaler
+    name: kube-downscaler
+    sources:
+    - https://github.com/caas-team/py-kube-downscaler
+    urls:
+    - https://giantswarm.github.io/control-plane-test-catalog/kube-downscaler-0.6.0.tgz
+    version: 0.6.0
+  - annotations:
       application.giantswarm.io/metadata: https://giantswarm.github.io/control-plane-test-catalog/kube-downscaler-0.6.0-cf73824e2df076966018d605f209d4f204e903d2.tgz-meta/main.yaml
       application.giantswarm.io/readme: https://giantswarm.github.io/control-plane-test-catalog/kube-downscaler-0.6.0-cf73824e2df076966018d605f209d4f204e903d2.tgz-meta/README.md
       application.giantswarm.io/team: planeteers
@@ -45021,4 +45045,4 @@ entries:
     urls:
     - https://giantswarm.github.io/control-plane-test-catalog/vertical-pod-autoscaler-crd-3.1.2-19e4e274b795898e7414b6e422439527ecd70dae.tgz
     version: 3.1.2-19e4e274b795898e7414b6e422439527ecd70dae
-generated: "2025-03-17T13:45:55.493039977Z"
+generated: "2025-03-17T13:46:19.2305452Z"
