@@ -21200,6 +21200,30 @@ entries:
     version: 0.10.1-0147265b83fc26f046938957132517482fe2a298
   kube-downscaler:
   - annotations:
+      application.giantswarm.io/metadata: https://giantswarm.github.io/control-plane-test-catalog/kube-downscaler-0.6.1-ac70ba23fd329f7cd423ee645fc7cc316b683aec.tgz-meta/main.yaml
+      application.giantswarm.io/readme: https://giantswarm.github.io/control-plane-test-catalog/kube-downscaler-0.6.1-ac70ba23fd329f7cd423ee645fc7cc316b683aec.tgz-meta/README.md
+      application.giantswarm.io/team: planeteers
+      application.giantswarm.io/values-schema: https://giantswarm.github.io/control-plane-test-catalog/kube-downscaler-0.6.1-ac70ba23fd329f7cd423ee645fc7cc316b683aec.tgz-meta/values.schema.json
+    apiVersion: v2
+    appVersion: 25.3.0
+    created: "2025-04-17T12:25:36.182715752Z"
+    dependencies:
+    - alias: kube-downscaler
+      condition: enabled
+      name: py-kube-downscaler
+      repository: https://caas-team.github.io/helm-charts/
+      version: 0.2.12
+    description: Downscaling tool to save on resources with dev clusters when they
+      are not used
+    digest: da1710d0b46e24b120e025f7dc2761549cd925e2dd50d1c2401a4e29bf4df4ae
+    home: https://github.com/giantswarm/kube-downscaler-app
+    name: kube-downscaler
+    sources:
+    - https://github.com/caas-team/py-kube-downscaler
+    urls:
+    - https://giantswarm.github.io/control-plane-test-catalog/kube-downscaler-0.6.1-ac70ba23fd329f7cd423ee645fc7cc316b683aec.tgz
+    version: 0.6.1-ac70ba23fd329f7cd423ee645fc7cc316b683aec
+  - annotations:
       application.giantswarm.io/metadata: https://giantswarm.github.io/control-plane-test-catalog/kube-downscaler-0.6.0.tgz-meta/main.yaml
       application.giantswarm.io/readme: https://giantswarm.github.io/control-plane-test-catalog/kube-downscaler-0.6.0.tgz-meta/README.md
       application.giantswarm.io/team: planeteers
@@ -44375,4 +44399,4 @@ entries:
     urls:
     - https://giantswarm.github.io/control-plane-test-catalog/vertical-pod-autoscaler-crd-3.2.0-1a127ca0c987ab2c7245266ddd8e624d8678fcef.tgz
     version: 3.2.0-1a127ca0c987ab2c7245266ddd8e624d8678fcef
-generated: "2025-04-17T12:02:10.453438782Z"
+generated: "2025-04-17T12:25:36.179668544Z"
