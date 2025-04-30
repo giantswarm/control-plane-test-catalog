@@ -22685,6 +22685,34 @@ entries:
     version: 6.3.0-5e38a1ac652973a52849d5617342e619472c0428
   grafana:
   - annotations:
+      application.giantswarm.io/metadata: https://giantswarm.github.io/control-plane-test-catalog/grafana-2.21.0.tgz-meta/main.yaml
+      application.giantswarm.io/readme: https://giantswarm.github.io/control-plane-test-catalog/grafana-2.21.0.tgz-meta/README.md
+      application.giantswarm.io/team: atlas
+      application.giantswarm.io/values-schema: https://giantswarm.github.io/control-plane-test-catalog/grafana-2.21.0.tgz-meta/values.schema.json
+      config.giantswarm.io/version: 1.x.x
+    apiVersion: v2
+    appVersion: 11.6.1
+    created: "2025-04-30T08:06:55.681390565Z"
+    dependencies:
+    - name: grafana
+      repository: https://grafana.github.io/helm-charts
+      version: 8.14.0
+    description: The leading tool for querying and visualizing time series and metrics.
+    digest: 3b1fa4f17da2816c87bb94d4ffabc84fe9f0d2dedf79570be33dc2a26fa3bf43
+    home: https://github.com/giantswarm/grafana-app
+    icon: https://s.giantswarm.io/app-icons/grafana/1/light.svg
+    kubeVersion: ^1.8.0-0
+    maintainers:
+    - email: team-atlas@giantswarm.io
+      name: giantswarm/team-atlas
+    name: grafana
+    sources:
+    - https://github.com/grafana/helm-charts/tree/main/charts/grafana
+    type: application
+    urls:
+    - https://giantswarm.github.io/control-plane-test-catalog/grafana-2.21.0.tgz
+    version: 2.21.0
+  - annotations:
       application.giantswarm.io/metadata: https://giantswarm.github.io/control-plane-test-catalog/grafana-2.20.0.tgz-meta/main.yaml
       application.giantswarm.io/readme: https://giantswarm.github.io/control-plane-test-catalog/grafana-2.20.0.tgz-meta/README.md
       application.giantswarm.io/team: atlas
@@ -62079,4 +62107,4 @@ entries:
     urls:
     - https://giantswarm.github.io/control-plane-test-catalog/vertical-pod-autoscaler-crd-3.2.0-0e05f55f35d16451de3afd3d88ec65388cb63c53.tgz
     version: 3.2.0-0e05f55f35d16451de3afd3d88ec65388cb63c53
-generated: "2025-04-30T07:47:06.072006259Z"
+generated: "2025-04-30T08:06:55.675241356Z"
