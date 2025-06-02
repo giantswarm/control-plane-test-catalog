@@ -40266,6 +40266,34 @@ entries:
     - https://giantswarm.github.io/control-plane-test-catalog/grafana-2.22.1.tgz
     version: 2.22.1
   - annotations:
+      application.giantswarm.io/metadata: https://giantswarm.github.io/control-plane-test-catalog/grafana-2.22.1-b7a61483441b6f191ea85da63c251cfd61e72943.tgz-meta/main.yaml
+      application.giantswarm.io/readme: https://giantswarm.github.io/control-plane-test-catalog/grafana-2.22.1-b7a61483441b6f191ea85da63c251cfd61e72943.tgz-meta/README.md
+      application.giantswarm.io/team: atlas
+      application.giantswarm.io/values-schema: https://giantswarm.github.io/control-plane-test-catalog/grafana-2.22.1-b7a61483441b6f191ea85da63c251cfd61e72943.tgz-meta/values.schema.json
+      config.giantswarm.io/version: 1.x.x
+    apiVersion: v2
+    appVersion: 12.0.0
+    created: "2025-06-02T17:05:49.732778048Z"
+    dependencies:
+    - name: grafana
+      repository: https://grafana.github.io/helm-charts
+      version: 9.2.1
+    description: The leading tool for querying and visualizing time series and metrics.
+    digest: 021d7b7037246c6b02f0c18eda667f1ffb7d06dbe67bfc8376ec20916a684441
+    home: https://github.com/giantswarm/grafana-app
+    icon: https://s.giantswarm.io/app-icons/grafana/1/light.svg
+    kubeVersion: ^1.8.0-0
+    maintainers:
+    - email: team-atlas@giantswarm.io
+      name: giantswarm/team-atlas
+    name: grafana
+    sources:
+    - https://github.com/grafana/helm-charts/tree/main/charts/grafana
+    type: application
+    urls:
+    - https://giantswarm.github.io/control-plane-test-catalog/grafana-2.22.1-b7a61483441b6f191ea85da63c251cfd61e72943.tgz
+    version: 2.22.1-b7a61483441b6f191ea85da63c251cfd61e72943
+  - annotations:
       application.giantswarm.io/metadata: https://giantswarm.github.io/control-plane-test-catalog/grafana-2.22.1-04de79036118571b4b54f13d88348d6a5ee4493b.tgz-meta/main.yaml
       application.giantswarm.io/readme: https://giantswarm.github.io/control-plane-test-catalog/grafana-2.22.1-04de79036118571b4b54f13d88348d6a5ee4493b.tgz-meta/README.md
       application.giantswarm.io/team: atlas
@@ -98844,4 +98872,4 @@ entries:
     urls:
     - https://giantswarm.github.io/control-plane-test-catalog/vertical-pod-autoscaler-crd-3.2.0-09dabdce4aadffc854e398fca1cc6eb57d4b7ef8.tgz
     version: 3.2.0-09dabdce4aadffc854e398fca1cc6eb57d4b7ef8
-generated: "2025-06-02T17:05:35.525832481Z"
+generated: "2025-06-02T17:05:49.725565664Z"
