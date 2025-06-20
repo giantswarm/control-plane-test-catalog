@@ -5,7 +5,7 @@ on:
   workflow_dispatch:
 jobs:
   cleanup:
-    uses: giantswarm/app-catalog-cleanup-tool/.github/workflows/cleanup.yaml@v0.2.7
+    uses: giantswarm/app-catalog-cleanup-tool/.github/workflows/cleanup.yaml@main
     with:
       delete-before: "1 month"
       dry-run: false
