@@ -6017,6 +6017,47 @@ entries:
     version: 4.5.0-7a7db9ca9f74c32d7e9847d3e2a925b293c2b463
   dex-app:
   - annotations:
+      application.giantswarm.io/metadata: https://giantswarm.github.io/control-plane-test-catalog/dex-app-2.0.1-bb4db4417b83f5a9c7791b52b9ba4e89b03a9787.tgz-meta/main.yaml
+      application.giantswarm.io/readme: https://giantswarm.github.io/control-plane-test-catalog/dex-app-2.0.1-bb4db4417b83f5a9c7791b52b9ba4e89b03a9787.tgz-meta/README.md
+      application.giantswarm.io/team: shield
+      application.giantswarm.io/values-schema: https://giantswarm.github.io/control-plane-test-catalog/dex-app-2.0.1-bb4db4417b83f5a9c7791b52b9ba4e89b03a9787.tgz-meta/values.schema.json
+      config.giantswarm.io/version: 1.x.x
+    apiVersion: v2
+    appVersion: 2.0.1-bb4db4417b83f5a9c7791b52b9ba4e89b03a9787
+    created: "2025-06-25T14:43:38.380322363Z"
+    dependencies:
+    - name: dex
+      repository: ""
+      version: 0.23.0
+    description: OpenID Connect (OIDC) identity and OAuth 2.0 provider with pluggable
+      connectors
+    digest: 197932f45a44807bb3bfc885ab4d6925fb9e04a11366d2cef3e02a66ab97c5fb
+    home: https://github.com/giantswarm/dex-app
+    icon: https://s.giantswarm.io/app-icons/dex/2/icon_light.svg
+    keywords:
+    - authentication
+    - oidc
+    maintainers:
+    - email: Kevin.Fox@pnnl.gov
+      name: kfox1111
+    - email: shane.starcher@gmail.com
+      name: sstarcher
+    - email: pete.brown@powerhrg.com
+      name: rendhalver
+    - email: vi7alya@gmail.com
+      name: vi7
+    - email: aaron@roydhouse.com
+      name: Aaron Roydhouse
+    - email: nbadger@mintel.com
+      name: Nick Badger
+    name: dex-app
+    sources:
+    - https://github.com/dexidp/dex/
+    - https://github.com/mintel/dex-k8s-authenticator
+    urls:
+    - https://giantswarm.github.io/control-plane-test-catalog/dex-app-2.0.1-bb4db4417b83f5a9c7791b52b9ba4e89b03a9787.tgz
+    version: 2.0.1-bb4db4417b83f5a9c7791b52b9ba4e89b03a9787
+  - annotations:
       application.giantswarm.io/metadata: https://giantswarm.github.io/control-plane-test-catalog/dex-app-2.0.0-ee2321ea9c1d82bac49380a063189e0af8cc8a2c.tgz-meta/main.yaml
       application.giantswarm.io/readme: https://giantswarm.github.io/control-plane-test-catalog/dex-app-2.0.0-ee2321ea9c1d82bac49380a063189e0af8cc8a2c.tgz-meta/README.md
       application.giantswarm.io/team: shield
@@ -19560,4 +19601,4 @@ entries:
     urls:
     - https://giantswarm.github.io/control-plane-test-catalog/vertical-pod-autoscaler-crd-3.3.0-6e314ac263c423a4df06afa22d0bf93a32ee490c.tgz
     version: 3.3.0-6e314ac263c423a4df06afa22d0bf93a32ee490c
-generated: "2025-06-25T14:37:22.597622873Z"
+generated: "2025-06-25T14:43:38.375493366Z"
