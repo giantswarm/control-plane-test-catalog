@@ -30168,6 +30168,33 @@ entries:
     version: 0.28.1-07d4fc976622bd9f1a51d4b50e90c6269448fdd8
   mimir:
   - annotations:
+      application.giantswarm.io/metadata: https://giantswarm.github.io/control-plane-test-catalog/mimir-0.17.1.tgz-meta/main.yaml
+      application.giantswarm.io/readme: https://giantswarm.github.io/control-plane-test-catalog/mimir-0.17.1.tgz-meta/README.md
+      application.giantswarm.io/team: atlas
+      application.giantswarm.io/values-schema: https://giantswarm.github.io/control-plane-test-catalog/mimir-0.17.1.tgz-meta/values.schema.json
+    apiVersion: v2
+    appVersion: 2.16.0
+    created: "2025-07-16T12:02:57.500910935Z"
+    dependencies:
+    - alias: mimir
+      condition: mimir.enabled
+      name: mimir-distributed
+      repository: https://grafana.github.io/helm-charts
+      version: 5.7.0
+    description: A Helm chart for grafana's Mimir
+    digest: ca97f308fad75a1df9a3adea5be1d6506bb97a72fe457999c7c1ef183ad22c5e
+    home: https://github.com/giantswarm/mimir-app
+    icon: https://s.giantswarm.io/app-icons/grafana-mimir/1/light-icon.svg
+    maintainers:
+    - email: team-atlas@giantswarm.io
+      name: giantswarm/team-atlas
+    name: mimir
+    sources:
+    - https://github.com/grafana/mimir/tree/main/operations/helm/charts/mimir-distributed
+    urls:
+    - https://giantswarm.github.io/control-plane-test-catalog/mimir-0.17.1.tgz
+    version: 0.17.1
+  - annotations:
       application.giantswarm.io/metadata: https://giantswarm.github.io/control-plane-test-catalog/mimir-0.17.0-feff641dfa19373c8ad65ea365d4f96d7338db7b.tgz-meta/main.yaml
       application.giantswarm.io/readme: https://giantswarm.github.io/control-plane-test-catalog/mimir-0.17.0-feff641dfa19373c8ad65ea365d4f96d7338db7b.tgz-meta/README.md
       application.giantswarm.io/team: atlas
@@ -45623,4 +45650,4 @@ entries:
     urls:
     - https://giantswarm.github.io/control-plane-test-catalog/vertical-pod-autoscaler-crd-3.3.0-6e314ac263c423a4df06afa22d0bf93a32ee490c.tgz
     version: 3.3.0-6e314ac263c423a4df06afa22d0bf93a32ee490c
-generated: "2025-07-16T12:01:32.389982727Z"
+generated: "2025-07-16T12:02:57.476922845Z"
