@@ -61954,6 +61954,35 @@ entries:
     urls:
     - https://giantswarm.github.io/control-plane-test-catalog/tempo-0.1.2-0f9e7619b6aee70f649a095b934df85ac1df654b.tgz
     version: 0.1.2-0f9e7619b6aee70f649a095b934df85ac1df654b
+  - annotations:
+      application.giantswarm.io/metadata: https://giantswarm.github.io/control-plane-test-catalog/tempo-0.1.2-07b31f26ef1f23ccba4bf9f6f2b376b9b3c397da.tgz-meta/main.yaml
+      application.giantswarm.io/readme: https://giantswarm.github.io/control-plane-test-catalog/tempo-0.1.2-07b31f26ef1f23ccba4bf9f6f2b376b9b3c397da.tgz-meta/README.md
+      application.giantswarm.io/team: atlas
+      application.giantswarm.io/values-schema: https://giantswarm.github.io/control-plane-test-catalog/tempo-0.1.2-07b31f26ef1f23ccba4bf9f6f2b376b9b3c397da.tgz-meta/values.schema.json
+    apiVersion: v2
+    appVersion: 2.2.3
+    created: "2025-09-15T13:14:40.21018676Z"
+    dependencies:
+    - alias: tempo
+      condition: tempo.enabled
+      name: tempo-distributed
+      repository: https://grafana.github.io/helm-charts
+      version: 1.47.3
+    description: Helm chart for Grafana Tempo in microservice mode
+    digest: c1fc9a0f87002b8d215fbe3588e094d495d163a96b8c615d07e72faee194f522
+    home: https://github.com/giantswarm/tempo-app
+    icon: https://s.giantswarm.io/app-icons/grafana-tempo/1/light.svg
+    maintainers:
+    - email: team-atlas@giantswarm.io
+      name: giantswarm/team-atlas
+    name: tempo
+    sources:
+    - https://github.com/giantswarm/tempo-app
+    - https://github.com/grafana/helm-charts/blob/main/charts/tempo-distributed
+    type: application
+    urls:
+    - https://giantswarm.github.io/control-plane-test-catalog/tempo-0.1.2-07b31f26ef1f23ccba4bf9f6f2b376b9b3c397da.tgz
+    version: 0.1.2-07b31f26ef1f23ccba4bf9f6f2b376b9b3c397da
   trivy:
   - annotations:
       application.giantswarm.io/metadata: https://giantswarm.github.io/control-plane-test-catalog/trivy-0.14.1.tgz-meta/main.yaml
@@ -64959,4 +64988,4 @@ entries:
     urls:
     - https://giantswarm.github.io/control-plane-test-catalog/vertical-pod-autoscaler-crd-3.3.1-1e4645548c7c31b68bdc8329e839eb63cbf08bfd.tgz
     version: 3.3.1-1e4645548c7c31b68bdc8329e839eb63cbf08bfd
-generated: "2025-09-15T13:12:49.986371129Z"
+generated: "2025-09-15T13:14:40.195000314Z"
