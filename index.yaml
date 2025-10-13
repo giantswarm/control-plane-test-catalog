@@ -29496,6 +29496,34 @@ entries:
     urls:
     - https://giantswarm.github.io/control-plane-test-catalog/organization-operator-2.1.1-16cae282c84f6cfaf42010458e0efbdbaedcd0c9.tgz
     version: 2.1.1-16cae282c84f6cfaf42010458e0efbdbaedcd0c9
+  plugin-barman-cloud:
+  - annotations:
+      application.giantswarm.io/metadata: https://giantswarm.github.io/control-plane-test-catalog/plugin-barman-cloud-0.0.1-f2f784d4499bf44991013dcbf5b88e4db5a5d8cf.tgz-meta/main.yaml
+      application.giantswarm.io/readme: https://giantswarm.github.io/control-plane-test-catalog/plugin-barman-cloud-0.0.1-f2f784d4499bf44991013dcbf5b88e4db5a5d8cf.tgz-meta/README.md
+      application.giantswarm.io/team: atlas
+      application.giantswarm.io/values-schema: https://giantswarm.github.io/control-plane-test-catalog/plugin-barman-cloud-0.0.1-f2f784d4499bf44991013dcbf5b88e4db5a5d8cf.tgz-meta/values.schema.json
+    apiVersion: v2
+    appVersion: 0.7.0
+    created: "2025-10-13T10:47:28.331236659Z"
+    dependencies:
+    - alias: pluginbarmancloud
+      condition: pluginbarmancloud.enabled
+      name: plugin-barman-cloud
+      repository: https://cloudnative-pg.io/charts
+      version: 0.2.0
+    description: A Helm chart for plugin-barman-cloud
+    digest: 7066f23843f13f12db4641254db78c7df0fc486fc1fbc1c8dfc3decc72bb70e1
+    home: https://github.com/giantswarm/plugin-barman-cloud
+    icon: https://s.giantswarm.io/app-icons/cloudnative-pg/icon-light.svg
+    maintainers:
+    - email: team-atlas@giantswarm.io
+      name: giantswarm/team-atlas
+    name: plugin-barman-cloud
+    sources:
+    - https://github.com/cloudnative-pg/charts/tree/main/charts/plugin-barman-cloud
+    urls:
+    - https://giantswarm.github.io/control-plane-test-catalog/plugin-barman-cloud-0.0.1-f2f784d4499bf44991013dcbf5b88e4db5a5d8cf.tgz
+    version: 0.0.1-f2f784d4499bf44991013dcbf5b88e4db5a5d8cf
   policy-api-crds:
   - annotations:
       application.giantswarm.io/metadata: https://giantswarm.github.io/control-plane-test-catalog/policy-api-crds-0.0.6-f7b3e8171c502d10da2225485ac09272ba3a1dcc.tgz-meta/main.yaml
@@ -42559,4 +42587,4 @@ entries:
     urls:
     - https://giantswarm.github.io/control-plane-test-catalog/vertical-pod-autoscaler-crd-4.0.0-024a65d1aa3f0df03be46df5e4409536590c6e96.tgz
     version: 4.0.0-024a65d1aa3f0df03be46df5e4409536590c6e96
-generated: "2025-10-13T10:44:42.662478061Z"
+generated: "2025-10-13T10:47:28.329223951Z"
