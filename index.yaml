@@ -40247,6 +40247,29 @@ entries:
     - https://giantswarm.github.io/control-plane-test-catalog/prometheus-remotewrite-1.4.0-3072d0e6d0ac0367b0c05576a130e1b836882f36.tgz
     version: 1.4.0-3072d0e6d0ac0367b0c05576a130e1b836882f36
   - annotations:
+      application.giantswarm.io/metadata: https://giantswarm.github.io/control-plane-test-catalog/prometheus-remotewrite-1.4.0-146c18658354b659251a515488b4891f3d79ee09.tgz-meta/main.yaml
+      application.giantswarm.io/readme: https://giantswarm.github.io/control-plane-test-catalog/prometheus-remotewrite-1.4.0-146c18658354b659251a515488b4891f3d79ee09.tgz-meta/README.md
+      application.giantswarm.io/team: atlas
+      application.giantswarm.io/values-schema: https://giantswarm.github.io/control-plane-test-catalog/prometheus-remotewrite-1.4.0-146c18658354b659251a515488b4891f3d79ee09.tgz-meta/values.schema.json
+      config.giantswarm.io/version: 1.x.x
+    apiVersion: v2
+    appVersion: 0.0.1
+    created: "2025-10-24T09:01:22.816251054Z"
+    dependencies:
+    - alias: kubePrometheusStack
+      condition: kubePrometheusStack.enabled
+      name: kube-prometheus-stack
+      repository: https://giantswarm.github.io/default-catalog/
+      version: 18.1.0
+    description: Hold remote write configuration for prometheus.
+    digest: 1a28c2b504d20e8b047c3b11fdcf06c03820bcf0b4b387dc31166175b8885747
+    home: https://github.com/giantswarm/prometheus-remotewrite
+    icon: https://s.giantswarm.io/app-icons/prometheus/1/light.svg
+    name: prometheus-remotewrite
+    urls:
+    - https://giantswarm.github.io/control-plane-test-catalog/prometheus-remotewrite-1.4.0-146c18658354b659251a515488b4891f3d79ee09.tgz
+    version: 1.4.0-146c18658354b659251a515488b4891f3d79ee09
+  - annotations:
       application.giantswarm.io/metadata: https://giantswarm.github.io/control-plane-test-catalog/prometheus-remotewrite-1.4.0-084dfbce1376a24e0c98db026b5dc0efa8bcb642.tgz-meta/main.yaml
       application.giantswarm.io/readme: https://giantswarm.github.io/control-plane-test-catalog/prometheus-remotewrite-1.4.0-084dfbce1376a24e0c98db026b5dc0efa8bcb642.tgz-meta/README.md
       application.giantswarm.io/team: atlas
@@ -55851,4 +55874,4 @@ entries:
     urls:
     - https://giantswarm.github.io/control-plane-test-catalog/vertical-pod-autoscaler-crd-4.0.0-024a65d1aa3f0df03be46df5e4409536590c6e96.tgz
     version: 4.0.0-024a65d1aa3f0df03be46df5e4409536590c6e96
-generated: "2025-10-24T09:01:09.180896475Z"
+generated: "2025-10-24T09:01:22.758854627Z"
