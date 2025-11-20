@@ -1,0 +1,245 @@
+{
+    "$schema": "http://json-schema.org/schema#",
+    "type": "object",
+    "properties": {
+        "env": {
+            "description": "Environment variables for the event exporter container.",
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "description": "Name of the environment variable.",
+                        "type": "string"
+                    },
+                    "value": {
+                        "description": "Value of the environment variable.",
+                        "type": "string"
+                    },
+                    "valueFrom": {
+                        "description": "Source for the environment variable's value.",
+                        "type": "object",
+                        "properties": {
+                            "secretKeyRef": {
+                                "description": "Selects a key of a secret in the pod's namespace.",
+                                "type": "object",
+                                "properties": {
+                                    "name": {
+                                        "description": "Name of the secret.",
+                                        "type": "string"
+                                    },
+                                    "key": {
+                                        "description": "The key of the secret to select from.",
+                                        "type": "string"
+                                    },
+                                    "optional": {
+                                        "description": "Specify whether the secret or its key must be defined.",
+                                        "type": "boolean"
+                                    }
+                                },
+                                "required": ["name", "key"]
+                            },
+                            "configMapKeyRef": {
+                                "description": "Selects a key of a ConfigMap.",
+                                "type": "object",
+                                "properties": {
+                                    "name": {
+                                        "description": "Name of the ConfigMap.",
+                                        "type": "string"
+                                    },
+                                    "key": {
+                                        "description": "The key of the ConfigMap to select from.",
+                                        "type": "string"
+                                    },
+                                    "optional": {
+                                        "description": "Specify whether the ConfigMap or its key must be defined.",
+                                        "type": "boolean"
+                                    }
+                                },
+                                "required": ["name", "key"]
+                            }
+                        }
+                    }
+                },
+                "required": ["name"],
+                "oneOf": [
+                    {"required": ["value"]},
+                    {"required": ["valueFrom"]}
+                ]
+            }
+        },
+        "grafana": {
+            "description": "Grafana settings.",
+            "type": "object",
+            "properties": {
+                "token": {
+                    "description": "Grafana authentication token.",
+                    "type": "string"
+                }
+            }
+        },
+        "image": {
+            "description": "Image settings.",
+            "type": "object",
+            "properties": {
+                "name": {
+                    "description": "Image repository.",
+                    "type": "string"
+                },
+                "pullPolicy": {
+                    "description": "Image pull policy.",
+                    "type": "string"
+                },
+                "registry": {
+                    "description": "Image registry.",
+                    "type": "string"
+                },
+                "tag": {
+                    "description": "Image tag. Defaults to .Chart.AppVersion.",
+                    "type": "string"
+                }
+            }
+        },
+        "managementCluster": {
+            "description": "Management cluster the event exporter is running in.",
+            "type": "object",
+            "properties": {
+                "customer": {
+                    "description": "Customer the management cluster belongs to.",
+                    "type": "string"
+                },
+                "name": {
+                    "description": "Management cluster name.",
+                    "type": "string"
+                }
+            }
+        },
+        "podSecurityContext": {
+            "description": "Pod Security Context.",
+            "type": "object",
+            "properties": {
+                "runAsGroup": {
+                    "description": "The GID to run the entrypoint of the container process.",
+                    "type": "integer"
+                },
+                "runAsNonRoot": {
+                    "description": "Indicates that the container must run as a non-root user.",
+                    "type": "boolean"
+                },
+                "runAsUser": {
+                    "description": "The UID to run the entrypoint of the container process.",
+                    "type": "integer"
+                },
+                "seccompProfile": {
+                    "description": "The seccomp profile to use by the containers in the pod.",
+                    "type": "object",
+                    "properties": {
+                        "type": {
+                            "description": "The type of seccomp profile.",
+                            "type": "string"
+                        }
+                    }
+                }
+            }
+        },
+        "provider": {
+            "description": "Provider of the management cluster the event exporter is running in.",
+            "type": "object",
+            "properties": {
+                "kind": {
+                    "description": "Provider kind.",
+                    "type": "string"
+                }
+            }
+        },
+        "securityContext": {
+            "description": "Container Security Context.",
+            "type": "object",
+            "properties": {
+                "allowPrivilegeEscalation": {
+                    "description": "Controls whether a process can gain more privileges than its parent process.",
+                    "type": "boolean"
+                },
+                "capabilities": {
+                    "description": "The capabilities to add or drop.",
+                    "type": "object",
+                    "properties": {
+                        "drop": {
+                            "description": "The capabilities to drop.",
+                            "type": "array",
+                            "items": {
+                                "type": "string"
+                            }
+                        }
+                    }
+                },
+                "readOnlyRootFilesystem": {
+                    "description": "Whether this container has a read-only root filesystem.",
+                    "type": "boolean"
+                },
+                "runAsGroup": {
+                    "description": "The GID to run the entrypoint of the container process.",
+                    "type": "integer"
+                },
+                "runAsNonRoot": {
+                    "description": "Indicates that the container must run as a non-root user.",
+                    "type": "boolean"
+                },
+                "runAsUser": {
+                    "description": "The UID to run the entrypoint of the container process.",
+                    "type": "integer"
+                },
+                "seccompProfile": {
+                    "description": "The seccomp profile to use by the container.",
+                    "type": "object",
+                    "properties": {
+                        "type": {
+                            "description": "The type of seccomp profile.",
+                            "type": "string"
+                        }
+                    }
+                }
+            }
+        },
+        "slack": {
+            "description": "Slack settings.",
+            "type": "object",
+            "properties": {
+                "channel": {
+                    "description": "Slack channel to post to.",
+                    "type": "string"
+                },
+                "token": {
+                    "description": "Slack token.",
+                    "type": "string"
+                },
+                "webhook": {
+                    "description": "DEPRECATED: Slack webhook URL. Will be removed in a future release.",
+                    "type": "string"
+                }
+            }
+        },
+        "testingEnvironment": {
+            "description": "If the management cluster the event exporter is running in is a testing environment.",
+            "type": "boolean"
+        },
+        "verticalPodAutoscaler": {
+            "description": "Vertical Pod Autoscaler settings.",
+            "type": "object",
+            "properties": {
+                "enabled": {
+                    "description": "If Vertical Pod Autoscaler is enabled.",
+                    "type": "boolean"
+                }
+            }
+        },
+        "watchReasons": {
+            "description": "Reasons for events to be exported.",
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        }
+    }
+}
+
