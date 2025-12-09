@@ -24145,6 +24145,33 @@ entries:
     - https://giantswarm.github.io/control-plane-test-catalog/kyverno-policies-0.24.0-ad12e97729f3899f49f8594a55065bce9beeae67.tgz
     version: 0.24.0-ad12e97729f3899f49f8594a55065bce9beeae67
   - annotations:
+      io.giantswarm.application.metadata: https://giantswarm.github.io/control-plane-test-catalog/kyverno-policies-0.24.0-9d839c734cd909004647a97dd5ec264ae2f25d48.tgz-meta/main.yaml
+      io.giantswarm.application.readme: https://raw.githubusercontent.com/giantswarm/kyverno-policies/refs/tags/v0.24.0-9d839c734cd909004647a97dd5ec264ae2f25d48/README.md
+      io.giantswarm.application.restrictions.cluster-singleton: "true"
+      io.giantswarm.application.team: shield
+      io.giantswarm.application.values-schema: https://raw.githubusercontent.com/giantswarm/kyverno-policies/refs/tags/v0.24.0-9d839c734cd909004647a97dd5ec264ae2f25d48/helm/kyverno-policies/values.schema.json
+    apiVersion: v2
+    created: "2025-12-09T13:55:47.385517027Z"
+    dependencies:
+    - name: kyverno-policies
+      repository: ""
+      version: 3.6.0
+    description: 'Kubernetes Pod Security Standards implemented as Kyverno policies '
+    digest: cec2153797ad320db9039f783c403b2d25ab52b9986b6c1b74f059636f71c657
+    home: https://github.com/giantswarm/kyverno-policies
+    icon: https://s.giantswarm.io/app-icons/kyverno/1/light.svg
+    keywords:
+    - kubernetes
+    - policy-agent
+    - validating-webhook
+    - admission-controller
+    name: kyverno-policies
+    sources:
+    - https://github.com/giantswarm/kyverno-policies
+    urls:
+    - https://giantswarm.github.io/control-plane-test-catalog/kyverno-policies-0.24.0-9d839c734cd909004647a97dd5ec264ae2f25d48.tgz
+    version: 0.24.0-9d839c734cd909004647a97dd5ec264ae2f25d48
+  - annotations:
       application.giantswarm.io/metadata: https://giantswarm.github.io/control-plane-test-catalog/kyverno-policies-0.24.0-9cec9200d64d16a2e27ff72dfa7514c90120b34d.tgz-meta/main.yaml
       application.giantswarm.io/readme: https://giantswarm.github.io/control-plane-test-catalog/kyverno-policies-0.24.0-9cec9200d64d16a2e27ff72dfa7514c90120b34d.tgz-meta/README.md
       application.giantswarm.io/team: shield
@@ -42157,4 +42184,4 @@ entries:
     urls:
     - https://giantswarm.github.io/control-plane-test-catalog/vertical-pod-autoscaler-crd-4.1.1-2c01fdecf9e5b88d2ad8c911252b93a9f49ec801.tgz
     version: 4.1.1-2c01fdecf9e5b88d2ad8c911252b93a9f49ec801
-generated: "2025-12-09T13:52:57.245628069Z"
+generated: "2025-12-09T13:55:47.383664709Z"
