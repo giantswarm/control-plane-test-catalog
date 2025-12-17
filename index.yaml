@@ -5118,6 +5118,29 @@ entries:
     version: 1.32.5-0668792a6ab782a6c6d26adc1e75efd98e7641ef
   backstage:
   - annotations:
+      io.giantswarm.application.logo: https://s.giantswarm.io/app-icons/backstage/1/logo.svg
+      io.giantswarm.application.metadata: https://giantswarm.github.io/control-plane-test-catalog/backstage-0.91.1-df106ee938a9d467f6b4fc9beeb5ea683a35cdff.tgz-meta/main.yaml
+      io.giantswarm.application.readme: https://raw.githubusercontent.com/giantswarm/backstage/refs/tags/v0.91.1-df106ee938a9d467f6b4fc9beeb5ea683a35cdff/README.md
+      io.giantswarm.application.team: honeybadger
+      io.giantswarm.application.values-schema: https://raw.githubusercontent.com/giantswarm/backstage/refs/tags/v0.91.1-df106ee938a9d467f6b4fc9beeb5ea683a35cdff/helm/backstage/values.schema.json
+    apiVersion: v2
+    appVersion: 0.91.1-df106ee938a9d467f6b4fc9beeb5ea683a35cdff
+    created: "2025-12-17T09:28:22.891952813Z"
+    dependencies:
+    - name: common
+      repository: oci://registry-1.docker.io/bitnamicharts
+      tags:
+      - bitnami-common
+      version: 2.31.4
+    description: Backstage app provided by Giant Swarm
+    digest: cd1cd52494b338d999129f101a009b1d30bbe3e7212b49799ee3a8284c10850f
+    home: https://github.com/giantswarm/backstage
+    icon: https://s.giantswarm.io/app-icons/backstage/1/icon.svg
+    name: backstage
+    urls:
+    - https://giantswarm.github.io/control-plane-test-catalog/backstage-0.91.1-df106ee938a9d467f6b4fc9beeb5ea683a35cdff.tgz
+    version: 0.91.1-df106ee938a9d467f6b4fc9beeb5ea683a35cdff
+  - annotations:
       application.giantswarm.io/metadata: https://giantswarm.github.io/control-plane-test-catalog/backstage-0.91.1-b531f91ccb0e24c55549900ce855c7edaacaeab9.tgz-meta/main.yaml
       application.giantswarm.io/readme: https://giantswarm.github.io/control-plane-test-catalog/backstage-0.91.1-b531f91ccb0e24c55549900ce855c7edaacaeab9.tgz-meta/README.md
       application.giantswarm.io/team: honeybadger
@@ -38366,4 +38389,4 @@ entries:
     urls:
     - https://giantswarm.github.io/control-plane-test-catalog/vertical-pod-autoscaler-crd-4.1.1-2c01fdecf9e5b88d2ad8c911252b93a9f49ec801.tgz
     version: 4.1.1-2c01fdecf9e5b88d2ad8c911252b93a9f49ec801
-generated: "2025-12-17T09:26:54.682000349Z"
+generated: "2025-12-17T09:28:22.889083512Z"
