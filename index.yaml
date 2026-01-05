@@ -3560,6 +3560,26 @@ entries:
     version: 1.0.2-1dbce4cdd1d706d8544c5c3b292cb37cb5e75080
   azuredisk-csi-driver-app:
   - annotations:
+      io.giantswarm.application.metadata: https://giantswarm.github.io/control-plane-test-catalog/azuredisk-csi-driver-app-2.0.0-68399c5110cd86553791f0beadde19f4ea51c089.tgz-meta/main.yaml
+      io.giantswarm.application.readme: https://raw.githubusercontent.com/giantswarm/azuredisk-csi-driver-app/refs/tags/v2.0.0-68399c5110cd86553791f0beadde19f4ea51c089/README.md
+      io.giantswarm.application.restrictions.cluster-singleton: "true"
+      io.giantswarm.application.restrictions.compatible-providers: azure
+      io.giantswarm.application.restrictions.fixed-namespace: kube-system
+      io.giantswarm.application.restrictions.gpu-instances: "false"
+      io.giantswarm.application.team: phoenix
+      io.giantswarm.application.values-schema: https://raw.githubusercontent.com/giantswarm/azuredisk-csi-driver-app/refs/tags/v2.0.0-68399c5110cd86553791f0beadde19f4ea51c089/helm/azuredisk-csi-driver-app/values.schema.json
+    apiVersion: v2
+    appVersion: 1.33.7
+    created: "2026-01-05T14:12:38.950951185Z"
+    description: A Helm chart to run Azure CSI driver for Azure Disks.
+    digest: f445332839b32c0ec5e792138b602bd12d938cb8b1ebd2804195cb058d2bb3b5
+    home: https://github.com/giantswarm/azuredisk-csi-driver-app
+    icon: https://s.giantswarm.io/app-icons/azure/1/dark.svg
+    name: azuredisk-csi-driver-app
+    urls:
+    - https://giantswarm.github.io/control-plane-test-catalog/azuredisk-csi-driver-app-2.0.0-68399c5110cd86553791f0beadde19f4ea51c089.tgz
+    version: 2.0.0-68399c5110cd86553791f0beadde19f4ea51c089
+  - annotations:
       application.giantswarm.io/team: phoenix
     apiVersion: v2
     appVersion: 1.33.7
@@ -28680,4 +28700,4 @@ entries:
     urls:
     - https://giantswarm.github.io/control-plane-test-catalog/vertical-pod-autoscaler-crd-4.1.1-2c01fdecf9e5b88d2ad8c911252b93a9f49ec801.tgz
     version: 4.1.1-2c01fdecf9e5b88d2ad8c911252b93a9f49ec801
-generated: "2026-01-05T13:56:49.681112021Z"
+generated: "2026-01-05T14:12:38.947768113Z"
