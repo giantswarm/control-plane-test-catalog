@@ -3335,6 +3335,27 @@ entries:
     version: 1.32.7-1-0d6f515221d9ad6e5ca29ecd7bbac05a5f57a394
   azure-cloud-node-manager-app:
   - annotations:
+      io.giantswarm.application.metadata: https://giantswarm.github.io/control-plane-test-catalog/azure-cloud-node-manager-app-2.0.0-858dd675afe7227ba7a98ac74633b1b5b494f5bb.tgz-meta/main.yaml
+      io.giantswarm.application.readme: https://raw.githubusercontent.com/giantswarm/azure-cloud-node-manager-app/refs/tags/v2.0.0-858dd675afe7227ba7a98ac74633b1b5b494f5bb/README.md
+      io.giantswarm.application.restrictions.cluster-singleton: "true"
+      io.giantswarm.application.restrictions.compatible-providers: azure
+      io.giantswarm.application.restrictions.fixed-namespace: kube-system
+      io.giantswarm.application.restrictions.gpu-instances: "false"
+      io.giantswarm.application.team: phoenix
+      io.giantswarm.application.values-schema: https://raw.githubusercontent.com/giantswarm/azure-cloud-node-manager-app/refs/tags/v2.0.0-858dd675afe7227ba7a98ac74633b1b5b494f5bb/helm/azure-cloud-node-manager-app/values.schema.json
+      ui.giantswarm.io/logo: https://s.giantswarm.io/app-icons/azure/1/dark.svg
+    apiVersion: v2
+    appVersion: 1.34.3
+    created: "2026-01-05T13:27:29.187781881Z"
+    description: A Helm chart for the Azure Cloud Node Manager.
+    digest: af6e9ab4526900e1a15461f9b8b3244caccc05535568aafe7ad980fd826172b8
+    home: https://github.com/giantswarm/azure-cloud-node-manager-app
+    icon: https://s.giantswarm.io/app-icons/azure/1/dark.svg
+    name: azure-cloud-node-manager-app
+    urls:
+    - https://giantswarm.github.io/control-plane-test-catalog/azure-cloud-node-manager-app-2.0.0-858dd675afe7227ba7a98ac74633b1b5b494f5bb.tgz
+    version: 2.0.0-858dd675afe7227ba7a98ac74633b1b5b494f5bb
+  - annotations:
       application.giantswarm.io/team: phoenix
       ui.giantswarm.io/logo: https://s.giantswarm.io/app-icons/azure/1/dark.svg
     apiVersion: v2
@@ -28623,4 +28644,4 @@ entries:
     urls:
     - https://giantswarm.github.io/control-plane-test-catalog/vertical-pod-autoscaler-crd-4.1.1-2c01fdecf9e5b88d2ad8c911252b93a9f49ec801.tgz
     version: 4.1.1-2c01fdecf9e5b88d2ad8c911252b93a9f49ec801
-generated: "2026-01-05T13:12:22.050736037Z"
+generated: "2026-01-05T13:27:29.187109269Z"
