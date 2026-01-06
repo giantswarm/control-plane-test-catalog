@@ -7753,6 +7753,28 @@ entries:
     - https://giantswarm.github.io/control-plane-test-catalog/cluster-api-6.1.1-dab91084066d9cb983044b2b711532217fc524d7.tgz
     version: 6.1.1-dab91084066d9cb983044b2b711532217fc524d7
   - annotations:
+      io.giantswarm.application.metadata: https://giantswarm.github.io/control-plane-test-catalog/cluster-api-6.1.1-32afb5d89b6b2e973344543a5dfb1e0cfc5f66a1.tgz-meta/main.yaml
+      io.giantswarm.application.readme: https://raw.githubusercontent.com/giantswarm/cluster-api-app/refs/tags/v6.1.1-32afb5d89b6b2e973344543a5dfb1e0cfc5f66a1/README.md
+      io.giantswarm.application.team: tenet
+      io.giantswarm.application.values-schema: https://raw.githubusercontent.com/giantswarm/cluster-api-app/refs/tags/v6.1.1-32afb5d89b6b2e973344543a5dfb1e0cfc5f66a1/helm/cluster-api/values.schema.json
+      ui.giantswarm.io/logo: https://s.giantswarm.io/app-icons/giantswarm/1/dark.svg
+    apiVersion: v2
+    appVersion: 6.1.1-dev
+    created: "2026-01-06T10:04:57.360725308Z"
+    dependencies:
+    - condition: crds.install
+      name: crd-install
+      repository: ""
+      version: 1.0.0
+    description: A Helm chart for Cluster API components.
+    digest: 25c261c0e3ba58a607d18527980c09ea60d60089be2a668006fa586e7bb897a6
+    home: https://github.com/giantswarm/cluster-api-app
+    icon: https://s.giantswarm.io/app-icons/giantswarm/1/dark.svg
+    name: cluster-api
+    urls:
+    - https://giantswarm.github.io/control-plane-test-catalog/cluster-api-6.1.1-32afb5d89b6b2e973344543a5dfb1e0cfc5f66a1.tgz
+    version: 6.1.1-32afb5d89b6b2e973344543a5dfb1e0cfc5f66a1
+  - annotations:
       application.giantswarm.io/team: tenet
       ui.giantswarm.io/logo: https://s.giantswarm.io/app-icons/giantswarm/1/dark.svg
     apiVersion: v2
@@ -31729,4 +31751,4 @@ entries:
     urls:
     - https://giantswarm.github.io/control-plane-test-catalog/vertical-pod-autoscaler-crd-4.1.1-2c01fdecf9e5b88d2ad8c911252b93a9f49ec801.tgz
     version: 4.1.1-2c01fdecf9e5b88d2ad8c911252b93a9f49ec801
-generated: "2026-01-06T09:51:07.72175688Z"
+generated: "2026-01-06T10:04:57.341413126Z"
