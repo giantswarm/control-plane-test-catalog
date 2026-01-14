@@ -4803,6 +4803,27 @@ entries:
     - https://giantswarm.github.io/control-plane-test-catalog/azure-cloud-controller-manager-app-2.0.0-ef2c6ab031e25131c10ef3e06fafc1c7b6af958a.tgz
     version: 2.0.0-ef2c6ab031e25131c10ef3e06fafc1c7b6af958a
   - annotations:
+      io.giantswarm.application.metadata: https://giantswarm.github.io/control-plane-test-catalog/azure-cloud-controller-manager-app-2.0.0-d651672c9511f42207d487bace6a9716a3dd9e93.tgz-meta/main.yaml
+      io.giantswarm.application.readme: https://raw.githubusercontent.com/giantswarm/azure-cloud-controller-manager-app/refs/tags/v2.0.0-d651672c9511f42207d487bace6a9716a3dd9e93/README.md
+      io.giantswarm.application.restrictions.cluster-singleton: "true"
+      io.giantswarm.application.restrictions.compatible-providers: azure
+      io.giantswarm.application.restrictions.fixed-namespace: kube-system
+      io.giantswarm.application.restrictions.gpu-instances: "false"
+      io.giantswarm.application.team: phoenix
+      io.giantswarm.application.values-schema: https://raw.githubusercontent.com/giantswarm/azure-cloud-controller-manager-app/refs/tags/v2.0.0-d651672c9511f42207d487bace6a9716a3dd9e93/helm/azure-cloud-controller-manager-app/values.schema.json
+      ui.giantswarm.io/logo: https://s.giantswarm.io/app-icons/azure/1/dark.svg
+    apiVersion: v2
+    appVersion: 1.34.3
+    created: "2026-01-14T13:23:49.773148613Z"
+    description: A Helm chart for the Azure Cloud Controller Manager.
+    digest: 8c0a09c56c979db142e66ae1fc66f1ed0c359655883041b4c5236cc01a4d0029
+    home: https://github.com/giantswarm/azure-cloud-controller-manager-app
+    icon: https://s.giantswarm.io/app-icons/azure/1/dark.svg
+    name: azure-cloud-controller-manager-app
+    urls:
+    - https://giantswarm.github.io/control-plane-test-catalog/azure-cloud-controller-manager-app-2.0.0-d651672c9511f42207d487bace6a9716a3dd9e93.tgz
+    version: 2.0.0-d651672c9511f42207d487bace6a9716a3dd9e93
+  - annotations:
       application.giantswarm.io/team: phoenix
       ui.giantswarm.io/logo: https://s.giantswarm.io/app-icons/azure/1/dark.svg
     apiVersion: v2
@@ -40492,4 +40513,4 @@ entries:
     urls:
     - https://giantswarm.github.io/control-plane-test-catalog/vertical-pod-autoscaler-crd-4.1.1-2c01fdecf9e5b88d2ad8c911252b93a9f49ec801.tgz
     version: 4.1.1-2c01fdecf9e5b88d2ad8c911252b93a9f49ec801
-generated: "2026-01-14T11:13:21.694796112Z"
+generated: "2026-01-14T13:23:49.772166663Z"
