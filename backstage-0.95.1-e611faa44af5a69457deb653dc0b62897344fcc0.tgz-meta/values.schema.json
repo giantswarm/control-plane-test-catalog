@@ -1,0 +1,499 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "authSessionSecret": {
+      "type": "string"
+    },
+    "aws": {
+      "type": "object",
+      "properties": {
+        "accessKeyID": {
+          "type": "string"
+        },
+        "secretAccessKey": {
+          "type": "string"
+        }
+      }
+    },
+    "backstageDiscovery": {
+      "type": "object",
+      "properties": {
+        "kubernetesId": {
+          "type": "string",
+          "description": "Value to set for the backstage.io/kubernetes-id label in resources, for discovery in Backstage."
+        }
+      }
+    },
+    "backstage": {
+      "title": "Backstage parameters",
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "appConfig": {
+          "default": {},
+          "examples": [
+            {
+              "app": {
+                "baseUrl": "https://somedomain.tld"
+              }
+            }
+          ],
+          "title": "Generates ConfigMap and configures it in the Backstage pods",
+          "type": ["object", "string"]
+        },
+        "args": {
+          "title": "Backstage container command arguments",
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "default": []
+        },
+        "command": {
+          "title": "Backstage container command",
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "default": ["node", "packages/backend"]
+        },
+        "extraAppConfig": {
+          "title": "Extra app configuration files to inline into command arguments",
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "filename": {
+                "type": "string"
+              },
+              "configMapRef": {
+                "type": "string"
+              }
+            }
+          },
+          "default": []
+        },
+        "extraEnvVars": {
+          "title": "Backstage container environment variables",
+          "type": "array",
+          "items": {
+            "$ref": "https://raw.githubusercontent.com/yannh/kubernetes-json-schema/master/master/_definitions.json#/definitions/io.k8s.api.core.v1.EnvVar"
+          },
+          "default": [],
+          "examples": [
+            [
+              {
+                "name": "APP_CONFIG_backend_cache_store",
+                "value": "memory"
+              }
+            ]
+          ]
+        },
+        "extraEnvVarsCM": {
+          "title": "Backstage container environment variables from existing ConfigMaps",
+          "type": "array",
+          "description": "Translates into array of `envFrom.[].configMapRef.name`",
+          "items": {
+            "type": "string"
+          },
+          "default": [],
+          "examples": [["my-backstage-configmap"]]
+        },
+        "extraEnvVarsSecrets": {
+          "title": "Backstage container environment variables from existing Secrets",
+          "type": "array",
+          "description": "Translates into array of `envFrom.[].secretRef.name`",
+          "items": {
+            "type": "string"
+          },
+          "default": [],
+          "examples": [["my-backstage-secrets"]]
+        },
+        "extraVolumeMounts": {
+          "title": "Backstage container additional volume mounts",
+          "type": "array",
+          "items": {
+            "$ref": "https://raw.githubusercontent.com/yannh/kubernetes-json-schema/master/master/_definitions.json#/definitions/io.k8s.api.core.v1.VolumeMount"
+          },
+          "default": []
+        },
+        "extraVolumes": {
+          "title": "Backstage container additional volumes",
+          "type": "array",
+          "items": {
+            "$ref": "https://raw.githubusercontent.com/yannh/kubernetes-json-schema/master/master/_definitions.json#/definitions/io.k8s.api.core.v1.Volume"
+          },
+          "default": []
+        }
+      }
+    },
+    "circleci": {
+      "type": "object",
+      "properties": {
+        "apiToken": {
+          "type": "string"
+        }
+      }
+    },
+    "dexAuthCredentials": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "properties": {
+          "clientID": {
+            "type": "string"
+          },
+          "clientSecret": {
+            "type": "string"
+          }
+        },
+        "required": ["clientID", "clientSecret"]
+      }
+    },
+    "externalAccess": {
+      "type": "object",
+      "properties": {
+        "mcpToken": {
+          "type": "string"
+        }
+      }
+    },
+    "githubAppCredentials": {
+      "type": "object",
+      "properties": {
+        "appId": {
+          "type": "integer"
+        },
+        "webhookUrl": {
+          "type": "string"
+        },
+        "clientId": {
+          "type": "string"
+        },
+        "clientSecret": {
+          "type": "string"
+        },
+        "webhookSecret": {
+          "type": "string"
+        },
+        "privateKey": {
+          "type": "string"
+        }
+      }
+    },
+    "githubAuthCredentials": {
+      "type": "object",
+      "properties": {
+        "clientID": {
+          "type": "string"
+        },
+        "clientSecret": {
+          "type": "string"
+        }
+      }
+    },
+    "grafana": {
+      "type": "object",
+      "properties": {
+        "apiToken": {
+          "type": "string"
+        }
+      }
+    },
+    "groupID": {
+      "type": "integer"
+    },
+    "ingress": {
+      "type": "object",
+      "description": "Traditional Ingress configuration",
+      "properties": {
+        "enabled": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enable traditional Ingress resource"
+        },
+        "className": {
+          "type": "string",
+          "default": "nginx",
+          "description": "Ingress class name"
+        },
+        "annotations": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          },
+          "description": "Ingress annotations"
+        },
+        "hostnames": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Hostnames for the Ingress"
+        }
+      }
+    },
+    "image": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "repository": {
+          "type": "string"
+        }
+      }
+    },
+    "name": {
+      "type": "string"
+    },
+    "nodeSelector": {
+      "type": "object"
+    },
+    "pluginKeys": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "keyId": {
+            "type": "string"
+          },
+          "publicKey": {
+            "type": "string"
+          },
+          "privateKey": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "port": {
+      "type": "integer"
+    },
+    "registry": {
+      "type": "object",
+      "properties": {
+        "domain": {
+          "type": "string"
+        }
+      }
+    },
+    "resources": {
+      "type": "object",
+      "properties": {
+        "limits": {
+          "type": "object",
+          "properties": {
+            "cpu": {
+              "type": "string"
+            },
+            "memory": {
+              "type": "string"
+            }
+          }
+        },
+        "requests": {
+          "type": "object",
+          "properties": {
+            "cpu": {
+              "type": "string"
+            },
+            "memory": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "route": {
+      "type": "object",
+      "description": "Gateway API route configuration",
+      "properties": {
+        "enabled": {
+          "type": "boolean",
+          "default": false,
+          "description": "Enable Gateway API HTTPRoute"
+        },
+        "kind": {
+          "type": "string",
+          "default": "HTTPRoute",
+          "enum": [
+            "HTTPRoute",
+            "GRPCRoute",
+            "TCPRoute",
+            "TLSRoute",
+            "UDPRoute"
+          ],
+          "description": "Route kind"
+        },
+        "name": {
+          "type": "string",
+          "description": "Route name (defaults to .Values.name)"
+        },
+        "annotations": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          },
+          "description": "Route annotations"
+        },
+        "labels": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          },
+          "description": "Route labels"
+        },
+        "hostnames": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Hostnames for the route (supports templating)"
+        },
+        "parentRefs": {
+          "type": "array",
+          "description": "Parent Gateway references",
+          "items": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string",
+                "description": "Name of the parent Gateway"
+              },
+              "namespace": {
+                "type": "string",
+                "description": "Namespace of the parent Gateway"
+              },
+              "sectionName": {
+                "type": "string",
+                "description": "Section name within the parent Gateway"
+              }
+            },
+            "required": ["name"]
+          }
+        },
+        "matches": {
+          "type": "array",
+          "description": "Path matching rules"
+        },
+        "filters": {
+          "type": "array",
+          "description": "Request/Response filters"
+        },
+        "additionalRules": {
+          "type": "array",
+          "description": "Additional custom rules"
+        },
+        "securityPolicy": {
+          "type": "object",
+          "description": "Envoy Gateway SecurityPolicy configuration (gateway.envoyproxy.io/v1alpha1)",
+          "properties": {
+            "enabled": {
+              "type": "boolean",
+              "default": false,
+              "description": "Enable SecurityPolicy resource"
+            },
+            "labels": {
+              "type": "object",
+              "additionalProperties": {
+                "type": "string"
+              },
+              "description": "SecurityPolicy labels"
+            },
+            "annotations": {
+              "type": "object",
+              "additionalProperties": {
+                "type": "string"
+              },
+              "description": "SecurityPolicy annotations"
+            },
+            "basicAuth": {
+              "type": "object",
+              "description": "Basic authentication configuration"
+            },
+            "cors": {
+              "type": "object",
+              "description": "CORS configuration"
+            },
+            "jwt": {
+              "type": "object",
+              "description": "JWT validation configuration"
+            },
+            "oidc": {
+              "type": "object",
+              "description": "OIDC authentication configuration"
+            },
+            "extAuth": {
+              "type": "object",
+              "description": "External authorization configuration"
+            },
+            "authorization": {
+              "type": "object",
+              "description": "Authorization rules configuration"
+            }
+          }
+        }
+      }
+    },
+    "sharedConfig": {
+      "default": {},
+      "type": ["object", "string"]
+    },
+    "sentry": {
+      "type": "object",
+      "properties": {
+        "app": {
+          "type": "object",
+          "properties": {
+            "dsn": {
+              "type": "string"
+            }
+          }
+        },
+        "backend": {
+          "type": "object",
+          "properties": {
+            "dsn": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "telemetrydeck": {
+      "type": "object",
+      "properties": {
+        "salt": {
+          "type": "string"
+        }
+      }
+    },
+    "userID": {
+      "type": "integer"
+    },
+    "database": {
+      "type": "object",
+      "properties": {
+        "engine": {
+          "type": "string",
+          "enum": ["postgresql", "sqlite"],
+          "default": "sqlite"
+        },
+        "postgresql": {
+          "type": "object",
+          "properties": {
+            "clusterNameSuffix": {
+              "type": "string"
+            },
+            "storageSize": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    }
+  }
+}
