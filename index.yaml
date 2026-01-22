@@ -33835,6 +33835,38 @@ entries:
     urls:
     - https://giantswarm.github.io/control-plane-test-catalog/k8s-audit-metrics-0.10.10-08b1c3b66b897eb2f7206d6933ce324b0fc0ddc0.tgz
     version: 0.10.10-08b1c3b66b897eb2f7206d6933ce324b0fc0ddc0
+  kamaji:
+  - annotations:
+      io.giantswarm.application.audience: giantswarm
+      io.giantswarm.application.managed: "true"
+      io.giantswarm.application.metadata: https://giantswarm.github.io/control-plane-test-catalog/kamaji-0.1.1-7606ac5e0bb4b0c77352a910ddcd97223e1a3f2e.tgz-meta/main.yaml
+      io.giantswarm.application.readme: https://raw.githubusercontent.com/giantswarm/kamaji-app/7606ac5e0bb4b0c77352a910ddcd97223e1a3f2e/README.md
+      io.giantswarm.application.team: rocket
+      io.giantswarm.application.upstream-chart-url: https://github.com/clastix/kamaji
+      io.giantswarm.application.upstream-chart-version: edge-25.12.3
+      io.giantswarm.application.values-schema: https://raw.githubusercontent.com/giantswarm/kamaji-app/7606ac5e0bb4b0c77352a910ddcd97223e1a3f2e/helm/kamaji/values.schema.json
+    apiVersion: v2
+    appVersion: edge-25.12.3
+    created: "2026-01-22T11:15:27.958082016Z"
+    dependencies:
+    - name: kamaji-crds
+      repository: ""
+      version: 0.0.1
+    description: Kamaji is the Hosted Control Plane Manager for Kubernetes.
+    digest: 7fd1346fd043efbcc78be67dc2621d853b754bf99734a9bcf61150099022632f
+    home: https://github.com/giantswarm/kamaji-app
+    icon: https://s.giantswarm.io/app-icons/kamaji/1/light.png
+    kubeVersion: '>=1.21.0-0'
+    maintainers:
+    - email: team-rocket@giantswarm.io
+      name: Team Rocket
+    name: kamaji
+    sources:
+    - https://github.com/clastix/kamaji
+    type: application
+    urls:
+    - https://giantswarm.github.io/control-plane-test-catalog/kamaji-0.1.1-7606ac5e0bb4b0c77352a910ddcd97223e1a3f2e.tgz
+    version: 0.1.1-7606ac5e0bb4b0c77352a910ddcd97223e1a3f2e
   keda:
   - annotations:
       io.giantswarm.application.metadata: https://giantswarm.github.io/control-plane-test-catalog/keda-3.1.0-e2a2ae1c878ba0a855402bfb4b922bf56e55fbf1.tgz-meta/main.yaml
@@ -57186,4 +57218,4 @@ entries:
     urls:
     - https://giantswarm.github.io/control-plane-test-catalog/vertical-pod-autoscaler-crd-4.1.1-2c01fdecf9e5b88d2ad8c911252b93a9f49ec801.tgz
     version: 4.1.1-2c01fdecf9e5b88d2ad8c911252b93a9f49ec801
-generated: "2026-01-22T11:06:53.044170739Z"
+generated: "2026-01-22T11:15:27.953783439Z"
