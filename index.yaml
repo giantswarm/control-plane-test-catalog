@@ -8106,6 +8106,26 @@ entries:
     version: 1.0.2-1dbce4cdd1d706d8544c5c3b292cb37cb5e75080
   azuredisk-csi-driver-app:
   - annotations:
+      io.giantswarm.application.metadata: https://giantswarm.github.io/control-plane-test-catalog/azuredisk-csi-driver-app-2.1.0-c62db4cafbd0915759c555ef8a007914ac9e5e8e.tgz-meta/main.yaml
+      io.giantswarm.application.readme: https://raw.githubusercontent.com/giantswarm/azuredisk-csi-driver-app/c62db4cafbd0915759c555ef8a007914ac9e5e8e/README.md
+      io.giantswarm.application.restrictions.cluster-singleton: "true"
+      io.giantswarm.application.restrictions.compatible-providers: azure
+      io.giantswarm.application.restrictions.fixed-namespace: kube-system
+      io.giantswarm.application.restrictions.gpu-instances: "false"
+      io.giantswarm.application.team: phoenix
+      io.giantswarm.application.values-schema: https://raw.githubusercontent.com/giantswarm/azuredisk-csi-driver-app/c62db4cafbd0915759c555ef8a007914ac9e5e8e/helm/azuredisk-csi-driver-app/values.schema.json
+    apiVersion: v2
+    appVersion: 1.34.0
+    created: "2026-01-28T17:23:26.518641018Z"
+    description: A Helm chart to run Azure CSI driver for Azure Disks.
+    digest: 9cc825994b031f3f6333ee54f32642f30001d4e8e71cb6fa2ce6ba41b8c7fd1a
+    home: https://github.com/giantswarm/azuredisk-csi-driver-app
+    icon: https://s.giantswarm.io/app-icons/azure/1/dark.svg
+    name: azuredisk-csi-driver-app
+    urls:
+    - https://giantswarm.github.io/control-plane-test-catalog/azuredisk-csi-driver-app-2.1.0-c62db4cafbd0915759c555ef8a007914ac9e5e8e.tgz
+    version: 2.1.0-c62db4cafbd0915759c555ef8a007914ac9e5e8e
+  - annotations:
       application.giantswarm.io/team: phoenix
     apiVersion: v2
     appVersion: 1.34.0
@@ -66105,4 +66125,4 @@ entries:
     urls:
     - https://giantswarm.github.io/control-plane-test-catalog/vertical-pod-autoscaler-crd-4.1.1-2c01fdecf9e5b88d2ad8c911252b93a9f49ec801.tgz
     version: 4.1.1-2c01fdecf9e5b88d2ad8c911252b93a9f49ec801
-generated: "2026-01-28T17:22:19.946669202Z"
+generated: "2026-01-28T17:23:26.514716188Z"
