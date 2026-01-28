@@ -8204,6 +8204,26 @@ entries:
     - https://giantswarm.github.io/control-plane-test-catalog/azuredisk-csi-driver-app-2.0.0-68399c5110cd86553791f0beadde19f4ea51c089.tgz
     version: 2.0.0-68399c5110cd86553791f0beadde19f4ea51c089
   - annotations:
+      io.giantswarm.application.metadata: https://giantswarm.github.io/control-plane-test-catalog/azuredisk-csi-driver-app-2.0.0-110298967effcefde66df128b0ab4d7e012ef9ec.tgz-meta/main.yaml
+      io.giantswarm.application.readme: https://raw.githubusercontent.com/giantswarm/azuredisk-csi-driver-app/refs/tags/v2.0.0-110298967effcefde66df128b0ab4d7e012ef9ec/README.md
+      io.giantswarm.application.restrictions.cluster-singleton: "true"
+      io.giantswarm.application.restrictions.compatible-providers: azure
+      io.giantswarm.application.restrictions.fixed-namespace: kube-system
+      io.giantswarm.application.restrictions.gpu-instances: "false"
+      io.giantswarm.application.team: phoenix
+      io.giantswarm.application.values-schema: https://raw.githubusercontent.com/giantswarm/azuredisk-csi-driver-app/refs/tags/v2.0.0-110298967effcefde66df128b0ab4d7e012ef9ec/helm/azuredisk-csi-driver-app/values.schema.json
+    apiVersion: v2
+    appVersion: 1.33.7
+    created: "2026-01-28T17:22:19.949885495Z"
+    description: A Helm chart to run Azure CSI driver for Azure Disks.
+    digest: 84385c105ef895658d8c41b283b8a07190c577f05bbf22eba23bc6b577fd2c49
+    home: https://github.com/giantswarm/azuredisk-csi-driver-app
+    icon: https://s.giantswarm.io/app-icons/azure/1/dark.svg
+    name: azuredisk-csi-driver-app
+    urls:
+    - https://giantswarm.github.io/control-plane-test-catalog/azuredisk-csi-driver-app-2.0.0-110298967effcefde66df128b0ab4d7e012ef9ec.tgz
+    version: 2.0.0-110298967effcefde66df128b0ab4d7e012ef9ec
+  - annotations:
       application.giantswarm.io/team: phoenix
     apiVersion: v2
     appVersion: 1.33.7
@@ -66085,4 +66105,4 @@ entries:
     urls:
     - https://giantswarm.github.io/control-plane-test-catalog/vertical-pod-autoscaler-crd-4.1.1-2c01fdecf9e5b88d2ad8c911252b93a9f49ec801.tgz
     version: 4.1.1-2c01fdecf9e5b88d2ad8c911252b93a9f49ec801
-generated: "2026-01-28T17:20:15.448747724Z"
+generated: "2026-01-28T17:22:19.946669202Z"
