@@ -45683,6 +45683,40 @@ entries:
     - https://giantswarm.github.io/control-plane-test-catalog/tempo-0.9.0-ab2c9d52f4d2afab7861dc3bf62b4c3cade58c54.tgz
     version: 0.9.0-ab2c9d52f4d2afab7861dc3bf62b4c3cade58c54
   - annotations:
+      io.giantswarm.application.metadata: https://giantswarm.github.io/control-plane-test-catalog/tempo-0.9.0-65dd155dbe85c0ea61d5c626759c94da077875cd.tgz-meta/main.yaml
+      io.giantswarm.application.readme: https://raw.githubusercontent.com/giantswarm/tempo-app/65dd155dbe85c0ea61d5c626759c94da077875cd/README.md
+      io.giantswarm.application.team: atlas
+      io.giantswarm.application.values-schema: https://raw.githubusercontent.com/giantswarm/tempo-app/65dd155dbe85c0ea61d5c626759c94da077875cd/helm/tempo/values.schema.json
+    apiVersion: v2
+    appVersion: 2.9.0
+    created: "2026-02-02T15:52:41.763733275Z"
+    dependencies:
+    - alias: tempo
+      condition: tempo.enabled
+      name: tempo-distributed
+      repository: https://grafana.github.io/helm-charts
+      version: 1.58.1
+    - alias: vulture
+      condition: vulture.enabled
+      name: tempo-vulture
+      repository: https://grafana.github.io/helm-charts
+      version: 0.10.0
+    description: Helm chart for Grafana Tempo in microservice mode
+    digest: b1fd385575b8533eb00fcebb8c26cc940a51b7f650910fed1914f6091647c790
+    home: https://github.com/giantswarm/tempo-app
+    icon: https://s.giantswarm.io/app-icons/grafana-tempo/1/light.svg
+    maintainers:
+    - email: team-atlas@giantswarm.io
+      name: giantswarm/team-atlas
+    name: tempo
+    sources:
+    - https://github.com/giantswarm/tempo-app
+    - https://github.com/grafana/helm-charts/blob/main/charts/tempo-distributed
+    type: application
+    urls:
+    - https://giantswarm.github.io/control-plane-test-catalog/tempo-0.9.0-65dd155dbe85c0ea61d5c626759c94da077875cd.tgz
+    version: 0.9.0-65dd155dbe85c0ea61d5c626759c94da077875cd
+  - annotations:
       io.giantswarm.application.metadata: https://giantswarm.github.io/control-plane-test-catalog/tempo-0.9.0-482d3763a5b6bc0ab8791e2a3e68f26fb93055f5.tgz-meta/main.yaml
       io.giantswarm.application.readme: https://raw.githubusercontent.com/giantswarm/tempo-app/482d3763a5b6bc0ab8791e2a3e68f26fb93055f5/README.md
       io.giantswarm.application.team: atlas
@@ -46183,4 +46217,4 @@ entries:
     urls:
     - https://giantswarm.github.io/control-plane-test-catalog/vertical-pod-autoscaler-crd-4.1.1-355e0a59910b6c089c444c378ae68cd73ef9f7cb.tgz
     version: 4.1.1-355e0a59910b6c089c444c378ae68cd73ef9f7cb
-generated: "2026-02-02T15:52:04.556793584Z"
+generated: "2026-02-02T15:52:41.749876029Z"
