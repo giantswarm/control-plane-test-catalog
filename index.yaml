@@ -34824,6 +34824,38 @@ entries:
     version: 1.23.0-533db8a76fcc93a0e4b981dd580ae547f51b3cf7
   node-exporter-app:
   - annotations:
+      application.giantswarm.io/team: turtles
+      artifacthub.io/license: Apache-2.0
+      artifacthub.io/links: |
+        - name: Chart Source
+          url: https://github.com/prometheus-community/helm-charts
+      config.giantswarm.io/version: 1.x.x
+    apiVersion: v2
+    appVersion: 1.8.2
+    created: "2026-02-03T11:41:09.359894122Z"
+    description: A Helm chart for prometheus node-exporter
+    digest: 3f13eff9a36c320bdb07226b3c877092e7a1bf63e3adfab2b640eb420ed8c67e
+    home: https://github.com/giantswarm/node-exporter-app
+    icon: https://s.giantswarm.io/app-icons/prometheus/1/light.svg
+    keywords:
+    - node-exporter
+    - prometheus
+    - exporter
+    maintainers:
+    - email: gianrubio@gmail.com
+      name: gianrubio
+    - email: zanhsieh@gmail.com
+      name: zanhsieh
+    - email: rootsandtrees@posteo.de
+      name: zeritti
+    name: node-exporter-app
+    sources:
+    - https://github.com/prometheus/node_exporter/
+    type: application
+    urls:
+    - https://giantswarm.github.io/control-plane-test-catalog/node-exporter-app-1.20.10-c8cbb9d831ba2bafda41d1d296ad5894fc49a000.tgz
+    version: 1.20.10-c8cbb9d831ba2bafda41d1d296ad5894fc49a000
+  - annotations:
       artifacthub.io/license: Apache-2.0
       artifacthub.io/links: |
         - name: Chart Source
@@ -48006,4 +48038,4 @@ entries:
     urls:
     - https://giantswarm.github.io/control-plane-test-catalog/vertical-pod-autoscaler-crd-4.1.1-355e0a59910b6c089c444c378ae68cd73ef9f7cb.tgz
     version: 4.1.1-355e0a59910b6c089c444c378ae68cd73ef9f7cb
-generated: "2026-02-03T11:41:01.965231076Z"
+generated: "2026-02-03T11:41:09.357989361Z"
