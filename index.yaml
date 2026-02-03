@@ -31628,6 +31628,46 @@ entries:
     urls:
     - https://giantswarm.github.io/control-plane-test-catalog/kamaji-etcd-0.0.0-1de6d614920e23f0718ef0e54237d8c4d9c2949d.tgz
     version: 0.0.0-1de6d614920e23f0718ef0e54237d8c4d9c2949d
+  - annotations:
+      artifacthub.io/changes: |
+        - kind: feat
+          description: custom certmanager object names and customisations
+      artifacthub.io/links: |
+        - name: CLASTIX
+          url: https://clastix.io
+        - name: Kamaji
+          url: https://kamaji.clastix.io
+        - name: support
+          url: https://clastix.io/support
+      artifacthub.io/operator: "true"
+      artifacthub.io/operatorCapabilities: Full Lifecycle
+      io.giantswarm.application.metadata: https://giantswarm.github.io/control-plane-test-catalog/kamaji-etcd-0.0.0-113d1941fe73b44bfb2965f3d4ab1a6dff914c5e.tgz-meta/main.yaml
+      io.giantswarm.application.readme: https://raw.githubusercontent.com/clastix/kamaji-etcd/refs/tags/v0.0.0-113d1941fe73b44bfb2965f3d4ab1a6dff914c5e/README.md
+      io.giantswarm.application.team: rocket
+      io.giantswarm.application.upstream: https://github.com/clastix/kamaji-etcd
+      io.giantswarm.application.values-schema: https://raw.githubusercontent.com/clastix/kamaji-etcd/refs/tags/v0.0.0-113d1941fe73b44bfb2965f3d4ab1a6dff914c5e/helm/kamaji-etcd/values.schema.json
+    apiVersion: v2
+    appVersion: 3.5.17
+    created: "2026-02-03T17:44:04.77602966Z"
+    description: Helm chart for deploying a multi-tenant `etcd` cluster.
+    digest: ba981dfc72606fd824e9fd95ba555676619158817fbc3f911735aceaf7a91e12
+    home: https://github.com/clastix/kamaji-etcd
+    icon: https://github.com/clastix/kamaji/raw/master/assets/logo-colored.png
+    kubeVersion: '>=1.22.0-0'
+    maintainers:
+    - email: adriano@clastix.io
+      name: Adriano Pezzuto
+      url: https://clastix.io
+    - email: dario@clastix.io
+      name: Dario Tranchitella
+      url: https://clastix.io
+    name: kamaji-etcd
+    sources:
+    - https://github.com/clastix/kamaji-etcd
+    type: application
+    urls:
+    - https://giantswarm.github.io/control-plane-test-catalog/kamaji-etcd-0.0.0-113d1941fe73b44bfb2965f3d4ab1a6dff914c5e.tgz
+    version: 0.0.0-113d1941fe73b44bfb2965f3d4ab1a6dff914c5e
   keda:
   - annotations:
       io.giantswarm.application.metadata: https://giantswarm.github.io/control-plane-test-catalog/keda-3.1.1-50993d732cee67a5b6e7074da707d8f9d103d607.tgz-meta/main.yaml
@@ -50934,4 +50974,4 @@ entries:
     urls:
     - https://giantswarm.github.io/control-plane-test-catalog/vertical-pod-autoscaler-crd-4.1.1-355e0a59910b6c089c444c378ae68cd73ef9f7cb.tgz
     version: 4.1.1-355e0a59910b6c089c444c378ae68cd73ef9f7cb
-generated: "2026-02-03T17:42:41.684603777Z"
+generated: "2026-02-03T17:44:04.774362917Z"
