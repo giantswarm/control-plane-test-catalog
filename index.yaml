@@ -51165,6 +51165,30 @@ entries:
     - https://giantswarm.github.io/control-plane-test-catalog/reports-server-0.1.0-ef1c56eeea7933a7bf84dd8feef7a4352c62e27a.tgz
     version: 0.1.0-ef1c56eeea7933a7bf84dd8feef7a4352c62e27a
   - annotations:
+      io.giantswarm.application.audience: all
+      io.giantswarm.application.managed: "true"
+      io.giantswarm.application.metadata: https://giantswarm.github.io/control-plane-test-catalog/reports-server-0.1.0-cb4cb2a88c5fb73c7ba15338e733cc485a2cc430.tgz-meta/main.yaml
+      io.giantswarm.application.readme: https://raw.githubusercontent.com/giantswarm/reports-server-app/cb4cb2a88c5fb73c7ba15338e733cc485a2cc430/README.md
+      io.giantswarm.application.team: shield
+      io.giantswarm.application.values-schema: https://raw.githubusercontent.com/giantswarm/reports-server-app/cb4cb2a88c5fb73c7ba15338e733cc485a2cc430/helm/reports-server/values.schema.json
+    apiVersion: v2
+    appVersion: v0.1.6
+    created: "2026-02-05T19:33:16.859777176Z"
+    dependencies:
+    - name: reports-server
+      repository: ""
+      version: 0.1.6
+    description: A Giant Swarm app for deploying the Kyverno Reports Server.
+    digest: e1acfce3d30ab86fabcd60f8ce7c7254ed6ee9313014ebc961d677da5551dc5b
+    home: https://github.com/giantswarm/reports-server-app
+    icon: https://s.giantswarm.io/app-icons/kyverno/1/light.svg
+    name: reports-server
+    sources:
+    - https://github.com/kyverno/reports-server
+    urls:
+    - https://giantswarm.github.io/control-plane-test-catalog/reports-server-0.1.0-cb4cb2a88c5fb73c7ba15338e733cc485a2cc430.tgz
+    version: 0.1.0-cb4cb2a88c5fb73c7ba15338e733cc485a2cc430
+  - annotations:
       config.giantswarm.io/version: 1.x.x
       io.giantswarm.application.audience: all
       io.giantswarm.application.managed: "true"
@@ -60370,4 +60394,4 @@ entries:
     urls:
     - https://giantswarm.github.io/control-plane-test-catalog/vertical-pod-autoscaler-crd-4.1.1-355e0a59910b6c089c444c378ae68cd73ef9f7cb.tgz
     version: 4.1.1-355e0a59910b6c089c444c378ae68cd73ef9f7cb
-generated: "2026-02-05T19:32:55.255698756Z"
+generated: "2026-02-05T19:33:16.848593841Z"
