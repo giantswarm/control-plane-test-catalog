@@ -58618,6 +58618,34 @@ entries:
     version: 0.14.1-61919935dced945ba6732baca579f4509df53a50
   trivy-operator:
   - annotations:
+      io.giantswarm.application.audience: all
+      io.giantswarm.application.managed: "true"
+      io.giantswarm.application.metadata: https://giantswarm.github.io/control-plane-test-catalog/trivy-operator-0.12.1-b8100a15248896c2b5dc660681b25061133fa6a0.tgz-meta/main.yaml
+      io.giantswarm.application.readme: https://raw.githubusercontent.com/giantswarm/trivy-operator-app/b8100a15248896c2b5dc660681b25061133fa6a0/README.md
+      io.giantswarm.application.team: shield
+      io.giantswarm.application.values-schema: https://raw.githubusercontent.com/giantswarm/trivy-operator-app/b8100a15248896c2b5dc660681b25061133fa6a0/helm/trivy-operator/values.schema.json
+    apiVersion: v2
+    appVersion: 0.27.3
+    created: "2026-02-05T15:43:54.457390116Z"
+    dependencies:
+    - name: trivy-operator
+      repository: ""
+      version: 0.30.0
+    description: A Giant Swarm App for trivy-operator, the cluster security tool from
+      Aqua Security.
+    digest: a662249aef5e9c37bc84f14b26547ee05b9772cd83b72ec8c2bc45fc662ee244
+    home: https://github.com/giantswarm/trivy-operator-app
+    icon: https://s.giantswarm.io/app-icons/trivy/1/light.svg
+    maintainers:
+    - name: Giant Swarm applications team
+      url: https://github.com/giantswarm/trivy-operator-app
+    name: trivy-operator
+    sources:
+    - https://github.com/aquasecurity/trivy-operator
+    urls:
+    - https://giantswarm.github.io/control-plane-test-catalog/trivy-operator-0.12.1-b8100a15248896c2b5dc660681b25061133fa6a0.tgz
+    version: 0.12.1-b8100a15248896c2b5dc660681b25061133fa6a0
+  - annotations:
       config.giantswarm.io/version: 1.x.x
       io.giantswarm.application.audience: all
       io.giantswarm.application.managed: "true"
@@ -59050,4 +59078,4 @@ entries:
     urls:
     - https://giantswarm.github.io/control-plane-test-catalog/vertical-pod-autoscaler-crd-4.1.1-355e0a59910b6c089c444c378ae68cd73ef9f7cb.tgz
     version: 4.1.1-355e0a59910b6c089c444c378ae68cd73ef9f7cb
-generated: "2026-02-05T15:43:47.716848289Z"
+generated: "2026-02-05T15:43:54.452421824Z"
