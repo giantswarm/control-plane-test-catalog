@@ -30866,6 +30866,43 @@ entries:
     - https://giantswarm.github.io/control-plane-test-catalog/falco-0.11.0-b110148bb2c3670ff442d9f1b48daa1d16a0487e.tgz
     version: 0.11.0-b110148bb2c3670ff442d9f1b48daa1d16a0487e
   - annotations:
+      io.giantswarm.application.audience: all
+      io.giantswarm.application.logo: https://s.giantswarm.io/app-icons/falco/2/logo_dark.svg
+      io.giantswarm.application.managed: "true"
+      io.giantswarm.application.metadata: https://giantswarm.github.io/control-plane-test-catalog/falco-0.11.0-acc2ce09369bed94a712122b72a31c406d7eecc2.tgz-meta/main.yaml
+      io.giantswarm.application.readme: https://raw.githubusercontent.com/giantswarm/falco-app/acc2ce09369bed94a712122b72a31c406d7eecc2/README.md
+      io.giantswarm.application.team: shield
+      io.giantswarm.application.values-schema: https://raw.githubusercontent.com/giantswarm/falco-app/acc2ce09369bed94a712122b72a31c406d7eecc2/helm/falco/values.schema.json
+    apiVersion: v2
+    appVersion: 0.41.3
+    created: "2026-02-05T16:31:50.639308675Z"
+    dependencies:
+    - condition: falco.enabled
+      name: falco
+      repository: ""
+      version: 6.2.5
+    - condition: falcosidekick.enabled
+      name: falcosidekick
+      repository: ""
+      version: 0.10.2
+    - condition: k8s-metacollector.enabled
+      name: k8s-metacollector
+      repository: ""
+      version: 0.1.10
+    description: A Helm chart for falco
+    digest: 1d09f01cf2452f7fb9d79a541d79b4c408105592902cc20f6bdd3b424e2a014e
+    home: https://github.com/giantswarm/falco-app
+    icon: https://s.giantswarm.io/app-icons/falco/2/icon_dark.svg
+    maintainers:
+    - name: Giant Swarm applications team
+      url: https://github.com/giantswarm/falco-app
+    name: falco
+    sources:
+    - https://github.com/giantswarm/falco-app
+    urls:
+    - https://giantswarm.github.io/control-plane-test-catalog/falco-0.11.0-acc2ce09369bed94a712122b72a31c406d7eecc2.tgz
+    version: 0.11.0-acc2ce09369bed94a712122b72a31c406d7eecc2
+  - annotations:
       config.giantswarm.io/version: 1.x.x
       io.giantswarm.application.audience: all
       io.giantswarm.application.managed: "true"
@@ -59545,4 +59582,4 @@ entries:
     urls:
     - https://giantswarm.github.io/control-plane-test-catalog/vertical-pod-autoscaler-crd-4.1.1-355e0a59910b6c089c444c378ae68cd73ef9f7cb.tgz
     version: 4.1.1-355e0a59910b6c089c444c378ae68cd73ef9f7cb
-generated: "2026-02-05T16:27:37.652415517Z"
+generated: "2026-02-05T16:31:50.626729116Z"
