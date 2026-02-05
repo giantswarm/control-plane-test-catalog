@@ -58785,6 +58785,34 @@ entries:
     urls:
     - https://giantswarm.github.io/control-plane-test-catalog/trivy-operator-0.12.1-b0158d01278839d5150a2d82e16b25bf660e8bef.tgz
     version: 0.12.1-b0158d01278839d5150a2d82e16b25bf660e8bef
+  - annotations:
+      io.giantswarm.application.audience: all
+      io.giantswarm.application.managed: "true"
+      io.giantswarm.application.metadata: https://giantswarm.github.io/control-plane-test-catalog/trivy-operator-0.12.1-a337c6a9b797815d698259f1a5eb7ef46a50f84a.tgz-meta/main.yaml
+      io.giantswarm.application.readme: https://raw.githubusercontent.com/giantswarm/trivy-operator-app/a337c6a9b797815d698259f1a5eb7ef46a50f84a/README.md
+      io.giantswarm.application.team: shield
+      io.giantswarm.application.values-schema: https://raw.githubusercontent.com/giantswarm/trivy-operator-app/a337c6a9b797815d698259f1a5eb7ef46a50f84a/helm/trivy-operator/values.schema.json
+    apiVersion: v2
+    appVersion: 0.27.3
+    created: "2026-02-05T15:52:03.59153435Z"
+    dependencies:
+    - name: trivy-operator
+      repository: ""
+      version: 0.30.0
+    description: A Giant Swarm App for trivy-operator, the cluster security tool from
+      Aqua Security.
+    digest: 669131a601585a8d8cb8470757f9262933133aade6372b6b453db82f7043799a
+    home: https://github.com/giantswarm/trivy-operator-app
+    icon: https://s.giantswarm.io/app-icons/trivy/1/light.svg
+    maintainers:
+    - name: Giant Swarm applications team
+      url: https://github.com/giantswarm/trivy-operator-app
+    name: trivy-operator
+    sources:
+    - https://github.com/aquasecurity/trivy-operator
+    urls:
+    - https://giantswarm.github.io/control-plane-test-catalog/trivy-operator-0.12.1-a337c6a9b797815d698259f1a5eb7ef46a50f84a.tgz
+    version: 0.12.1-a337c6a9b797815d698259f1a5eb7ef46a50f84a
   upgrade-schedule-operator:
   - annotations:
       config.giantswarm.io/version: 1.x.x
@@ -59160,4 +59188,4 @@ entries:
     urls:
     - https://giantswarm.github.io/control-plane-test-catalog/vertical-pod-autoscaler-crd-4.1.1-355e0a59910b6c089c444c378ae68cd73ef9f7cb.tgz
     version: 4.1.1-355e0a59910b6c089c444c378ae68cd73ef9f7cb
-generated: "2026-02-05T15:47:50.203760369Z"
+generated: "2026-02-05T15:52:03.585825892Z"
