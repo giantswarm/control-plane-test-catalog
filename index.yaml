@@ -29823,6 +29823,45 @@ entries:
     urls:
     - https://giantswarm.github.io/control-plane-test-catalog/exception-recommender-0.2.0-0e6e4931802cf0c222b094305bc5fe0bb8cd4229.tgz
     version: 0.2.0-0e6e4931802cf0c222b094305bc5fe0bb8cd4229
+  falco:
+  - annotations:
+      config.giantswarm.io/version: 1.x.x
+      io.giantswarm.application.audience: all
+      io.giantswarm.application.managed: "true"
+      io.giantswarm.application.metadata: https://giantswarm.github.io/control-plane-test-catalog/falco-0.11.0-b110148bb2c3670ff442d9f1b48daa1d16a0487e.tgz-meta/main.yaml
+      io.giantswarm.application.readme: https://raw.githubusercontent.com/giantswarm/falco-app/b110148bb2c3670ff442d9f1b48daa1d16a0487e/README.md
+      io.giantswarm.application.team: shield
+      io.giantswarm.application.values-schema: https://raw.githubusercontent.com/giantswarm/falco-app/b110148bb2c3670ff442d9f1b48daa1d16a0487e/helm/falco/values.schema.json
+      ui.giantswarm.io/logo: https://s.giantswarm.io/app-icons/falco/2/logo_dark.svg
+    apiVersion: v2
+    appVersion: 0.41.3
+    created: "2026-02-05T13:04:45.806848104Z"
+    dependencies:
+    - condition: falco.enabled
+      name: falco
+      repository: ""
+      version: 6.2.5
+    - condition: falcosidekick.enabled
+      name: falcosidekick
+      repository: ""
+      version: 0.10.2
+    - condition: k8s-metacollector.enabled
+      name: k8s-metacollector
+      repository: ""
+      version: 0.1.10
+    description: A Helm chart for falco
+    digest: f2b485092c43ba688bfb70b857164a075164530e9af48417d21bc36fc97f7879
+    home: https://github.com/giantswarm/falco-app
+    icon: https://s.giantswarm.io/app-icons/falco/2/icon_dark.svg
+    maintainers:
+    - name: Giant Swarm applications team
+      url: https://github.com/giantswarm/falco-app
+    name: falco
+    sources:
+    - https://github.com/giantswarm/falco-app
+    urls:
+    - https://giantswarm.github.io/control-plane-test-catalog/falco-0.11.0-b110148bb2c3670ff442d9f1b48daa1d16a0487e.tgz
+    version: 0.11.0-b110148bb2c3670ff442d9f1b48daa1d16a0487e
   fluent-logshipping-app:
   - annotations:
       config.giantswarm.io/version: 1.x.x
@@ -57416,4 +57455,4 @@ entries:
     urls:
     - https://giantswarm.github.io/control-plane-test-catalog/vertical-pod-autoscaler-crd-4.1.1-355e0a59910b6c089c444c378ae68cd73ef9f7cb.tgz
     version: 4.1.1-355e0a59910b6c089c444c378ae68cd73ef9f7cb
-generated: "2026-02-05T13:02:08.773560979Z"
+generated: "2026-02-05T13:04:45.795005314Z"
