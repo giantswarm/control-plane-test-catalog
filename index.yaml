@@ -35115,6 +35115,32 @@ entries:
     - https://giantswarm.github.io/control-plane-test-catalog/kyverno-crds-1.17.0-f29a755de99c93779358f9f07c9ac260a6e7581a.tgz
     version: 1.17.0-f29a755de99c93779358f9f07c9ac260a6e7581a
   - annotations:
+      io.giantswarm.application.audience: all
+      io.giantswarm.application.managed: "true"
+      io.giantswarm.application.metadata: https://giantswarm.github.io/control-plane-test-catalog/kyverno-crds-1.17.0-3faf1bcd831f363e22024046726b75b356caaedf.tgz-meta/main.yaml
+      io.giantswarm.application.readme: https://raw.githubusercontent.com/giantswarm/kyverno-crds/3faf1bcd831f363e22024046726b75b356caaedf/README.md
+      io.giantswarm.application.team: shield
+      io.giantswarm.application.values-schema: https://raw.githubusercontent.com/giantswarm/kyverno-crds/3faf1bcd831f363e22024046726b75b356caaedf/helm/kyverno-crds/values.schema.json
+    apiVersion: v2
+    created: "2026-02-05T12:44:24.240700316Z"
+    dependencies:
+    - name: crds
+      repository: ""
+      version: 3.7.0
+    - name: kyverno-api
+      repository: ""
+      version: 0.0.0
+    description: This app contains the Kyverno CRDs.
+    digest: 6714ff99bac1ff6ae96ccd5fe44934e975daaf6801e6919b8736842b912ea54a
+    home: https://github.com/giantswarm/kyverno-crds
+    icon: https://s.giantswarm.io/app-icons/kyverno/1/light.svg
+    name: kyverno-crds
+    sources:
+    - https://github.com/kyverno/kyverno
+    urls:
+    - https://giantswarm.github.io/control-plane-test-catalog/kyverno-crds-1.17.0-3faf1bcd831f363e22024046726b75b356caaedf.tgz
+    version: 1.17.0-3faf1bcd831f363e22024046726b75b356caaedf
+  - annotations:
       io.giantswarm.application.metadata: https://giantswarm.github.io/control-plane-test-catalog/kyverno-crds-1.16.0-e117ab3f9588eabcddc2831ed2f342cece5e59bf.tgz-meta/main.yaml
       io.giantswarm.application.readme: https://raw.githubusercontent.com/giantswarm/kyverno-crds/e117ab3f9588eabcddc2831ed2f342cece5e59bf/README.md
       io.giantswarm.application.team: shield
@@ -56132,4 +56158,4 @@ entries:
     urls:
     - https://giantswarm.github.io/control-plane-test-catalog/vertical-pod-autoscaler-crd-4.1.1-355e0a59910b6c089c444c378ae68cd73ef9f7cb.tgz
     version: 4.1.1-355e0a59910b6c089c444c378ae68cd73ef9f7cb
-generated: "2026-02-05T12:44:13.845813843Z"
+generated: "2026-02-05T12:44:24.204677205Z"
