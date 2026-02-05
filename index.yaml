@@ -57735,6 +57735,35 @@ entries:
     urls:
     - https://giantswarm.github.io/control-plane-test-catalog/tempo-0.8.1-357f48c06eef37a88b71b1ebad1fdb42fd6166ea.tgz
     version: 0.8.1-357f48c06eef37a88b71b1ebad1fdb42fd6166ea
+  trivy:
+  - annotations:
+      config.giantswarm.io/version: 1.x.x
+      io.giantswarm.application.audience: all
+      io.giantswarm.application.managed: "true"
+      io.giantswarm.application.metadata: https://giantswarm.github.io/control-plane-test-catalog/trivy-0.14.1-bc6b9c7acef9c11e1b44eb213417a1b0a46b90e0.tgz-meta/main.yaml
+      io.giantswarm.application.readme: https://raw.githubusercontent.com/giantswarm/trivy-app/bc6b9c7acef9c11e1b44eb213417a1b0a46b90e0/README.md
+      io.giantswarm.application.team: shield
+      io.giantswarm.application.values-schema: https://raw.githubusercontent.com/giantswarm/trivy-app/bc6b9c7acef9c11e1b44eb213417a1b0a46b90e0/helm/trivy/values.schema.json
+    apiVersion: v2
+    appVersion: 0.63.0
+    created: "2026-02-05T13:57:35.440310853Z"
+    dependencies:
+    - name: trivy
+      repository: ""
+      version: 0.15.0
+    description: A Helm chart for trivy
+    digest: a34e950c7889aa0593bbea76e2fe6b29989e0e2c10b08e0a98f5f8f43ad80f5a
+    home: https://github.com/giantswarm/trivy-app
+    icon: https://s.giantswarm.io/app-icons/trivy/1/light.svg
+    maintainers:
+    - name: Giant Swarm applications team
+      url: https://github.com/giantswarm/trivy-app
+    name: trivy
+    sources:
+    - https://github.com/giantswarm/trivy-app
+    urls:
+    - https://giantswarm.github.io/control-plane-test-catalog/trivy-0.14.1-bc6b9c7acef9c11e1b44eb213417a1b0a46b90e0.tgz
+    version: 0.14.1-bc6b9c7acef9c11e1b44eb213417a1b0a46b90e0
   trivy-operator:
   - annotations:
       config.giantswarm.io/version: 1.x.x
@@ -58140,4 +58169,4 @@ entries:
     urls:
     - https://giantswarm.github.io/control-plane-test-catalog/vertical-pod-autoscaler-crd-4.1.1-355e0a59910b6c089c444c378ae68cd73ef9f7cb.tgz
     version: 4.1.1-355e0a59910b6c089c444c378ae68cd73ef9f7cb
-generated: "2026-02-05T13:57:27.563886138Z"
+generated: "2026-02-05T13:57:35.438999195Z"
