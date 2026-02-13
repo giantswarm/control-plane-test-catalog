@@ -9108,6 +9108,26 @@ entries:
     - https://giantswarm.github.io/control-plane-test-catalog/azurefile-csi-driver-app-2.0.0-b3181af1bc3cb7be27a8d208e1c0e62612a3cf6b.tgz
     version: 2.0.0-b3181af1bc3cb7be27a8d208e1c0e62612a3cf6b
   - annotations:
+      io.giantswarm.application.metadata: https://giantswarm.github.io/control-plane-test-catalog/azurefile-csi-driver-app-2.0.0-900828e6839324381fc3dc22528a72f2425e26f0.tgz-meta/main.yaml
+      io.giantswarm.application.readme: https://raw.githubusercontent.com/giantswarm/azurefile-csi-driver-app/900828e6839324381fc3dc22528a72f2425e26f0/README.md
+      io.giantswarm.application.restrictions.cluster-singleton: "true"
+      io.giantswarm.application.restrictions.compatible-providers: azure
+      io.giantswarm.application.restrictions.fixed-namespace: kube-system
+      io.giantswarm.application.restrictions.gpu-instances: "false"
+      io.giantswarm.application.team: phoenix
+      io.giantswarm.application.values-schema: https://raw.githubusercontent.com/giantswarm/azurefile-csi-driver-app/900828e6839324381fc3dc22528a72f2425e26f0/helm/azurefile-csi-driver-app/values.schema.json
+    apiVersion: v2
+    appVersion: 1.34.2
+    created: "2026-02-13T23:24:04.510352953Z"
+    description: A Helm chart to run Azure CSI driver for Azure File.
+    digest: 7e5fe21842b4f6c978813b81d9d973b62a101572f2456315cd4e6c963d8c18d3
+    home: https://github.com/giantswarm/azurefile-csi-driver-app
+    icon: https://s.giantswarm.io/app-icons/azure/1/dark.svg
+    name: azurefile-csi-driver-app
+    urls:
+    - https://giantswarm.github.io/control-plane-test-catalog/azurefile-csi-driver-app-2.0.0-900828e6839324381fc3dc22528a72f2425e26f0.tgz
+    version: 2.0.0-900828e6839324381fc3dc22528a72f2425e26f0
+  - annotations:
       application.giantswarm.io/team: phoenix
     apiVersion: v1
     appVersion: 1.34.2
@@ -75842,4 +75862,4 @@ entries:
     urls:
     - https://giantswarm.github.io/control-plane-test-catalog/vertical-pod-autoscaler-crd-4.1.1-355e0a59910b6c089c444c378ae68cd73ef9f7cb.tgz
     version: 4.1.1-355e0a59910b6c089c444c378ae68cd73ef9f7cb
-generated: "2026-02-13T23:23:58.216455229Z"
+generated: "2026-02-13T23:24:04.508434689Z"
