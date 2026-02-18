@@ -65248,6 +65248,28 @@ entries:
     version: 0.0.3-08977d099911af8166b8cbb237b80065f0a73090
   prometheus-remotewrite:
   - annotations:
+      io.giantswarm.application.metadata: https://giantswarm.github.io/control-plane-test-catalog/prometheus-remotewrite-1.4.4.tgz-meta/main.yaml
+      io.giantswarm.application.readme: https://raw.githubusercontent.com/giantswarm/prometheus-remotewrite/refs/tags/v1.4.4/README.md
+      io.giantswarm.application.team: atlas
+      io.giantswarm.application.values-schema: https://raw.githubusercontent.com/giantswarm/prometheus-remotewrite/refs/tags/v1.4.4/helm/prometheus-remotewrite/values.schema.json
+    apiVersion: v2
+    appVersion: 1.4.4
+    created: "2026-02-18T09:27:35.955547801Z"
+    dependencies:
+    - alias: kubePrometheusStack
+      condition: kubePrometheusStack.enabled
+      name: kube-prometheus-stack
+      repository: https://giantswarm.github.io/default-catalog/
+      version: 19.0.2
+    description: Hold remote write configuration for prometheus.
+    digest: fc669b724ff7239060ca8bf25aea70b0d5b247e8129c6154803cc9903f5f1b17
+    home: https://github.com/giantswarm/prometheus-remotewrite
+    icon: https://s.giantswarm.io/app-icons/prometheus/1/light.svg
+    name: prometheus-remotewrite
+    urls:
+    - https://giantswarm.github.io/control-plane-test-catalog/prometheus-remotewrite-1.4.4.tgz
+    version: 1.4.4
+  - annotations:
       io.giantswarm.application.metadata: https://giantswarm.github.io/control-plane-test-catalog/prometheus-remotewrite-1.4.3.tgz-meta/main.yaml
       io.giantswarm.application.readme: https://raw.githubusercontent.com/giantswarm/prometheus-remotewrite/refs/tags/v1.4.3/README.md
       io.giantswarm.application.team: atlas
@@ -80951,4 +80973,4 @@ entries:
     urls:
     - https://giantswarm.github.io/control-plane-test-catalog/vertical-pod-autoscaler-crd-4.1.1-355e0a59910b6c089c444c378ae68cd73ef9f7cb.tgz
     version: 4.1.1-355e0a59910b6c089c444c378ae68cd73ef9f7cb
-generated: "2026-02-18T09:15:58.222078811Z"
+generated: "2026-02-18T09:27:35.893518689Z"
