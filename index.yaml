@@ -8643,6 +8643,27 @@ entries:
     version: 2.0.0-0675c5f1fb70ee330b53933073f5cfb0f8bbb4a9
   azure-cloud-node-manager-app:
   - annotations:
+      io.giantswarm.application.metadata: https://giantswarm.github.io/control-plane-test-catalog/azure-cloud-node-manager-app-2.0.0-d46c7d4a8170955b58e146d06be6881f353bac69.tgz-meta/main.yaml
+      io.giantswarm.application.readme: https://raw.githubusercontent.com/giantswarm/azure-cloud-node-manager-app/d46c7d4a8170955b58e146d06be6881f353bac69/README.md
+      io.giantswarm.application.restrictions.cluster-singleton: "true"
+      io.giantswarm.application.restrictions.compatible-providers: azure
+      io.giantswarm.application.restrictions.fixed-namespace: kube-system
+      io.giantswarm.application.restrictions.gpu-instances: "false"
+      io.giantswarm.application.team: phoenix
+      io.giantswarm.application.values-schema: https://raw.githubusercontent.com/giantswarm/azure-cloud-node-manager-app/d46c7d4a8170955b58e146d06be6881f353bac69/helm/azure-cloud-node-manager-app/values.schema.json
+      ui.giantswarm.io/logo: https://s.giantswarm.io/app-icons/azure/1/dark.svg
+    apiVersion: v2
+    appVersion: 1.34.3
+    created: "2026-02-18T11:38:08.774147326Z"
+    description: A Helm chart for the Azure Cloud Node Manager.
+    digest: d22dc9d9920f31eb2e56acb154fd724a869927016649b48fb41429675f5213de
+    home: https://github.com/giantswarm/azure-cloud-node-manager-app
+    icon: https://s.giantswarm.io/app-icons/azure/1/dark.svg
+    name: azure-cloud-node-manager-app
+    urls:
+    - https://giantswarm.github.io/control-plane-test-catalog/azure-cloud-node-manager-app-2.0.0-d46c7d4a8170955b58e146d06be6881f353bac69.tgz
+    version: 2.0.0-d46c7d4a8170955b58e146d06be6881f353bac69
+  - annotations:
       application.giantswarm.io/team: phoenix
       ui.giantswarm.io/logo: https://s.giantswarm.io/app-icons/azure/1/dark.svg
     apiVersion: v2
@@ -81780,4 +81801,4 @@ entries:
     urls:
     - https://giantswarm.github.io/control-plane-test-catalog/vertical-pod-autoscaler-crd-4.1.1-355e0a59910b6c089c444c378ae68cd73ef9f7cb.tgz
     version: 4.1.1-355e0a59910b6c089c444c378ae68cd73ef9f7cb
-generated: "2026-02-18T11:37:38.859484684Z"
+generated: "2026-02-18T11:38:08.773336515Z"
