@@ -29154,6 +29154,28 @@ entries:
     - https://giantswarm.github.io/control-plane-test-catalog/cluster-api-6.1.1-f968e9cc0795eca6dd6bf6d0e161ccba334095a6.tgz
     version: 6.1.1-f968e9cc0795eca6dd6bf6d0e161ccba334095a6
   - annotations:
+      io.giantswarm.application.metadata: https://giantswarm.github.io/control-plane-test-catalog/cluster-api-6.1.1-df19e88b8be9a89d164d45fb7132ab5edb3847cb.tgz-meta/main.yaml
+      io.giantswarm.application.readme: https://raw.githubusercontent.com/giantswarm/cluster-api-app/df19e88b8be9a89d164d45fb7132ab5edb3847cb/README.md
+      io.giantswarm.application.team: tenet
+      io.giantswarm.application.values-schema: https://raw.githubusercontent.com/giantswarm/cluster-api-app/df19e88b8be9a89d164d45fb7132ab5edb3847cb/helm/cluster-api/values.schema.json
+      ui.giantswarm.io/logo: https://s.giantswarm.io/app-icons/giantswarm/1/dark.svg
+    apiVersion: v2
+    appVersion: 6.1.1-dev
+    created: "2026-02-19T07:29:57.539102288Z"
+    dependencies:
+    - condition: crds.install
+      name: crd-install
+      repository: ""
+      version: 1.0.0
+    description: A Helm chart for Cluster API components.
+    digest: 333db0da4dfbb137847caa81ca3acbb042961fd5e90675bf5bf144a83bbdc861
+    home: https://github.com/giantswarm/cluster-api-app
+    icon: https://s.giantswarm.io/app-icons/giantswarm/1/dark.svg
+    name: cluster-api
+    urls:
+    - https://giantswarm.github.io/control-plane-test-catalog/cluster-api-6.1.1-df19e88b8be9a89d164d45fb7132ab5edb3847cb.tgz
+    version: 6.1.1-df19e88b8be9a89d164d45fb7132ab5edb3847cb
+  - annotations:
       application.giantswarm.io/team: tenet
       ui.giantswarm.io/logo: https://s.giantswarm.io/app-icons/giantswarm/1/dark.svg
     apiVersion: v2
@@ -85424,4 +85446,4 @@ entries:
     urls:
     - https://giantswarm.github.io/control-plane-test-catalog/vertical-pod-autoscaler-crd-4.1.1-355e0a59910b6c089c444c378ae68cd73ef9f7cb.tgz
     version: 4.1.1-355e0a59910b6c089c444c378ae68cd73ef9f7cb
-generated: "2026-02-19T04:15:17.081722716Z"
+generated: "2026-02-19T07:29:57.522389597Z"
