@@ -9928,6 +9928,26 @@ entries:
     - https://giantswarm.github.io/control-plane-test-catalog/azuredisk-csi-driver-app-2.1.0-7b417c73b64f80cfdaab30733d558f19baa429bc.tgz
     version: 2.1.0-7b417c73b64f80cfdaab30733d558f19baa429bc
   - annotations:
+      io.giantswarm.application.metadata: https://giantswarm.github.io/control-plane-test-catalog/azuredisk-csi-driver-app-2.1.0-35153702853ff8134593de2ffdb9779441da84ed.tgz-meta/main.yaml
+      io.giantswarm.application.readme: https://raw.githubusercontent.com/giantswarm/azuredisk-csi-driver-app/35153702853ff8134593de2ffdb9779441da84ed/README.md
+      io.giantswarm.application.restrictions.cluster-singleton: "true"
+      io.giantswarm.application.restrictions.compatible-providers: azure
+      io.giantswarm.application.restrictions.fixed-namespace: kube-system
+      io.giantswarm.application.restrictions.gpu-instances: "false"
+      io.giantswarm.application.team: phoenix
+      io.giantswarm.application.values-schema: https://raw.githubusercontent.com/giantswarm/azuredisk-csi-driver-app/35153702853ff8134593de2ffdb9779441da84ed/helm/azuredisk-csi-driver-app/values.schema.json
+    apiVersion: v2
+    appVersion: 1.34.0
+    created: "2026-02-20T18:11:57.704020462Z"
+    description: A Helm chart to run Azure CSI driver for Azure Disks.
+    digest: 0ee90bfc9390c1644616099d5d010f0c8740f2183033105953696811dc414073
+    home: https://github.com/giantswarm/azuredisk-csi-driver-app
+    icon: https://s.giantswarm.io/app-icons/azure/1/dark.svg
+    name: azuredisk-csi-driver-app
+    urls:
+    - https://giantswarm.github.io/control-plane-test-catalog/azuredisk-csi-driver-app-2.1.0-35153702853ff8134593de2ffdb9779441da84ed.tgz
+    version: 2.1.0-35153702853ff8134593de2ffdb9779441da84ed
+  - annotations:
       application.giantswarm.io/team: phoenix
     apiVersion: v2
     appVersion: 1.34.0
@@ -91720,4 +91740,4 @@ entries:
     urls:
     - https://giantswarm.github.io/control-plane-test-catalog/vertical-pod-autoscaler-crd-4.1.1-355e0a59910b6c089c444c378ae68cd73ef9f7cb.tgz
     version: 4.1.1-355e0a59910b6c089c444c378ae68cd73ef9f7cb
-generated: "2026-02-20T18:11:49.573913533Z"
+generated: "2026-02-20T18:11:57.700206344Z"
