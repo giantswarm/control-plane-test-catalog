@@ -90762,6 +90762,30 @@ entries:
     - https://giantswarm.github.io/control-plane-test-catalog/reports-server-0.1.0-37822513db77c268a13d4a9aea3ff458e49e58ff.tgz
     version: 0.1.0-37822513db77c268a13d4a9aea3ff458e49e58ff
   - annotations:
+      io.giantswarm.application.audience: all
+      io.giantswarm.application.managed: "true"
+      io.giantswarm.application.metadata: https://giantswarm.github.io/control-plane-test-catalog/reports-server-0.1.0-20c0e9989f2cb2ca6c95020bc989a00d499c15d9.tgz-meta/main.yaml
+      io.giantswarm.application.readme: https://raw.githubusercontent.com/giantswarm/reports-server-app/20c0e9989f2cb2ca6c95020bc989a00d499c15d9/README.md
+      io.giantswarm.application.team: shield
+      io.giantswarm.application.values-schema: https://raw.githubusercontent.com/giantswarm/reports-server-app/20c0e9989f2cb2ca6c95020bc989a00d499c15d9/helm/reports-server/values.schema.json
+    apiVersion: v2
+    appVersion: v0.1.6
+    created: "2026-02-27T22:14:45.75383887Z"
+    dependencies:
+    - name: reports-server
+      repository: ""
+      version: 0.1.6
+    description: A Giant Swarm app for deploying the Kyverno Reports Server.
+    digest: aa95f8aec7f06c71cf742cd5090f4b23bc1f5ec05ce13cdb115cbd774290ba78
+    home: https://github.com/giantswarm/reports-server-app
+    icon: https://s.giantswarm.io/app-icons/kyverno/1/light.svg
+    name: reports-server
+    sources:
+    - https://github.com/kyverno/reports-server
+    urls:
+    - https://giantswarm.github.io/control-plane-test-catalog/reports-server-0.1.0-20c0e9989f2cb2ca6c95020bc989a00d499c15d9.tgz
+    version: 0.1.0-20c0e9989f2cb2ca6c95020bc989a00d499c15d9
+  - annotations:
       config.giantswarm.io/version: 1.x.x
       io.giantswarm.application.metadata: https://giantswarm.github.io/control-plane-test-catalog/reports-server-0.1.0-143bc7979af60d23446520cde2902863d71aae3f.tgz-meta/main.yaml
       io.giantswarm.application.readme: https://raw.githubusercontent.com/giantswarm/reports-server-app/143bc7979af60d23446520cde2902863d71aae3f/README.md
@@ -107290,4 +107314,4 @@ entries:
     urls:
     - https://giantswarm.github.io/control-plane-test-catalog/vertical-pod-autoscaler-crd-4.1.1-355e0a59910b6c089c444c378ae68cd73ef9f7cb.tgz
     version: 4.1.1-355e0a59910b6c089c444c378ae68cd73ef9f7cb
-generated: "2026-02-27T22:13:36.854004239Z"
+generated: "2026-02-27T22:14:45.745165924Z"
