@@ -27233,6 +27233,30 @@ entries:
     - https://giantswarm.github.io/control-plane-test-catalog/cloudnative-pg-0.0.13-b527d9122461877d86f36adbf88be291c17d0cc7.tgz
     version: 0.0.13-b527d9122461877d86f36adbf88be291c17d0cc7
   - annotations:
+      io.giantswarm.application.audience: giantswarm
+      io.giantswarm.application.managed: "true"
+      io.giantswarm.application.metadata: https://giantswarm.github.io/control-plane-test-catalog/cloudnative-pg-0.0.13-b0f3d11518f1f158e8c78b17bcda0ce7e72349ff.tgz-meta/main.yaml
+      io.giantswarm.application.readme: https://raw.githubusercontent.com/giantswarm/cloudnative-pg-app/b0f3d11518f1f158e8c78b17bcda0ce7e72349ff/README.md
+      io.giantswarm.application.team: shield
+      io.giantswarm.application.values-schema: https://raw.githubusercontent.com/giantswarm/cloudnative-pg-app/b0f3d11518f1f158e8c78b17bcda0ce7e72349ff/helm/cloudnative-pg/values.schema.json
+    apiVersion: v2
+    appVersion: 1.27.1
+    created: "2026-03-13T17:46:01.5872063Z"
+    dependencies:
+    - name: cloudnative-pg
+      repository: https://cloudnative-pg.github.io/charts
+      version: 0.27.1
+    description: A Giant Swarm app for deploying CloudNative PostgreSQL.
+    digest: fc013069f10de9bd60ed9ce11268e8ba930ac3b3eff32215dbd3b4e317557917
+    home: https://github.com/giantswarm/cloudnative-pg-app
+    icon: https://s.giantswarm.io/app-icons/cloudnative-pg/icon-light.svg
+    name: cloudnative-pg
+    sources:
+    - https://github.com/cloudnative-pg/charts
+    urls:
+    - https://giantswarm.github.io/control-plane-test-catalog/cloudnative-pg-0.0.13-b0f3d11518f1f158e8c78b17bcda0ce7e72349ff.tgz
+    version: 0.0.13-b0f3d11518f1f158e8c78b17bcda0ce7e72349ff
+  - annotations:
       config.giantswarm.io/version: 1.x.x
       io.giantswarm.application.audience: all
       io.giantswarm.application.managed: "true"
@@ -91081,4 +91105,4 @@ entries:
     urls:
     - https://giantswarm.github.io/control-plane-test-catalog/vertical-pod-autoscaler-crd-4.1.1-513de7672f0d88a5631b397605dd843e41d77831.tgz
     version: 4.1.1-513de7672f0d88a5631b397605dd843e41d77831
-generated: "2026-03-13T17:44:36.20449071Z"
+generated: "2026-03-13T17:46:01.577035944Z"
