@@ -1,0 +1,124 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "properties": {
+        "crds": {
+            "properties": {
+                "annotations": {
+                    "properties": {
+                        "helm.sh/resource-policy": {
+                            "type": "string"
+                        }
+                    },
+                    "type": "object"
+                },
+                "customLabels": {
+                    "type": "object"
+                },
+                "groups": {
+                    "properties": {
+                        "kyverno": {
+                            "properties": {
+                                "cleanuppolicies": {
+                                    "type": "boolean"
+                                },
+                                "clustercleanuppolicies": {
+                                    "type": "boolean"
+                                },
+                                "clusterpolicies": {
+                                    "type": "boolean"
+                                },
+                                "globalcontextentries": {
+                                    "type": "boolean"
+                                },
+                                "policies": {
+                                    "type": "boolean"
+                                },
+                                "policyexceptions": {
+                                    "type": "boolean"
+                                },
+                                "updaterequests": {
+                                    "type": "boolean"
+                                }
+                            },
+                            "type": "object"
+                        },
+                        "policies": {
+                            "properties": {
+                                "deletingpolicies": {
+                                    "type": "boolean"
+                                },
+                                "generatingpolicies": {
+                                    "type": "boolean"
+                                },
+                                "imagevalidatingpolicies": {
+                                    "type": "boolean"
+                                },
+                                "mutatingpolicies": {
+                                    "type": "boolean"
+                                },
+                                "namespaceddeletingpolicies": {
+                                    "type": "boolean"
+                                },
+                                "namespacedgeneratingpolicies": {
+                                    "type": "boolean"
+                                },
+                                "namespacedimagevalidatingpolicies": {
+                                    "type": "boolean"
+                                },
+                                "namespacedvalidatingpolicies": {
+                                    "type": "boolean"
+                                },
+                                "policyexceptions": {
+                                    "type": "boolean"
+                                },
+                                "validatingpolicies": {
+                                    "type": "boolean"
+                                }
+                            },
+                            "type": "object"
+                        },
+                        "reports": {
+                            "properties": {
+                                "clusterephemeralreports": {
+                                    "type": "boolean"
+                                },
+                                "ephemeralreports": {
+                                    "type": "boolean"
+                                }
+                            },
+                            "type": "object"
+                        },
+                        "wgpolicyk8s": {
+                            "properties": {
+                                "clusterpolicyreports": {
+                                    "type": "boolean"
+                                },
+                                "policyreports": {
+                                    "type": "boolean"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    },
+                    "type": "object"
+                },
+                "reportsServer": {
+                    "properties": {
+                        "enabled": {
+                            "type": "boolean"
+                        }
+                    },
+                    "type": "object"
+                }
+            },
+            "type": "object"
+        },
+        "name": {
+            "type": "string"
+        },
+        "serviceType": {
+            "type": "string"
+        }
+    },
+    "type": "object"
+}
