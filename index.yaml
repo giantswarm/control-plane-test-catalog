@@ -32545,6 +32545,30 @@ entries:
     - https://giantswarm.github.io/control-plane-test-catalog/cloudnative-pg-0.0.13-e925ef12420da3187b7075699e1a21e0385c2401.tgz
     version: 0.0.13-e925ef12420da3187b7075699e1a21e0385c2401
   - annotations:
+      io.giantswarm.application.audience: giantswarm
+      io.giantswarm.application.managed: "true"
+      io.giantswarm.application.metadata: https://giantswarm.github.io/control-plane-test-catalog/cloudnative-pg-0.0.13-dced5864c1c3b473c9c1a2596ac6924a1dc31d3a.tgz-meta/main.yaml
+      io.giantswarm.application.readme: https://raw.githubusercontent.com/giantswarm/cloudnative-pg-app/dced5864c1c3b473c9c1a2596ac6924a1dc31d3a/README.md
+      io.giantswarm.application.team: shield
+      io.giantswarm.application.values-schema: https://raw.githubusercontent.com/giantswarm/cloudnative-pg-app/dced5864c1c3b473c9c1a2596ac6924a1dc31d3a/helm/cloudnative-pg/values.schema.json
+    apiVersion: v2
+    appVersion: 1.27.1
+    created: "2026-03-25T23:02:49.186484727Z"
+    dependencies:
+    - name: cloudnative-pg
+      repository: https://cloudnative-pg.github.io/charts
+      version: 0.27.1
+    description: A Giant Swarm app for deploying CloudNative PostgreSQL.
+    digest: 265e387aa1951048464b489137864684ac269d4c8d0440bb03dfe60b9429c3a4
+    home: https://github.com/giantswarm/cloudnative-pg-app
+    icon: https://s.giantswarm.io/app-icons/cloudnative-pg/icon-light.svg
+    name: cloudnative-pg
+    sources:
+    - https://github.com/cloudnative-pg/charts
+    urls:
+    - https://giantswarm.github.io/control-plane-test-catalog/cloudnative-pg-0.0.13-dced5864c1c3b473c9c1a2596ac6924a1dc31d3a.tgz
+    version: 0.0.13-dced5864c1c3b473c9c1a2596ac6924a1dc31d3a
+  - annotations:
       io.giantswarm.application.audience: all
       io.giantswarm.application.managed: "true"
       io.giantswarm.application.metadata: https://giantswarm.github.io/control-plane-test-catalog/cloudnative-pg-0.0.13-daa2865caee9eb61c3cc5e07c2ef8fad2e4219c0.tgz-meta/main.yaml
@@ -111015,4 +111039,4 @@ entries:
     urls:
     - https://giantswarm.github.io/control-plane-test-catalog/vertical-pod-autoscaler-crd-4.1.1-513de7672f0d88a5631b397605dd843e41d77831.tgz
     version: 4.1.1-513de7672f0d88a5631b397605dd843e41d77831
-generated: "2026-03-25T23:02:39.376205818Z"
+generated: "2026-03-25T23:02:49.165301004Z"
