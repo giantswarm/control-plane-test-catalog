@@ -35081,6 +35081,32 @@ entries:
     urls:
     - https://giantswarm.github.io/control-plane-test-catalog/kyverno-crds-1.17.0-088351446c55150f857d78f6656d16bd47f91ed2.tgz
     version: 1.17.0-088351446c55150f857d78f6656d16bd47f91ed2
+  - annotations:
+      io.giantswarm.application.audience: all
+      io.giantswarm.application.managed: "true"
+      io.giantswarm.application.metadata: https://giantswarm.github.io/control-plane-test-catalog/kyverno-crds-1.17.0-05de5ce441a41bffaf979fc93a85987d130bfed4.tgz-meta/main.yaml
+      io.giantswarm.application.readme: https://raw.githubusercontent.com/giantswarm/kyverno-crds/05de5ce441a41bffaf979fc93a85987d130bfed4/README.md
+      io.giantswarm.application.team: shield
+      io.giantswarm.application.values-schema: https://raw.githubusercontent.com/giantswarm/kyverno-crds/05de5ce441a41bffaf979fc93a85987d130bfed4/helm/kyverno-crds/values.schema.json
+    apiVersion: v2
+    created: "2026-04-07T17:30:33.236910089Z"
+    dependencies:
+    - name: crds
+      repository: ""
+      version: 3.7.1
+    - name: kyverno-api
+      repository: ""
+      version: v0.0.0
+    description: This app contains the Kyverno CRDs.
+    digest: 2939eefbe200834ff7ece7c512f6b83f6297bbf0917ac8a619db81672030bdcf
+    home: https://github.com/giantswarm/kyverno-crds
+    icon: https://s.giantswarm.io/app-icons/kyverno/1/light.svg
+    name: kyverno-crds
+    sources:
+    - https://github.com/kyverno/kyverno
+    urls:
+    - https://giantswarm.github.io/control-plane-test-catalog/kyverno-crds-1.17.0-05de5ce441a41bffaf979fc93a85987d130bfed4.tgz
+    version: 1.17.0-05de5ce441a41bffaf979fc93a85987d130bfed4
   kyverno-policies:
   - annotations:
       io.giantswarm.application.audience: all
@@ -63983,4 +64009,4 @@ entries:
     urls:
     - https://giantswarm.github.io/control-plane-test-catalog/vertical-pod-autoscaler-crd-4.1.2-3ceecd6bf7b6a29c25b9958a58b46c5afc7f2503.tgz
     version: 4.1.2-3ceecd6bf7b6a29c25b9958a58b46c5afc7f2503
-generated: "2026-04-07T17:30:19.075250219Z"
+generated: "2026-04-07T17:30:33.208974743Z"
