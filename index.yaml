@@ -4632,6 +4632,30 @@ entries:
     urls:
     - https://giantswarm.github.io/control-plane-test-catalog/azure-workload-identity-webhook-1.0.3-0dad2e0f14418a3a454d1ad464bfb8ea24d2001c.tgz
     version: 1.0.3-0dad2e0f14418a3a454d1ad464bfb8ea24d2001c
+  - annotations:
+      io.giantswarm.application.metadata: https://giantswarm.github.io/control-plane-test-catalog/azure-workload-identity-webhook-1.0.3-02bbe354b6a1b3a0e019aa75edf8e0f75b3d4b49.tgz-meta/main.yaml
+      io.giantswarm.application.readme: https://raw.githubusercontent.com/giantswarm/azure-workload-identity-webhook-app/02bbe354b6a1b3a0e019aa75edf8e0f75b3d4b49/README.md
+      io.giantswarm.application.team: phoenix
+      io.giantswarm.application.values-schema: https://raw.githubusercontent.com/giantswarm/azure-workload-identity-webhook-app/02bbe354b6a1b3a0e019aa75edf8e0f75b3d4b49/helm/azure-workload-identity-webhook/values.schema.json
+    apiVersion: v2
+    appVersion: v1.5.1
+    created: "2026-04-09T09:55:45.131504195Z"
+    dependencies:
+    - alias: upstream
+      name: workload-identity-webhook
+      repository: https://azure.github.io/azure-workload-identity/charts
+      version: 1.5.1
+    description: A Helm chart to install the azure-workload-identity webhook
+    digest: 9ae0c1d1b0c4d02924bd7b5b3fdb43cd423adb419a5f04f4e5181c27e884487f
+    home: https://github.com/giantswarm/azure-workload-identity-webhook-app
+    icon: https://s.giantswarm.io/app-icons/azure-ad-pod-identity/1/light.svg
+    name: azure-workload-identity-webhook
+    sources:
+    - https://github.com/Azure/azure-workload-identity
+    type: application
+    urls:
+    - https://giantswarm.github.io/control-plane-test-catalog/azure-workload-identity-webhook-1.0.3-02bbe354b6a1b3a0e019aa75edf8e0f75b3d4b49.tgz
+    version: 1.0.3-02bbe354b6a1b3a0e019aa75edf8e0f75b3d4b49
   azure-workload-identity-webhook-bundle:
   - annotations:
       io.giantswarm.application.metadata: https://giantswarm.github.io/control-plane-test-catalog/azure-workload-identity-webhook-bundle-1.0.3-d25820eaf986e98cbea6037e86a2a5098c20515d.tgz-meta/main.yaml
@@ -68776,4 +68800,4 @@ entries:
     urls:
     - https://giantswarm.github.io/control-plane-test-catalog/vertical-pod-autoscaler-crd-4.1.2-3ceecd6bf7b6a29c25b9958a58b46c5afc7f2503.tgz
     version: 4.1.2-3ceecd6bf7b6a29c25b9958a58b46c5afc7f2503
-generated: "2026-04-09T09:53:12.66103334Z"
+generated: "2026-04-09T09:55:45.130396142Z"
