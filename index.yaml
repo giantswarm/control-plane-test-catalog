@@ -57132,6 +57132,33 @@ entries:
     urls:
     - https://giantswarm.github.io/control-plane-test-catalog/plugin-barman-cloud-0.3.0-fc79ffb5bd46795ffa23afd31ef3a87851e300fb.tgz
     version: 0.3.0-fc79ffb5bd46795ffa23afd31ef3a87851e300fb
+  - annotations:
+      io.giantswarm.application.metadata: https://giantswarm.github.io/control-plane-test-catalog/plugin-barman-cloud-0.3.0-8be029c582c49cf59babca3c718ffb8caea484e5.tgz-meta/main.yaml
+      io.giantswarm.application.readme: https://raw.githubusercontent.com/giantswarm/plugin-barman-cloud/8be029c582c49cf59babca3c718ffb8caea484e5/README.md
+      io.giantswarm.application.team: atlas
+      io.giantswarm.application.values-schema: https://raw.githubusercontent.com/giantswarm/plugin-barman-cloud/8be029c582c49cf59babca3c718ffb8caea484e5/helm/plugin-barman-cloud/values.schema.json
+    apiVersion: v2
+    appVersion: 0.11.0
+    created: "2026-04-14T10:52:02.697536972Z"
+    dependencies:
+    - alias: pluginbarmancloud
+      condition: pluginbarmancloud.enabled
+      name: plugin-barman-cloud
+      repository: https://cloudnative-pg.io/charts
+      version: 0.6.0
+    description: A Helm chart for plugin-barman-cloud
+    digest: 434beb75dee7b42007e4459ee0b4b0f5da888c5618f65333c74c87e3a86276bf
+    home: https://github.com/giantswarm/plugin-barman-cloud
+    icon: https://s.giantswarm.io/app-icons/cloudnative-pg/icon-light.svg
+    maintainers:
+    - email: team-atlas@giantswarm.io
+      name: giantswarm/team-atlas
+    name: plugin-barman-cloud
+    sources:
+    - https://github.com/cloudnative-pg/charts/tree/main/charts/plugin-barman-cloud
+    urls:
+    - https://giantswarm.github.io/control-plane-test-catalog/plugin-barman-cloud-0.3.0-8be029c582c49cf59babca3c718ffb8caea484e5.tgz
+    version: 0.3.0-8be029c582c49cf59babca3c718ffb8caea484e5
   policy-api-crds:
   - annotations:
       io.giantswarm.application.audience: all
@@ -75091,4 +75118,4 @@ entries:
     urls:
     - https://giantswarm.github.io/control-plane-test-catalog/vertical-pod-autoscaler-crd-4.1.2-3ceecd6bf7b6a29c25b9958a58b46c5afc7f2503.tgz
     version: 4.1.2-3ceecd6bf7b6a29c25b9958a58b46c5afc7f2503
-generated: "2026-04-14T10:51:52.01831107Z"
+generated: "2026-04-14T10:52:02.695055695Z"
