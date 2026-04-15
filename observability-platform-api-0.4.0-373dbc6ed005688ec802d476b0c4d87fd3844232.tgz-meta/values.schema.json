@@ -1,0 +1,320 @@
+{
+    "$schema": "http://json-schema.org/schema#",
+    "type": "object",
+    "properties": {
+        "auth": {
+            "type": "object",
+            "properties": {
+                "jwt": {
+                    "type": "object",
+                    "description": "JWT validation config for all routes. Supports multiple OIDC providers.",
+                    "properties": {
+                        "providers": {
+                            "type": "array",
+                            "description": "List of trusted JWT providers. Required when any service is enabled.",
+                            "items": {
+                                "type": "object",
+                                "required": ["name", "issuer", "remoteJWKS"],
+                                "properties": {
+                                    "name": {
+                                        "type": "string"
+                                    },
+                                    "issuer": {
+                                        "type": "string"
+                                    },
+                                    "remoteJWKS": {
+                                        "type": "object",
+                                        "properties": {
+                                            "uri": {
+                                                "type": "string"
+                                            }
+                                        }
+                                    },
+                                    "extractFrom": {
+                                        "type": "object",
+                                        "description": "Restrict where the JWT is extracted from. Best practice: set headers[].valuePrefix to 'Bearer ' so that Basic Auth credentials on the Authorization header are not mistakenly parsed as a JWT.",
+                                        "properties": {
+                                            "headers": {
+                                                "type": "array",
+                                                "items": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                        "name": { "type": "string" },
+                                                        "valuePrefix": { "type": "string" }
+                                                    }
+                                                }
+                                            },
+                                            "cookies": { "type": "array", "items": { "type": "string" } },
+                                            "params": { "type": "array", "items": { "type": "string" } }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "ingresses": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "hosts": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "host": {
+                                    "type": "string"
+                                },
+                                "paths": {
+                                    "type": "array"
+                                }
+                            }
+                        }
+                    },
+                    "ingressClassName": {
+                        "type": "string"
+                    },
+                    "name": {
+                        "type": "string"
+                    },
+                    "namespace": {
+                        "type": "string"
+                    },
+                    "service": {
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            },
+                            "port": {
+                                "type": "integer"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "loki": {
+            "type": "object",
+            "properties": {
+                "enabled": {
+                    "type": "boolean"
+                },
+                "hostname": {
+                    "type": "string"
+                },
+                "namespace": {
+                    "type": "string"
+                },
+                "parentRefs": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            },
+                            "namespace": {
+                                "type": "string"
+                            }
+                        }
+                    }
+                },
+                "read": {
+                    "type": "object",
+                    "properties": {
+                        "backendPort": {
+                            "type": "integer"
+                        },
+                        "backendService": {
+                            "type": "string"
+                        },
+                        "paths": {
+                            "type": "array",
+                            "items": {
+                                "type": "string"
+                            }
+                        }
+                    }
+                },
+                "write": {
+                    "type": "object",
+                    "properties": {
+                        "backendPort": {
+                            "type": "integer"
+                        },
+                        "backendService": {
+                            "type": "string"
+                        },
+                        "grpc": {
+                            "type": "object",
+                            "properties": {
+                                "backendPort": {
+                                    "type": "integer"
+                                },
+                                "backendService": {
+                                    "type": "string"
+                                }
+                            }
+                        },
+                        "paths": {
+                            "type": "array",
+                            "items": {
+                                "type": "string"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "mimir": {
+            "type": "object",
+            "properties": {
+                "enabled": {
+                    "type": "boolean"
+                },
+                "hostname": {
+                    "type": "string"
+                },
+                "namespace": {
+                    "type": "string"
+                },
+                "parentRefs": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            },
+                            "namespace": {
+                                "type": "string"
+                            }
+                        }
+                    }
+                },
+                "read": {
+                    "type": "object",
+                    "properties": {
+                        "backendPort": {
+                            "type": "integer"
+                        },
+                        "backendService": {
+                            "type": "string"
+                        },
+                        "paths": {
+                            "type": "array",
+                            "items": {
+                                "type": "string"
+                            }
+                        }
+                    }
+                },
+                "write": {
+                    "type": "object",
+                    "properties": {
+                        "backendPort": {
+                            "type": "integer"
+                        },
+                        "backendService": {
+                            "type": "string"
+                        },
+                        "paths": {
+                            "type": "array",
+                            "items": {
+                                "type": "string"
+                            }
+                        },
+                        "stripPrefixPaths": {
+                            "type": "array",
+                            "items": {
+                                "type": "string"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "name": {
+            "type": "string"
+        },
+        "serviceType": {
+            "type": "string"
+        },
+        "tempo": {
+            "type": "object",
+            "properties": {
+                "enabled": {
+                    "type": "boolean"
+                },
+                "hostname": {
+                    "type": "string"
+                },
+                "namespace": {
+                    "type": "string"
+                },
+                "parentRefs": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            },
+                            "namespace": {
+                                "type": "string"
+                            }
+                        }
+                    }
+                },
+                "read": {
+                    "type": "object",
+                    "properties": {
+                        "grpc": {
+                            "type": "object",
+                            "properties": {
+                                "backendPort": {
+                                    "type": "integer"
+                                },
+                                "backendService": {
+                                    "type": "string"
+                                }
+                            }
+                        },
+                        "paths": {
+                            "type": "array",
+                            "items": {
+                                "type": "string"
+                            }
+                        }
+                    }
+                },
+                "write": {
+                    "type": "object",
+                    "properties": {
+                        "grpc": {
+                            "type": "object",
+                            "properties": {
+                                "backendPort": {
+                                    "type": "integer"
+                                },
+                                "backendService": {
+                                    "type": "string"
+                                }
+                            }
+                        },
+                        "paths": {
+                            "type": "array",
+                            "items": {
+                                "type": "string"
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
