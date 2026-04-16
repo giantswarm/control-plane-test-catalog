@@ -23230,6 +23230,28 @@ entries:
     version: 2.36.0-109ab040cfb273b71fb46f3d7420dc62a5596ee3
   cluster-api-provider-azure:
   - annotations:
+      io.giantswarm.application.metadata: https://giantswarm.github.io/control-plane-test-catalog/cluster-api-provider-azure-4.1.0-9c2ff33c25bb7b08ddc82991402a1ba5a0798d95.tgz-meta/main.yaml
+      io.giantswarm.application.readme: https://raw.githubusercontent.com/giantswarm/cluster-api-provider-azure-app/9c2ff33c25bb7b08ddc82991402a1ba5a0798d95/README.md
+      io.giantswarm.application.team: phoenix
+      io.giantswarm.application.values-schema: https://raw.githubusercontent.com/giantswarm/cluster-api-provider-azure-app/9c2ff33c25bb7b08ddc82991402a1ba5a0798d95/helm/cluster-api-provider-azure/values.schema.json
+      ui.giantswarm.io/logo: https://s.giantswarm.io/app-icons/giantswarm/1/dark.svg
+    apiVersion: v2
+    appVersion: v1.23.0-gs-dd9dbf924
+    created: "2026-04-16T07:00:41.752752737Z"
+    dependencies:
+    - condition: crds.install
+      name: crd-install
+      repository: ""
+      version: 1.0.0
+    description: A Helm chart for Cluster API Provider Azure components.
+    digest: 02357e8217a0d8a4f88e9fc476d43907ea19ece8d2348d9fa59e8179d080b40d
+    home: https://github.com/giantswarm/cluster-api-provider-azure-app
+    icon: https://s.giantswarm.io/app-icons/giantswarm/1/dark.svg
+    name: cluster-api-provider-azure
+    urls:
+    - https://giantswarm.github.io/control-plane-test-catalog/cluster-api-provider-azure-4.1.0-9c2ff33c25bb7b08ddc82991402a1ba5a0798d95.tgz
+    version: 4.1.0-9c2ff33c25bb7b08ddc82991402a1ba5a0798d95
+  - annotations:
       io.giantswarm.application.metadata: https://giantswarm.github.io/control-plane-test-catalog/cluster-api-provider-azure-4.1.0-34727b503211608fdf6d70bad0ee84fc95419ae2.tgz-meta/main.yaml
       io.giantswarm.application.readme: https://raw.githubusercontent.com/giantswarm/cluster-api-provider-azure-app/34727b503211608fdf6d70bad0ee84fc95419ae2/README.md
       io.giantswarm.application.team: phoenix
@@ -80637,4 +80659,4 @@ entries:
     urls:
     - https://giantswarm.github.io/control-plane-test-catalog/vertical-pod-autoscaler-crd-4.1.2-3ceecd6bf7b6a29c25b9958a58b46c5afc7f2503.tgz
     version: 4.1.2-3ceecd6bf7b6a29c25b9958a58b46c5afc7f2503
-generated: "2026-04-15T23:02:09.648507436Z"
+generated: "2026-04-16T07:00:41.732835893Z"
