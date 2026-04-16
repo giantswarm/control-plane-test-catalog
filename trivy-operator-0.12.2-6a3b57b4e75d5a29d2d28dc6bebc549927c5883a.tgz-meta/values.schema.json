@@ -1,0 +1,583 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "properties": {
+        "ciliumNetworkPolicy": {
+            "properties": {
+                "enabled": {
+                    "type": "boolean"
+                },
+                "scanJobExtraEgress": {
+                    "properties": {
+                        "dnsSelector": {
+                            "properties": {
+                                "rules": {
+                                    "type": "array"
+                                }
+                            },
+                            "type": "object"
+                        },
+                        "enabled": {
+                            "type": "boolean"
+                        },
+                        "fqdnsConnection": {
+                            "properties": {
+                                "port": {
+                                    "type": "string"
+                                },
+                                "protocol": {
+                                    "type": "string"
+                                },
+                                "rules": {
+                                    "type": "array"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    },
+                    "type": "object"
+                }
+            },
+            "type": "object"
+        },
+        "crds": {
+            "properties": {
+                "image": {
+                    "properties": {
+                        "tag": {
+                            "type": "string"
+                        }
+                    },
+                    "type": "object"
+                },
+                "install": {
+                    "type": "boolean"
+                },
+                "resources": {
+                    "properties": {
+                        "limits": {
+                            "properties": {
+                                "cpu": {
+                                    "type": "string"
+                                },
+                                "memory": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        },
+                        "requests": {
+                            "properties": {
+                                "cpu": {
+                                    "type": "string"
+                                },
+                                "memory": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    },
+                    "type": "object"
+                }
+            },
+            "type": "object"
+        },
+        "global": {
+            "properties": {
+                "image": {
+                    "properties": {
+                        "registry": {
+                            "type": "string"
+                        }
+                    },
+                    "type": "object"
+                },
+                "podSecurityStandards": {
+                    "properties": {
+                        "enforced": {
+                            "type": "boolean"
+                        }
+                    },
+                    "type": "object"
+                }
+            },
+            "type": "object"
+        },
+        "image": {
+            "properties": {
+                "registry": {
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        },
+        "kyvernoPolicyExceptions": {
+            "properties": {
+                "enabled": {
+                    "type": "boolean"
+                },
+                "namespace": {
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        },
+        "managedBy": {
+            "type": "string"
+        },
+        "name": {
+            "type": "string"
+        },
+        "networkPolicy": {
+            "properties": {
+                "enabled": {
+                    "type": "boolean"
+                }
+            },
+            "type": "object"
+        },
+        "podSecurityContext": {
+            "properties": {
+                "runAsGroup": {
+                    "type": "integer"
+                },
+                "runAsNonRoot": {
+                    "type": "boolean"
+                },
+                "runAsUser": {
+                    "type": "integer"
+                },
+                "seccompProfile": {
+                    "properties": {
+                        "type": {
+                            "type": "string"
+                        }
+                    },
+                    "type": "object"
+                }
+            },
+            "type": "object"
+        },
+        "securityContext": {
+            "properties": {
+                "allowPrivilegeEscalation": {
+                    "type": "boolean"
+                },
+                "capabilities": {
+                    "properties": {
+                        "drop": {
+                            "items": {
+                                "type": "string"
+                            },
+                            "type": "array"
+                        }
+                    },
+                    "type": "object"
+                },
+                "privileged": {
+                    "type": "boolean"
+                },
+                "readOnlyRootFilesystem": {
+                    "type": "boolean"
+                },
+                "runAsGroup": {
+                    "type": "integer"
+                },
+                "runAsNonRoot": {
+                    "type": "boolean"
+                },
+                "runAsUser": {
+                    "type": "integer"
+                },
+                "seccompProfile": {
+                    "properties": {
+                        "type": {
+                            "type": "string"
+                        }
+                    },
+                    "type": "object"
+                }
+            },
+            "type": "object"
+        },
+        "serviceType": {
+            "type": "string"
+        },
+        "trivy-operator": {
+            "properties": {
+                "compliance": {
+                    "properties": {
+                        "cron": {
+                            "type": "string"
+                        },
+                        "reportType": {
+                            "type": "string"
+                        }
+                    },
+                    "type": "object"
+                },
+                "excludeNamespaces": {
+                    "type": "string"
+                },
+                "image": {
+                    "properties": {
+                        "repository": {
+                            "type": "string"
+                        }
+                    },
+                    "type": "object"
+                },
+                "nodeCollector": {
+                    "properties": {
+                        "repository": {
+                            "type": "string"
+                        },
+                        "tolerations": {
+                            "items": {
+                                "properties": {
+                                    "effect": {
+                                        "type": "string"
+                                    },
+                                    "key": {
+                                        "type": "string"
+                                    },
+                                    "operator": {
+                                        "type": "string"
+                                    }
+                                },
+                                "type": "object"
+                            },
+                            "type": "array"
+                        }
+                    },
+                    "type": "object"
+                },
+                "operator": {
+                    "properties": {
+                        "clusterComplianceEnabled": {
+                            "type": "boolean"
+                        },
+                        "configAuditScannerEnabled": {
+                            "type": "boolean"
+                        },
+                        "exposedSecretScannerEnabled": {
+                            "type": "boolean"
+                        },
+                        "infraAssessmentScannerEnabled": {
+                            "type": "boolean"
+                        },
+                        "rbacAssessmentScannerEnabled": {
+                            "type": "boolean"
+                        },
+                        "sbomGenerationEnabled": {
+                            "type": "boolean"
+                        },
+                        "scanJobsConcurrentLimit": {
+                            "type": "integer"
+                        },
+                        "scanJobsRetryDelay": {
+                            "type": "string"
+                        },
+                        "scannerReportTTL": {
+                            "type": "string"
+                        },
+                        "vulnerabilityScannerScanOnlyCurrentRevisions": {
+                            "type": "boolean"
+                        }
+                    },
+                    "type": "object"
+                },
+                "podSecurityContext": {
+                    "properties": {
+                        "runAsGroup": {
+                            "type": "integer"
+                        },
+                        "runAsNonRoot": {
+                            "type": "boolean"
+                        },
+                        "runAsUser": {
+                            "type": "integer"
+                        },
+                        "seccompProfile": {
+                            "properties": {
+                                "type": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    },
+                    "type": "object"
+                },
+                "policiesBundle": {
+                    "properties": {
+                        "registry": {
+                            "type": "string"
+                        },
+                        "repository": {
+                            "type": "string"
+                        },
+                        "tag": {
+                            "type": "string"
+                        }
+                    },
+                    "type": "object"
+                },
+                "securityContext": {
+                    "properties": {
+                        "allowPrivilegeEscalation": {
+                            "type": "boolean"
+                        },
+                        "capabilities": {
+                            "properties": {
+                                "drop": {
+                                    "items": {
+                                        "type": "string"
+                                    },
+                                    "type": "array"
+                                }
+                            },
+                            "type": "object"
+                        },
+                        "privileged": {
+                            "type": "boolean"
+                        },
+                        "readOnlyRootFilesystem": {
+                            "type": "boolean"
+                        },
+                        "runAsGroup": {
+                            "type": "integer"
+                        },
+                        "runAsNonRoot": {
+                            "type": "boolean"
+                        },
+                        "runAsUser": {
+                            "type": "integer"
+                        },
+                        "seccompProfile": {
+                            "properties": {
+                                "type": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    },
+                    "type": "object"
+                },
+                "service": {
+                    "properties": {
+                        "metricsPort": {
+                            "type": "integer"
+                        }
+                    },
+                    "type": "object"
+                },
+                "serviceAccount": {
+                    "properties": {
+                        "name": {
+                            "type": "string"
+                        }
+                    },
+                    "type": "object"
+                },
+                "serviceMonitor": {
+                    "properties": {
+                        "enabled": {
+                            "type": "boolean"
+                        },
+                        "interval": {
+                            "type": "string"
+                        },
+                        "labels": {
+                            "properties": {
+                                "application.giantswarm.io/team": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    },
+                    "type": "object"
+                },
+                "targetNamespaces": {
+                    "type": "string"
+                },
+                "targetWorkloads": {
+                    "type": "string"
+                },
+                "trivy": {
+                    "properties": {
+                        "command": {
+                            "type": "string"
+                        },
+                        "dbRegistry": {
+                            "type": "string"
+                        },
+                        "dbRepository": {
+                            "type": "string"
+                        },
+                        "image": {
+                            "properties": {
+                                "repository": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        },
+                        "javaDbRegistry": {
+                            "type": "string"
+                        },
+                        "javaDbRepository": {
+                            "type": "string"
+                        },
+                        "mode": {
+                            "type": "string"
+                        },
+                        "resources": {
+                            "properties": {
+                                "limits": {
+                                    "properties": {
+                                        "cpu": {
+                                            "type": "string"
+                                        },
+                                        "memory": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "type": "object"
+                                },
+                                "requests": {
+                                    "properties": {
+                                        "cpu": {
+                                            "type": "string"
+                                        },
+                                        "memory": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            },
+                            "type": "object"
+                        },
+                        "serverURL": {
+                            "type": "string"
+                        }
+                    },
+                    "type": "object"
+                },
+                "trivyOperator": {
+                    "properties": {
+                        "scanJobPodTemplateContainerSecurityContext": {
+                            "properties": {
+                                "allowPrivilegeEscalation": {
+                                    "type": "boolean"
+                                },
+                                "capabilities": {
+                                    "properties": {
+                                        "drop": {
+                                            "items": {
+                                                "type": "string"
+                                            },
+                                            "type": "array"
+                                        }
+                                    },
+                                    "type": "object"
+                                },
+                                "privileged": {
+                                    "type": "boolean"
+                                },
+                                "readOnlyRootFilesystem": {
+                                    "type": "boolean"
+                                },
+                                "runAsGroup": {
+                                    "type": "integer"
+                                },
+                                "runAsNonRoot": {
+                                    "type": "boolean"
+                                },
+                                "runAsUser": {
+                                    "type": "integer"
+                                },
+                                "seccompProfile": {
+                                    "properties": {
+                                        "type": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            },
+                            "type": "object"
+                        },
+                        "scanJobPodTemplatePodSecurityContext": {
+                            "properties": {
+                                "runAsGroup": {
+                                    "type": "integer"
+                                },
+                                "runAsNonRoot": {
+                                    "type": "boolean"
+                                },
+                                "runAsUser": {
+                                    "type": "integer"
+                                },
+                                "seccompProfile": {
+                                    "properties": {
+                                        "type": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            },
+                            "type": "object"
+                        },
+                        "scanJobTolerations": {
+                            "items": {
+                                "properties": {
+                                    "effect": {
+                                        "type": "string"
+                                    },
+                                    "key": {
+                                        "type": "string"
+                                    },
+                                    "operator": {
+                                        "type": "string"
+                                    }
+                                },
+                                "type": "object"
+                            },
+                            "type": "array"
+                        }
+                    },
+                    "type": "object"
+                }
+            },
+            "type": "object"
+        },
+        "trivyServiceName": {
+            "type": "string"
+        },
+        "trivyServicePort": {
+            "type": "integer"
+        },
+        "verticalPodAutoscaler": {
+            "properties": {
+                "trivyOperator": {
+                    "properties": {
+                        "containerPolicies": {
+                            "type": "object"
+                        },
+                        "enabled": {
+                            "type": "boolean"
+                        }
+                    },
+                    "type": "object"
+                }
+            },
+            "type": "object"
+        }
+    },
+    "type": "object"
+}
