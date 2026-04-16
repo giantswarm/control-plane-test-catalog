@@ -44950,6 +44950,32 @@ entries:
     urls:
     - https://giantswarm.github.io/control-plane-test-catalog/kyverno-crds-1.17.0-05de5ce441a41bffaf979fc93a85987d130bfed4.tgz
     version: 1.17.0-05de5ce441a41bffaf979fc93a85987d130bfed4
+  - annotations:
+      io.giantswarm.application.audience: all
+      io.giantswarm.application.managed: "true"
+      io.giantswarm.application.metadata: https://giantswarm.github.io/control-plane-test-catalog/kyverno-crds-0.0.0-2da217af28a11c692ed4aed96e72caf3d3227511.tgz-meta/main.yaml
+      io.giantswarm.application.readme: https://raw.githubusercontent.com/giantswarm/kyverno-crds/2da217af28a11c692ed4aed96e72caf3d3227511/README.md
+      io.giantswarm.application.team: shield
+      io.giantswarm.application.values-schema: https://raw.githubusercontent.com/giantswarm/kyverno-crds/2da217af28a11c692ed4aed96e72caf3d3227511/helm/kyverno-crds/values.schema.json
+    apiVersion: v2
+    created: "2026-04-16T11:16:29.930867938Z"
+    dependencies:
+    - name: crds
+      repository: ""
+      version: 3.7.0
+    - name: kyverno-api
+      repository: ""
+      version: 0.0.0
+    description: This app contains the Kyverno CRDs.
+    digest: 01bc4ea108cf361f272089faafbcbb1fb25784cffb38a0a98ae5c3eccbea2cea
+    home: https://github.com/giantswarm/kyverno-crds
+    icon: https://s.giantswarm.io/app-icons/kyverno/1/light.svg
+    name: kyverno-crds
+    sources:
+    - https://github.com/kyverno/kyverno
+    urls:
+    - https://giantswarm.github.io/control-plane-test-catalog/kyverno-crds-0.0.0-2da217af28a11c692ed4aed96e72caf3d3227511.tgz
+    version: 0.0.0-2da217af28a11c692ed4aed96e72caf3d3227511
   kyverno-policies:
   - annotations:
       io.giantswarm.application.audience: all
@@ -83146,4 +83172,4 @@ entries:
     urls:
     - https://giantswarm.github.io/control-plane-test-catalog/vertical-pod-autoscaler-crd-4.1.2-3ceecd6bf7b6a29c25b9958a58b46c5afc7f2503.tgz
     version: 4.1.2-3ceecd6bf7b6a29c25b9958a58b46c5afc7f2503
-generated: "2026-04-16T11:16:20.302516475Z"
+generated: "2026-04-16T11:16:29.903784825Z"
