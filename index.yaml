@@ -5794,6 +5794,27 @@ entries:
     urls:
     - https://giantswarm.github.io/control-plane-test-catalog/azure-workload-identity-webhook-bundle-1.0.3-02bbe354b6a1b3a0e019aa75edf8e0f75b3d4b49.tgz
     version: 1.0.3-02bbe354b6a1b3a0e019aa75edf8e0f75b3d4b49
+  azuredisk-csi-driver-app:
+  - annotations:
+      io.giantswarm.application.metadata: https://giantswarm.github.io/control-plane-test-catalog/azuredisk-csi-driver-app-2.1.0-ed2972a90bfe5b5ef1c8cf896e30515c45d0132d.tgz-meta/main.yaml
+      io.giantswarm.application.readme: https://raw.githubusercontent.com/giantswarm/azuredisk-csi-driver-app/ed2972a90bfe5b5ef1c8cf896e30515c45d0132d/README.md
+      io.giantswarm.application.restrictions.cluster-singleton: "true"
+      io.giantswarm.application.restrictions.compatible-providers: azure
+      io.giantswarm.application.restrictions.fixed-namespace: kube-system
+      io.giantswarm.application.restrictions.gpu-instances: "false"
+      io.giantswarm.application.team: phoenix
+      io.giantswarm.application.values-schema: https://raw.githubusercontent.com/giantswarm/azuredisk-csi-driver-app/ed2972a90bfe5b5ef1c8cf896e30515c45d0132d/helm/azuredisk-csi-driver-app/values.schema.json
+    apiVersion: v2
+    appVersion: 1.34.0
+    created: "2026-04-17T14:59:23.534024307Z"
+    description: A Helm chart to run Azure CSI driver for Azure Disks.
+    digest: 61d9f838b6597284590dab40a4ba61e3ceb2e13e21e087f4f240db2c9140bf36
+    home: https://github.com/giantswarm/azuredisk-csi-driver-app
+    icon: https://s.giantswarm.io/app-icons/azure/1/dark.svg
+    name: azuredisk-csi-driver-app
+    urls:
+    - https://giantswarm.github.io/control-plane-test-catalog/azuredisk-csi-driver-app-2.1.0-ed2972a90bfe5b5ef1c8cf896e30515c45d0132d.tgz
+    version: 2.1.0-ed2972a90bfe5b5ef1c8cf896e30515c45d0132d
   backstage:
   - annotations:
       io.giantswarm.application.logo: https://s.giantswarm.io/app-icons/backstage/1/logo.svg
@@ -87547,4 +87568,4 @@ entries:
     urls:
     - https://giantswarm.github.io/control-plane-test-catalog/vertical-pod-autoscaler-crd-4.1.2-3ceecd6bf7b6a29c25b9958a58b46c5afc7f2503.tgz
     version: 4.1.2-3ceecd6bf7b6a29c25b9958a58b46c5afc7f2503
-generated: "2026-04-17T14:42:21.617712541Z"
+generated: "2026-04-17T14:59:23.531891531Z"
