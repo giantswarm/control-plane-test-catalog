@@ -45592,6 +45592,37 @@ entries:
     urls:
     - https://giantswarm.github.io/control-plane-test-catalog/kamaji-0.2.2-c76fb4ad09b74180a2fb0597420f5ffae4b35d38.tgz
     version: 0.2.2-c76fb4ad09b74180a2fb0597420f5ffae4b35d38
+  - annotations:
+      io.giantswarm.application.audience: giantswarm
+      io.giantswarm.application.managed: "true"
+      io.giantswarm.application.metadata: https://giantswarm.github.io/control-plane-test-catalog/kamaji-0.2.2-8b2ab0af8495ea33604d859732cdb6c0794d5506.tgz-meta/main.yaml
+      io.giantswarm.application.readme: https://raw.githubusercontent.com/giantswarm/kamaji-app/8b2ab0af8495ea33604d859732cdb6c0794d5506/README.md
+      io.giantswarm.application.team: rocket
+      io.giantswarm.application.upstream-chart-url: https://github.com/clastix/kamaji
+      io.giantswarm.application.upstream-chart-version: edge-25.12.3
+      io.giantswarm.application.values-schema: https://raw.githubusercontent.com/giantswarm/kamaji-app/8b2ab0af8495ea33604d859732cdb6c0794d5506/helm/kamaji/values.schema.json
+    apiVersion: v2
+    appVersion: edge-25.12.3
+    created: "2026-04-17T15:21:28.80666947Z"
+    dependencies:
+    - name: kamaji-crds
+      repository: ""
+      version: 0.2.1
+    description: Kamaji is the Hosted Control Plane Manager for Kubernetes.
+    digest: 02c86280545881514830684b07af5e7b6d7bf4aca124b735220bb0f11a6cadee
+    home: https://github.com/giantswarm/kamaji-app
+    icon: https://s.giantswarm.io/app-icons/kamaji/1/light.png
+    kubeVersion: '>=1.21.0-0'
+    maintainers:
+    - email: team-rocket@giantswarm.io
+      name: Team Rocket
+    name: kamaji
+    sources:
+    - https://github.com/clastix/kamaji
+    type: application
+    urls:
+    - https://giantswarm.github.io/control-plane-test-catalog/kamaji-0.2.2-8b2ab0af8495ea33604d859732cdb6c0794d5506.tgz
+    version: 0.2.2-8b2ab0af8495ea33604d859732cdb6c0794d5506
   keda:
   - annotations:
       io.giantswarm.application.audience: all
@@ -88875,4 +88906,4 @@ entries:
     urls:
     - https://giantswarm.github.io/control-plane-test-catalog/vertical-pod-autoscaler-crd-4.1.2-3ceecd6bf7b6a29c25b9958a58b46c5afc7f2503.tgz
     version: 4.1.2-3ceecd6bf7b6a29c25b9958a58b46c5afc7f2503
-generated: "2026-04-17T15:20:27.124536504Z"
+generated: "2026-04-17T15:21:28.799072293Z"
