@@ -20158,6 +20158,34 @@ entries:
     version: 0.110.1-0030f408b3d0489f2abf39a2616a4cacebe929de
   caicloud-event-exporter-app:
   - annotations:
+      io.giantswarm.application.metadata: https://giantswarm.github.io/control-plane-test-catalog/caicloud-event-exporter-app-0.2.3-986910fafae0feaf6f3676059de09ad8f4f0bfd5.tgz-meta/main.yaml
+      io.giantswarm.application.readme: https://raw.githubusercontent.com/giantswarm/caicloud-event-exporter-app/986910fafae0feaf6f3676059de09ad8f4f0bfd5/README.md
+      io.giantswarm.application.restrictions.cluster-singleton: "true"
+      io.giantswarm.application.team: honeybadger
+      io.giantswarm.application.two-step-install: "false"
+      io.giantswarm.application.values-schema: https://raw.githubusercontent.com/giantswarm/caicloud-event-exporter-app/986910fafae0feaf6f3676059de09ad8f4f0bfd5/helm/caicloud-event-exporter-app/values.schema.json
+    apiVersion: v2
+    appVersion: 1.0.0
+    created: "2026-04-20T10:41:06.108161781Z"
+    description: 'Kubernetes events to Prometheus bridge. A Collector that can list
+      and watch Kubernetes events, and according to events'' occurrence, determine
+      how long the event lasts. The information is then translated into metrics. '
+    digest: 6b0572f168f29c476368571d59d61441162126a89ae8b83c3d0d3a86b5c175d9
+    home: https://github.com/giantswarm/caicloud-event-exporter-app
+    icon: https://s.giantswarm.io/app-icons/prometheus/1/light.svg
+    keywords:
+    - event-exporter
+    - exporter
+    - metrics
+    - crossplane
+    name: caicloud-event-exporter-app
+    sources:
+    - https://github.com/caicloud/event_exporter
+    type: application
+    urls:
+    - https://giantswarm.github.io/control-plane-test-catalog/caicloud-event-exporter-app-0.2.3-986910fafae0feaf6f3676059de09ad8f4f0bfd5.tgz
+    version: 0.2.3-986910fafae0feaf6f3676059de09ad8f4f0bfd5
+  - annotations:
       io.giantswarm.application.metadata: https://giantswarm.github.io/control-plane-test-catalog/caicloud-event-exporter-app-0.2.3-6b81d2f58093e03e0dbcbae82e136c0f73ae78f6.tgz-meta/main.yaml
       io.giantswarm.application.readme: https://raw.githubusercontent.com/giantswarm/caicloud-event-exporter-app/6b81d2f58093e03e0dbcbae82e136c0f73ae78f6/README.md
       io.giantswarm.application.restrictions.cluster-singleton: "true"
@@ -92273,4 +92301,4 @@ entries:
     urls:
     - https://giantswarm.github.io/control-plane-test-catalog/vertical-pod-autoscaler-crd-4.1.2-3ceecd6bf7b6a29c25b9958a58b46c5afc7f2503.tgz
     version: 4.1.2-3ceecd6bf7b6a29c25b9958a58b46c5afc7f2503
-generated: "2026-04-20T10:40:58.956191154Z"
+generated: "2026-04-20T10:41:06.107288341Z"
