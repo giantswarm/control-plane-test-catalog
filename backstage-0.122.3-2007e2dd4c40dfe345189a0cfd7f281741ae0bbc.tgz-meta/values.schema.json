@@ -1,0 +1,704 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title": "Backstage Helm Chart Values",
+    "description": "Schema for Giant Swarm's Backstage Helm chart values",
+    "type": "object",
+    "properties": {
+        "anthropic": {
+            "description": "Anthropic AI provider settings",
+            "type": "object",
+            "properties": {
+                "apiKey": {
+                    "description": "Anthropic API key for AI chat features (exposed as ANTHROPIC_API_KEY env var)",
+                    "type": "string"
+                }
+            },
+            "additionalProperties": false
+        },
+        "authSessionSecret": {
+            "description": "Secret used for signing authentication sessions (exposed as AUTH_SESSION_SECRET env var)",
+            "type": "string"
+        },
+        "aws": {
+            "description": "AWS credentials for S3 and other AWS service integrations",
+            "type": "object",
+            "properties": {
+                "accessKeyID": {
+                    "description": "AWS access key ID (exposed as AWS_ACCESS_KEY_ID env var)",
+                    "type": "string"
+                },
+                "secretAccessKey": {
+                    "description": "AWS secret access key (exposed as AWS_SECRET_ACCESS_KEY env var)",
+                    "type": "string"
+                }
+            },
+            "additionalProperties": false
+        },
+        "backstage": {
+            "description": "Backstage application parameters",
+            "type": "object",
+            "properties": {
+                "appConfig": {
+                    "description": "Inline Backstage app configuration that generates a ConfigMap automatically. Do not use for sensitive data",
+                    "type": [
+                        "object",
+                        "string"
+                    ],
+                    "additionalProperties": false
+                },
+                "args": {
+                    "description": "Additional command arguments passed to the Backstage container",
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "command": {
+                    "description": "Container command to start the Backstage backend",
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "extraAppConfig": {
+                    "description": "Extra app configuration files to inline into command arguments, each referencing a ConfigMap",
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "configMapRef": {
+                                "type": "string"
+                            },
+                            "filename": {
+                                "type": "string"
+                            }
+                        },
+                        "additionalProperties": false
+                    }
+                },
+                "extraEnvVars": {
+                    "description": "Extra environment variables for the Backstage container",
+                    "type": "array",
+                    "items": {
+                        "$ref": "https://raw.githubusercontent.com/yannh/kubernetes-json-schema/master/master/_definitions.json#/definitions/io.k8s.api.core.v1.EnvVar"
+                    }
+                },
+                "extraEnvVarsCM": {
+                    "description": "Names of existing ConfigMaps to mount as envFrom sources in the Backstage container",
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "extraEnvVarsSecrets": {
+                    "description": "Names of existing Secrets to mount as envFrom sources in the Backstage container",
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "extraVolumeMounts": {
+                    "description": "Additional volume mounts for the Backstage container",
+                    "type": "array",
+                    "items": {
+                        "$ref": "https://raw.githubusercontent.com/yannh/kubernetes-json-schema/master/master/_definitions.json#/definitions/io.k8s.api.core.v1.VolumeMount"
+                    }
+                },
+                "extraVolumes": {
+                    "description": "Additional volumes for the Backstage pod",
+                    "type": "array",
+                    "items": {
+                        "$ref": "https://raw.githubusercontent.com/yannh/kubernetes-json-schema/master/master/_definitions.json#/definitions/io.k8s.api.core.v1.Volume"
+                    }
+                }
+            },
+            "additionalProperties": false
+        },
+        "backstageDiscovery": {
+            "description": "Backstage service discovery settings",
+            "type": "object",
+            "properties": {
+                "kubernetesId": {
+                    "description": "Value to set for the backstage.io/kubernetes-id label on all resources, used for entity discovery in Backstage",
+                    "type": "string"
+                }
+            },
+            "additionalProperties": false
+        },
+        "circleci": {
+            "description": "CircleCI integration settings",
+            "type": "object",
+            "properties": {
+                "apiToken": {
+                    "description": "CircleCI API token for pipeline integration (exposed as CIRCLECI_API_TOKEN env var)",
+                    "type": "string"
+                }
+            },
+            "additionalProperties": false
+        },
+        "common": {
+            "description": "Bitnami common library chart settings (subchart dependency)",
+            "type": "object",
+            "additionalProperties": true
+        },
+        "database": {
+            "description": "Database configuration",
+            "type": "object",
+            "properties": {
+                "engine": {
+                    "description": "Database engine to use",
+                    "type": "string",
+                    "enum": [
+                        "sqlite",
+                        "postgresql"
+                    ]
+                },
+                "postgresql": {
+                    "description": "Settings for the PostgreSQL database (only used when engine is \"postgresql\")",
+                    "type": "object",
+                    "properties": {
+                        "clusterNameSuffix": {
+                            "description": "Suffix appended to the chart name to form the CNPG cluster resource name",
+                            "type": "string"
+                        },
+                        "image": {
+                            "description": "PostgreSQL container image for the CNPG cluster (registry.domain is prepended)",
+                            "type": "string"
+                        },
+                        "storageSize": {
+                            "description": "Persistent volume size for the PostgreSQL CNPG cluster",
+                            "type": "string"
+                        }
+                    },
+                    "additionalProperties": false
+                }
+            },
+            "additionalProperties": false
+        },
+        "dexAuthCredentials": {
+            "description": "Dex authentication provider credentials, keyed by provider name. Each entry generates AUTH_DEX_\u003cNAME\u003e_CLIENT_ID and AUTH_DEX_\u003cNAME\u003e_CLIENT_SECRET env vars",
+            "type": "object",
+            "additionalProperties": {
+                "type": "object",
+                "required": [
+                    "clientID",
+                    "clientSecret"
+                ],
+                "properties": {
+                    "clientID": {
+                        "type": "string"
+                    },
+                    "clientSecret": {
+                        "type": "string"
+                    }
+                },
+                "additionalProperties": false
+            }
+        },
+        "externalAccess": {
+            "description": "External access settings for programmatic API access",
+            "type": "object",
+            "properties": {
+                "mcpToken": {
+                    "description": "Bearer token for MCP (Model Context Protocol) external access (exposed as EXTERNAL_ACCESS_MCP_TOKEN env var)",
+                    "type": "string"
+                }
+            },
+            "additionalProperties": false
+        },
+        "githubAppCredentials": {
+            "description": "GitHub App credentials for repository access and webhooks",
+            "type": "object",
+            "properties": {
+                "appId": {
+                    "description": "GitHub App ID",
+                    "type": "integer"
+                },
+                "clientId": {
+                    "description": "GitHub App OAuth client ID",
+                    "type": "string"
+                },
+                "clientSecret": {
+                    "description": "GitHub App OAuth client secret",
+                    "type": "string"
+                },
+                "privateKey": {
+                    "description": "GitHub App private key (PEM format)",
+                    "type": "string"
+                },
+                "webhookSecret": {
+                    "description": "GitHub App webhook secret",
+                    "type": "string"
+                },
+                "webhookUrl": {
+                    "description": "GitHub App webhook URL",
+                    "type": "string"
+                }
+            },
+            "additionalProperties": false
+        },
+        "githubAuthCredentials": {
+            "description": "GitHub OAuth credentials for user authentication",
+            "type": "object",
+            "properties": {
+                "clientID": {
+                    "description": "GitHub OAuth App client ID (exposed as GITHUB_OAUTH_CLIENT_ID env var)",
+                    "type": "string"
+                },
+                "clientSecret": {
+                    "description": "GitHub OAuth App client secret (exposed as GITHUB_OAUTH_CLIENT_SECRET env var)",
+                    "type": "string"
+                }
+            },
+            "additionalProperties": false
+        },
+        "global": {
+            "description": "Global values shared between all subcharts",
+            "$comment": "Added automatically by 'helm schema' to allow this chart to be used as a Helm dependency, as the `additionalProperties` setting would otherwise collide with Helm's special 'global' values key.",
+            "type": [
+                "object",
+                "null"
+            ]
+        },
+        "grafana": {
+            "description": "Grafana integration settings",
+            "type": "object",
+            "properties": {
+                "apiToken": {
+                    "description": "Grafana API token for dashboard integration (exposed as GRAFANA_TOKEN env var)",
+                    "type": "string"
+                }
+            },
+            "additionalProperties": false
+        },
+        "groupID": {
+            "description": "Group ID for the pod security context (runAsGroup)",
+            "type": "integer",
+            "minimum": 0
+        },
+        "image": {
+            "description": "Container image settings",
+            "type": "object",
+            "properties": {
+                "name": {
+                    "description": "Container name in the pod spec",
+                    "type": "string"
+                },
+                "repository": {
+                    "description": "Image repository path (prepended with registry.domain to form the full image reference)",
+                    "type": "string"
+                }
+            },
+            "additionalProperties": false
+        },
+        "ingress": {
+            "description": "Traditional Ingress configuration",
+            "type": "object",
+            "properties": {
+                "annotations": {
+                    "description": "Annotations applied to the Ingress resource",
+                    "type": "object",
+                    "properties": {
+                        "cert-manager.io/cluster-issuer": {
+                            "type": "string"
+                        },
+                        "kubernetes.io/tls-acme": {
+                            "type": "string"
+                        },
+                        "nginx.ingress.kubernetes.io/force-ssl-redirect": {
+                            "type": "string"
+                        }
+                    },
+                    "additionalProperties": {
+                        "type": "string"
+                    }
+                },
+                "className": {
+                    "description": "Ingress class name",
+                    "type": "string"
+                },
+                "enabled": {
+                    "description": "Enable the Kubernetes Ingress resource for external HTTP access",
+                    "type": "boolean"
+                },
+                "hostnames": {
+                    "description": "Hostnames for the Ingress rules and TLS configuration",
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                }
+            },
+            "additionalProperties": false
+        },
+        "name": {
+            "description": "Name used for all Kubernetes resources (Deployment, Service, Ingress, etc.)",
+            "type": "string"
+        },
+        "nodeSelector": {
+            "description": "Node selector labels to constrain pod scheduling to specific nodes",
+            "type": "object",
+            "additionalProperties": true
+        },
+        "ociRegistryCredentials": {
+            "description": "Private OCI registry credentials, keyed by registry name. Each entry generates OCI_REGISTRY_\u003cNAME\u003e_USERNAME and OCI_REGISTRY_\u003cNAME\u003e_PASSWORD env vars. Registry hosts are configured in backstage.appConfig",
+            "type": "object",
+            "additionalProperties": {
+                "type": "object",
+                "required": [
+                    "username",
+                    "password"
+                ],
+                "properties": {
+                    "password": {
+                        "type": "string"
+                    },
+                    "username": {
+                        "type": "string"
+                    }
+                },
+                "additionalProperties": false
+            }
+        },
+        "openai": {
+            "description": "OpenAI provider settings",
+            "type": "object",
+            "properties": {
+                "apiKey": {
+                    "description": "OpenAI API key for AI chat features (exposed as OPENAI_API_KEY env var)",
+                    "type": "string"
+                }
+            },
+            "additionalProperties": false
+        },
+        "pluginKeys": {
+            "description": "Plugin signing key pairs, each mounted as files under /app/plugin-keys/\u003ckeyId\u003e/",
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "keyId": {
+                        "type": "string"
+                    },
+                    "privateKey": {
+                        "type": "string"
+                    },
+                    "publicKey": {
+                        "type": "string"
+                    }
+                },
+                "additionalProperties": false
+            }
+        },
+        "port": {
+            "description": "Container port for the Backstage backend, also used for the Service and Ingress backend",
+            "type": "integer",
+            "maximum": 65535,
+            "minimum": 1
+        },
+        "registry": {
+            "description": "Container image registry settings",
+            "type": "object",
+            "properties": {
+                "domain": {
+                    "description": "Container image registry domain prepended to image.repository",
+                    "type": "string"
+                }
+            },
+            "additionalProperties": false
+        },
+        "resources": {
+            "description": "Resource requests, limits, and autoscaler settings for the Backstage container",
+            "type": "object",
+            "properties": {
+                "limits": {
+                    "description": "CPU and memory resource limits",
+                    "type": "object",
+                    "properties": {
+                        "cpu": {
+                            "description": "CPU resource limit for the Backstage container",
+                            "type": "string"
+                        },
+                        "memory": {
+                            "description": "Memory resource limit for the Backstage container",
+                            "type": "string"
+                        }
+                    },
+                    "additionalProperties": false
+                },
+                "requests": {
+                    "description": "CPU and memory resource requests",
+                    "type": "object",
+                    "properties": {
+                        "cpu": {
+                            "description": "CPU resource request for the Backstage container",
+                            "type": "string"
+                        },
+                        "memory": {
+                            "description": "Memory resource request for the Backstage container",
+                            "type": "string"
+                        }
+                    },
+                    "additionalProperties": false
+                },
+                "verticalPodAutoscaler": {
+                    "description": "Vertical Pod Autoscaler settings",
+                    "type": "object",
+                    "properties": {
+                        "enabled": {
+                            "description": "Enable the VerticalPodAutoscaler resource for automatic resource adjustment",
+                            "type": "boolean"
+                        }
+                    },
+                    "additionalProperties": false
+                }
+            },
+            "additionalProperties": false
+        },
+        "route": {
+            "description": "Gateway API route configuration",
+            "type": "object",
+            "properties": {
+                "additionalRules": {
+                    "description": "Additional custom routing rules",
+                    "type": "array"
+                },
+                "annotations": {
+                    "description": "Annotations applied to the route resource",
+                    "type": "object",
+                    "additionalProperties": {
+                        "type": "string"
+                    }
+                },
+                "backendTrafficPolicy": {
+                    "description": "Envoy Gateway BackendTrafficPolicy configuration (gateway.envoyproxy.io/v1alpha1)",
+                    "type": "object",
+                    "properties": {
+                        "annotations": {
+                            "description": "Annotations applied to the BackendTrafficPolicy resource",
+                            "type": "object",
+                            "additionalProperties": {
+                                "type": "string"
+                            }
+                        },
+                        "enabled": {
+                            "description": "Enable the BackendTrafficPolicy resource",
+                            "type": "boolean"
+                        },
+                        "labels": {
+                            "description": "Labels applied to the BackendTrafficPolicy resource",
+                            "type": "object",
+                            "additionalProperties": {
+                                "type": "string"
+                            }
+                        },
+                        "spec": {
+                            "description": "BackendTrafficPolicy spec passthrough (timeout, retry, circuitBreaker, etc.); targetRefs is injected automatically",
+                            "type": "object",
+                            "additionalProperties": true
+                        }
+                    },
+                    "additionalProperties": false
+                },
+                "enabled": {
+                    "description": "Enable the Gateway API HTTPRoute resource",
+                    "type": "boolean"
+                },
+                "filters": {
+                    "description": "Request/Response filters applied to the route",
+                    "type": "array"
+                },
+                "hostnames": {
+                    "description": "Hostnames for the route (supports Go templating)",
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "kind": {
+                    "description": "Route resource kind",
+                    "type": "string",
+                    "enum": [
+                        "HTTPRoute",
+                        "GRPCRoute",
+                        "TCPRoute",
+                        "TLSRoute",
+                        "UDPRoute"
+                    ]
+                },
+                "labels": {
+                    "description": "Labels applied to the route resource",
+                    "type": "object",
+                    "additionalProperties": {
+                        "type": "string"
+                    }
+                },
+                "matches": {
+                    "description": "Path matching rules for the route",
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "path": {
+                                "type": "object",
+                                "properties": {
+                                    "type": {
+                                        "type": "string"
+                                    },
+                                    "value": {
+                                        "type": "string"
+                                    }
+                                },
+                                "additionalProperties": false
+                            }
+                        },
+                        "additionalProperties": false
+                    }
+                },
+                "name": {
+                    "description": "Route name (defaults to .Values.name)",
+                    "type": "string"
+                },
+                "parentRefs": {
+                    "description": "Parent Gateway references that this route attaches to",
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "group": {
+                                "type": "string"
+                            },
+                            "kind": {
+                                "type": "string"
+                            },
+                            "name": {
+                                "type": "string"
+                            },
+                            "namespace": {
+                                "type": "string"
+                            },
+                            "sectionName": {
+                                "type": "string"
+                            }
+                        },
+                        "additionalProperties": false
+                    }
+                },
+                "securityPolicy": {
+                    "description": "Envoy Gateway SecurityPolicy configuration (gateway.envoyproxy.io/v1alpha1)",
+                    "type": "object",
+                    "properties": {
+                        "annotations": {
+                            "description": "Annotations applied to the SecurityPolicy resource",
+                            "type": "object",
+                            "additionalProperties": {
+                                "type": "string"
+                            }
+                        },
+                        "authorization": {
+                            "description": "Authorization rules for request-level access control",
+                            "type": "object",
+                            "additionalProperties": true
+                        },
+                        "basicAuth": {
+                            "description": "Basic authentication configuration (reference to htpasswd secret)",
+                            "type": "object",
+                            "additionalProperties": true
+                        },
+                        "cors": {
+                            "description": "CORS (Cross-Origin Resource Sharing) policy configuration",
+                            "type": "object",
+                            "additionalProperties": true
+                        },
+                        "enabled": {
+                            "description": "Enable the SecurityPolicy resource",
+                            "type": "boolean"
+                        },
+                        "extAuth": {
+                            "description": "External authorization service configuration",
+                            "type": "object",
+                            "additionalProperties": true
+                        },
+                        "jwt": {
+                            "description": "JWT token validation configuration",
+                            "type": "object",
+                            "additionalProperties": true
+                        },
+                        "labels": {
+                            "description": "Labels applied to the SecurityPolicy resource",
+                            "type": "object",
+                            "additionalProperties": {
+                                "type": "string"
+                            }
+                        },
+                        "oidc": {
+                            "description": "OIDC authentication provider configuration",
+                            "type": "object",
+                            "additionalProperties": true
+                        }
+                    },
+                    "additionalProperties": false
+                }
+            },
+            "additionalProperties": false
+        },
+        "sentry": {
+            "description": "Sentry error tracking settings",
+            "type": "object",
+            "properties": {
+                "app": {
+                    "description": "Sentry settings for the frontend application",
+                    "type": "object",
+                    "properties": {
+                        "dsn": {
+                            "description": "Sentry DSN for the frontend app (exposed as SENTRY_DSN_APP env var)",
+                            "type": "string"
+                        }
+                    },
+                    "additionalProperties": false
+                },
+                "backend": {
+                    "description": "Sentry settings for the backend service",
+                    "type": "object",
+                    "properties": {
+                        "dsn": {
+                            "description": "Sentry DSN for the backend service (exposed as SENTRY_DSN_BACKEND env var)",
+                            "type": "string"
+                        }
+                    },
+                    "additionalProperties": false
+                },
+                "reportURI": {
+                    "description": "Sentry CSP report URI (exposed as SENTRY_REPORT_URI env var)",
+                    "type": "string"
+                }
+            },
+            "additionalProperties": false
+        },
+        "sharedConfig": {
+            "description": "Shared configuration that generates a ConfigMap. Can be referenced in the main app configuration with $include keyword",
+            "type": [
+                "object",
+                "string"
+            ],
+            "additionalProperties": false
+        },
+        "telemetrydeck": {
+            "description": "TelemetryDeck analytics settings",
+            "type": "object",
+            "properties": {
+                "salt": {
+                    "description": "TelemetryDeck salt for hashing user identifiers (exposed as TELEMETRYDECK_SALT env var)",
+                    "type": "string"
+                }
+            },
+            "additionalProperties": false
+        },
+        "userID": {
+            "description": "User ID for the pod security context (runAsUser)",
+            "type": "integer",
+            "minimum": 0
+        }
+    },
+    "additionalProperties": false
+}
