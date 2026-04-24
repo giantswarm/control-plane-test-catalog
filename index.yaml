@@ -62165,6 +62165,35 @@ entries:
   - annotations:
       io.giantswarm.application.audience: all
       io.giantswarm.application.managed: "true"
+      io.giantswarm.application.metadata: https://giantswarm.github.io/control-plane-test-catalog/kyverno-policies-0.25.0-bf8ca698c3d57d0dfcaf792572fcd41c7f7c4071.tgz-meta/main.yaml
+      io.giantswarm.application.readme: https://raw.githubusercontent.com/giantswarm/kyverno-policies/bf8ca698c3d57d0dfcaf792572fcd41c7f7c4071/README.md
+      io.giantswarm.application.restrictions.cluster-singleton: "true"
+      io.giantswarm.application.team: shield
+      io.giantswarm.application.values-schema: https://raw.githubusercontent.com/giantswarm/kyverno-policies/bf8ca698c3d57d0dfcaf792572fcd41c7f7c4071/helm/kyverno-policies/values.schema.json
+    apiVersion: v2
+    created: "2026-04-24T19:30:39.526384344Z"
+    dependencies:
+    - name: kyverno-policies
+      repository: ""
+      version: 3.7.0
+    description: 'Kubernetes Pod Security Standards implemented as Kyverno policies '
+    digest: ff588bae9ece089b4e03b1c1db47d5fff3fb4b361a6dcb1d30e718c23e716085
+    home: https://github.com/giantswarm/kyverno-policies
+    icon: https://s.giantswarm.io/app-icons/kyverno/1/light.svg
+    keywords:
+    - kubernetes
+    - policy-agent
+    - validating-webhook
+    - admission-controller
+    name: kyverno-policies
+    sources:
+    - https://github.com/giantswarm/kyverno-policies
+    urls:
+    - https://giantswarm.github.io/control-plane-test-catalog/kyverno-policies-0.25.0-bf8ca698c3d57d0dfcaf792572fcd41c7f7c4071.tgz
+    version: 0.25.0-bf8ca698c3d57d0dfcaf792572fcd41c7f7c4071
+  - annotations:
+      io.giantswarm.application.audience: all
+      io.giantswarm.application.managed: "true"
       io.giantswarm.application.metadata: https://giantswarm.github.io/control-plane-test-catalog/kyverno-policies-0.25.0-bded3e8507dd4fd98ad825babaf539215cc2949c.tgz-meta/main.yaml
       io.giantswarm.application.readme: https://raw.githubusercontent.com/giantswarm/kyverno-policies/bded3e8507dd4fd98ad825babaf539215cc2949c/README.md
       io.giantswarm.application.restrictions.cluster-singleton: "true"
@@ -108942,4 +108971,4 @@ entries:
     urls:
     - https://giantswarm.github.io/control-plane-test-catalog/vertical-pod-autoscaler-crd-4.1.2-3ceecd6bf7b6a29c25b9958a58b46c5afc7f2503.tgz
     version: 4.1.2-3ceecd6bf7b6a29c25b9958a58b46c5afc7f2503
-generated: "2026-04-24T19:06:34.121949448Z"
+generated: "2026-04-24T19:30:39.524256771Z"
