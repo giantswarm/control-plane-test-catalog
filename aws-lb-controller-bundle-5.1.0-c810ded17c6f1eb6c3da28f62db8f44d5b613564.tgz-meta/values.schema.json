@@ -1,0 +1,61 @@
+{
+    "$schema": "http://json-schema.org/schema#",
+    "type": "object",
+    "additionalProperties": true,
+    "properties": {
+        "bundleNameOverride": {
+            "type": "string"
+        },
+        "fullBundleNameOverride": {
+            "type": "string"
+        },
+        "ociRepositoryUrl": {
+            "type": "string"
+        },
+        "image": {
+            "type": "object",
+            "additionalProperties": true,
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "pullPolicy": {
+                    "type": "string"
+                },
+                "registry": {
+                    "type": "string"
+                },
+                "tag": {
+                    "type": "string"
+                }
+            }
+        },
+        "clusterName": {
+            "type": "string"
+        },
+        "verticalPodAutoscaler": {
+            "type": "object",
+            "additionalProperties": true,
+            "properties": {
+                "enabled": {
+                    "type": "boolean"
+                }
+            }
+        },
+        "global": {
+            "type": "object",
+            "additionalProperties": true,
+            "properties": {
+                "podSecurityStandards": {
+                    "type": "object",
+                    "additionalProperties": true,
+                    "properties": {
+                        "enforced": {
+                            "type": "boolean"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
