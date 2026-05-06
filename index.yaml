@@ -56788,6 +56788,28 @@ entries:
     urls:
     - https://giantswarm.github.io/control-plane-test-catalog/prometheus-remotewrite-1.5.0-2cdbabf55ac0b0f1d527ef8b6aa52af0496e9ff9.tgz
     version: 1.5.0-2cdbabf55ac0b0f1d527ef8b6aa52af0496e9ff9
+  - annotations:
+      io.giantswarm.application.metadata: https://giantswarm.github.io/control-plane-test-catalog/prometheus-remotewrite-1.5.0-10d690c770a5017177d8e8a1047758ed52da6b21.tgz-meta/main.yaml
+      io.giantswarm.application.readme: https://raw.githubusercontent.com/giantswarm/prometheus-remotewrite/10d690c770a5017177d8e8a1047758ed52da6b21/README.md
+      io.giantswarm.application.team: atlas
+      io.giantswarm.application.values-schema: https://raw.githubusercontent.com/giantswarm/prometheus-remotewrite/10d690c770a5017177d8e8a1047758ed52da6b21/helm/prometheus-remotewrite/values.schema.json
+    apiVersion: v2
+    appVersion: 1.5.0-10d690c770a5017177d8e8a1047758ed52da6b21
+    created: "2026-05-06T17:41:32.977961481Z"
+    dependencies:
+    - alias: kubePrometheusStack
+      condition: kubePrometheusStack.enabled
+      name: kube-prometheus-stack
+      repository: https://giantswarm.github.io/default-catalog/
+      version: 20.2.0
+    description: Hold remote write configuration for prometheus.
+    digest: 48c4895d19da1eecc6da90eb43d5bea0cb0cd98a688e1c6a996e764fc99ae462
+    home: https://github.com/giantswarm/prometheus-remotewrite
+    icon: https://s.giantswarm.io/app-icons/prometheus/1/light.svg
+    name: prometheus-remotewrite
+    urls:
+    - https://giantswarm.github.io/control-plane-test-catalog/prometheus-remotewrite-1.5.0-10d690c770a5017177d8e8a1047758ed52da6b21.tgz
+    version: 1.5.0-10d690c770a5017177d8e8a1047758ed52da6b21
   prometheus-rules:
   - annotations:
       io.giantswarm.application.metadata: https://giantswarm.github.io/control-plane-test-catalog/prometheus-rules-4.105.1-e7057b0e57eb88d3562d61e06f148e7717c254ec.tgz-meta/main.yaml
@@ -72473,4 +72495,4 @@ entries:
     urls:
     - https://giantswarm.github.io/control-plane-test-catalog/vertical-pod-autoscaler-crd-4.1.2-3fda68f24c904866e293708ddcc95f4d82a3ded8.tgz
     version: 4.1.2-3fda68f24c904866e293708ddcc95f4d82a3ded8
-generated: "2026-05-06T17:41:18.53415943Z"
+generated: "2026-05-06T17:41:32.901734975Z"
