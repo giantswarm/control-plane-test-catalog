@@ -1,5 +1,4 @@
 [![CircleCI](https://circleci.com/gh/giantswarm/tunnelport.svg?&style=shield)](https://circleci.com/gh/giantswarm/tunnelport)
-[![Docker Repository on Quay](https://quay.io/repository/giantswarm/tunnelport/status "Docker Repository on Quay")](https://quay.io/repository/giantswarm/tunnelport)
 
 # tunnelport
 
