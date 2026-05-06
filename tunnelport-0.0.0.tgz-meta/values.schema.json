@@ -29,7 +29,10 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
-        "image": { "type": "string" },
+        "image": {
+          "type": "string",
+          "description": "tbot image reference. SHOULD be digest-pinned (`<repo>:<tag>@sha256:<hex>`) in production so a re-push of an upstream tag cannot silently change tbot's config schema underneath the operator. Tag-only forms are accepted to keep dev/smoke workflows simple."
+        },
         "insecure": { "type": "boolean" },
         "resources": { "$ref": "#/definitions/resources" }
       }
