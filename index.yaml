@@ -22160,6 +22160,28 @@ entries:
     - https://giantswarm.github.io/control-plane-test-catalog/cluster-api-6.1.1-4202bcab57a9e7f9befd7cfea1ab77e47ad70de0.tgz
     version: 6.1.1-4202bcab57a9e7f9befd7cfea1ab77e47ad70de0
   - annotations:
+      io.giantswarm.application.metadata: https://giantswarm.github.io/control-plane-test-catalog/cluster-api-6.1.1-20c23936b7ba4d9475ac779d74a9917d832c0b83.tgz-meta/main.yaml
+      io.giantswarm.application.readme: https://raw.githubusercontent.com/giantswarm/cluster-api-app/20c23936b7ba4d9475ac779d74a9917d832c0b83/README.md
+      io.giantswarm.application.team: tenet
+      io.giantswarm.application.values-schema: https://raw.githubusercontent.com/giantswarm/cluster-api-app/20c23936b7ba4d9475ac779d74a9917d832c0b83/helm/cluster-api/values.schema.json
+      ui.giantswarm.io/logo: https://s.giantswarm.io/app-icons/giantswarm/1/dark.svg
+    apiVersion: v2
+    appVersion: 1.12.7-gs-e49e77f55
+    created: "2026-05-06T07:28:43.205497787Z"
+    dependencies:
+    - condition: crds.install
+      name: crd-install
+      repository: ""
+      version: 1.0.0
+    description: A Helm chart for Cluster API components.
+    digest: 18ee6f02f574c50022893ef9e155d910870d4717609001164041421f2be785a3
+    home: https://github.com/giantswarm/cluster-api-app
+    icon: https://s.giantswarm.io/app-icons/giantswarm/1/dark.svg
+    name: cluster-api
+    urls:
+    - https://giantswarm.github.io/control-plane-test-catalog/cluster-api-6.1.1-20c23936b7ba4d9475ac779d74a9917d832c0b83.tgz
+    version: 6.1.1-20c23936b7ba4d9475ac779d74a9917d832c0b83
+  - annotations:
       io.giantswarm.application.metadata: https://giantswarm.github.io/control-plane-test-catalog/cluster-api-6.1.1-1fa369e394f7d58a832ca1eb99354c36f52b3b28.tgz-meta/main.yaml
       io.giantswarm.application.readme: https://raw.githubusercontent.com/giantswarm/cluster-api-app/1fa369e394f7d58a832ca1eb99354c36f52b3b28/README.md
       io.giantswarm.application.team: tenet
@@ -69465,4 +69487,4 @@ entries:
     urls:
     - https://giantswarm.github.io/control-plane-test-catalog/vertical-pod-autoscaler-crd-4.1.2-3fda68f24c904866e293708ddcc95f4d82a3ded8.tgz
     version: 4.1.2-3fda68f24c904866e293708ddcc95f4d82a3ded8
-generated: "2026-05-06T07:05:56.911692663Z"
+generated: "2026-05-06T07:28:43.18847047Z"
