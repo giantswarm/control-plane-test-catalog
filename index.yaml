@@ -23359,6 +23359,28 @@ entries:
     urls:
     - https://giantswarm.github.io/control-plane-test-catalog/cluster-api-6.1.1-1fa369e394f7d58a832ca1eb99354c36f52b3b28.tgz
     version: 6.1.1-1fa369e394f7d58a832ca1eb99354c36f52b3b28
+  - annotations:
+      io.giantswarm.application.metadata: https://giantswarm.github.io/control-plane-test-catalog/cluster-api-6.1.1-1802cc53e6a7bfb561700f227e54b2d018112dc8.tgz-meta/main.yaml
+      io.giantswarm.application.readme: https://raw.githubusercontent.com/giantswarm/cluster-api-app/1802cc53e6a7bfb561700f227e54b2d018112dc8/README.md
+      io.giantswarm.application.team: tenet
+      io.giantswarm.application.values-schema: https://raw.githubusercontent.com/giantswarm/cluster-api-app/1802cc53e6a7bfb561700f227e54b2d018112dc8/helm/cluster-api/values.schema.json
+      ui.giantswarm.io/logo: https://s.giantswarm.io/app-icons/giantswarm/1/dark.svg
+    apiVersion: v2
+    appVersion: 1.12.7-gs-e49e77f55
+    created: "2026-05-06T12:33:23.021188019Z"
+    dependencies:
+    - condition: crds.install
+      name: crd-install
+      repository: ""
+      version: 1.0.0
+    description: A Helm chart for Cluster API components.
+    digest: d620fe96d4d7bf7a8ea041d0c3afeead6f806bc44e2bbc63ed0a2d1f051a87fa
+    home: https://github.com/giantswarm/cluster-api-app
+    icon: https://s.giantswarm.io/app-icons/giantswarm/1/dark.svg
+    name: cluster-api
+    urls:
+    - https://giantswarm.github.io/control-plane-test-catalog/cluster-api-6.1.1-1802cc53e6a7bfb561700f227e54b2d018112dc8.tgz
+    version: 6.1.1-1802cc53e6a7bfb561700f227e54b2d018112dc8
   cluster-api-cleaner-cloud-director:
   - annotations:
       config.giantswarm.io/version: 1.x.x
@@ -70822,4 +70844,4 @@ entries:
     urls:
     - https://giantswarm.github.io/control-plane-test-catalog/vertical-pod-autoscaler-crd-4.1.2-3fda68f24c904866e293708ddcc95f4d82a3ded8.tgz
     version: 4.1.2-3fda68f24c904866e293708ddcc95f4d82a3ded8
-generated: "2026-05-06T12:32:16.719976091Z"
+generated: "2026-05-06T12:33:23.003759312Z"
