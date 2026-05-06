@@ -23030,6 +23030,28 @@ entries:
     version: 0.0.0-fd2c973e2e473a2754c9620c45089431c6cf6882
   cluster-api:
   - annotations:
+      io.giantswarm.application.metadata: https://giantswarm.github.io/control-plane-test-catalog/cluster-api-6.1.1-f2cc3aabf17ff18cc466dcd97920026b54ea59df.tgz-meta/main.yaml
+      io.giantswarm.application.readme: https://raw.githubusercontent.com/giantswarm/cluster-api-app/f2cc3aabf17ff18cc466dcd97920026b54ea59df/README.md
+      io.giantswarm.application.team: tenet
+      io.giantswarm.application.values-schema: https://raw.githubusercontent.com/giantswarm/cluster-api-app/f2cc3aabf17ff18cc466dcd97920026b54ea59df/helm/cluster-api/values.schema.json
+      ui.giantswarm.io/logo: https://s.giantswarm.io/app-icons/giantswarm/1/dark.svg
+    apiVersion: v2
+    appVersion: 1.11.10-gs-9073163a8
+    created: "2026-05-06T12:56:52.551808623Z"
+    dependencies:
+    - condition: crds.install
+      name: crd-install
+      repository: ""
+      version: 1.0.1
+    description: A Helm chart for Cluster API components.
+    digest: 2faa918f333048f3b7171549bdfbe37d51c6733eab71079695a962768a28fc5b
+    home: https://github.com/giantswarm/cluster-api-app
+    icon: https://s.giantswarm.io/app-icons/giantswarm/1/dark.svg
+    name: cluster-api
+    urls:
+    - https://giantswarm.github.io/control-plane-test-catalog/cluster-api-6.1.1-f2cc3aabf17ff18cc466dcd97920026b54ea59df.tgz
+    version: 6.1.1-f2cc3aabf17ff18cc466dcd97920026b54ea59df
+  - annotations:
       io.giantswarm.application.metadata: https://giantswarm.github.io/control-plane-test-catalog/cluster-api-6.1.1-e9d9aaafa7c05b35915411c703eb48b75009fe1c.tgz-meta/main.yaml
       io.giantswarm.application.readme: https://raw.githubusercontent.com/giantswarm/cluster-api-app/e9d9aaafa7c05b35915411c703eb48b75009fe1c/README.md
       io.giantswarm.application.team: tenet
@@ -70992,4 +71014,4 @@ entries:
     urls:
     - https://giantswarm.github.io/control-plane-test-catalog/vertical-pod-autoscaler-crd-4.1.2-3fda68f24c904866e293708ddcc95f4d82a3ded8.tgz
     version: 4.1.2-3fda68f24c904866e293708ddcc95f4d82a3ded8
-generated: "2026-05-06T12:55:37.97440955Z"
+generated: "2026-05-06T12:56:52.534533481Z"
