@@ -42976,6 +42976,34 @@ entries:
     urls:
     - https://giantswarm.github.io/control-plane-test-catalog/ingress-nginx-4.3.1-085aed5b55eb990145c9cd22098349210e60f105.tgz
     version: 4.3.1-085aed5b55eb990145c9cd22098349210e60f105
+  k6-operator:
+  - annotations:
+      io.giantswarm.application.audience: giantswarm
+      io.giantswarm.application.managed: "false"
+      io.giantswarm.application.metadata: https://giantswarm.github.io/control-plane-test-catalog/k6-operator-0.1.0-0b0c4c4085f97b86fca94de0e776cf97b47b4bfc.tgz-meta/main.yaml
+      io.giantswarm.application.readme: https://raw.githubusercontent.com/giantswarm/k6-operator-app/0b0c4c4085f97b86fca94de0e776cf97b47b4bfc/README.md
+      io.giantswarm.application.team: cabbage
+      io.giantswarm.application.values-schema: https://raw.githubusercontent.com/giantswarm/k6-operator-app/0b0c4c4085f97b86fca94de0e776cf97b47b4bfc/helm/k6-operator/values.schema.json
+    apiVersion: v2
+    appVersion: 1.4.0
+    created: "2026-05-07T13:44:33.564995251Z"
+    dependencies:
+    - alias: k6operator
+      condition: k6operator.enabled
+      name: k6-operator
+      repository: https://grafana.github.io/helm-charts
+      version: 4.4.1
+    description: A Helm chart to install the k6-operator
+    digest: fbcf66f0cd2e0085c0d4c4e836c7bc3cce9c3c8b146906bd7ee5a7705ead031a
+    home: https://github.com/giantswarm/k6-operator-app
+    icon: https://s.giantswarm.io/app-icons/giantswarm/1/light.svg
+    name: k6-operator
+    sources:
+    - https://github.com/giantswarm/k6-operator-app
+    - https://github.com/grafana/k6-operator/blob/main/charts/k6-operator
+    urls:
+    - https://giantswarm.github.io/control-plane-test-catalog/k6-operator-0.1.0-0b0c4c4085f97b86fca94de0e776cf97b47b4bfc.tgz
+    version: 0.1.0-0b0c4c4085f97b86fca94de0e776cf97b47b4bfc
   k8s-audit-metrics:
   - annotations:
       io.giantswarm.application.metadata: https://giantswarm.github.io/control-plane-test-catalog/k8s-audit-metrics-0.10.13-f3bcec88f647ac7a114db6696c03db9e13613f7f.tgz-meta/main.yaml
@@ -75012,4 +75040,4 @@ entries:
     urls:
     - https://giantswarm.github.io/control-plane-test-catalog/vertical-pod-autoscaler-crd-4.1.2-3fda68f24c904866e293708ddcc95f4d82a3ded8.tgz
     version: 4.1.2-3fda68f24c904866e293708ddcc95f4d82a3ded8
-generated: "2026-05-07T13:44:27.85045525Z"
+generated: "2026-05-07T13:44:33.561922846Z"
