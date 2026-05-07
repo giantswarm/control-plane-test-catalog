@@ -43694,6 +43694,33 @@ entries:
   - annotations:
       io.giantswarm.application.audience: giantswarm
       io.giantswarm.application.managed: "false"
+      io.giantswarm.application.metadata: https://giantswarm.github.io/control-plane-test-catalog/k6-operator-0.1.1-342be0cdc684779d9c5ea8a7f8c5319615b8baf5.tgz-meta/main.yaml
+      io.giantswarm.application.readme: https://raw.githubusercontent.com/giantswarm/k6-operator-app/342be0cdc684779d9c5ea8a7f8c5319615b8baf5/README.md
+      io.giantswarm.application.team: cabbage
+      io.giantswarm.application.values-schema: https://raw.githubusercontent.com/giantswarm/k6-operator-app/342be0cdc684779d9c5ea8a7f8c5319615b8baf5/helm/k6-operator/values.schema.json
+    apiVersion: v2
+    appVersion: 1.4.0
+    created: "2026-05-07T15:48:11.282955572Z"
+    dependencies:
+    - alias: k6operator
+      condition: k6operator.enabled
+      name: k6-operator
+      repository: https://grafana.github.io/helm-charts
+      version: 4.4.1
+    description: A Helm chart to install the k6-operator
+    digest: af44428a642a8a212ff11dd0665cbf8d3f20befcb5e361b749db4463d6dbe6b7
+    home: https://github.com/giantswarm/k6-operator-app
+    icon: https://s.giantswarm.io/app-icons/giantswarm/1/light.svg
+    name: k6-operator
+    sources:
+    - https://github.com/giantswarm/k6-operator-app
+    - https://github.com/grafana/k6-operator/blob/main/charts/k6-operator
+    urls:
+    - https://giantswarm.github.io/control-plane-test-catalog/k6-operator-0.1.1-342be0cdc684779d9c5ea8a7f8c5319615b8baf5.tgz
+    version: 0.1.1-342be0cdc684779d9c5ea8a7f8c5319615b8baf5
+  - annotations:
+      io.giantswarm.application.audience: giantswarm
+      io.giantswarm.application.managed: "false"
       io.giantswarm.application.metadata: https://giantswarm.github.io/control-plane-test-catalog/k6-operator-0.1.1-136284e6ac34bd1e8343c9e62b3aad022c6949b1.tgz-meta/main.yaml
       io.giantswarm.application.readme: https://raw.githubusercontent.com/giantswarm/k6-operator-app/136284e6ac34bd1e8343c9e62b3aad022c6949b1/README.md
       io.giantswarm.application.team: cabbage
@@ -76662,4 +76689,4 @@ entries:
     urls:
     - https://giantswarm.github.io/control-plane-test-catalog/vertical-pod-autoscaler-crd-4.1.2-3fda68f24c904866e293708ddcc95f4d82a3ded8.tgz
     version: 4.1.2-3fda68f24c904866e293708ddcc95f4d82a3ded8
-generated: "2026-05-07T15:48:01.065547928Z"
+generated: "2026-05-07T15:48:11.280330626Z"
