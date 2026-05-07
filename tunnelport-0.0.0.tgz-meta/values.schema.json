@@ -6,6 +6,23 @@
     "installNamespace": {
       "type": "string"
     },
+    "replicaCount": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Number of operator replicas. Default 2 — leader election keeps one active and one hot standby so node drains and chart upgrades don't gap reconciles. Set to 1 only when scheduling pressure forces it; pair with podDisruptionBudget.enabled=false."
+    },
+    "podDisruptionBudget": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "enabled": { "type": "boolean" },
+        "minAvailable": { "type": ["integer", "string"] },
+        "unhealthyPodEvictionPolicy": {
+          "type": "string",
+          "enum": ["IfHealthyBudget", "AlwaysAllow"]
+        }
+      }
+    },
     "image": {
       "type": "object",
       "additionalProperties": false,
