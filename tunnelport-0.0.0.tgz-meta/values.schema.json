@@ -48,13 +48,9 @@
       "properties": {
         "image": {
           "type": "string",
-          "description": "tbot image reference. The major version MUST match the Teleport server major — the `GenerateUserCerts` RPC contract changes across majors and a mismatched-major tbot fails first cert renewal with `ssh: no key found` (initial join still works for ~1h, so this is easy to miss in short smoke tests). SHOULD be digest-pinned (`<repo>:<tag>@sha256:<hex>`) in production so a re-push of an upstream tag cannot silently change tbot's config schema underneath the operator. Tag-only forms are accepted to keep dev/smoke workflows simple."
+          "description": "tbot image reference. SHOULD be digest-pinned (`<repo>:<tag>@sha256:<hex>`) in production so a re-push of an upstream tag cannot silently change tbot's config schema underneath the operator. Tag-only forms are accepted to keep dev/smoke workflows simple."
         },
         "insecure": { "type": "boolean" },
-        "saTokenAudience": {
-          "type": "string",
-          "description": "Audience claim baked into every projected ServiceAccount token mounted on a tbot pod. MUST match the consumer MC's Teleport cluster name; Teleport's `kubernetes.type: static_jwks` join validates the JWT `aud` against the cluster name and offers no per-token override. Empty leaves the operator's compiled-in default."
-        },
         "resources": { "$ref": "#/definitions/resources" }
       }
     },
@@ -69,7 +65,8 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
-        "enabled": { "type": "boolean" }
+        "enabled": { "type": "boolean" },
+        "apiServerCIDR": { "type": "string" }
       }
     },
     "ports": {
