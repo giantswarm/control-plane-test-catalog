@@ -39,13 +39,17 @@ Teleport.
            appName: payments
            port: 8080
            proxyAddr: teleport.example:443
-           tokenRef: { name: payments-join-token, key: token }
+           tokenName: payments-bot
 ```
 
-One `tbot` Deployment per `RemoteApp` (per-app blast-radius isolation). Join
-tokens are delivered out-of-band as `Secret`s; the operator references them by
-`(name, key, resourceVersion)` and never reads their contents. See
-[`CONTEXT.md`](./CONTEXT.md) for the full design.
+One `tbot` Deployment per `RemoteApp` (per-app blast-radius isolation). Under
+the kubernetes-join model (ADR 0004) the operator renders a per-CR
+`ServiceAccount`; the rendered tbot pod authenticates to Teleport using that
+SA's projected JWT, validated against the `static_jwks` pinned on the
+Teleport `ProvisionToken`. No static-token `Secret` is delivered to the
+consumer cluster. See [`CONTEXT.md`](./CONTEXT.md) for the full design and
+[`docs/adr/0004-kubernetes-join-method.md`](./docs/adr/0004-kubernetes-join-method.md)
+for the join-method decision.
 
 ## Scope
 
