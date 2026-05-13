@@ -39,6 +39,25 @@
     "imagePullSecret": {
       "type": "string"
     },
+    "teleport": {
+      "type": "object",
+      "additionalProperties": false,
+      "description": "Teleport binding for this consumer MC (ADR 0005). The operator fails fast at startup if either field is empty; the templates/deployment.yaml `required` helm function gates `helm install` with a clearer error than a JSON Schema violation. Schema-level `required:` on the two fields is intentionally absent so `ct lint` accepts the default values.yaml empty block — pattern + minLength still gate any supplied value, and the operator's startup regex check is the authoritative contract.",
+      "properties": {
+        "clusterName": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "^[a-z0-9]([-a-z0-9]*[a-z0-9])?(\\.[a-z0-9]([-a-z0-9]*[a-z0-9])?)*$",
+          "description": "Teleport cluster name (the `Cluster:` line from `tctl status` on Central). Used as the `aud` claim on every rendered tbot pod's projected SA JWT."
+        },
+        "proxyAddr": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "^[a-z0-9]([-a-z0-9.]*[a-z0-9])?(\\.[a-z0-9]([-a-z0-9.]*[a-z0-9])?)*:[0-9]+$",
+          "description": "host:port of the Teleport proxy every rendered tbot pod connects to."
+        }
+      }
+    },
     "resources": {
       "$ref": "#/definitions/resources"
     },
@@ -52,6 +71,29 @@
         },
         "insecure": { "type": "boolean" },
         "resources": { "$ref": "#/definitions/resources" }
+      }
+    },
+    "tls": {
+      "type": "object",
+      "additionalProperties": false,
+      "description": "Ghostunnel TLS-termination sidecar (ADR 0007 / slice 02). Every rendered tbot Deployment grows a ghostunnel sidecar that reads the SVID and serves it on the Service's `tls` port.",
+      "properties": {
+        "ghostunnelImage": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Container image reference for the ghostunnel sidecar."
+        },
+        "reloadInterval": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Go-duration value for ghostunnel's --timed-reload flag. 5m is safe with tbot's default 20m SVID renewal cadence."
+        },
+        "port": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 65535,
+          "description": "TLS port the rendered Service exposes and the ghostunnel sidecar listens on inside the pod."
+        }
       }
     },
     "crds": {

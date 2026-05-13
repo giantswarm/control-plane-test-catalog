@@ -38,9 +38,12 @@ Teleport.
          spec:
            appName: payments
            port: 8080
-           proxyAddr: teleport.example:443
            tokenName: payments-bot
 ```
+
+The Teleport cluster name + proxy address are operator-level chart values
+(`teleport.clusterName`, `teleport.proxyAddr`), not CR fields — see
+[`docs/adr/0005-operator-owns-teleport-cluster-and-proxy.md`](./docs/adr/0005-operator-owns-teleport-cluster-and-proxy.md).
 
 One `tbot` Deployment per `RemoteApp` (per-app blast-radius isolation). Under
 the kubernetes-join model (ADR 0004) the operator renders a per-CR
