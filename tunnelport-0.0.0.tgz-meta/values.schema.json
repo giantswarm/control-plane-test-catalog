@@ -132,6 +132,30 @@
     },
     "affinity": {
       "type": "object"
+    },
+    "trustBundle": {
+      "type": "object",
+      "additionalProperties": false,
+      "description": "Singleton trust-bundle tbot (ADR 0008). One chart-managed tbot Deployment writes the SPIFFE trust bundle into a single Secret in installNamespace; consumers co-deployed in this namespace mount that Secret.",
+      "properties": {
+        "enabled": { "type": "boolean" },
+        "secretName": { "type": "string", "minLength": 1 },
+        "tokenName": {
+          "type": "string",
+          "description": "Teleport-central ProvisionToken name admitting the singleton bot via kubernetes-join. Empty disables a meaningful install — the chart's template uses helm `required` to fail install when trustBundle.enabled and tokenName is empty."
+        },
+        "workloadIdentityLabels": {
+          "type": "object",
+          "description": "Selector labels matching the Teleport-central WorkloadIdentity resource. Default key is `trust-bundle` (distinct from per-CR `remoteapp:` selectors).",
+          "additionalProperties": {
+            "type": "array",
+            "items": { "type": "string", "minLength": 1 }
+          }
+        },
+        "credentialTTL": { "type": "string", "minLength": 1 },
+        "renewalInterval": { "type": "string", "minLength": 1 },
+        "resources": { "$ref": "#/definitions/resources" }
+      }
     }
   },
   "definitions": {
