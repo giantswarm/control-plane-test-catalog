@@ -73416,6 +73416,34 @@ entries:
     - https://giantswarm.github.io/control-plane-test-catalog/loki-0.45.0-854734302ffe0255ee4203c5199a7787225f90e4.tgz
     version: 0.45.0-854734302ffe0255ee4203c5199a7787225f90e4
   - annotations:
+      io.giantswarm.application.metadata: https://giantswarm.github.io/control-plane-test-catalog/loki-0.45.0-68f081bb6fb0528765465b62a183191b475472ed.tgz-meta/main.yaml
+      io.giantswarm.application.readme: https://raw.githubusercontent.com/giantswarm/loki-app/68f081bb6fb0528765465b62a183191b475472ed/README.md
+      io.giantswarm.application.team: atlas
+      io.giantswarm.application.values-schema: https://raw.githubusercontent.com/giantswarm/loki-app/68f081bb6fb0528765465b62a183191b475472ed/helm/loki/values.schema.json
+      ui.giantswarm.io/logo: https://s.giantswarm.io/app-icons/grafana-loki/2/dark.svg
+    apiVersion: v2
+    appVersion: 3.7.1
+    created: "2026-05-22T10:38:44.050669631Z"
+    dependencies:
+    - condition: loki.enabled
+      name: loki
+      repository: https://grafana-community.github.io/helm-charts
+      version: 17.0.1
+    description: Helm chart for Grafana Loki in simple, scalable mode
+    digest: 95467dd7a031291bd510a94cdc942f7d8bff4e347177797072959114b5fa90d2
+    home: https://github.com/giantswarm/loki-app
+    icon: https://s.giantswarm.io/app-icons/loki-stack/1/dark.svg
+    maintainers:
+    - email: team-atlas@giantswarm.io
+      name: giantswarm/team-atlas
+    name: loki
+    sources:
+    - https://github.com/giantswarm/loki-app
+    type: application
+    urls:
+    - https://giantswarm.github.io/control-plane-test-catalog/loki-0.45.0-68f081bb6fb0528765465b62a183191b475472ed.tgz
+    version: 0.45.0-68f081bb6fb0528765465b62a183191b475472ed
+  - annotations:
       io.giantswarm.application.metadata: https://giantswarm.github.io/control-plane-test-catalog/loki-0.45.0-62935b4c2640f20e6816bce5e8e528dd7d83fb38.tgz-meta/main.yaml
       io.giantswarm.application.readme: https://raw.githubusercontent.com/giantswarm/loki-app/62935b4c2640f20e6816bce5e8e528dd7d83fb38/README.md
       io.giantswarm.application.team: atlas
@@ -110446,4 +110474,4 @@ entries:
     urls:
     - https://giantswarm.github.io/control-plane-test-catalog/vertical-pod-autoscaler-crd-4.1.2-0b7ae62c544101887ff35f40a15a58c6a3e43a1c.tgz
     version: 4.1.2-0b7ae62c544101887ff35f40a15a58c6a3e43a1c
-generated: "2026-05-22T10:28:03.101683042Z"
+generated: "2026-05-22T10:38:44.026744861Z"
