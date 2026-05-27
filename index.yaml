@@ -33316,6 +33316,28 @@ entries:
     version: 0.0.0-fd2c973e2e473a2754c9620c45089431c6cf6882
   cluster-api:
   - annotations:
+      io.giantswarm.application.metadata: https://giantswarm.github.io/control-plane-test-catalog/cluster-api-7.0.0-d3316ad6a6a77817ef6788e73a97c42660065659.tgz-meta/main.yaml
+      io.giantswarm.application.readme: https://raw.githubusercontent.com/giantswarm/cluster-api-app/d3316ad6a6a77817ef6788e73a97c42660065659/README.md
+      io.giantswarm.application.team: tenet
+      io.giantswarm.application.values-schema: https://raw.githubusercontent.com/giantswarm/cluster-api-app/d3316ad6a6a77817ef6788e73a97c42660065659/helm/cluster-api/values.schema.json
+      ui.giantswarm.io/logo: https://s.giantswarm.io/app-icons/giantswarm/1/dark.svg
+    apiVersion: v2
+    appVersion: 1.12.8-gs-6158079b4
+    created: "2026-05-27T15:15:38.038527942Z"
+    dependencies:
+    - condition: crds.install
+      name: crd-install
+      repository: ""
+      version: 1.0.1
+    description: A Helm chart for Cluster API components.
+    digest: c0adf89780a94656e2eb4de2e10791e596df955ab0c481c48686c329276d571c
+    home: https://github.com/giantswarm/cluster-api-app
+    icon: https://s.giantswarm.io/app-icons/giantswarm/1/dark.svg
+    name: cluster-api
+    urls:
+    - https://giantswarm.github.io/control-plane-test-catalog/cluster-api-7.0.0-d3316ad6a6a77817ef6788e73a97c42660065659.tgz
+    version: 7.0.0-d3316ad6a6a77817ef6788e73a97c42660065659
+  - annotations:
       io.giantswarm.application.metadata: https://giantswarm.github.io/control-plane-test-catalog/cluster-api-7.0.0-c730d554cf73d0b39bf65d945fe3c637c3c51a45.tgz-meta/main.yaml
       io.giantswarm.application.readme: https://raw.githubusercontent.com/giantswarm/cluster-api-app/c730d554cf73d0b39bf65d945fe3c637c3c51a45/README.md
       io.giantswarm.application.team: tenet
@@ -115697,4 +115719,4 @@ entries:
     urls:
     - https://giantswarm.github.io/control-plane-test-catalog/vertical-pod-autoscaler-crd-4.1.2-0b7ae62c544101887ff35f40a15a58c6a3e43a1c.tgz
     version: 4.1.2-0b7ae62c544101887ff35f40a15a58c6a3e43a1c
-generated: "2026-05-27T15:03:06.064146721Z"
+generated: "2026-05-27T15:15:38.02135937Z"
