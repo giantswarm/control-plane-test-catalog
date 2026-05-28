@@ -1,0 +1,179 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "installNamespace": {
+      "type": "string"
+    },
+    "replicaCount": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Number of operator replicas. Default 2 — leader election keeps one active and one hot standby so node drains and chart upgrades don't gap reconciles. Set to 1 only when scheduling pressure forces it; pair with podDisruptionBudget.enabled=false."
+    },
+    "podDisruptionBudget": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "enabled": { "type": "boolean" },
+        "minAvailable": { "type": ["integer", "string"] },
+        "unhealthyPodEvictionPolicy": {
+          "type": "string",
+          "enum": ["IfHealthyBudget", "AlwaysAllow"]
+        }
+      }
+    },
+    "image": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "registry": { "type": "string" },
+        "name": { "type": "string" },
+        "tag": { "type": "string" },
+        "pullPolicy": {
+          "type": "string",
+          "enum": ["Always", "IfNotPresent", "Never"]
+        }
+      }
+    },
+    "imagePullSecret": {
+      "type": "string"
+    },
+    "teleport": {
+      "type": "object",
+      "additionalProperties": false,
+      "description": "Teleport binding for this consumer MC (ADR 0005). The operator fails fast at startup if either field is empty; the templates/deployment.yaml `required` helm function gates `helm install` with a clearer error than a JSON Schema violation. Schema-level `required:` on the two fields is intentionally absent so `ct lint` accepts the default values.yaml empty block — pattern + minLength still gate any supplied value, and the operator's startup regex check is the authoritative contract.",
+      "properties": {
+        "clusterName": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "^[a-z0-9]([-a-z0-9]*[a-z0-9])?(\\.[a-z0-9]([-a-z0-9]*[a-z0-9])?)*$",
+          "description": "Teleport cluster name (the `Cluster:` line from `tctl status` on Central). Used as the `aud` claim on every rendered tbot pod's projected SA JWT."
+        },
+        "proxyAddr": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "^[a-z0-9]([-a-z0-9.]*[a-z0-9])?(\\.[a-z0-9]([-a-z0-9.]*[a-z0-9])?)*:[0-9]+$",
+          "description": "host:port of the Teleport proxy every rendered tbot pod connects to."
+        }
+      }
+    },
+    "resources": {
+      "$ref": "#/definitions/resources"
+    },
+    "tbot": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "image": {
+          "type": "string",
+          "description": "tbot image reference. The major version MUST match the Teleport server major — the `GenerateUserCerts` RPC contract changes across majors and a mismatched-major tbot fails first cert renewal with `ssh: no key found` (initial join still works for ~1h, so this is easy to miss in short smoke tests). SHOULD be digest-pinned (`<repo>:<tag>@sha256:<hex>`) in production so a re-push of an upstream tag cannot silently change tbot's config schema underneath the operator. Tag-only forms are accepted to keep dev/smoke workflows simple."
+        },
+        "insecure": { "type": "boolean" },
+        "resources": { "$ref": "#/definitions/resources" }
+      }
+    },
+    "tls": {
+      "type": "object",
+      "additionalProperties": false,
+      "description": "Ghostunnel TLS-termination sidecar (ADR 0007 / slice 02). Every rendered tbot Deployment grows a ghostunnel sidecar that reads the SVID and serves it on the Service's `tls` port.",
+      "properties": {
+        "ghostunnelImage": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Container image reference for the ghostunnel sidecar."
+        },
+        "reloadInterval": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Go-duration value for ghostunnel's --timed-reload flag. 5m is safe with tbot's default 20m SVID renewal cadence."
+        },
+        "port": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 65535,
+          "description": "TLS port the rendered Service exposes and the ghostunnel sidecar listens on inside the pod."
+        }
+      }
+    },
+    "crds": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "install": { "type": "boolean" }
+      }
+    },
+    "networkPolicy": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "enabled": { "type": "boolean" }
+      }
+    },
+    "ports": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "metrics": { "type": "integer", "minimum": 1, "maximum": 65535 },
+        "health": { "type": "integer", "minimum": 1, "maximum": 65535 }
+      }
+    },
+    "podSecurityContext": {
+      "type": "object"
+    },
+    "securityContext": {
+      "type": "object"
+    },
+    "nodeSelector": {
+      "type": "object"
+    },
+    "tolerations": {
+      "type": "array"
+    },
+    "affinity": {
+      "type": "object"
+    },
+    "trustBundle": {
+      "type": "object",
+      "additionalProperties": false,
+      "description": "Singleton trust-bundle tbot (ADR 0008). One chart-managed tbot Deployment writes the SPIFFE trust bundle into a single Secret in installNamespace; consumers co-deployed in this namespace mount that Secret.",
+      "properties": {
+        "enabled": { "type": "boolean" },
+        "secretName": { "type": "string", "minLength": 1 },
+        "tokenName": {
+          "type": "string",
+          "description": "Teleport-central ProvisionToken name admitting the singleton bot via kubernetes-join. Empty disables a meaningful install — the chart's template uses helm `required` to fail install when trustBundle.enabled and tokenName is empty."
+        },
+        "workloadIdentityLabels": {
+          "type": "object",
+          "description": "Selector labels matching the Teleport-central WorkloadIdentity resource. Default key is `trust-bundle` (distinct from per-CR `remoteapp:` selectors).",
+          "additionalProperties": {
+            "type": "array",
+            "items": { "type": "string", "minLength": 1 }
+          }
+        },
+        "credentialTTL": { "type": "string", "minLength": 1 },
+        "renewalInterval": { "type": "string", "minLength": 1 },
+        "resources": { "$ref": "#/definitions/resources" }
+      }
+    }
+  },
+  "definitions": {
+    "resources": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "requests": { "$ref": "#/definitions/resourceQuantities" },
+        "limits": { "$ref": "#/definitions/resourceQuantities" }
+      }
+    },
+    "resourceQuantities": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "cpu": { "type": ["string", "number"] },
+        "memory": { "type": ["string", "number"] }
+      }
+    }
+  }
+}
