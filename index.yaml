@@ -26941,6 +26941,43 @@ entries:
       io.giantswarm.application.audience: all
       io.giantswarm.application.logo: https://s.giantswarm.io/app-icons/falco/2/logo_dark.svg
       io.giantswarm.application.managed: "true"
+      io.giantswarm.application.metadata: https://giantswarm.github.io/control-plane-test-catalog/falco-0.11.3-dev.main-update-chart.2026-06-02.18-12-44.tgz-meta/main.yaml
+      io.giantswarm.application.readme: https://raw.githubusercontent.com/giantswarm/falco-app/refs/tags/v0.11.3-dev.main-update-chart.2026-06-02.18-12-44/README.md
+      io.giantswarm.application.team: shield
+      io.giantswarm.application.values-schema: https://raw.githubusercontent.com/giantswarm/falco-app/refs/tags/v0.11.3-dev.main-update-chart.2026-06-02.18-12-44/helm/falco/values.schema.json
+    apiVersion: v2
+    appVersion: 0.11.3-dev.main-update-chart.2026-06-02.18-12-44
+    created: "2026-06-02T18:13:16.904412878Z"
+    dependencies:
+    - condition: falco.enabled
+      name: falco
+      repository: ""
+      version: 9.0.0
+    - condition: falcosidekick.enabled
+      name: falcosidekick
+      repository: ""
+      version: 0.13.1
+    - condition: k8s-metacollector.enabled
+      name: k8s-metacollector
+      repository: ""
+      version: 0.3.0
+    description: A Helm chart for falco
+    digest: 639fc567df070dc41785836e52e5f201d1d7864c8ab523b4e274f1f0f3bd3917
+    home: https://github.com/giantswarm/falco-app
+    icon: https://s.giantswarm.io/app-icons/falco/2/icon_dark.svg
+    maintainers:
+    - name: Giant Swarm applications team
+      url: https://github.com/giantswarm/falco-app
+    name: falco
+    sources:
+    - https://github.com/giantswarm/falco-app
+    urls:
+    - https://giantswarm.github.io/control-plane-test-catalog/falco-0.11.3-dev.main-update-chart.2026-06-02.18-12-44.tgz
+    version: 0.11.3-dev.main-update-chart.2026-06-02.18-12-44
+  - annotations:
+      io.giantswarm.application.audience: all
+      io.giantswarm.application.logo: https://s.giantswarm.io/app-icons/falco/2/logo_dark.svg
+      io.giantswarm.application.managed: "true"
       io.giantswarm.application.metadata: https://giantswarm.github.io/control-plane-test-catalog/falco-0.11.3-dev.main-update-chart.2026-06-02.18-12-25.tgz-meta/main.yaml
       io.giantswarm.application.readme: https://raw.githubusercontent.com/giantswarm/falco-app/refs/tags/v0.11.3-dev.main-update-chart.2026-06-02.18-12-25/README.md
       io.giantswarm.application.team: shield
@@ -63688,4 +63725,4 @@ entries:
     urls:
     - https://giantswarm.github.io/control-plane-test-catalog/vertical-pod-autoscaler-crd-4.1.2-0b7ae62c544101887ff35f40a15a58c6a3e43a1c.tgz
     version: 4.1.2-0b7ae62c544101887ff35f40a15a58c6a3e43a1c
-generated: "2026-06-02T18:13:00.783914683Z"
+generated: "2026-06-02T18:13:16.891675833Z"
