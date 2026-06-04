@@ -1,0 +1,170 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "properties": {
+        "ciliumNetworkPolicy": {
+            "properties": {
+                "enabled": {
+                    "type": "boolean"
+                }
+            },
+            "type": "object"
+        },
+        "cloudnative-pg": {
+            "properties": {
+                "additionalEnv": {
+                    "items": {
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            },
+                            "value": {
+                                "type": "string"
+                            }
+                        },
+                        "type": "object"
+                    },
+                    "type": "array"
+                },
+                "config": {
+                    "properties": {
+                        "data": {
+                            "properties": {
+                                "EXPIRING_CHECK_THRESHOLD": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    },
+                    "type": "object"
+                },
+                "image": {
+                    "properties": {
+                        "repository": {
+                            "type": "string"
+                        }
+                    },
+                    "type": "object"
+                },
+                "monitoring": {
+                    "properties": {
+                        "grafanaDashboard": {
+                            "properties": {
+                                "annotations": {
+                                    "properties": {
+                                        "observability.giantswarm.io/organization": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "type": "object"
+                                },
+                                "create": {
+                                    "type": "boolean"
+                                },
+                                "labels": {
+                                    "properties": {
+                                        "app.giantswarm.io/kind": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            },
+                            "type": "object"
+                        },
+                        "podMonitorAdditionalLabels": {
+                            "properties": {
+                                "application.giantswarm.io/team": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        },
+                        "podMonitorEnabled": {
+                            "type": "boolean"
+                        }
+                    },
+                    "type": "object"
+                },
+                "resources": {
+                    "properties": {
+                        "limits": {
+                            "properties": {
+                                "cpu": {
+                                    "type": "string"
+                                },
+                                "memory": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        },
+                        "requests": {
+                            "properties": {
+                                "cpu": {
+                                    "type": "string"
+                                },
+                                "memory": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    },
+                    "type": "object"
+                }
+            },
+            "type": "object"
+        },
+        "clusterImageCatalog": {
+            "properties": {
+                "enabled": {
+                    "type": "boolean"
+                },
+                "images": {
+                    "items": {
+                        "properties": {
+                            "major": {
+                                "type": "integer"
+                            },
+                            "tag": {
+                                "type": "number"
+                            }
+                        },
+                        "type": "object"
+                    },
+                    "type": "array"
+                },
+                "registry": {
+                    "type": "string"
+                },
+                "repository": {
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        },
+        "vpa": {
+            "properties": {
+                "containerPolicies": {
+                    "properties": {
+                        "minAllowed": {
+                            "properties": {
+                                "cpu": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    },
+                    "type": "object"
+                },
+                "enabled": {
+                    "type": "boolean"
+                }
+            },
+            "type": "object"
+        }
+    },
+    "type": "object"
+}
