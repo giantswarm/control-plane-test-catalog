@@ -61408,6 +61408,28 @@ entries:
     version: 0.0.4-078485b00756d4334265c49a1a4898a55f102379
   prometheus-remotewrite:
   - annotations:
+      io.giantswarm.application.metadata: https://giantswarm.github.io/control-plane-test-catalog/prometheus-remotewrite-1.5.1-dev.renovate-architect-9-x.2026-06-09.14-42-28.hae93c80.tgz-meta/main.yaml
+      io.giantswarm.application.readme: https://raw.githubusercontent.com/giantswarm/prometheus-remotewrite/refs/tags/v1.5.1-dev.renovate-architect-9-x.2026-06-09.14-42-28.hae93c80/README.md
+      io.giantswarm.application.team: atlas
+      io.giantswarm.application.values-schema: https://raw.githubusercontent.com/giantswarm/prometheus-remotewrite/refs/tags/v1.5.1-dev.renovate-architect-9-x.2026-06-09.14-42-28.hae93c80/helm/prometheus-remotewrite/values.schema.json
+    apiVersion: v2
+    appVersion: 1.5.1-dev.renovate-architect-9-x.2026-06-09.14-42-28.hae93c80
+    created: "2026-06-09T14:43:13.000241597Z"
+    dependencies:
+    - alias: kubePrometheusStack
+      condition: kubePrometheusStack.enabled
+      name: kube-prometheus-stack
+      repository: https://giantswarm.github.io/default-catalog/
+      version: 21.0.0
+    description: Hold remote write configuration for prometheus.
+    digest: 2bf5a3b22731e8dbceea373385431e9770f1b5d223dbb077dfd1b37c7f11450d
+    home: https://github.com/giantswarm/prometheus-remotewrite
+    icon: https://s.giantswarm.io/app-icons/prometheus/1/light.svg
+    name: prometheus-remotewrite
+    urls:
+    - https://giantswarm.github.io/control-plane-test-catalog/prometheus-remotewrite-1.5.1-dev.renovate-architect-9-x.2026-06-09.14-42-28.hae93c80.tgz
+    version: 1.5.1-dev.renovate-architect-9-x.2026-06-09.14-42-28.hae93c80
+  - annotations:
       io.giantswarm.application.metadata: https://giantswarm.github.io/control-plane-test-catalog/prometheus-remotewrite-1.5.1-dev.renovate-architect-9-x.2026-06-09.07-10-24.tgz-meta/main.yaml
       io.giantswarm.application.readme: https://raw.githubusercontent.com/giantswarm/prometheus-remotewrite/refs/tags/v1.5.1-dev.renovate-architect-9-x.2026-06-09.07-10-24/README.md
       io.giantswarm.application.team: atlas
@@ -81001,4 +81023,4 @@ entries:
     urls:
     - https://giantswarm.github.io/control-plane-test-catalog/vertical-pod-autoscaler-crd-4.1.2-0b7ae62c544101887ff35f40a15a58c6a3e43a1c.tgz
     version: 4.1.2-0b7ae62c544101887ff35f40a15a58c6a3e43a1c
-generated: "2026-06-09T14:42:42.132344266Z"
+generated: "2026-06-09T14:43:12.954348248Z"
