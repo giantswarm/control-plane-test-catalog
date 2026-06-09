@@ -1,0 +1,1105 @@
+{
+    "$schema": "http://json-schema.org/schema#",
+    "type": "object",
+    "properties": {
+        "adidas": {
+            "type": "object",
+            "properties": {
+                "policy": {
+                    "type": "object",
+                    "properties": {
+                        "bufferDelayMinutes": {
+                            "type": "integer"
+                        },
+                        "cabbageDelayMinutes": {
+                            "type": "integer"
+                        },
+                        "cabbageScheduleId": {
+                            "type": "string"
+                        },
+                        "id": {
+                            "type": "string"
+                        },
+                        "numLoops": {
+                            "type": "integer"
+                        },
+                        "platformCatchupScheduleId": {
+                            "type": "string"
+                        },
+                        "platformDelayMinutes": {
+                            "type": "integer"
+                        }
+                    }
+                },
+                "schedule": {
+                    "type": "object",
+                    "properties": {
+                        "id": {
+                            "type": "string"
+                        },
+                        "rotationVirtualStart": {
+                            "type": "string"
+                        }
+                    }
+                },
+                "service": {
+                    "type": "object",
+                    "properties": {
+                        "id": {
+                            "type": "string"
+                        }
+                    }
+                },
+                "webhook": {
+                    "type": "object",
+                    "properties": {
+                        "id": {
+                            "type": "string"
+                        },
+                        "url": {
+                            "type": "string"
+                        }
+                    }
+                }
+            }
+        },
+        "alertmanagerInstances": {
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },
+        "areas": {
+            "type": "object",
+            "properties": {
+                "kaas_cloud": {
+                    "type": "object",
+                    "properties": {
+                        "catchupId": {
+                            "type": "string"
+                        },
+                        "restrictions": {
+                            "type": "string"
+                        },
+                        "scheduleIds": {
+                            "type": "array",
+                            "items": {
+                                "type": "string"
+                            }
+                        },
+                        "users": {
+                            "type": "array",
+                            "items": {
+                                "type": "string"
+                            }
+                        }
+                    }
+                },
+                "kaas_onprem": {
+                    "type": "object",
+                    "properties": {
+                        "catchupId": {
+                            "type": "string"
+                        },
+                        "restrictions": {
+                            "type": "string"
+                        },
+                        "scheduleIds": {
+                            "type": "array",
+                            "items": {
+                                "type": "string"
+                            }
+                        },
+                        "users": {
+                            "type": "array",
+                            "items": {
+                                "type": "string"
+                            }
+                        }
+                    }
+                },
+                "platform": {
+                    "type": "object",
+                    "properties": {
+                        "catchupId": {
+                            "type": "string"
+                        },
+                        "restrictions": {
+                            "type": "string"
+                        },
+                        "scheduleIds": {
+                            "type": "array",
+                            "items": {
+                                "type": "string"
+                            }
+                        },
+                        "users": {
+                            "type": "array",
+                            "items": {
+                                "type": "string"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "escalationPolicyDefaults": {
+            "type": "object",
+            "properties": {
+                "escalationDelayInMinutes": {
+                    "type": "integer"
+                },
+                "numLoops": {
+                    "type": "integer"
+                }
+            }
+        },
+        "providerConfigName": {
+            "type": "string"
+        },
+        "restrictionPresets": {
+            "type": "object",
+            "properties": {
+                "afterHours": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "durationSeconds": {
+                                "type": "integer"
+                            },
+                            "startDayOfWeek": {
+                                "type": "integer"
+                            },
+                            "startTimeOfDay": {
+                                "type": "string"
+                            },
+                            "type": {
+                                "type": "string"
+                            }
+                        }
+                    }
+                },
+                "afternoonShift": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "durationSeconds": {
+                                "type": "integer"
+                            },
+                            "startDayOfWeek": {
+                                "type": "integer"
+                            },
+                            "startTimeOfDay": {
+                                "type": "string"
+                            },
+                            "type": {
+                                "type": "string"
+                            }
+                        }
+                    }
+                },
+                "businessHours": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "durationSeconds": {
+                                "type": "integer"
+                            },
+                            "startDayOfWeek": {
+                                "type": "integer"
+                            },
+                            "startTimeOfDay": {
+                                "type": "string"
+                            },
+                            "type": {
+                                "type": "string"
+                            }
+                        }
+                    }
+                },
+                "morningShift": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "durationSeconds": {
+                                "type": "integer"
+                            },
+                            "startDayOfWeek": {
+                                "type": "integer"
+                            },
+                            "startTimeOfDay": {
+                                "type": "string"
+                            },
+                            "type": {
+                                "type": "string"
+                            }
+                        }
+                    }
+                },
+                "seAfternoonShift": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "durationSeconds": {
+                                "type": "integer"
+                            },
+                            "startDayOfWeek": {
+                                "type": "integer"
+                            },
+                            "startTimeOfDay": {
+                                "type": "string"
+                            },
+                            "type": {
+                                "type": "string"
+                            }
+                        }
+                    }
+                },
+                "seMorningShift": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "durationSeconds": {
+                                "type": "integer"
+                            },
+                            "startDayOfWeek": {
+                                "type": "integer"
+                            },
+                            "startTimeOfDay": {
+                                "type": "string"
+                            },
+                            "type": {
+                                "type": "string"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "scheduleDefaults": {
+            "type": "object",
+            "properties": {
+                "layerStart": {
+                    "type": "string"
+                },
+                "rotationTurnLengthSeconds": {
+                    "type": "integer"
+                },
+                "timeZone": {
+                    "type": "string"
+                }
+            }
+        },
+        "serviceDefaults": {
+            "type": "object",
+            "properties": {
+                "acknowledgementTimeout": {
+                    "type": "string"
+                },
+                "autoResolveTimeout": {
+                    "type": "string"
+                },
+                "emailVendorId": {
+                    "type": "string"
+                },
+                "prometheusVendorId": {
+                    "type": "string"
+                }
+            }
+        },
+        "teams": {
+            "type": "object",
+            "properties": {
+                "atlas": {
+                    "type": "object",
+                    "properties": {
+                        "area": {
+                            "type": "string"
+                        },
+                        "policyId": {
+                            "type": "string"
+                        },
+                        "schedules": {
+                            "type": "object",
+                            "properties": {
+                                "atlas": {
+                                    "type": "object",
+                                    "properties": {
+                                        "catchupId": {
+                                            "type": "string"
+                                        },
+                                        "restrictions": {
+                                            "type": "string"
+                                        },
+                                        "scheduleIds": {
+                                            "type": "array",
+                                            "items": {
+                                                "type": "string"
+                                            }
+                                        },
+                                        "users": {
+                                            "type": "array",
+                                            "items": {
+                                                "type": "string"
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "cabbage": {
+                    "type": "object",
+                    "properties": {
+                        "area": {
+                            "type": "string"
+                        },
+                        "policyId": {
+                            "type": "string"
+                        },
+                        "schedules": {
+                            "type": "object",
+                            "properties": {
+                                "cabbage": {
+                                    "type": "object",
+                                    "properties": {
+                                        "catchupId": {
+                                            "type": "string"
+                                        },
+                                        "restrictions": {
+                                            "type": "string"
+                                        },
+                                        "scheduleIds": {
+                                            "type": "array",
+                                            "items": {
+                                                "type": "string"
+                                            }
+                                        },
+                                        "users": {
+                                            "type": "array",
+                                            "items": {
+                                                "type": "string"
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "honeybadger": {
+                    "type": "object",
+                    "properties": {
+                        "area": {
+                            "type": "string"
+                        },
+                        "policyId": {
+                            "type": "string"
+                        },
+                        "schedules": {
+                            "type": "object",
+                            "properties": {
+                                "honeybadger_afternoon": {
+                                    "type": "object",
+                                    "properties": {
+                                        "catchupId": {
+                                            "type": "string"
+                                        },
+                                        "restrictions": {
+                                            "type": "string"
+                                        },
+                                        "scheduleIds": {
+                                            "type": "array",
+                                            "items": {
+                                                "type": "string"
+                                            }
+                                        },
+                                        "users": {
+                                            "type": "array",
+                                            "items": {
+                                                "type": "string"
+                                            }
+                                        }
+                                    }
+                                },
+                                "honeybadger_morning": {
+                                    "type": "object",
+                                    "properties": {
+                                        "catchupId": {
+                                            "type": "string"
+                                        },
+                                        "restrictions": {
+                                            "type": "string"
+                                        },
+                                        "scheduleIds": {
+                                            "type": "array",
+                                            "items": {
+                                                "type": "string"
+                                            }
+                                        },
+                                        "users": {
+                                            "type": "array",
+                                            "items": {
+                                                "type": "string"
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "phoenix": {
+                    "type": "object",
+                    "properties": {
+                        "area": {
+                            "type": "string"
+                        },
+                        "policyId": {
+                            "type": "string"
+                        },
+                        "schedules": {
+                            "type": "object",
+                            "properties": {
+                                "phoenix_afternoon": {
+                                    "type": "object",
+                                    "properties": {
+                                        "catchupId": {
+                                            "type": "string"
+                                        },
+                                        "restrictions": {
+                                            "type": "string"
+                                        },
+                                        "scheduleIds": {
+                                            "type": "array",
+                                            "items": {
+                                                "type": "string"
+                                            }
+                                        },
+                                        "users": {
+                                            "type": "array",
+                                            "items": {
+                                                "type": "string"
+                                            }
+                                        }
+                                    }
+                                },
+                                "phoenix_morning": {
+                                    "type": "object",
+                                    "properties": {
+                                        "catchupId": {
+                                            "type": "string"
+                                        },
+                                        "restrictions": {
+                                            "type": "string"
+                                        },
+                                        "scheduleIds": {
+                                            "type": "array",
+                                            "items": {
+                                                "type": "string"
+                                            }
+                                        },
+                                        "users": {
+                                            "type": "array",
+                                            "items": {
+                                                "type": "string"
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "rocket": {
+                    "type": "object",
+                    "properties": {
+                        "area": {
+                            "type": "string"
+                        },
+                        "policyId": {
+                            "type": "string"
+                        },
+                        "schedules": {
+                            "type": "object",
+                            "properties": {
+                                "rocket_afternoon": {
+                                    "type": "object",
+                                    "properties": {
+                                        "catchupId": {
+                                            "type": "string"
+                                        },
+                                        "restrictions": {
+                                            "type": "string"
+                                        },
+                                        "scheduleIds": {
+                                            "type": "array",
+                                            "items": {
+                                                "type": "string"
+                                            }
+                                        },
+                                        "users": {
+                                            "type": "array",
+                                            "items": {
+                                                "type": "string"
+                                            }
+                                        }
+                                    }
+                                },
+                                "rocket_morning": {
+                                    "type": "object",
+                                    "properties": {
+                                        "catchupId": {
+                                            "type": "string"
+                                        },
+                                        "restrictions": {
+                                            "type": "string"
+                                        },
+                                        "scheduleIds": {
+                                            "type": "array",
+                                            "items": {
+                                                "type": "string"
+                                            }
+                                        },
+                                        "users": {
+                                            "type": "array",
+                                            "items": {
+                                                "type": "string"
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "se": {
+                    "type": "object",
+                    "properties": {
+                        "policyId": {
+                            "type": "string"
+                        },
+                        "schedules": {
+                            "type": "object",
+                            "properties": {
+                                "se_afternoon": {
+                                    "type": "object",
+                                    "properties": {
+                                        "catchupId": {
+                                            "type": "string"
+                                        },
+                                        "restrictions": {
+                                            "type": "string"
+                                        },
+                                        "scheduleIds": {
+                                            "type": "array",
+                                            "items": {
+                                                "type": "string"
+                                            }
+                                        },
+                                        "users": {
+                                            "type": "array",
+                                            "items": {
+                                                "type": "string"
+                                            }
+                                        }
+                                    }
+                                },
+                                "se_morning": {
+                                    "type": "object",
+                                    "properties": {
+                                        "catchupId": {
+                                            "type": "string"
+                                        },
+                                        "restrictions": {
+                                            "type": "string"
+                                        },
+                                        "scheduleIds": {
+                                            "type": "array",
+                                            "items": {
+                                                "type": "string"
+                                            }
+                                        },
+                                        "users": {
+                                            "type": "array",
+                                            "items": {
+                                                "type": "string"
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "shield": {
+                    "type": "object",
+                    "properties": {
+                        "area": {
+                            "type": "string"
+                        },
+                        "policyId": {
+                            "type": "string"
+                        },
+                        "schedules": {
+                            "type": "object",
+                            "properties": {
+                                "shield_afternoon": {
+                                    "type": "object",
+                                    "properties": {
+                                        "catchupId": {
+                                            "type": "string"
+                                        },
+                                        "restrictions": {
+                                            "type": "string"
+                                        },
+                                        "scheduleIds": {
+                                            "type": "array",
+                                            "items": {
+                                                "type": "string"
+                                            }
+                                        },
+                                        "users": {
+                                            "type": "array",
+                                            "items": {
+                                                "type": "string"
+                                            }
+                                        }
+                                    }
+                                },
+                                "shield_morning": {
+                                    "type": "object",
+                                    "properties": {
+                                        "catchupId": {
+                                            "type": "string"
+                                        },
+                                        "restrictions": {
+                                            "type": "string"
+                                        },
+                                        "scheduleIds": {
+                                            "type": "array",
+                                            "items": {
+                                                "type": "string"
+                                            }
+                                        },
+                                        "users": {
+                                            "type": "array",
+                                            "items": {
+                                                "type": "string"
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "urgent": {
+            "type": "object",
+            "properties": {
+                "allowedDomains": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "integration": {
+                    "type": "object",
+                    "properties": {
+                        "id": {
+                            "type": "string"
+                        }
+                    }
+                },
+                "policy": {
+                    "type": "object",
+                    "properties": {
+                        "id": {
+                            "type": "string"
+                        }
+                    }
+                },
+                "service": {
+                    "type": "object",
+                    "properties": {
+                        "acknowledgementTimeout": {
+                            "type": "string"
+                        },
+                        "autoResolveTimeout": {
+                            "type": "string"
+                        },
+                        "id": {
+                            "type": "string"
+                        }
+                    }
+                }
+            }
+        },
+        "users": {
+            "type": "object",
+            "properties": {
+                "alex": {
+                    "type": "object",
+                    "properties": {
+                        "email": {
+                            "type": "string"
+                        },
+                        "pdId": {
+                            "type": "string"
+                        }
+                    }
+                },
+                "andreas": {
+                    "type": "object",
+                    "properties": {
+                        "email": {
+                            "type": "string"
+                        },
+                        "pdId": {
+                            "type": "string"
+                        }
+                    }
+                },
+                "antonia": {
+                    "type": "object",
+                    "properties": {
+                        "email": {
+                            "type": "string"
+                        },
+                        "pdId": {
+                            "type": "string"
+                        }
+                    }
+                },
+                "automation": {
+                    "type": "object",
+                    "properties": {
+                        "email": {
+                            "type": "string"
+                        },
+                        "pdId": {
+                            "type": "string"
+                        }
+                    }
+                },
+                "ben": {
+                    "type": "object",
+                    "properties": {
+                        "email": {
+                            "type": "string"
+                        },
+                        "pdId": {
+                            "type": "string"
+                        }
+                    }
+                },
+                "fernando": {
+                    "type": "object",
+                    "properties": {
+                        "email": {
+                            "type": "string"
+                        },
+                        "pdId": {
+                            "type": "string"
+                        }
+                    }
+                },
+                "franco": {
+                    "type": "object",
+                    "properties": {
+                        "email": {
+                            "type": "string"
+                        },
+                        "pdId": {
+                            "type": "string"
+                        }
+                    }
+                },
+                "gerald": {
+                    "type": "object",
+                    "properties": {
+                        "email": {
+                            "type": "string"
+                        },
+                        "pdId": {
+                            "type": "string"
+                        }
+                    }
+                },
+                "herve": {
+                    "type": "object",
+                    "properties": {
+                        "email": {
+                            "type": "string"
+                        },
+                        "pdId": {
+                            "type": "string"
+                        }
+                    }
+                },
+                "iuri": {
+                    "type": "object",
+                    "properties": {
+                        "email": {
+                            "type": "string"
+                        },
+                        "pdId": {
+                            "type": "string"
+                        }
+                    }
+                },
+                "jose": {
+                    "type": "object",
+                    "properties": {
+                        "email": {
+                            "type": "string"
+                        },
+                        "pdId": {
+                            "type": "string"
+                        }
+                    }
+                },
+                "joseph": {
+                    "type": "object",
+                    "properties": {
+                        "email": {
+                            "type": "string"
+                        },
+                        "pdId": {
+                            "type": "string"
+                        }
+                    }
+                },
+                "laszlo": {
+                    "type": "object",
+                    "properties": {
+                        "email": {
+                            "type": "string"
+                        },
+                        "pdId": {
+                            "type": "string"
+                        }
+                    }
+                },
+                "luca": {
+                    "type": "object",
+                    "properties": {
+                        "email": {
+                            "type": "string"
+                        },
+                        "pdId": {
+                            "type": "string"
+                        }
+                    }
+                },
+                "lucas": {
+                    "type": "object",
+                    "properties": {
+                        "email": {
+                            "type": "string"
+                        },
+                        "pdId": {
+                            "type": "string"
+                        }
+                    }
+                },
+                "lukasz": {
+                    "type": "object",
+                    "properties": {
+                        "email": {
+                            "type": "string"
+                        },
+                        "pdId": {
+                            "type": "string"
+                        }
+                    }
+                },
+                "lukasz_j": {
+                    "type": "object",
+                    "properties": {
+                        "email": {
+                            "type": "string"
+                        },
+                        "pdId": {
+                            "type": "string"
+                        }
+                    }
+                },
+                "marco": {
+                    "type": "object",
+                    "properties": {
+                        "email": {
+                            "type": "string"
+                        },
+                        "pdId": {
+                            "type": "string"
+                        }
+                    }
+                },
+                "martin": {
+                    "type": "object",
+                    "properties": {
+                        "email": {
+                            "type": "string"
+                        },
+                        "pdId": {
+                            "type": "string"
+                        }
+                    }
+                },
+                "matias": {
+                    "type": "object",
+                    "properties": {
+                        "email": {
+                            "type": "string"
+                        },
+                        "pdId": {
+                            "type": "string"
+                        }
+                    }
+                },
+                "nick": {
+                    "type": "object",
+                    "properties": {
+                        "email": {
+                            "type": "string"
+                        },
+                        "pdId": {
+                            "type": "string"
+                        }
+                    }
+                },
+                "pau": {
+                    "type": "object",
+                    "properties": {
+                        "email": {
+                            "type": "string"
+                        },
+                        "pdId": {
+                            "type": "string"
+                        }
+                    }
+                },
+                "puja": {
+                    "type": "object",
+                    "properties": {
+                        "email": {
+                            "type": "string"
+                        },
+                        "pdId": {
+                            "type": "string"
+                        }
+                    }
+                },
+                "quentin": {
+                    "type": "object",
+                    "properties": {
+                        "email": {
+                            "type": "string"
+                        },
+                        "pdId": {
+                            "type": "string"
+                        }
+                    }
+                },
+                "robin_k": {
+                    "type": "object",
+                    "properties": {
+                        "email": {
+                            "type": "string"
+                        },
+                        "pdId": {
+                            "type": "string"
+                        }
+                    }
+                },
+                "simonweald": {
+                    "type": "object",
+                    "properties": {
+                        "email": {
+                            "type": "string"
+                        },
+                        "pdId": {
+                            "type": "string"
+                        }
+                    }
+                },
+                "theo": {
+                    "type": "object",
+                    "properties": {
+                        "email": {
+                            "type": "string"
+                        },
+                        "pdId": {
+                            "type": "string"
+                        }
+                    }
+                },
+                "thibaud": {
+                    "type": "object",
+                    "properties": {
+                        "email": {
+                            "type": "string"
+                        },
+                        "pdId": {
+                            "type": "string"
+                        }
+                    }
+                },
+                "timo": {
+                    "type": "object",
+                    "properties": {
+                        "email": {
+                            "type": "string"
+                        },
+                        "pdId": {
+                            "type": "string"
+                        }
+                    }
+                },
+                "tobiasz": {
+                    "type": "object",
+                    "properties": {
+                        "email": {
+                            "type": "string"
+                        },
+                        "pdId": {
+                            "type": "string"
+                        }
+                    }
+                },
+                "xavier": {
+                    "type": "object",
+                    "properties": {
+                        "email": {
+                            "type": "string"
+                        },
+                        "pdId": {
+                            "type": "string"
+                        }
+                    }
+                },
+                "zach": {
+                    "type": "object",
+                    "properties": {
+                        "email": {
+                            "type": "string"
+                        },
+                        "pdId": {
+                            "type": "string"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
