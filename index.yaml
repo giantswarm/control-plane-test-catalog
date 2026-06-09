@@ -34769,6 +34769,43 @@ entries:
       io.giantswarm.application.audience: all
       io.giantswarm.application.logo: https://s.giantswarm.io/app-icons/falco/2/logo_dark.svg
       io.giantswarm.application.managed: "true"
+      io.giantswarm.application.metadata: https://giantswarm.github.io/control-plane-test-catalog/falco-0.12.1-dev.fix-daemonset-max-unavailable.2026-06-09.08-46-08.tgz-meta/main.yaml
+      io.giantswarm.application.readme: https://raw.githubusercontent.com/giantswarm/falco-app/refs/tags/v0.12.1-dev.fix-daemonset-max-unavailable.2026-06-09.08-46-08/README.md
+      io.giantswarm.application.team: shield
+      io.giantswarm.application.values-schema: https://raw.githubusercontent.com/giantswarm/falco-app/refs/tags/v0.12.1-dev.fix-daemonset-max-unavailable.2026-06-09.08-46-08/helm/falco/values.schema.json
+    apiVersion: v2
+    appVersion: 0.12.1-dev.fix-daemonset-max-unavailable.2026-06-09.08-46-08
+    created: "2026-06-09T08:47:48.791009282Z"
+    dependencies:
+    - condition: falco.enabled
+      name: falco
+      repository: ""
+      version: 9.0.0
+    - condition: falcosidekick.enabled
+      name: falcosidekick
+      repository: ""
+      version: 0.13.1
+    - condition: k8s-metacollector.enabled
+      name: k8s-metacollector
+      repository: ""
+      version: 0.3.0
+    description: A Helm chart for falco
+    digest: 1dfe748ae0467625e82fd6f60d79c0aa3916024dd202cc43f7cd8dcfff2e1790
+    home: https://github.com/giantswarm/falco-app
+    icon: https://s.giantswarm.io/app-icons/falco/2/icon_dark.svg
+    maintainers:
+    - name: Giant Swarm applications team
+      url: https://github.com/giantswarm/falco-app
+    name: falco
+    sources:
+    - https://github.com/giantswarm/falco-app
+    urls:
+    - https://giantswarm.github.io/control-plane-test-catalog/falco-0.12.1-dev.fix-daemonset-max-unavailable.2026-06-09.08-46-08.tgz
+    version: 0.12.1-dev.fix-daemonset-max-unavailable.2026-06-09.08-46-08
+  - annotations:
+      io.giantswarm.application.audience: all
+      io.giantswarm.application.logo: https://s.giantswarm.io/app-icons/falco/2/logo_dark.svg
+      io.giantswarm.application.managed: "true"
       io.giantswarm.application.metadata: https://giantswarm.github.io/control-plane-test-catalog/falco-0.11.3-dev.teams-alignment-branch.2026-06-03.03-11-14.tgz-meta/main.yaml
       io.giantswarm.application.readme: https://raw.githubusercontent.com/giantswarm/falco-app/refs/tags/v0.11.3-dev.teams-alignment-branch.2026-06-03.03-11-14/README.md
       io.giantswarm.application.team: shield
@@ -79661,4 +79698,4 @@ entries:
     urls:
     - https://giantswarm.github.io/control-plane-test-catalog/vertical-pod-autoscaler-crd-4.1.2-0b7ae62c544101887ff35f40a15a58c6a3e43a1c.tgz
     version: 4.1.2-0b7ae62c544101887ff35f40a15a58c6a3e43a1c
-generated: "2026-06-09T08:46:18.892163263Z"
+generated: "2026-06-09T08:47:48.776803828Z"
