@@ -47888,6 +47888,31 @@ entries:
     version: 1.2.1-339810a1cd61b74f4e149061b8a5f2933387df43
   kube-downscaler:
   - annotations:
+      io.giantswarm.application.metadata: https://giantswarm.github.io/control-plane-test-catalog/kube-downscaler-0.6.4-dev.renovate-architect-9-x.2026-06-09.05-04-26.tgz-meta/main.yaml
+      io.giantswarm.application.readme: https://raw.githubusercontent.com/giantswarm/kube-downscaler-app/refs/tags/v0.6.4-dev.renovate-architect-9-x.2026-06-09.05-04-26/README.md
+      io.giantswarm.application.team: planeteers
+      io.giantswarm.application.values-schema: https://raw.githubusercontent.com/giantswarm/kube-downscaler-app/refs/tags/v0.6.4-dev.renovate-architect-9-x.2026-06-09.05-04-26/helm/kube-downscaler/values.schema.json
+    apiVersion: v2
+    appVersion: 0.6.4-dev.renovate-architect-9-x.2026-06-09.05-04-26
+    created: "2026-06-09T05:05:18.627750617Z"
+    dependencies:
+    - alias: kube-downscaler
+      condition: enabled
+      name: py-kube-downscaler
+      repository: https://caas-team.github.io/helm-charts/
+      version: 0.3.12
+    description: Downscaling tool to save on resources with dev clusters when they
+      are not used
+    digest: c09f9831b73e991d50827c08912e3be886456807bb34ea5f411aa0aa7a36ed51
+    home: https://github.com/giantswarm/kube-downscaler-app
+    icon: https://s.giantswarm.io/app-icons/giantswarm/1/dark.svg
+    name: kube-downscaler
+    sources:
+    - https://github.com/caas-team/py-kube-downscaler
+    urls:
+    - https://giantswarm.github.io/control-plane-test-catalog/kube-downscaler-0.6.4-dev.renovate-architect-9-x.2026-06-09.05-04-26.tgz
+    version: 0.6.4-dev.renovate-architect-9-x.2026-06-09.05-04-26
+  - annotations:
       io.giantswarm.application.metadata: https://giantswarm.github.io/control-plane-test-catalog/kube-downscaler-0.6.4-dev.renovate-architect-9-x.2026-06-03.18-08-45.tgz-meta/main.yaml
       io.giantswarm.application.readme: https://raw.githubusercontent.com/giantswarm/kube-downscaler-app/refs/tags/v0.6.4-dev.renovate-architect-9-x.2026-06-03.18-08-45/README.md
       io.giantswarm.application.team: planeteers
@@ -78125,4 +78150,4 @@ entries:
     urls:
     - https://giantswarm.github.io/control-plane-test-catalog/vertical-pod-autoscaler-crd-4.1.2-0b7ae62c544101887ff35f40a15a58c6a3e43a1c.tgz
     version: 4.1.2-0b7ae62c544101887ff35f40a15a58c6a3e43a1c
-generated: "2026-06-09T05:01:42.862535994Z"
+generated: "2026-06-09T05:05:18.625742334Z"
