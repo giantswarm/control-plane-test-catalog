@@ -58684,6 +58684,33 @@ entries:
     version: 0.2.0-22c6cf6977b1b37ca9b00551aedf9560aee60590
   mimir:
   - annotations:
+      io.giantswarm.application.metadata: https://giantswarm.github.io/control-plane-test-catalog/mimir-0.28.1-dev.teams-alignment-branch.2026-06-10.08-12-29.h0f11bc0.tgz-meta/main.yaml
+      io.giantswarm.application.readme: https://raw.githubusercontent.com/giantswarm/mimir-app/refs/tags/v0.28.1-dev.teams-alignment-branch.2026-06-10.08-12-29.h0f11bc0/README.md
+      io.giantswarm.application.team: atlas
+      io.giantswarm.application.values-schema: https://raw.githubusercontent.com/giantswarm/mimir-app/refs/tags/v0.28.1-dev.teams-alignment-branch.2026-06-10.08-12-29.h0f11bc0/helm/mimir/values.schema.json
+    apiVersion: v2
+    appVersion: 0.28.1-dev.teams-alignment-branch.2026-06-10.08-12-29.h0f11bc0
+    created: "2026-06-10T08:13:20.796226507Z"
+    dependencies:
+    - alias: mimir
+      condition: mimir.enabled
+      name: mimir-distributed
+      repository: https://grafana.github.io/helm-charts
+      version: 5.8.0
+    description: A Helm chart for grafana's Mimir
+    digest: 7bd1288f65fbaa116ee929abc23fdad03521993a985c9380e3e1c5380a81186b
+    home: https://github.com/giantswarm/mimir-app
+    icon: https://s.giantswarm.io/app-icons/grafana-mimir/1/light-icon.svg
+    maintainers:
+    - email: team-atlas@giantswarm.io
+      name: giantswarm/team-atlas
+    name: mimir
+    sources:
+    - https://github.com/grafana/mimir/tree/main/operations/helm/charts/mimir-distributed
+    urls:
+    - https://giantswarm.github.io/control-plane-test-catalog/mimir-0.28.1-dev.teams-alignment-branch.2026-06-10.08-12-29.h0f11bc0.tgz
+    version: 0.28.1-dev.teams-alignment-branch.2026-06-10.08-12-29.h0f11bc0
+  - annotations:
       io.giantswarm.application.metadata: https://giantswarm.github.io/control-plane-test-catalog/mimir-0.28.1-dev.renovate-architect-9-x.2026-06-09.14-56-54.h5c87d9a.tgz-meta/main.yaml
       io.giantswarm.application.readme: https://raw.githubusercontent.com/giantswarm/mimir-app/refs/tags/v0.28.1-dev.renovate-architect-9-x.2026-06-09.14-56-54.h5c87d9a/README.md
       io.giantswarm.application.team: atlas
@@ -84734,4 +84761,4 @@ entries:
     urls:
     - https://giantswarm.github.io/control-plane-test-catalog/vertical-pod-autoscaler-crd-4.1.2-0b7ae62c544101887ff35f40a15a58c6a3e43a1c.tgz
     version: 4.1.2-0b7ae62c544101887ff35f40a15a58c6a3e43a1c
-generated: "2026-06-10T08:13:01.950311131Z"
+generated: "2026-06-10T08:13:20.757634533Z"
