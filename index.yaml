@@ -22425,6 +22425,45 @@ entries:
   - annotations:
       io.giantswarm.application.audience: all
       io.giantswarm.application.managed: "true"
+      io.giantswarm.application.metadata: https://giantswarm.github.io/control-plane-test-catalog/cert-manager-app-3.13.1-dev.renovate-g--work-v5-5-x.2026-06-18.21-59-18.hcc2f50c.tgz-meta/main.yaml
+      io.giantswarm.application.readme: https://raw.githubusercontent.com/giantswarm/cert-manager-app/refs/tags/v3.13.1-dev.renovate-g--work-v5-5-x.2026-06-18.21-59-18.hcc2f50c/README.md
+      io.giantswarm.application.team: shield
+      io.giantswarm.application.values-schema: https://raw.githubusercontent.com/giantswarm/cert-manager-app/refs/tags/v3.13.1-dev.renovate-g--work-v5-5-x.2026-06-18.21-59-18.hcc2f50c/helm/cert-manager/values.schema.json
+    apiVersion: v2
+    appVersion: 3.13.1-dev.renovate-g--work-v5-5-x.2026-06-18.21-59-18.hcc2f50c
+    created: "2026-06-18T21:59:43.193479399Z"
+    dependencies:
+    - name: cert-manager
+      repository: ""
+      version: v1.19.4
+    - alias: giantSwarmClusterIssuer
+      name: cert-manager-giantswarm-clusterissuer
+      repository: ""
+      version: 2.0.0
+    - condition: giantswarmNetworkPolicy.enabled
+      name: cert-manager-giantswarm-netpol
+      repository: ""
+      version: 0.1.0
+    - condition: ciliumNetworkPolicy.enabled
+      name: cert-manager-giantswarm-ciliumnetworkpolicies
+      repository: ""
+      version: 0.1.0
+    description: Simplifies the process of obtaining, renewing and using certificates.
+    digest: dea12107a9cc08735ca6398c15ecc376431082dc55a59ac56f868e845835b4db
+    home: https://github.com/giantswarm/cert-manager-app
+    icon: https://s.giantswarm.io/app-icons/cert-manager/1/light.svg
+    kubeVersion: '>=1.22.0-0'
+    maintainers:
+    - name: Shield
+    name: cert-manager-app
+    sources:
+    - https://github.com/cert-manager/cert-manager
+    urls:
+    - https://giantswarm.github.io/control-plane-test-catalog/cert-manager-app-3.13.1-dev.renovate-g--work-v5-5-x.2026-06-18.21-59-18.hcc2f50c.tgz
+    version: 3.13.1-dev.renovate-g--work-v5-5-x.2026-06-18.21-59-18.hcc2f50c
+  - annotations:
+      io.giantswarm.application.audience: all
+      io.giantswarm.application.managed: "true"
       io.giantswarm.application.metadata: https://giantswarm.github.io/control-plane-test-catalog/cert-manager-app-3.13.1-dev.renovate-g--work-v5-5-x.2026-06-17.21-53-17.h8198cc1.tgz-meta/main.yaml
       io.giantswarm.application.readme: https://raw.githubusercontent.com/giantswarm/cert-manager-app/refs/tags/v3.13.1-dev.renovate-g--work-v5-5-x.2026-06-17.21-53-17.h8198cc1/README.md
       io.giantswarm.application.team: shield
@@ -109601,4 +109640,4 @@ entries:
     urls:
     - https://giantswarm.github.io/control-plane-test-catalog/vertical-pod-autoscaler-crd-4.1.2-0b7ae62c544101887ff35f40a15a58c6a3e43a1c.tgz
     version: 4.1.2-0b7ae62c544101887ff35f40a15a58c6a3e43a1c
-generated: "2026-06-18T21:58:42.840795642Z"
+generated: "2026-06-18T21:59:43.171984563Z"
