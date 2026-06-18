@@ -80328,6 +80328,33 @@ entries:
     - https://giantswarm.github.io/control-plane-test-catalog/plugin-barman-cloud-0.4.1-dev.renovate-pl--n-cloud-0-x.2026-06-10.14-52-06.hb049b2c.tgz
     version: 0.4.1-dev.renovate-pl--n-cloud-0-x.2026-06-10.14-52-06.hb049b2c
   - annotations:
+      io.giantswarm.application.metadata: https://giantswarm.github.io/control-plane-test-catalog/plugin-barman-cloud-0.4.1-dev.renovate-architect-9-x.2026-06-18.02-10-34.hc818688.tgz-meta/main.yaml
+      io.giantswarm.application.readme: https://raw.githubusercontent.com/giantswarm/plugin-barman-cloud/refs/tags/v0.4.1-dev.renovate-architect-9-x.2026-06-18.02-10-34.hc818688/README.md
+      io.giantswarm.application.team: atlas
+      io.giantswarm.application.values-schema: https://raw.githubusercontent.com/giantswarm/plugin-barman-cloud/refs/tags/v0.4.1-dev.renovate-architect-9-x.2026-06-18.02-10-34.hc818688/helm/plugin-barman-cloud/values.schema.json
+    apiVersion: v2
+    appVersion: 0.12.0
+    created: "2026-06-18T02:11:04.733708042Z"
+    dependencies:
+    - alias: pluginbarmancloud
+      condition: pluginbarmancloud.enabled
+      name: plugin-barman-cloud
+      repository: https://cloudnative-pg.io/charts
+      version: 0.6.0
+    description: A Helm chart for plugin-barman-cloud
+    digest: a662787d8326f2db690c94bc517c894b86d7105cd04886a3160fc3a16fefc240
+    home: https://github.com/giantswarm/plugin-barman-cloud
+    icon: https://s.giantswarm.io/app-icons/cloudnative-pg/icon-light.svg
+    maintainers:
+    - email: team-atlas@giantswarm.io
+      name: giantswarm/team-atlas
+    name: plugin-barman-cloud
+    sources:
+    - https://github.com/cloudnative-pg/charts/tree/main/charts/plugin-barman-cloud
+    urls:
+    - https://giantswarm.github.io/control-plane-test-catalog/plugin-barman-cloud-0.4.1-dev.renovate-architect-9-x.2026-06-18.02-10-34.hc818688.tgz
+    version: 0.4.1-dev.renovate-architect-9-x.2026-06-18.02-10-34.hc818688
+  - annotations:
       io.giantswarm.application.metadata: https://giantswarm.github.io/control-plane-test-catalog/plugin-barman-cloud-0.4.1-dev.renovate-architect-9-x.2026-06-11.19-39-53.h2ffdf28.tgz-meta/main.yaml
       io.giantswarm.application.readme: https://raw.githubusercontent.com/giantswarm/plugin-barman-cloud/refs/tags/v0.4.1-dev.renovate-architect-9-x.2026-06-11.19-39-53.h2ffdf28/README.md
       io.giantswarm.application.team: atlas
@@ -105929,4 +105956,4 @@ entries:
     urls:
     - https://giantswarm.github.io/control-plane-test-catalog/vertical-pod-autoscaler-crd-4.1.2-0b7ae62c544101887ff35f40a15a58c6a3e43a1c.tgz
     version: 4.1.2-0b7ae62c544101887ff35f40a15a58c6a3e43a1c
-generated: "2026-06-18T02:05:48.938568891Z"
+generated: "2026-06-18T02:11:04.731980347Z"
