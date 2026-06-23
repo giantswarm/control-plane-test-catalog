@@ -59662,6 +59662,38 @@ entries:
     version: 6.3.0-8092bd88f4c95c0f20ead3df5b00788691721016
   grafana:
   - annotations:
+      io.giantswarm.application.metadata: https://giantswarm.github.io/control-plane-test-catalog/grafana-2.38.1-dev.teams-alignment-branch.2026-06-23.08-23-54.h5c43933.tgz-meta/main.yaml
+      io.giantswarm.application.readme: https://raw.githubusercontent.com/giantswarm/grafana-app/refs/tags/v2.38.1-dev.teams-alignment-branch.2026-06-23.08-23-54.h5c43933/README.md
+      io.giantswarm.application.team: atlas
+      io.giantswarm.application.values-schema: https://raw.githubusercontent.com/giantswarm/grafana-app/refs/tags/v2.38.1-dev.teams-alignment-branch.2026-06-23.08-23-54.h5c43933/helm/grafana/values.schema.json
+    apiVersion: v2
+    appVersion: 13.0.1
+    created: "2026-06-23T08:24:41.077161105Z"
+    dependencies:
+    - name: grafana
+      repository: https://grafana-community.github.io/helm-charts
+      version: 12.3.0
+    - alias: pgClusterRecoveryTest
+      condition: pgClusterRecoveryTest.enabled
+      name: pg-cluster-recovery-test
+      repository: https://giantswarm.github.io/giantswarm-catalog
+      version: 0.5.0
+    description: The leading tool for querying and visualizing time series and metrics.
+    digest: 879bc81eeecc1b630aeab6b1ca4355d5f8e65761a716a5e9f188f9f32dd344d9
+    home: https://github.com/giantswarm/grafana-app
+    icon: https://s.giantswarm.io/app-icons/grafana/1/light.svg
+    kubeVersion: ^1.25.0-0
+    maintainers:
+    - email: team-atlas@giantswarm.io
+      name: giantswarm/team-atlas
+    name: grafana
+    sources:
+    - https://github.com/grafana-community/helm-charts/tree/main/charts/grafana
+    type: application
+    urls:
+    - https://giantswarm.github.io/control-plane-test-catalog/grafana-2.38.1-dev.teams-alignment-branch.2026-06-23.08-23-54.h5c43933.tgz
+    version: 2.38.1-dev.teams-alignment-branch.2026-06-23.08-23-54.h5c43933
+  - annotations:
       io.giantswarm.application.metadata: https://giantswarm.github.io/control-plane-test-catalog/grafana-2.38.1-dev.teams-alignment-branch.2026-06-10.08-22-24.h5eb8799.tgz-meta/main.yaml
       io.giantswarm.application.readme: https://raw.githubusercontent.com/giantswarm/grafana-app/refs/tags/v2.38.1-dev.teams-alignment-branch.2026-06-10.08-22-24.h5eb8799/README.md
       io.giantswarm.application.team: atlas
@@ -124727,4 +124759,4 @@ entries:
     urls:
     - https://giantswarm.github.io/control-plane-test-catalog/vertical-pod-autoscaler-crd-4.1.2-0b7ae62c544101887ff35f40a15a58c6a3e43a1c.tgz
     version: 4.1.2-0b7ae62c544101887ff35f40a15a58c6a3e43a1c
-generated: "2026-06-23T08:24:23.49971603Z"
+generated: "2026-06-23T08:24:41.068238844Z"
