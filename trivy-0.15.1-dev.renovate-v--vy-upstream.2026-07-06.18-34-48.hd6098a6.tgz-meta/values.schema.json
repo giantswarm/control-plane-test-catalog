@@ -1,0 +1,106 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "properties": {
+        "ciliumNetworkPolicy": {
+            "properties": {
+                "enabled": {
+                    "type": "boolean"
+                }
+            },
+            "type": "object"
+        },
+        "kyvernoPolicyExceptions": {
+            "properties": {
+                "enabled": {
+                    "type": "boolean"
+                },
+                "namespace": {
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        },
+        "networkPolicy": {
+            "properties": {
+                "enabled": {
+                    "type": "boolean"
+                },
+                "ingress": {
+                    "properties": {
+                        "namespaceSelector": {
+                            "type": "object"
+                        },
+                        "podSelector": {
+                            "type": "object"
+                        }
+                    },
+                    "type": "object"
+                }
+            },
+            "type": "object"
+        },
+        "trivy": {
+            "properties": {
+                "image": {
+                    "properties": {
+                        "registry": {
+                            "type": "string"
+                        },
+                        "repository": {
+                            "type": "string"
+                        }
+                    },
+                    "type": "object"
+                },
+                "rbac": {
+                    "properties": {
+                        "pspEnabled": {
+                            "type": "boolean"
+                        }
+                    },
+                    "type": "object"
+                },
+                "securityContext": {
+                    "properties": {
+                        "allowPrivilegeEscalation": {
+                            "type": "boolean"
+                        },
+                        "privileged": {
+                            "type": "boolean"
+                        },
+                        "readOnlyRootFilesystem": {
+                            "type": "boolean"
+                        }
+                    },
+                    "type": "object"
+                },
+                "trivy": {
+                    "properties": {
+                        "dbRepository": {
+                            "type": "string"
+                        }
+                    },
+                    "type": "object"
+                }
+            },
+            "type": "object"
+        },
+        "verticalPodAutoscaler": {
+            "properties": {
+                "trivy": {
+                    "properties": {
+                        "containerPolicies": {
+                            "type": "object"
+                        },
+                        "enabled": {
+                            "type": "boolean"
+                        }
+                    },
+                    "type": "object"
+                }
+            },
+            "type": "object"
+        }
+    },
+    "type": "object"
+}
