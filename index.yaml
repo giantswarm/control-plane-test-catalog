@@ -68452,6 +68452,28 @@ entries:
     version: 0.0.7-dev.remediate-vulnerabilities-main.2026-06-17.10-34-16
   prometheus-remotewrite:
   - annotations:
+      io.giantswarm.application.metadata: https://giantswarm.github.io/control-plane-test-catalog/prometheus-remotewrite-1.5.1-dev.teams-alignment-branch.2026-07-11.12-24-10.h72c4d83.tgz-meta/main.yaml
+      io.giantswarm.application.readme: https://raw.githubusercontent.com/giantswarm/prometheus-remotewrite/refs/tags/v1.5.1-dev.teams-alignment-branch.2026-07-11.12-24-10.h72c4d83/README.md
+      io.giantswarm.application.team: atlas
+      io.giantswarm.application.values-schema: https://raw.githubusercontent.com/giantswarm/prometheus-remotewrite/refs/tags/v1.5.1-dev.teams-alignment-branch.2026-07-11.12-24-10.h72c4d83/helm/prometheus-remotewrite/values.schema.json
+    apiVersion: v2
+    appVersion: 1.5.1-dev.teams-alignment-branch.2026-07-11.12-24-10.h72c4d83
+    created: "2026-07-11T12:24:54.629978617Z"
+    dependencies:
+    - alias: kubePrometheusStack
+      condition: kubePrometheusStack.enabled
+      name: kube-prometheus-stack
+      repository: https://giantswarm.github.io/default-catalog/
+      version: 22.0.0
+    description: Hold remote write configuration for prometheus.
+    digest: a573c7ef0f0338a5d8be59f7c34c254b3a1cb8ff16cf97be537ddcb3195877f1
+    home: https://github.com/giantswarm/prometheus-remotewrite
+    icon: https://s.giantswarm.io/app-icons/prometheus/1/light.svg
+    name: prometheus-remotewrite
+    urls:
+    - https://giantswarm.github.io/control-plane-test-catalog/prometheus-remotewrite-1.5.1-dev.teams-alignment-branch.2026-07-11.12-24-10.h72c4d83.tgz
+    version: 1.5.1-dev.teams-alignment-branch.2026-07-11.12-24-10.h72c4d83
+  - annotations:
       io.giantswarm.application.metadata: https://giantswarm.github.io/control-plane-test-catalog/prometheus-remotewrite-1.5.1-dev.teams-alignment-branch.2026-06-23.09-03-19.h2e07578.tgz-meta/main.yaml
       io.giantswarm.application.readme: https://raw.githubusercontent.com/giantswarm/prometheus-remotewrite/refs/tags/v1.5.1-dev.teams-alignment-branch.2026-06-23.09-03-19.h2e07578/README.md
       io.giantswarm.application.team: atlas
@@ -85276,4 +85298,4 @@ entries:
     urls:
     - https://giantswarm.github.io/control-plane-test-catalog/vertical-pod-autoscaler-crd-4.1.3-dev.main.2026-06-03.18-02-50.tgz
     version: 4.1.3-dev.main.2026-06-03.18-02-50
-generated: "2026-07-11T12:24:14.508077826Z"
+generated: "2026-07-11T12:24:54.566121835Z"
