@@ -68917,6 +68917,33 @@ entries:
     version: 0.0.0-dev.main.2026-06-05.14-17-16
   plugin-barman-cloud:
   - annotations:
+      io.giantswarm.application.metadata: https://giantswarm.github.io/control-plane-test-catalog/plugin-barman-cloud-0.4.1-dev.teams-alignment-branch.2026-07-11.19-49-48.h08770e1.tgz-meta/main.yaml
+      io.giantswarm.application.readme: https://raw.githubusercontent.com/giantswarm/plugin-barman-cloud/refs/tags/v0.4.1-dev.teams-alignment-branch.2026-07-11.19-49-48.h08770e1/README.md
+      io.giantswarm.application.team: atlas
+      io.giantswarm.application.values-schema: https://raw.githubusercontent.com/giantswarm/plugin-barman-cloud/refs/tags/v0.4.1-dev.teams-alignment-branch.2026-07-11.19-49-48.h08770e1/helm/plugin-barman-cloud/values.schema.json
+    apiVersion: v2
+    appVersion: 0.12.0
+    created: "2026-07-11T19:50:37.007259429Z"
+    dependencies:
+    - alias: pluginbarmancloud
+      condition: pluginbarmancloud.enabled
+      name: plugin-barman-cloud
+      repository: https://cloudnative-pg.io/charts
+      version: 0.6.0
+    description: A Helm chart for plugin-barman-cloud
+    digest: 31f89d0b93b5f7b05b21dcda2146d28fe62d654bd45c548e9c7ae02292a2fa4a
+    home: https://github.com/giantswarm/plugin-barman-cloud
+    icon: https://s.giantswarm.io/app-icons/cloudnative-pg/icon-light.svg
+    maintainers:
+    - email: team-atlas@giantswarm.io
+      name: giantswarm/team-atlas
+    name: plugin-barman-cloud
+    sources:
+    - https://github.com/cloudnative-pg/charts/tree/main/charts/plugin-barman-cloud
+    urls:
+    - https://giantswarm.github.io/control-plane-test-catalog/plugin-barman-cloud-0.4.1-dev.teams-alignment-branch.2026-07-11.19-49-48.h08770e1.tgz
+    version: 0.4.1-dev.teams-alignment-branch.2026-07-11.19-49-48.h08770e1
+  - annotations:
       io.giantswarm.application.metadata: https://giantswarm.github.io/control-plane-test-catalog/plugin-barman-cloud-0.4.1-dev.teams-alignment-branch.2026-07-11.12-37-59.hfaea5c2.tgz-meta/main.yaml
       io.giantswarm.application.readme: https://raw.githubusercontent.com/giantswarm/plugin-barman-cloud/refs/tags/v0.4.1-dev.teams-alignment-branch.2026-07-11.12-37-59.hfaea5c2/README.md
       io.giantswarm.application.team: atlas
@@ -87062,4 +87089,4 @@ entries:
     urls:
     - https://giantswarm.github.io/control-plane-test-catalog/vertical-pod-autoscaler-crd-4.1.3-dev.main.2026-06-03.18-02-50.tgz
     version: 4.1.3-dev.main.2026-06-03.18-02-50
-generated: "2026-07-11T19:50:19.445218768Z"
+generated: "2026-07-11T19:50:37.00554835Z"
