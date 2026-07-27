@@ -69893,6 +69893,38 @@ entries:
     version: 0.5.1-dev.renovate-ac--heckout-7-x.2026-06-18.19-09-00.h3193003
   loki:
   - annotations:
+      artifacthub.io/license: Apache-2.0
+      artifacthub.io/links: |
+        - name: Support
+          url: https://github.com/giantswarm/loki-app/issues
+      io.giantswarm.application.metadata: https://giantswarm.github.io/control-plane-test-catalog/loki-0.45.1-dev.teams-alignment-branch.2026-07-27.15-58-37.h6f67dce.tgz-meta/main.yaml
+      io.giantswarm.application.readme: https://raw.githubusercontent.com/giantswarm/loki-app/refs/tags/v0.45.1-dev.teams-alignment-branch.2026-07-27.15-58-37.h6f67dce/README.md
+      io.giantswarm.application.team: atlas
+      io.giantswarm.application.values-schema: https://raw.githubusercontent.com/giantswarm/loki-app/refs/tags/v0.45.1-dev.teams-alignment-branch.2026-07-27.15-58-37.h6f67dce/helm/loki/values.schema.json
+      ui.giantswarm.io/logo: https://s.giantswarm.io/app-icons/grafana-loki/2/dark.svg
+    apiVersion: v2
+    appVersion: 3.7.1
+    created: "2026-07-27T15:59:16.166751068Z"
+    dependencies:
+    - condition: loki.enabled
+      name: loki
+      repository: https://grafana-community.github.io/helm-charts
+      version: 13.5.0
+    description: Helm chart for Grafana Loki in simple, scalable mode
+    digest: d0f7da26dd1cb6e91af44c0697af2bdd2687a23270690272b27b3dcf7a55ca3b
+    home: https://github.com/giantswarm/loki-app
+    icon: https://s.giantswarm.io/app-icons/loki-stack/1/dark.svg
+    maintainers:
+    - email: team-atlas@giantswarm.io
+      name: giantswarm/team-atlas
+    name: loki
+    sources:
+    - https://github.com/giantswarm/loki-app
+    type: application
+    urls:
+    - https://giantswarm.github.io/control-plane-test-catalog/loki-0.45.1-dev.teams-alignment-branch.2026-07-27.15-58-37.h6f67dce.tgz
+    version: 0.45.1-dev.teams-alignment-branch.2026-07-27.15-58-37.h6f67dce
+  - annotations:
       io.giantswarm.application.metadata: https://giantswarm.github.io/control-plane-test-catalog/loki-0.45.1-dev.teams-alignment-branch.2026-07-11.19-49-42.ha35d477.tgz-meta/main.yaml
       io.giantswarm.application.readme: https://raw.githubusercontent.com/giantswarm/loki-app/refs/tags/v0.45.1-dev.teams-alignment-branch.2026-07-11.19-49-42.ha35d477/README.md
       io.giantswarm.application.team: atlas
@@ -104461,4 +104493,4 @@ entries:
     urls:
     - https://giantswarm.github.io/control-plane-test-catalog/vertical-pod-autoscaler-crd-4.1.3-dev.main.2026-06-03.18-02-50.tgz
     version: 4.1.3-dev.main.2026-06-03.18-02-50
-generated: "2026-07-27T15:59:05.475213081Z"
+generated: "2026-07-27T15:59:16.146869303Z"
