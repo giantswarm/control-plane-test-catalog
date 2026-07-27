@@ -1,0 +1,45 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "properties": {
+        "Installation": {
+            "properties": {
+                "V1": {
+                    "properties": {
+                        "Guest": {
+                            "properties": {
+                                "Kubernetes": {
+                                    "properties": {
+                                        "Kubelet": {
+                                            "properties": {
+                                                "ImagePullProgressDeadline": {
+                                                    "type": "string"
+                                                }
+                                            },
+                                            "type": "object"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            },
+                            "type": "object"
+                        },
+                        "Proxy": {
+                            "properties": {
+                                "Enabled": {
+                                    "type": "boolean"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    },
+                    "type": "object"
+                }
+            },
+            "type": "object"
+        },
+        "clusterDescription": {
+            "type": "string"
+        }
+    },
+    "type": "object"
+}
