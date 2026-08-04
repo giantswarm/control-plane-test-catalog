@@ -27213,6 +27213,34 @@ entries:
     urls:
     - https://giantswarm.github.io/control-plane-test-catalog/loki-0.45.1-dev.main.2026-07-19.13-57-28.h718d1ba.tgz
     version: 0.45.1-dev.main.2026-07-19.13-57-28.h718d1ba
+  - annotations:
+      io.giantswarm.application.metadata: https://giantswarm.github.io/control-plane-test-catalog/loki-0.45.1-dev.azure-mana--identities.2026-08-04.19-12-50.h5ec41a6.tgz-meta/main.yaml
+      io.giantswarm.application.readme: https://raw.githubusercontent.com/giantswarm/loki-app/refs/tags/v0.45.1-dev.azure-mana--identities.2026-08-04.19-12-50.h5ec41a6/README.md
+      io.giantswarm.application.team: atlas
+      io.giantswarm.application.values-schema: https://raw.githubusercontent.com/giantswarm/loki-app/refs/tags/v0.45.1-dev.azure-mana--identities.2026-08-04.19-12-50.h5ec41a6/helm/loki/values.schema.json
+      ui.giantswarm.io/logo: https://s.giantswarm.io/app-icons/grafana-loki/2/dark.svg
+    apiVersion: v2
+    appVersion: 3.7.1
+    created: "2026-08-04T19:13:29.033287684Z"
+    dependencies:
+    - condition: loki.enabled
+      name: loki
+      repository: https://grafana-community.github.io/helm-charts
+      version: 13.5.0
+    description: Helm chart for Grafana Loki in simple, scalable mode
+    digest: 67cc5294e49b5814ceb59910dfa30563064b27e7fb466bf9dd5fdbbfee13738e
+    home: https://github.com/giantswarm/loki-app
+    icon: https://s.giantswarm.io/app-icons/loki-stack/1/dark.svg
+    maintainers:
+    - email: team-atlas@giantswarm.io
+      name: giantswarm/team-atlas
+    name: loki
+    sources:
+    - https://github.com/giantswarm/loki-app
+    type: application
+    urls:
+    - https://giantswarm.github.io/control-plane-test-catalog/loki-0.45.1-dev.azure-mana--identities.2026-08-04.19-12-50.h5ec41a6.tgz
+    version: 0.45.1-dev.azure-mana--identities.2026-08-04.19-12-50.h5ec41a6
   mimir:
   - annotations:
       artifacthub.io/license: Apache-2.0
@@ -39429,4 +39457,4 @@ entries:
     urls:
     - https://giantswarm.github.io/control-plane-test-catalog/vertical-pod-autoscaler-crd-4.1.3-dev.main.2026-07-14.04-48-25.hac7e233.tgz
     version: 4.1.3-dev.main.2026-07-14.04-48-25.hac7e233
-generated: "2026-08-04T17:05:41.7225257Z"
+generated: "2026-08-04T19:13:29.0081975Z"
