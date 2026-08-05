@@ -1,0 +1,36 @@
+{
+    "$schema": "http://json-schema.org/schema#",
+    "type": "object",
+    "properties": {
+        "global": {
+            "type": "object",
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "namespace": {
+                    "type": "string"
+                },
+                "provider": {
+                    "type": "object",
+                    "properties": {
+                        "kind": {
+                            "type": "string"
+                        }
+                    }
+                },
+                "serviceType": {
+                    "type": "string"
+                }
+            }
+        },
+        "provider": {
+            "type": "object",
+            "properties": {
+                "kind": {
+                    "type": "string"
+                }
+            }
+        }
+    }
+}
