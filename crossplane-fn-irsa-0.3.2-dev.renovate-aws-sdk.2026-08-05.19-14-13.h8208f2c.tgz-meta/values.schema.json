@@ -1,0 +1,67 @@
+{
+    "$schema": "http://json-schema.org/schema#",
+    "type": "object",
+    "properties": {
+        "image": {
+            "type": "object",
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "tag": {
+                    "type": "string"
+                }
+            }
+        },
+        "registry": {
+            "type": "object",
+            "properties": {
+                "domain": {
+                    "type": "string"
+                }
+            }
+        },
+        "function": {
+            "type": "object",
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "skipDependencyResolution": {
+                    "type": "boolean"
+                }
+            }
+        },
+        "runtimeConfig": {
+            "type": "object",
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "namespace": {
+                    "type": "string"
+                },
+                "debug": {
+                    "type": "boolean"
+                },
+                "awsRegion": {
+                    "type": "string"
+                }
+            }
+        },
+        "composition": {
+            "type": "object",
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "kclFunctionRef": {
+                    "type": "string"
+                },
+                "autoReadyFunctionRef": {
+                    "type": "string"
+                }
+            }
+        }
+    }
+}
