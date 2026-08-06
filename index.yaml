@@ -33438,6 +33438,32 @@ entries:
     urls:
     - https://giantswarm.github.io/control-plane-test-catalog/prometheus-remotewrite-1.5.1-dev.main.2026-07-19.16-42-43.ha6ca419.tgz
     version: 1.5.1-dev.main.2026-07-19.16-42-43.ha6ca419
+  - annotations:
+      artifacthub.io/license: Apache-2.0
+      artifacthub.io/links: |
+        - name: Support
+          url: https://github.com/giantswarm/prometheus-remotewrite/issues
+      io.giantswarm.application.metadata: https://giantswarm.github.io/control-plane-test-catalog/prometheus-remotewrite-1.5.1-dev.chore-remov--d-orb-param.2026-08-06.09-56-42.h1555732.tgz-meta/main.yaml
+      io.giantswarm.application.readme: https://raw.githubusercontent.com/giantswarm/prometheus-remotewrite/refs/tags/v1.5.1-dev.chore-remov--d-orb-param.2026-08-06.09-56-42.h1555732/README.md
+      io.giantswarm.application.team: atlas
+      io.giantswarm.application.values-schema: https://raw.githubusercontent.com/giantswarm/prometheus-remotewrite/refs/tags/v1.5.1-dev.chore-remov--d-orb-param.2026-08-06.09-56-42.h1555732/helm/prometheus-remotewrite/values.schema.json
+    apiVersion: v2
+    appVersion: 1.5.1-dev.chore-remov--d-orb-param.2026-08-06.09-56-42.h1555732
+    created: "2026-08-06T09:57:28.649363194Z"
+    dependencies:
+    - alias: kubePrometheusStack
+      condition: kubePrometheusStack.enabled
+      name: kube-prometheus-stack
+      repository: https://giantswarm.github.io/default-catalog/
+      version: 22.0.0
+    description: Hold remote write configuration for prometheus.
+    digest: 322609c79da33faf57974ccec8818c638f3423bca7e4a27caab3e8d537ecee1f
+    home: https://github.com/giantswarm/prometheus-remotewrite
+    icon: https://s.giantswarm.io/app-icons/prometheus/1/light.svg
+    name: prometheus-remotewrite
+    urls:
+    - https://giantswarm.github.io/control-plane-test-catalog/prometheus-remotewrite-1.5.1-dev.chore-remov--d-orb-param.2026-08-06.09-56-42.h1555732.tgz
+    version: 1.5.1-dev.chore-remov--d-orb-param.2026-08-06.09-56-42.h1555732
   prometheus-rules:
   - annotations:
       artifacthub.io/license: Apache-2.0
@@ -41498,4 +41524,4 @@ entries:
     urls:
     - https://giantswarm.github.io/control-plane-test-catalog/vertical-pod-autoscaler-crd-4.1.3-dev.main.2026-07-14.04-48-25.hac7e233.tgz
     version: 4.1.3-dev.main.2026-07-14.04-48-25.hac7e233
-generated: "2026-08-06T09:57:14.944370117Z"
+generated: "2026-08-06T09:57:28.60274836Z"
