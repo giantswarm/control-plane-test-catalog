@@ -1,0 +1,309 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "type": "object",
+    "additionalProperties": true,
+    "properties": {
+        "bestPracticesPolicies": {
+            "type": "object",
+            "properties": {
+                "policies": {
+                    "type": "object",
+                    "properties": {
+                        "check-resources-request-and-limits-ratio": {
+                            "type": "object",
+                            "properties": {
+                                "enabled": {
+                                    "type": "boolean"
+                                },
+                                "mode": {
+                                    "type": "string"
+                                }
+                            }
+                        },
+                        "disallow-latest-tag": {
+                            "type": "object",
+                            "properties": {
+                                "enabled": {
+                                    "type": "boolean"
+                                },
+                                "mode": {
+                                    "type": "string"
+                                }
+                            }
+                        },
+                        "prevent-bare-pods": {
+                            "type": "object",
+                            "properties": {
+                                "enabled": {
+                                    "type": "boolean"
+                                },
+                                "mode": {
+                                    "type": "string"
+                                }
+                            }
+                        },
+                        "require-container-requests-and-limits": {
+                            "type": "object",
+                            "properties": {
+                                "enabled": {
+                                    "type": "boolean"
+                                },
+                                "mode": {
+                                    "type": "string"
+                                }
+                            }
+                        },
+                        "require-emptydir-requests-and-limits": {
+                            "type": "object",
+                            "properties": {
+                                "enabled": {
+                                    "type": "boolean"
+                                },
+                                "mode": {
+                                    "type": "string"
+                                }
+                            }
+                        },
+                        "require-pod-probes": {
+                            "type": "object",
+                            "properties": {
+                                "enabled": {
+                                    "type": "boolean"
+                                },
+                                "mode": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "debugAccessPolicies": {
+            "type": "object",
+            "properties": {
+                "allowedDebugContainerImages": {
+                    "type": "array"
+                },
+                "authorizedDebugTargets": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "allDeployments": {
+                                "type": "boolean"
+                            },
+                            "allowedDebugContainerImages": {},
+                            "deployments": {
+                                "type": "array"
+                            },
+                            "namespaces": {
+                                "type": "array"
+                            }
+                        }
+                    }
+                },
+                "policies": {
+                    "type": "object",
+                    "properties": {
+                        "block-expired-exceptions": {
+                            "type": "object",
+                            "properties": {
+                                "enabled": {
+                                    "type": "boolean"
+                                },
+                                "mode": {
+                                    "type": "string"
+                                }
+                            }
+                        },
+                        "disallow-ephemeral-containers": {
+                            "type": "object",
+                            "properties": {
+                                "enabled": {
+                                    "type": "boolean"
+                                },
+                                "mode": {
+                                    "type": "string"
+                                }
+                            }
+                        },
+                        "disallow-unapproved-debug-access": {
+                            "type": "object",
+                            "properties": {
+                                "enabled": {
+                                    "type": "boolean"
+                                },
+                                "mode": {
+                                    "type": "string"
+                                }
+                            }
+                        },
+                        "purge-expired-exceptions": {
+                            "type": "object",
+                            "properties": {
+                                "cleanupSchedule": {
+                                    "type": "string"
+                                },
+                                "enabled": {
+                                    "type": "boolean"
+                                },
+                                "mode": {
+                                    "type": "string"
+                                },
+                                "targetAnnotation": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "kyverno-policies": {
+            "type": "object",
+            "properties": {
+                "customLabels": {
+                    "type": "object",
+                    "properties": {
+                        "application.giantswarm.io/team": {
+                            "type": "string"
+                        }
+                    }
+                },
+                "podSecurityStandard": {
+                    "type": "string"
+                },
+                "policyType": {
+                    "type": "string"
+                }
+            }
+        },
+        "policyNamePrefix": {
+            "type": "string"
+        },
+        "supplementalSecurityPolicies": {
+            "type": "object",
+            "properties": {
+                "policies": {
+                    "type": "object",
+                    "properties": {
+                        "add-default-deny-network-policy": {
+                            "type": "object",
+                            "properties": {
+                                "deleteNetworkPolicyOnKyvernoPolicyDeletion": {
+                                    "type": "boolean"
+                                },
+                                "enabled": {
+                                    "type": "boolean"
+                                },
+                                "generateForExistingNamespaces": {
+                                    "type": "boolean"
+                                },
+                                "networkPolicy": {
+                                    "type": "object",
+                                    "properties": {
+                                        "blockEgress": {
+                                            "type": "boolean"
+                                        },
+                                        "blockIngress": {
+                                            "type": "boolean"
+                                        },
+                                        "policyName": {
+                                            "type": "string"
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "audit-event-on-exec": {
+                            "type": "object",
+                            "properties": {
+                                "enabled": {
+                                    "type": "boolean"
+                                }
+                            }
+                        },
+                        "check-serviceaccount-secrets": {
+                            "type": "object",
+                            "properties": {
+                                "enabled": {
+                                    "type": "boolean"
+                                },
+                                "mode": {
+                                    "type": "string"
+                                }
+                            }
+                        },
+                        "disallow-gitrepo-volume": {
+                            "type": "object",
+                            "properties": {
+                                "enabled": {
+                                    "type": "boolean"
+                                },
+                                "mode": {
+                                    "type": "string"
+                                }
+                            }
+                        },
+                        "require-ro-rootfs": {
+                            "type": "object",
+                            "properties": {
+                                "enabled": {
+                                    "type": "boolean"
+                                },
+                                "mode": {
+                                    "type": "string"
+                                }
+                            }
+                        },
+                        "restrict-binding-clusteradmin": {
+                            "type": "object",
+                            "properties": {
+                                "enabled": {
+                                    "type": "boolean"
+                                },
+                                "mode": {
+                                    "type": "string"
+                                }
+                            }
+                        },
+                        "restrict-binding-system-groups": {
+                            "type": "object",
+                            "properties": {
+                                "enabled": {
+                                    "type": "boolean"
+                                },
+                                "mode": {
+                                    "type": "string"
+                                }
+                            }
+                        },
+                        "restrict-external-ips": {
+                            "type": "object",
+                            "properties": {
+                                "enabled": {
+                                    "type": "boolean"
+                                },
+                                "mode": {
+                                    "type": "string"
+                                }
+                            }
+                        },
+                        "restrict-sa-automount-sa-token": {
+                            "type": "object",
+                            "properties": {
+                                "enabled": {
+                                    "type": "boolean"
+                                },
+                                "mode": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
