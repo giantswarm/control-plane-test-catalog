@@ -1,0 +1,51 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+        "alerting": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "cronitorHeartbeatPingKey": {
+                    "type": "string",
+                    "description": "Cronitor ping key for heartbeat alerts"
+                },
+                "grafanaAddress": {
+                    "type": "string",
+                    "description": "Grafana instance address"
+                },
+                "slackAPIToken": {
+                    "type": "string",
+                    "description": "Slack API token for the default Slack receiver"
+                },
+                "teams": {
+                    "type": "array",
+                    "description": "List of team-specific configs for per-team PagerDuty routing Expected team contents: - name: teamA pagerdutyToken: token-for-teamA"
+                }
+            }
+        },
+        "global": {
+            "type": [
+                "object",
+                "null"
+            ],
+            "description": "Global values shared between all subcharts",
+            "$comment": "Added automatically by 'helm schema' to allow this chart to be used as a Helm dependency, as the `additionalProperties` setting would otherwise collide with Helm's special 'global' values key."
+        },
+        "managementCluster": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "name": {
+                    "type": "string",
+                    "description": "Cluster name"
+                },
+                "pipeline": {
+                    "type": "string",
+                    "description": "Pipeline identifier (e.g. stable, testing)"
+                }
+            }
+        }
+    }
+}
