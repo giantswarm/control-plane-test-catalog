@@ -1,0 +1,130 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "type": "object",
+    "additionalProperties": true,
+    "properties": {
+        "crds": {
+            "type": "object",
+            "properties": {
+                "annotations": {
+                    "type": "object",
+                    "properties": {
+                        "helm.sh/resource-policy": {
+                            "type": "string"
+                        }
+                    }
+                },
+                "customLabels": {
+                    "type": "object"
+                },
+                "groups": {
+                    "type": "object",
+                    "properties": {
+                        "kyverno": {
+                            "type": "object",
+                            "description": "Install CRDs in group `kyverno.io`",
+                            "properties": {
+                                "cleanuppolicies": {
+                                    "type": "boolean"
+                                },
+                                "clustercleanuppolicies": {
+                                    "type": "boolean"
+                                },
+                                "clusterpolicies": {
+                                    "type": "boolean"
+                                },
+                                "globalcontextentries": {
+                                    "type": "boolean"
+                                },
+                                "policies": {
+                                    "type": "boolean"
+                                },
+                                "policyexceptions": {
+                                    "type": "boolean"
+                                },
+                                "updaterequests": {
+                                    "type": "boolean"
+                                }
+                            }
+                        },
+                        "policies": {
+                            "type": "object",
+                            "description": "Install CRDs in group `reports.kyverno.io`",
+                            "properties": {
+                                "deletingpolicies": {
+                                    "type": "boolean"
+                                },
+                                "generatingpolicies": {
+                                    "type": "boolean"
+                                },
+                                "imagevalidatingpolicies": {
+                                    "type": "boolean"
+                                },
+                                "mutatingpolicies": {
+                                    "type": "boolean"
+                                },
+                                "namespaceddeletingpolicies": {
+                                    "type": "boolean"
+                                },
+                                "namespacedgeneratingpolicies": {
+                                    "type": "boolean"
+                                },
+                                "namespacedimagevalidatingpolicies": {
+                                    "type": "boolean"
+                                },
+                                "namespacedvalidatingpolicies": {
+                                    "type": "boolean"
+                                },
+                                "policyexceptions": {
+                                    "type": "boolean"
+                                },
+                                "validatingpolicies": {
+                                    "type": "boolean"
+                                }
+                            }
+                        },
+                        "reports": {
+                            "type": "object",
+                            "description": "This field can be overwritten by setting crds.labels in the parent chart",
+                            "properties": {
+                                "clusterephemeralreports": {
+                                    "type": "boolean"
+                                },
+                                "ephemeralreports": {
+                                    "type": "boolean"
+                                }
+                            }
+                        },
+                        "wgpolicyk8s": {
+                            "type": "object",
+                            "description": "Install CRDs in group `wgpolicyk8s.io`",
+                            "properties": {
+                                "clusterpolicyreports": {
+                                    "type": "boolean"
+                                },
+                                "policyreports": {
+                                    "type": "boolean"
+                                }
+                            }
+                        }
+                    }
+                },
+                "reportsServer": {
+                    "type": "object",
+                    "properties": {
+                        "enabled": {
+                            "type": "boolean",
+                            "description": "Kyverno reports-server is used in your cluster"
+                        }
+                    }
+                }
+            }
+        },
+        "name": {
+            "type": "string"
+        },
+        "serviceType": {
+            "type": "string"
+        }
+    }
+}
