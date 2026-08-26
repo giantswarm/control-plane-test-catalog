@@ -1,0 +1,29 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+        "crds": {
+            "type": "object",
+            "additionalProperties": true
+        },
+        "global": {
+            "type": [
+                "object",
+                "null"
+            ],
+            "description": "Global values shared between all subcharts",
+            "$comment": "Added automatically by 'helm schema' to allow this chart to be used as a Helm dependency, as the `additionalProperties` setting would otherwise collide with Helm's special 'global' values key."
+        },
+        "kyverno-api": {
+            "type": "object",
+            "additionalProperties": true
+        },
+        "name": {
+            "type": "string"
+        },
+        "serviceType": {
+            "type": "string"
+        }
+    }
+}
