@@ -62474,6 +62474,38 @@ entries:
       artifacthub.io/links: |
         - name: Support
           url: https://github.com/giantswarm/loki-app/issues
+      io.giantswarm.application.metadata: https://giantswarm.github.io/control-plane-test-catalog/loki-0.47.1-dev.main.2026-08-31.10-56-02.h4e65740.tgz-meta/main.yaml
+      io.giantswarm.application.readme: https://raw.githubusercontent.com/giantswarm/loki-app/refs/tags/v0.47.1-dev.main.2026-08-31.10-56-02.h4e65740/README.md
+      io.giantswarm.application.team: atlas
+      io.giantswarm.application.values-schema: https://raw.githubusercontent.com/giantswarm/loki-app/refs/tags/v0.47.1-dev.main.2026-08-31.10-56-02.h4e65740/helm/loki/values.schema.json
+      ui.giantswarm.io/logo: https://s.giantswarm.io/app-icons/grafana-loki/2/dark.svg
+    apiVersion: v2
+    appVersion: 3.7.6
+    created: "2026-08-31T10:56:36.746197924Z"
+    dependencies:
+    - condition: loki.enabled
+      name: loki
+      repository: https://grafana-community.github.io/helm-charts
+      version: 18.10.1
+    description: Helm chart for Grafana Loki in simple, scalable mode
+    digest: d4f681d2697c94c81297d6bc77eb2cbb34a7558fe783df74a03099487c4d88b7
+    home: https://github.com/giantswarm/loki-app
+    icon: https://s.giantswarm.io/app-icons/loki-stack/1/dark.svg
+    maintainers:
+    - email: team-atlas@giantswarm.io
+      name: giantswarm/team-atlas
+    name: loki
+    sources:
+    - https://github.com/giantswarm/loki-app
+    type: application
+    urls:
+    - https://giantswarm.github.io/control-plane-test-catalog/loki-0.47.1-dev.main.2026-08-31.10-56-02.h4e65740.tgz
+    version: 0.47.1-dev.main.2026-08-31.10-56-02.h4e65740
+  - annotations:
+      artifacthub.io/license: Apache-2.0
+      artifacthub.io/links: |
+        - name: Support
+          url: https://github.com/giantswarm/loki-app/issues
       io.giantswarm.application.metadata: https://giantswarm.github.io/control-plane-test-catalog/loki-0.47.1-dev.add-reques--irror-value.2026-08-31.10-55-02.hed3bffc.tgz-meta/main.yaml
       io.giantswarm.application.readme: https://raw.githubusercontent.com/giantswarm/loki-app/refs/tags/v0.47.1-dev.add-reques--irror-value.2026-08-31.10-55-02.hed3bffc/README.md
       io.giantswarm.application.team: atlas
@@ -90459,4 +90491,4 @@ entries:
     urls:
     - https://giantswarm.github.io/control-plane-test-catalog/vertical-pod-autoscaler-crd-4.1.3-dev.main.2026-07-14.04-48-25.hac7e233.tgz
     version: 4.1.3-dev.main.2026-07-14.04-48-25.hac7e233
-generated: "2026-08-31T10:55:31.871976135Z"
+generated: "2026-08-31T10:56:36.718156667Z"
