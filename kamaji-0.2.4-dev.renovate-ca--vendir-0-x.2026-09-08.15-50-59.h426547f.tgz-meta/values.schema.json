@@ -1,0 +1,570 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "properties": {
+    "affinity": {
+      "description": "Kubernetes affinity rules to apply to Kamaji controller pods",
+      "title": "affinity",
+      "type": "object"
+    },
+    "defaultDatastoreName": {
+      "description": "If specified, all the Kamaji instances with an unassigned DataStore will inherit this default value.",
+      "title": "defaultDatastoreName",
+      "type": "string"
+    },
+    "extraArgs": {
+      "description": "A list of extra arguments to add to the kamaji controller default ones",
+      "title": "extraArgs",
+      "type": "array"
+    },
+    "fullnameOverride": {
+      "title": "fullnameOverride",
+      "type": "string"
+    },
+    "healthProbeBindAddress": {
+      "default": ":8081",
+      "description": "The address the probe endpoint binds to. (default \":8081\")",
+      "title": "healthProbeBindAddress",
+      "type": "string"
+    },
+    "image": {
+      "properties": {
+        "pullPolicy": {
+          "default": "Always",
+          "title": "pullPolicy",
+          "type": "string"
+        },
+        "repository": {
+          "default": "gsoci.azurecr.io/giantswarm/kamaji",
+          "description": "The container image of the Kamaji controller.",
+          "title": "repository",
+          "type": "string"
+        },
+        "tag": {
+          "description": "Overrides the image tag whose default is the chart appVersion.",
+          "title": "tag",
+          "type": "null"
+        }
+      },
+      "title": "image",
+      "type": "object"
+    },
+    "imagePullSecrets": {
+      "items": {
+      },
+      "title": "imagePullSecrets",
+      "type": "array"
+    },
+    "kamaji-etcd": {
+      "description": "Subchart: See https://github.com/clastix/kamaji-etcd/blob/master/charts/kamaji-etcd/values.yaml",
+      "properties": {
+        "clusterDomain": {
+          "default": "cluster.local",
+          "description": "# -- Important, this must match your management cluster's clusterDomain, otherwise the init jobs will fail",
+          "title": "clusterDomain",
+          "type": "string"
+        },
+        "datastore": {
+          "properties": {
+            "enabled": {
+              "default": false,
+              "title": "enabled",
+              "type": "boolean"
+            },
+            "name": {
+              "default": "default",
+              "title": "name",
+              "type": "string"
+            }
+          },
+          "title": "datastore",
+          "type": "object"
+        },
+        "deploy": {
+          "default": false,
+          "title": "deploy",
+          "type": "boolean"
+        },
+        "fullnameOverride": {
+          "default": "kamaji-etcd",
+          "title": "fullnameOverride",
+          "type": "string"
+        }
+      },
+      "title": "kamaji-etcd",
+      "type": "object"
+    },
+    "kubeconfigGenerator": {
+      "properties": {
+        "affinity": {
+          "description": "Kubernetes affinity rules to apply to Kubeconfig Generator controller pods",
+          "title": "affinity",
+          "type": "object"
+        },
+        "enableLeaderElect": {
+          "default": true,
+          "description": "Enables the leader election.",
+          "title": "enableLeaderElect",
+          "type": "boolean"
+        },
+        "enabled": {
+          "default": false,
+          "description": "Toggle to deploy the Kubeconfig Generator Deployment.",
+          "title": "enabled",
+          "type": "boolean"
+        },
+        "extraArgs": {
+          "description": "A list of extra arguments to add to the Kubeconfig Generator controller default ones.",
+          "title": "extraArgs",
+          "type": "array"
+        },
+        "fullnameOverride": {
+          "title": "fullnameOverride",
+          "type": "string"
+        },
+        "healthProbeBindAddress": {
+          "default": ":8081",
+          "description": "The address the probe endpoint binds to.",
+          "title": "healthProbeBindAddress",
+          "type": "string"
+        },
+        "loggingDevel": {
+          "properties": {
+            "enable": {
+              "default": false,
+              "description": "Development Mode defaults(encoder=consoleEncoder,logLevel=Debug,stackTraceLevel=Warn). Production Mode defaults(encoder=jsonEncoder,logLevel=Info,stackTraceLevel=Error)",
+              "title": "enable",
+              "type": "boolean"
+            }
+          },
+          "title": "loggingDevel",
+          "type": "object"
+        },
+        "nodeSelector": {
+          "description": "Kubernetes node selector rules to schedule Kubeconfig Generator controller",
+          "title": "nodeSelector",
+          "type": "object"
+        },
+        "podAnnotations": {
+          "description": "The annotations to apply to the Kubeconfig Generator controller pods.",
+          "title": "podAnnotations",
+          "type": "object"
+        },
+        "podSecurityContext": {
+          "description": "The securityContext to apply to the Kubeconfig Generator controller pods.",
+          "properties": {
+            "runAsNonRoot": {
+              "default": true,
+              "title": "runAsNonRoot",
+              "type": "boolean"
+            },
+            "seccompProfile": {
+              "properties": {
+                "type": {
+                  "default": "RuntimeDefault",
+                  "title": "type",
+                  "type": "string"
+                }
+              },
+              "title": "seccompProfile",
+              "type": "object"
+            }
+          },
+          "title": "podSecurityContext",
+          "type": "object"
+        },
+        "replicaCount": {
+          "default": 2,
+          "description": "The number of the pod replicas for the Kubeconfig Generator controller.",
+          "title": "replicaCount",
+          "type": "integer"
+        },
+        "resources": {
+          "properties": {
+            "limits": {
+              "properties": {
+                "cpu": {
+                  "default": "200m",
+                  "title": "cpu",
+                  "type": "string"
+                },
+                "memory": {
+                  "default": "512Mi",
+                  "title": "memory",
+                  "type": "string"
+                }
+              },
+              "title": "limits",
+              "type": "object"
+            },
+            "requests": {
+              "properties": {
+                "cpu": {
+                  "default": "200m",
+                  "title": "cpu",
+                  "type": "string"
+                },
+                "memory": {
+                  "default": "512Mi",
+                  "title": "memory",
+                  "type": "string"
+                }
+              },
+              "title": "requests",
+              "type": "object"
+            }
+          },
+          "title": "resources",
+          "type": "object"
+        },
+        "securityContext": {
+          "description": "The securityContext to apply to the Kubeconfig Generator controller container only.",
+          "properties": {
+            "allowPrivilegeEscalation": {
+              "default": false,
+              "title": "allowPrivilegeEscalation",
+              "type": "boolean"
+            },
+            "capabilities": {
+              "properties": {
+                "drop": {
+                  "items": {
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      }
+                    ]
+                  },
+                  "title": "drop",
+                  "type": "array"
+                }
+              },
+              "title": "capabilities",
+              "type": "object"
+            },
+            "readOnlyRootFilesystem": {
+              "default": true,
+              "title": "readOnlyRootFilesystem",
+              "type": "boolean"
+            },
+            "runAsNonRoot": {
+              "default": true,
+              "title": "runAsNonRoot",
+              "type": "boolean"
+            },
+            "runAsUser": {
+              "default": 1000,
+              "title": "runAsUser",
+              "type": "integer"
+            },
+            "seccompProfile": {
+              "properties": {
+                "type": {
+                  "default": "RuntimeDefault",
+                  "title": "type",
+                  "type": "string"
+                }
+              },
+              "title": "seccompProfile",
+              "type": "object"
+            }
+          },
+          "title": "securityContext",
+          "type": "object"
+        },
+        "serviceAccountOverride": {
+          "description": "The name of the service account to use. If not set, the root Kamaji one will be used.",
+          "title": "serviceAccountOverride",
+          "type": "string"
+        },
+        "tolerations": {
+          "description": "Kubernetes node taints that the Kubeconfig Generator controller pods would tolerate",
+          "items": {
+          },
+          "title": "tolerations",
+          "type": "array"
+        }
+      },
+      "title": "kubeconfigGenerator",
+      "type": "object"
+    },
+    "livenessProbe": {
+      "description": "The livenessProbe for the controller container",
+      "properties": {
+        "httpGet": {
+          "properties": {
+            "path": {
+              "default": "/healthz",
+              "title": "path",
+              "type": "string"
+            },
+            "port": {
+              "default": "healthcheck",
+              "title": "port",
+              "type": "string"
+            }
+          },
+          "title": "httpGet",
+          "type": "object"
+        },
+        "initialDelaySeconds": {
+          "default": 15,
+          "title": "initialDelaySeconds",
+          "type": "integer"
+        },
+        "periodSeconds": {
+          "default": 20,
+          "title": "periodSeconds",
+          "type": "integer"
+        }
+      },
+      "title": "livenessProbe",
+      "type": "object"
+    },
+    "loggingDevel": {
+      "properties": {
+        "enable": {
+          "default": false,
+          "description": "Development Mode defaults(encoder=consoleEncoder,logLevel=Debug,stackTraceLevel=Warn). Production Mode defaults(encoder=jsonEncoder,logLevel=Info,stackTraceLevel=Error) (default false)",
+          "title": "enable",
+          "type": "boolean"
+        }
+      },
+      "title": "loggingDevel",
+      "type": "object"
+    },
+    "metricsBindAddress": {
+      "default": ":8080",
+      "description": "The address the metric endpoint binds to. (default \":8080\")",
+      "title": "metricsBindAddress",
+      "type": "string"
+    },
+    "nameOverride": {
+      "title": "nameOverride",
+      "type": "string"
+    },
+    "nodeSelector": {
+      "description": "Kubernetes node selector rules to schedule Kamaji controller",
+      "title": "nodeSelector",
+      "type": "object"
+    },
+    "podAnnotations": {
+      "description": "The annotations to apply to the Kamaji controller pods.",
+      "title": "podAnnotations",
+      "type": "object"
+    },
+    "podSecurityContext": {
+      "description": "The securityContext to apply to the Kamaji controller pods.",
+      "properties": {
+        "runAsNonRoot": {
+          "default": true,
+          "title": "runAsNonRoot",
+          "type": "boolean"
+        },
+        "seccompProfile": {
+          "properties": {
+            "type": {
+              "default": "RuntimeDefault",
+              "title": "type",
+              "type": "string"
+            }
+          },
+          "title": "seccompProfile",
+          "type": "object"
+        }
+      },
+      "title": "podSecurityContext",
+      "type": "object"
+    },
+    "readinessProbe": {
+      "description": "The readinessProbe for the controller container",
+      "properties": {
+        "httpGet": {
+          "properties": {
+            "path": {
+              "default": "/readyz",
+              "title": "path",
+              "type": "string"
+            },
+            "port": {
+              "default": "healthcheck",
+              "title": "port",
+              "type": "string"
+            }
+          },
+          "title": "httpGet",
+          "type": "object"
+        },
+        "initialDelaySeconds": {
+          "default": 5,
+          "title": "initialDelaySeconds",
+          "type": "integer"
+        },
+        "periodSeconds": {
+          "default": 10,
+          "title": "periodSeconds",
+          "type": "integer"
+        }
+      },
+      "title": "readinessProbe",
+      "type": "object"
+    },
+    "replicaCount": {
+      "default": 1,
+      "description": "The number of the pod replicas for the Kamaji controller.",
+      "title": "replicaCount",
+      "type": "integer"
+    },
+    "resources": {
+      "properties": {
+        "limits": {
+          "properties": {
+            "cpu": {
+              "default": "200m",
+              "title": "cpu",
+              "type": "string"
+            },
+            "memory": {
+              "default": "250Mi",
+              "title": "memory",
+              "type": "string"
+            }
+          },
+          "title": "limits",
+          "type": "object"
+        },
+        "requests": {
+          "properties": {
+            "cpu": {
+              "default": "100m",
+              "title": "cpu",
+              "type": "string"
+            },
+            "memory": {
+              "default": "20Mi",
+              "title": "memory",
+              "type": "string"
+            }
+          },
+          "title": "requests",
+          "type": "object"
+        }
+      },
+      "title": "resources",
+      "type": "object"
+    },
+    "securityContext": {
+      "description": "The securityContext to apply to the Kamaji controller container only. It does not apply to the Kamaji RBAC proxy container.",
+      "properties": {
+        "allowPrivilegeEscalation": {
+          "default": false,
+          "title": "allowPrivilegeEscalation",
+          "type": "boolean"
+        },
+        "capabilities": {
+          "properties": {
+            "drop": {
+              "items": {
+                "anyOf": [
+                  {
+                    "type": "string"
+                  }
+                ]
+              },
+              "title": "drop",
+              "type": "array"
+            }
+          },
+          "title": "capabilities",
+          "type": "object"
+        },
+        "readOnlyRootFilesystem": {
+          "default": true,
+          "title": "readOnlyRootFilesystem",
+          "type": "boolean"
+        },
+        "runAsNonRoot": {
+          "default": true,
+          "title": "runAsNonRoot",
+          "type": "boolean"
+        },
+        "runAsUser": {
+          "default": 1000,
+          "title": "runAsUser",
+          "type": "integer"
+        },
+        "seccompProfile": {
+          "properties": {
+            "type": {
+              "default": "RuntimeDefault",
+              "title": "type",
+              "type": "string"
+            }
+          },
+          "title": "seccompProfile",
+          "type": "object"
+        }
+      },
+      "title": "securityContext",
+      "type": "object"
+    },
+    "serviceAccount": {
+      "properties": {
+        "annotations": {
+          "description": "Annotations to add to the service account",
+          "title": "annotations",
+          "type": "object"
+        },
+        "create": {
+          "default": true,
+          "description": "Specifies whether a service account should be created",
+          "title": "create",
+          "type": "boolean"
+        },
+        "name": {
+          "default": "kamaji-controller-manager",
+          "description": "The name of the service account to use.\nIf not set and create is true, a name is generated using the fullname template",
+          "title": "name",
+          "type": "string"
+        }
+      },
+      "title": "serviceAccount",
+      "type": "object"
+    },
+    "serviceMonitor": {
+      "properties": {
+        "enabled": {
+          "default": false,
+          "description": "Toggle the ServiceMonitor true if you have Prometheus Operator installed and configured",
+          "title": "enabled",
+          "type": "boolean"
+        }
+      },
+      "title": "serviceMonitor",
+      "type": "object"
+    },
+    "telemetry": {
+      "description": "Disable the analytics traces collection",
+      "properties": {
+        "disabled": {
+          "default": false,
+          "title": "disabled",
+          "type": "boolean"
+        }
+      },
+      "title": "telemetry",
+      "type": "object"
+    },
+    "temporaryDirectoryPath": {
+      "default": "/tmp/kamaji",
+      "description": "Directory which will be used to work with temporary files. (default \"/tmp/kamaji\")",
+      "title": "temporaryDirectoryPath",
+      "type": "string"
+    },
+    "tolerations": {
+      "description": "Kubernetes node taints that the Kamaji controller pods would tolerate",
+      "title": "tolerations",
+      "type": "array"
+    }
+  },
+  "type": "object"
+}
