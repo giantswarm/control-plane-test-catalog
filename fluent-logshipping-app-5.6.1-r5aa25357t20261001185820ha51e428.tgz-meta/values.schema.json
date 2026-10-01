@@ -1,0 +1,404 @@
+{
+    "$schema": "http://json-schema.org/schema#",
+    "type": "object",
+    "properties": {
+        "clusterID": {
+            "type": "string"
+        },
+        "extraFilters": {
+            "type": "object",
+            "properties": {
+                "postprocessing": {
+                    "type": "string"
+                },
+                "preprocessing": {
+                    "type": "string"
+                }
+            }
+        },
+        "extraParsers": {
+            "type": "array"
+        },
+        "fluentbit": {
+            "type": "object",
+            "properties": {
+                "backlogMemLimit": {
+                    "type": "string"
+                },
+                "buffering": {
+                    "type": "object",
+                    "properties": {
+                        "audit": {
+                            "type": "string"
+                        },
+                        "containers": {
+                            "type": "string"
+                        },
+                        "sshd": {
+                            "type": "string"
+                        },
+                        "syslog": {
+                            "type": "string"
+                        }
+                    }
+                },
+                "flushFrequencyInSeconds": {
+                    "type": "integer"
+                },
+                "groupID": {
+                    "type": "integer"
+                },
+                "image": {
+                    "type": "object",
+                    "properties": {
+                        "name": {
+                            "type": "string"
+                        },
+                        "tag": {
+                            "type": "string"
+                        }
+                    }
+                },
+                "logLevel": {
+                    "type": "string"
+                },
+                "memBufferLimit": {
+                    "type": "string"
+                },
+                "persistence": {
+                    "type": "object",
+                    "properties": {
+                        "emptyDir": {
+                            "type": "object",
+                            "properties": {
+                                "medium": {
+                                    "type": "string"
+                                },
+                                "sizeLimit": {
+                                    "type": "string"
+                                }
+                            }
+                        },
+                        "pvc": {
+                            "type": "object",
+                            "properties": {
+                                "accessModes": {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "string"
+                                    }
+                                },
+                                "enabled": {
+                                    "type": "boolean"
+                                },
+                                "size": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                },
+                "port": {
+                    "type": "integer"
+                },
+                "priorityClass": {
+                    "type": "object",
+                    "properties": {
+                        "create": {
+                            "type": "boolean"
+                        },
+                        "enabled": {
+                            "type": "boolean"
+                        },
+                        "name": {
+                            "type": "string"
+                        },
+                        "value": {
+                            "type": "integer"
+                        }
+                    }
+                },
+                "protocol": {
+                    "type": "string"
+                },
+                "storageMaxChunksUp": {
+                    "type": "integer"
+                },
+                "userID": {
+                    "type": "integer"
+                }
+            }
+        },
+        "global": {
+            "type": "object",
+            "properties": {
+                "podSecurityStandards": {
+                    "type": "object",
+                    "properties": {
+                        "enforced": {
+                            "type": "boolean"
+                        }
+                    }
+                }
+            }
+        },
+        "kyvernoPolicyExceptions": {
+            "type": "object",
+            "properties": {
+                "enabled": {
+                    "type": "boolean"
+                },
+                "namespace": {
+                    "type": "string"
+                }
+            }
+        },
+        "outputs": {
+            "type": "object",
+            "properties": {
+                "aws": {
+                    "type": "object",
+                    "properties": {
+                        "S3": {
+                            "type": "object",
+                            "properties": {
+                                "bucketName": {
+                                    "type": "string"
+                                },
+                                "bucketPathPrefix": {
+                                    "type": "string"
+                                },
+                                "enabled": {
+                                    "type": "boolean"
+                                },
+                                "endpoint": {
+                                    "type": "string"
+                                },
+                                "inputLogTypes": {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "string"
+                                    }
+                                },
+                                "s3_object_key_format": {
+                                    "type": "string"
+                                },
+                                "totalFileSize": {
+                                    "type": "string"
+                                }
+                            }
+                        },
+                        "cloudWatch": {
+                            "type": "object",
+                            "properties": {
+                                "enabled": {
+                                    "type": "boolean"
+                                },
+                                "inputLogTypes": {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "string"
+                                    }
+                                },
+                                "logGroupName": {
+                                    "type": "string"
+                                },
+                                "logRetentionDays": {
+                                    "type": "integer"
+                                },
+                                "logStreamName": {
+                                    "type": "string"
+                                }
+                            }
+                        },
+                        "credentials": {
+                            "type": "object",
+                            "properties": {
+                                "awsAccessKey": {
+                                    "type": "string"
+                                },
+                                "awsSecretKey": {
+                                    "type": "string"
+                                }
+                            }
+                        },
+                        "kiam": {
+                            "type": "boolean"
+                        },
+                        "region": {
+                            "type": "string"
+                        },
+                        "role": {
+                            "type": "string"
+                        }
+                    }
+                },
+                "elasticsearch": {
+                    "type": "object",
+                    "properties": {
+                        "config": {
+                            "type": "object",
+                            "properties": {
+                                "audit": {
+                                    "type": "object",
+                                    "properties": {
+                                        "kubernetes": {
+                                            "type": "object",
+                                            "properties": {
+                                                "indexName": {
+                                                    "type": "string"
+                                                }
+                                            }
+                                        },
+                                        "ssh": {
+                                            "type": "object",
+                                            "properties": {
+                                                "indexName": {
+                                                    "type": "string"
+                                                }
+                                            }
+                                        }
+                                    }
+                                },
+                                "containers": {
+                                    "type": "object",
+                                    "properties": {
+                                        "indexName": {
+                                            "type": "string"
+                                        }
+                                    }
+                                },
+                                "syslog": {
+                                    "type": "object",
+                                    "properties": {
+                                        "indexName": {
+                                            "type": "string"
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "enabled": {
+                            "type": "boolean"
+                        },
+                        "host": {
+                            "type": "string"
+                        },
+                        "inputLogTypes": {
+                            "type": "array",
+                            "items": {
+                                "type": "string"
+                            }
+                        },
+                        "password": {
+                            "type": "string"
+                        },
+                        "path": {
+                            "type": "string"
+                        },
+                        "port": {
+                            "type": "integer"
+                        },
+                        "secured": {
+                            "type": "boolean"
+                        },
+                        "sslVerify": {
+                            "type": "boolean"
+                        },
+                        "tlsEnabled": {
+                            "type": "boolean"
+                        },
+                        "user": {
+                            "type": "string"
+                        }
+                    }
+                },
+                "extraOutputConfig": {
+                    "type": "string"
+                },
+                "inputLogTypes": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                }
+            }
+        },
+        "registry": {
+            "type": "object",
+            "properties": {
+                "domain": {
+                    "type": "string"
+                }
+            }
+        },
+        "resources": {
+            "type": "object",
+            "properties": {
+                "limits": {
+                    "type": "object",
+                    "properties": {
+                        "memory": {
+                            "type": "string"
+                        }
+                    }
+                },
+                "requests": {
+                    "type": "object",
+                    "properties": {
+                        "cpu": {
+                            "type": "string"
+                        },
+                        "memory": {
+                            "type": "string"
+                        }
+                    }
+                }
+            }
+        },
+        "serviceAccount": {
+            "type": "object",
+            "properties": {
+                "annotations": {
+                    "type": "object"
+                }
+            }
+        },
+        "serviceMonitor": {
+            "type": "object",
+            "properties": {
+                "enabled": {
+                    "type": "boolean"
+                },
+                "interval": {
+                    "type": "string"
+                },
+                "scrapeTimeout": {
+                    "type": "string"
+                }
+            }
+        },
+        "tolerations": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "effect": {
+                        "type": "string"
+                    },
+                    "operator": {
+                        "type": "string"
+                    }
+                }
+            }
+        },
+        "verticalPodAutoscaler": {
+            "type": "object",
+            "properties": {
+                "enabled": {
+                    "type": "boolean"
+                }
+            }
+        }
+    }
+}
