@@ -1,0 +1,106 @@
+{
+    "$schema": "http://json-schema.org/schema#",
+    "type": "object",
+    "properties": {
+        "appCatalog": {
+            "type": "object",
+            "properties": {
+                "catalogNamespace": {
+                    "type": "string"
+                },
+                "catalogVisibility": {
+                    "type": "string"
+                },
+                "config": {
+                    "type": "object",
+                    "properties": {
+                        "configMap": {
+                            "type": "object",
+                            "properties": {
+                                "managed": {
+                                    "type": "boolean"
+                                },
+                                "name": {
+                                    "type": "string"
+                                },
+                                "namespace": {
+                                    "type": "string"
+                                },
+                                "values": {
+                                    "type": "object"
+                                }
+                            }
+                        },
+                        "secret": {
+                            "type": "object",
+                            "properties": {
+                                "managed": {
+                                    "type": "boolean"
+                                },
+                                "mergeIntoCM": {
+                                    "type": "boolean"
+                                },
+                                "name": {
+                                    "type": "string"
+                                },
+                                "namespace": {
+                                    "type": "string"
+                                },
+                                "values": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                },
+                "description": {
+                    "type": "string"
+                },
+                "logoURL": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "repositories": {
+                    "type": "array"
+                },
+                "storage": {
+                    "type": "object",
+                    "properties": {
+                        "URL": {
+                            "type": "string"
+                        },
+                        "type": {
+                            "type": "string"
+                        }
+                    }
+                },
+                "title": {
+                    "type": "string"
+                }
+            }
+        },
+        "appOperator": {
+            "type": "object",
+            "properties": {
+                "version": {
+                    "type": "string"
+                }
+            }
+        },
+        "vintage": {
+            "type": "object",
+            "properties": {
+                "appCatalog": {
+                    "type": "object",
+                    "properties": {
+                        "create": {
+                            "type": "boolean"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
