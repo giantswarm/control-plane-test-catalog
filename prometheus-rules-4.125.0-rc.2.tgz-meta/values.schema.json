@@ -1,0 +1,127 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+        "Installation": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "V1": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                        "Guest": {
+                            "type": "object",
+                            "additionalProperties": false,
+                            "properties": {
+                                "Kubernetes": {
+                                    "type": "object",
+                                    "additionalProperties": false,
+                                    "properties": {
+                                        "IngressController": {
+                                            "type": "object",
+                                            "additionalProperties": false,
+                                            "properties": {
+                                                "BaseDomain": {
+                                                    "type": "string"
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "baseDomain": {
+            "type": "string"
+        },
+        "bootstrapMode": {
+            "type": "object",
+            "additionalProperties": true
+        },
+        "chartOperator": {
+            "type": "object",
+            "additionalProperties": true
+        },
+        "ciliumNetworkPolicy": {
+            "type": "object",
+            "additionalProperties": true
+        },
+        "cluster": {
+            "type": "object",
+            "additionalProperties": true
+        },
+        "clusterCA": {
+            "type": "string"
+        },
+        "clusterCIDR": {
+            "type": "string"
+        },
+        "clusterDNSIP": {
+            "type": "string"
+        },
+        "clusterID": {
+            "type": "string"
+        },
+        "gcpProject": {
+            "type": "string"
+        },
+        "global": {
+            "type": [
+                "object",
+                "null"
+            ],
+            "description": "Global values shared between all subcharts",
+            "$comment": "Added automatically by 'helm schema' to allow this chart to be used as a Helm dependency, as this schema would otherwise not allow Helm's special 'global' values key."
+        },
+        "managementCluster": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "customer": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "pipeline": {
+                    "type": "string"
+                },
+                "provider": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                        "flavor": {
+                            "type": "string"
+                        },
+                        "kind": {
+                            "type": "string"
+                        },
+                        "region": {
+                            "type": "string"
+                        }
+                    }
+                }
+            }
+        },
+        "name": {
+            "type": "string"
+        },
+        "namespace": {
+            "type": "string"
+        },
+        "provider": {
+            "type": "string"
+        },
+        "serviceType": {
+            "type": "string"
+        },
+        "subscriptionID": {
+            "type": "string"
+        }
+    }
+}
