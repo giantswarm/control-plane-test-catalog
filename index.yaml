@@ -175863,6 +175863,39 @@ entries:
           url: https://github.com/giantswarm/plugin-barman-cloud/issues
         - name: Upstream project
           url: https://github.com/cloudnative-pg/charts/tree/main/charts/plugin-barman-cloud
+      io.giantswarm.application.metadata: https://giantswarm.github.io/control-plane-test-catalog/plugin-barman-cloud-0.4.1-r5aa25357t20261019085953h229ef7e.tgz-meta/main.yaml
+      io.giantswarm.application.readme: https://raw.githubusercontent.com/giantswarm/plugin-barman-cloud/refs/tags/v0.4.1-r5aa25357t20261019085953h229ef7e/README.md
+      io.giantswarm.application.team: atlas
+      io.giantswarm.application.values-schema: https://raw.githubusercontent.com/giantswarm/plugin-barman-cloud/refs/tags/v0.4.1-r5aa25357t20261019085953h229ef7e/helm/plugin-barman-cloud/values.schema.json
+    apiVersion: v2
+    appVersion: 0.12.0
+    created: "2026-10-19T09:00:35.908846128Z"
+    dependencies:
+    - alias: pluginbarmancloud
+      condition: pluginbarmancloud.enabled
+      name: plugin-barman-cloud
+      repository: https://cloudnative-pg.io/charts
+      version: 0.8.1
+    description: A Helm chart for plugin-barman-cloud
+    digest: eb6746675a5396465bc51ae3e1494a6bbb75d2f906914704f3040486cfd8495b
+    home: https://github.com/giantswarm/plugin-barman-cloud
+    icon: https://s.giantswarm.io/app-icons/cloudnative-pg/icon-light.svg
+    maintainers:
+    - email: team-atlas@giantswarm.io
+      name: giantswarm/team-atlas
+    name: plugin-barman-cloud
+    sources:
+    - https://github.com/cloudnative-pg/charts/tree/main/charts/plugin-barman-cloud
+    urls:
+    - https://giantswarm.github.io/control-plane-test-catalog/plugin-barman-cloud-0.4.1-r5aa25357t20261019085953h229ef7e.tgz
+    version: 0.4.1-r5aa25357t20261019085953h229ef7e
+  - annotations:
+      artifacthub.io/license: Apache-2.0
+      artifacthub.io/links: |
+        - name: Support
+          url: https://github.com/giantswarm/plugin-barman-cloud/issues
+        - name: Upstream project
+          url: https://github.com/cloudnative-pg/charts/tree/main/charts/plugin-barman-cloud
       io.giantswarm.application.metadata: https://giantswarm.github.io/control-plane-test-catalog/plugin-barman-cloud-0.4.1-r5aa25357t20261019052355h63e3906.tgz-meta/main.yaml
       io.giantswarm.application.readme: https://raw.githubusercontent.com/giantswarm/plugin-barman-cloud/refs/tags/v0.4.1-r5aa25357t20261019052355h63e3906/README.md
       io.giantswarm.application.team: atlas
@@ -216234,4 +216267,4 @@ entries:
     urls:
     - https://giantswarm.github.io/control-plane-test-catalog/vertical-pod-autoscaler-crd-4.1.3-dev.main.2026-09-05.09-21-28.ha2a4753.tgz
     version: 4.1.3-dev.main.2026-09-05.09-21-28.ha2a4753
-generated: "2026-10-19T08:54:38.238659365Z"
+generated: "2026-10-19T09:00:35.905584432Z"
