@@ -177107,6 +177107,38 @@ entries:
       artifacthub.io/links: |
         - name: Support
           url: https://github.com/giantswarm/loki-app/issues
+      io.giantswarm.application.metadata: https://giantswarm.github.io/control-plane-test-catalog/loki-0.48.1-dev.loki-thanos-objstore.2026-10-22.08-42-36.h3356f2a.tgz-meta/main.yaml
+      io.giantswarm.application.readme: https://raw.githubusercontent.com/giantswarm/loki-app/refs/tags/v0.48.1-dev.loki-thanos-objstore.2026-10-22.08-42-36.h3356f2a/README.md
+      io.giantswarm.application.team: atlas
+      io.giantswarm.application.values-schema: https://raw.githubusercontent.com/giantswarm/loki-app/refs/tags/v0.48.1-dev.loki-thanos-objstore.2026-10-22.08-42-36.h3356f2a/helm/loki/values.schema.json
+      ui.giantswarm.io/logo: https://s.giantswarm.io/app-icons/grafana-loki/2/dark.svg
+    apiVersion: v2
+    appVersion: 3.7.6
+    created: "2026-10-22T08:43:21.966656404Z"
+    dependencies:
+    - condition: loki.enabled
+      name: loki
+      repository: https://grafana-community.github.io/helm-charts
+      version: 18.13.7
+    description: Helm chart for Grafana Loki in simple, scalable mode
+    digest: 88705f11cd7d829ee78d23bd3e6bcc6a8871e36e6b7f4bde728cfdc2f6257115
+    home: https://github.com/giantswarm/loki-app
+    icon: https://s.giantswarm.io/app-icons/loki-stack/1/dark.svg
+    maintainers:
+    - email: team-atlas@giantswarm.io
+      name: giantswarm/team-atlas
+    name: loki
+    sources:
+    - https://github.com/giantswarm/loki-app
+    type: application
+    urls:
+    - https://giantswarm.github.io/control-plane-test-catalog/loki-0.48.1-dev.loki-thanos-objstore.2026-10-22.08-42-36.h3356f2a.tgz
+    version: 0.48.1-dev.loki-thanos-objstore.2026-10-22.08-42-36.h3356f2a
+  - annotations:
+      artifacthub.io/license: Apache-2.0
+      artifacthub.io/links: |
+        - name: Support
+          url: https://github.com/giantswarm/loki-app/issues
       io.giantswarm.application.metadata: https://giantswarm.github.io/control-plane-test-catalog/loki-0.48.1-dev.loki-thanos-objstore.2026-10-21.15-20-40.ha10d813.tgz-meta/main.yaml
       io.giantswarm.application.readme: https://raw.githubusercontent.com/giantswarm/loki-app/refs/tags/v0.48.1-dev.loki-thanos-objstore.2026-10-21.15-20-40.ha10d813/README.md
       io.giantswarm.application.team: atlas
@@ -245760,4 +245792,4 @@ entries:
     urls:
     - https://giantswarm.github.io/control-plane-test-catalog/vertical-pod-autoscaler-crd-4.1.3-dev.main.2026-09-05.09-21-28.ha2a4753.tgz
     version: 4.1.3-dev.main.2026-09-05.09-21-28.ha2a4753
-generated: "2026-10-22T08:42:44.755834417Z"
+generated: "2026-10-22T08:43:21.941094851Z"
