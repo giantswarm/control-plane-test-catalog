@@ -232449,6 +232449,46 @@ entries:
           url: https://github.com/giantswarm/tempo-app/issues
         - name: Upstream project
           url: https://github.com/grafana-community/helm-charts/blob/main/charts/tempo-distributed
+      io.giantswarm.application.metadata: https://giantswarm.github.io/control-plane-test-catalog/tempo-0.18.1-r6e3139cdt20261023094855h2e9ff3a.tgz-meta/main.yaml
+      io.giantswarm.application.readme: https://raw.githubusercontent.com/giantswarm/tempo-app/refs/tags/v0.18.1-r6e3139cdt20261023094855h2e9ff3a/README.md
+      io.giantswarm.application.team: atlas
+      io.giantswarm.application.values-schema: https://raw.githubusercontent.com/giantswarm/tempo-app/refs/tags/v0.18.1-r6e3139cdt20261023094855h2e9ff3a/helm/tempo/values.schema.json
+    apiVersion: v2
+    appVersion: 2.10.7
+    created: "2026-10-23T09:49:41.801495357Z"
+    dependencies:
+    - alias: tempo
+      condition: tempo.enabled
+      name: tempo-distributed
+      repository: https://grafana-community.github.io/helm-charts
+      version: 2.26.2
+    - alias: vulture
+      condition: vulture.enabled
+      name: tempo-vulture
+      repository: https://grafana-community.github.io/helm-charts
+      version: 0.14.1
+    description: Helm chart for Grafana Tempo in microservice mode
+    digest: 50fc98e6abefd81c4324a6bf0faa3eff0703b43cd3139bf70c47fefee8bff590
+    home: https://github.com/giantswarm/tempo-app
+    icon: https://s.giantswarm.io/app-icons/grafana-tempo/1/light.svg
+    maintainers:
+    - email: team-atlas@giantswarm.io
+      name: giantswarm/team-atlas
+    name: tempo
+    sources:
+    - https://github.com/giantswarm/tempo-app
+    - https://github.com/grafana-community/helm-charts/blob/main/charts/tempo-distributed
+    type: application
+    urls:
+    - https://giantswarm.github.io/control-plane-test-catalog/tempo-0.18.1-r6e3139cdt20261023094855h2e9ff3a.tgz
+    version: 0.18.1-r6e3139cdt20261023094855h2e9ff3a
+  - annotations:
+      artifacthub.io/license: Apache-2.0
+      artifacthub.io/links: |
+        - name: Support
+          url: https://github.com/giantswarm/tempo-app/issues
+        - name: Upstream project
+          url: https://github.com/grafana-community/helm-charts/blob/main/charts/tempo-distributed
       io.giantswarm.application.metadata: https://giantswarm.github.io/control-plane-test-catalog/tempo-0.18.1-r6e3139cdt20261022112528h5ccd106.tgz-meta/main.yaml
       io.giantswarm.application.readme: https://raw.githubusercontent.com/giantswarm/tempo-app/refs/tags/v0.18.1-r6e3139cdt20261022112528h5ccd106/README.md
       io.giantswarm.application.team: atlas
@@ -256628,4 +256668,4 @@ entries:
     urls:
     - https://giantswarm.github.io/control-plane-test-catalog/vertical-pod-autoscaler-crd-4.1.3-dev.main.2026-09-05.09-21-28.ha2a4753.tgz
     version: 4.1.3-dev.main.2026-09-05.09-21-28.ha2a4753
-generated: "2026-10-23T09:49:11.799323562Z"
+generated: "2026-10-23T09:49:41.783667397Z"
