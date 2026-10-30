@@ -1,0 +1,68 @@
+[![CircleCI](https://dl.circleci.com/status-badge/img/gh/giantswarm/cert-exporter/tree/master.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/giantswarm/cert-exporter/tree/master)
+
+# cert-exporter
+
+Exposes three metrics to Prometheus regarding certificates/tokens:
+
+## `cert_exporter_not_after`
+
+Timestamp after which the cert is invalid (for certificate files mounted from the host filesystem). When a file contains multiple concatenated certificates, one series is emitted per certificate, distinguished by the `serialnumber` label. Certificates that share a serial number (Kyverno regenerates its webhook CA with serial `0` and the same key) are told apart by the `fingerprint` label, the first 16 hex characters of the certificate's SHA-256 fingerprint.
+
+| Label | Value |
+|---|---|
+| `path` | File path of the certificate |
+| `serialnumber` | Certificate serial number, lowercase hex |
+| `fingerprint` | First 16 lowercase hex characters of the SHA-256 fingerprint of the certificate (DER) |
+
+## `cert_exporter_secret_not_after`
+
+Timestamp after which the cert is invalid (for certificates stored in Kubernetes secrets). When a secret key contains multiple concatenated certificates, one series is emitted per certificate, distinguished by the `serialnumber` label. Certificates that share a serial number (Kyverno regenerates its webhook CA with serial `0` and the same key) are told apart by the `fingerprint` label, the first 16 hex characters of the certificate's SHA-256 fingerprint.
+
+| Label | Value |
+|---|---|
+| `name` | Secret name |
+| `namespace` | Secret namespace |
+| `secretkey` | Key within the secret (`ca.crt` or `tls.crt`) |
+| `certificatename` | `cert-manager.io/certificate-name` annotation, if any |
+| `serialnumber` | Certificate serial number, lowercase hex |
+| `fingerprint` | First 16 lowercase hex characters of the SHA-256 fingerprint of the certificate (DER) |
+
+## `cert_exporter_token_not_after`
+
+Timestamp after which the Vault token is expired.
+
+## Deployment
+
+* Managed by [app-operator].
+* Production releases are stored in the [default-catalog].
+* WIP releases are stored in the [default-test-catalog].
+
+## Installing the Chart
+
+To install the chart locally:
+
+```bash
+$ git clone https://github.com/giantswarm/cert-exporter.git
+$ cd cert-exporter
+$ helm install helm/cert-exporter
+```
+
+Provide a custom `values.yaml`:
+
+```bash
+$ helm install cert-exporter -f values.yaml
+```
+
+## Release Process
+
+* Ensure CHANGELOG.md is up to date.
+* Create a new GitHub release with the version e.g. `v0.1.0` and link the
+changelog entry.
+* This will push a new git tag and trigger a new tarball to be pushed to the
+[default-catalog].
+* Update [cluster-operator] with the new version.
+
+[app-operator]: https://github.com/giantswarm/app-operator
+[cluster-operator]: https://github.com/giantswarm/cluster-operator
+[default-catalog]: https://github.com/giantswarm/default-catalog
+[default-test-catalog]: https://github.com/giantswarm/default-test-catalog
