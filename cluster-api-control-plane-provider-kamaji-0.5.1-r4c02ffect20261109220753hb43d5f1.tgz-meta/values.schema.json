@@ -1,0 +1,86 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "additionalProperties": false,
+  "properties": {
+    "image": {
+      "additionalProperties": false,
+      "properties": {
+        "name": {
+          "default": "giantswarm/cluster-api-control-plane-provider-kamaji",
+          "title": "name",
+          "type": "string"
+        },
+        "repository": {
+          "default": "gsoci.azurecr.io",
+          "title": "repository",
+          "type": "string"
+        },
+        "tag": {
+          "title": "tag",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "repository",
+        "tag"
+      ],
+      "title": "image",
+      "type": "object"
+    },
+    "resources": {
+      "additionalProperties": false,
+      "properties": {
+        "limits": {
+          "additionalProperties": false,
+          "properties": {
+            "cpu": {
+              "title": "cpu",
+              "type": "string"
+            },
+            "memory": {
+              "title": "memory",
+              "type": "string"
+            }
+          },
+          "required": [
+            "cpu",
+            "memory"
+          ],
+          "title": "limits",
+          "type": "object"
+        },
+        "requests": {
+          "additionalProperties": false,
+          "properties": {
+            "cpu": {
+              "title": "cpu",
+              "type": "string"
+            },
+            "memory": {
+              "title": "memory",
+              "type": "string"
+            }
+          },
+          "required": [
+            "cpu",
+            "memory"
+          ],
+          "title": "requests",
+          "type": "object"
+        }
+      },
+      "required": [
+        "limits",
+        "requests"
+      ],
+      "title": "resources",
+      "type": "object"
+    }
+  },
+  "required": [
+    "image",
+    "resources"
+  ],
+  "type": "object"
+}
