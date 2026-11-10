@@ -110411,6 +110411,51 @@ entries:
       artifacthub.io/links: |
         - name: Support
           url: https://github.com/giantswarm/dashboards/issues
+      io.giantswarm.application.metadata: https://giantswarm.github.io/control-plane-test-catalog/dashboards-4.34.1-r8a344e86t20261110143827h4856159.tgz-meta/main.yaml
+      io.giantswarm.application.readme: https://raw.githubusercontent.com/giantswarm/dashboards/refs/tags/v4.34.1-r8a344e86t20261110143827h4856159/README.md
+      io.giantswarm.application.team: atlas
+      io.giantswarm.application.values-schema: https://raw.githubusercontent.com/giantswarm/dashboards/refs/tags/v4.34.1-r8a344e86t20261110143827h4856159/helm/dashboards/values.schema.json
+    apiVersion: v2
+    appVersion: 4.34.1-r8a344e86t20261110143827h4856159
+    created: "2026-11-10T14:39:43.304969898Z"
+    dependencies:
+    - condition: observability.enabled
+      name: observability
+      repository: ""
+      version: 1.0.0
+    - condition: kubernetes.enabled
+      name: kubernetes
+      repository: ""
+      version: 1.0.0
+    - condition: cloud.enabled
+      name: cloud
+      repository: ""
+      version: 1.0.0
+    - condition: security.enabled
+      name: security
+      repository: ""
+      version: 1.0.0
+    - condition: networking.enabled
+      name: networking
+      repository: ""
+      version: 1.0.0
+    - condition: app_platform.enabled
+      name: app_platform
+      repository: ""
+      version: 1.0.0
+    description: Grafana dashboards accessible by Giant Swarm customers
+    digest: 6a4d3c7734c02ed45d7c988aafbbb8fe7eaf257f8c74c5e0a710f5f8ed1d6b00
+    home: https://github.com/giantswarm/dashboards
+    icon: https://s.giantswarm.io/app-icons/grafana/1/light.svg
+    name: dashboards
+    urls:
+    - https://giantswarm.github.io/control-plane-test-catalog/dashboards-4.34.1-r8a344e86t20261110143827h4856159.tgz
+    version: 4.34.1-r8a344e86t20261110143827h4856159
+  - annotations:
+      artifacthub.io/license: Apache-2.0
+      artifacthub.io/links: |
+        - name: Support
+          url: https://github.com/giantswarm/dashboards/issues
       io.giantswarm.application.metadata: https://giantswarm.github.io/control-plane-test-catalog/dashboards-4.34.1-r8a344e86t20261109201220hac4a457.tgz-meta/main.yaml
       io.giantswarm.application.readme: https://raw.githubusercontent.com/giantswarm/dashboards/refs/tags/v4.34.1-r8a344e86t20261109201220hac4a457/README.md
       io.giantswarm.application.team: atlas
@@ -265873,4 +265918,4 @@ entries:
     urls:
     - https://giantswarm.github.io/control-plane-test-catalog/vertical-pod-autoscaler-crd-4.1.3-r4c02ffect20261008001756h16742b6.tgz
     version: 4.1.3-r4c02ffect20261008001756h16742b6
-generated: "2026-11-10T14:38:38.875283399Z"
+generated: "2026-11-10T14:39:43.259351196Z"
