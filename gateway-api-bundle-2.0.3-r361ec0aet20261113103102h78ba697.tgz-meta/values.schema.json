@@ -1,0 +1,261 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$defs": {
+        "app.json": {
+            "$schema": "https://json-schema.org/draft/2020-12/schema",
+            "$defs": {
+                "userValues": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                        "values": {
+                            "type": [
+                                "object",
+                                "string"
+                            ],
+                            "additionalProperties": true
+                        }
+                    }
+                }
+            },
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "appName": {
+                    "type": "string"
+                },
+                "catalog": {
+                    "type": "string"
+                },
+                "chartName": {
+                    "type": "string"
+                },
+                "dependsOn": {
+                    "type": [
+                        "array",
+                        "string"
+                    ],
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "enabled": {
+                    "type": "boolean"
+                },
+                "extraConfigs": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "required": [
+                            "name"
+                        ],
+                        "additionalProperties": false,
+                        "properties": {
+                            "kind": {
+                                "type": "string"
+                            },
+                            "name": {
+                                "type": "string"
+                            },
+                            "namespace": {
+                                "type": "string"
+                            },
+                            "optional": {
+                                "type": "boolean"
+                            },
+                            "priority": {
+                                "type": "integer"
+                            }
+                        }
+                    }
+                },
+                "namespace": {
+                    "type": "string"
+                },
+                "skipCRDs": {
+                    "type": "boolean"
+                },
+                "timeout": {
+                    "type": "string"
+                },
+                "userConfig": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                        "configMap": {
+                            "$ref": "#/$defs/app.json/$defs/userValues"
+                        },
+                        "secret": {
+                            "$ref": "#/$defs/app.json/$defs/userValues"
+                        }
+                    }
+                },
+                "valuesFile": {
+                    "type": "string"
+                },
+                "version": {
+                    "type": "string"
+                }
+            }
+        }
+    },
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+        "apps": {
+            "type": "object",
+            "additionalProperties": true,
+            "properties": {
+                "cloudwatchExporter": {
+                    "$ref": "#/$defs/app.json",
+                    "type": "object",
+                    "unevaluatedProperties": false
+                },
+                "envoyGateway": {
+                    "$ref": "#/$defs/app.json",
+                    "type": "object",
+                    "unevaluatedProperties": false
+                },
+                "gatewayApiConfig": {
+                    "$ref": "#/$defs/app.json",
+                    "type": "object",
+                    "unevaluatedProperties": false
+                },
+                "gatewayApiCrds": {
+                    "$ref": "#/$defs/app.json",
+                    "type": "object",
+                    "unevaluatedProperties": false
+                },
+                "gatewayApiStateMetrics": {
+                    "$ref": "#/$defs/app.json",
+                    "type": "object",
+                    "unevaluatedProperties": false
+                }
+            }
+        },
+        "aws": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "accountID": {
+                    "type": "string"
+                },
+                "baseDomain": {
+                    "type": "string"
+                },
+                "oidcDomain": {
+                    "type": "string"
+                },
+                "region": {
+                    "type": "string"
+                }
+            }
+        },
+        "baseDomain": {
+            "type": "string"
+        },
+        "bootstrapMode": {
+            "type": "object",
+            "additionalProperties": true
+        },
+        "chartOperator": {
+            "type": "object",
+            "additionalProperties": true
+        },
+        "ciliumNetworkPolicy": {
+            "type": "object",
+            "additionalProperties": true
+        },
+        "cluster": {
+            "type": "object",
+            "additionalProperties": true
+        },
+        "clusterCA": {
+            "type": "string"
+        },
+        "clusterCIDR": {
+            "type": "string"
+        },
+        "clusterDNSIP": {
+            "type": "string"
+        },
+        "clusterID": {
+            "type": "string"
+        },
+        "externalDNSIP": {
+            "type": "string"
+        },
+        "gcpProject": {
+            "type": "string"
+        },
+        "global": {
+            "type": [
+                "object",
+                "null"
+            ],
+            "description": "Global values shared between all subcharts and the platform.",
+            "additionalProperties": true,
+            "properties": {
+                "podSecurityStandards": {
+                    "type": "object",
+                    "additionalProperties": true
+                }
+            }
+        },
+        "helm": {
+            "type": "object",
+            "additionalProperties": true
+        },
+        "iamRoles": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "cloudwatchExporter": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                        "enabled": {
+                            "type": "boolean"
+                        },
+                        "namespace": {
+                            "type": "string"
+                        },
+                        "serviceAccount": {
+                            "type": "string"
+                        }
+                    }
+                }
+            }
+        },
+        "managementCluster": {
+            "type": "string"
+        },
+        "migration": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "appToHelmRelease": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                        "enabled": {
+                            "type": "boolean"
+                        },
+                        "image": {
+                            "type": "string"
+                        }
+                    }
+                }
+            }
+        },
+        "organization": {
+            "type": "string"
+        },
+        "provider": {
+            "type": "string"
+        },
+        "subscriptionID": {
+            "type": "string"
+        }
+    }
+}
