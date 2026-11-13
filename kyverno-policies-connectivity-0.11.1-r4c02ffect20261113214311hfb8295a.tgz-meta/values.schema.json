@@ -1,0 +1,174 @@
+{
+    "$schema": "http://json-schema.org/schema#",
+    "type": "object",
+    "properties": {
+        "certManager": {
+            "title": "CertManager",
+            "type": "object",
+            "properties": {
+                "sourceNamespace": {
+                    "description": "Namespace containing source secret to sync to other namespaces",
+                    "title": "SourceNamespace",
+                    "type": "string"
+                },
+                "syncSecret": {
+                    "description": "Should the policy to sync the Route53 secret be enabled?",
+                    "title": "SyncSecret",
+                    "type": "boolean"
+                },
+                "targetNamespace": {
+                    "description": "Destinatinon namespace to sync the secret to",
+                    "title": "TargetNamespace",
+                    "type": "string"
+                }
+            }
+        },
+        "cluster": {
+            "title": "Cluster",
+            "type": "object",
+            "properties": {
+                "name": {
+                    "description": "The name of the installation",
+                    "title": "Name",
+                    "type": "string"
+                },
+                "proxy": {
+                    "title": "Proxy related settings",
+                    "type": "object",
+                    "properties": {
+                        "http": {
+                            "description": "URL of http proxy which should be injected to http_proxy env var",
+                            "title": "Http",
+                            "type": "string"
+                        },
+                        "https": {
+                            "description": "URL of https proxy which should be injected to https_proxy env var",
+                            "title": "Https",
+                            "type": "string"
+                        },
+                        "noProxy": {
+                            "description": "comma sepparated list of hosts or cidrs that should not be proxied, the no_proxy env var. Note: make sure to escape the comma with slash",
+                            "title": "No proxy",
+                            "type": "string"
+                        }
+                    }
+                }
+            }
+        },
+        "proxy": {
+            "title": "Proxy",
+            "type": "object",
+            "properties": {
+                "enabled": {
+                    "description": "should the policy that inject proxy related env vars be enabled?",
+                    "title": "Enabled",
+                    "type": "boolean"
+                }
+            }
+        },
+        "exclude": {
+            "title": "Exclude",
+            "type": "object",
+            "properties": {
+                "names": {
+                    "description": "Array of strings containing names of k8s resources to exclude",
+                    "title": "Names",
+                    "type": "array"
+                }
+            }
+        },
+        "wcIpCheck": {
+            "type": "object",
+            "properties": {
+              "enabled": {
+                "type": "boolean"
+              },
+              "validationFailureAction": {
+                "type": "string",
+                "enum": ["Audit", "Enforce"]
+              },
+              "infraClusterNames": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "controlPlaneIpRange": {
+                "type": "object",
+                "properties": {
+                  "ipRanges": {
+                    "type": "array",
+                    "minItems": 1,
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "start": {
+                          "type": "string"
+                        },
+                        "end": {
+                          "type": "string"
+                        }
+                      },
+                      "required": ["start", "end"]
+                    }
+                  },
+                  "deriveFromControlPlaneEndpoint": {
+                    "type": "object",
+                    "properties": {
+                      "enabled": {
+                        "type": "boolean"
+                      },
+                      "offset": {
+                        "type": "integer"
+                      },
+                      "number": {
+                        "type": "integer"
+                      }
+                    },
+                    "required": ["enabled", "offset", "number"]
+                  }
+                }
+              },
+              "exclude": {
+                "type": "object",
+                "properties": {
+                  "names": {
+                    "type": "array",
+                    "items": {}
+                  }
+                }
+              },
+              "installJob": {
+                "type": "object",
+                "properties": {
+                  "securityContext": {
+                    "type": "object",
+                    "properties": {
+                      "runAsGroup": {
+                        "type": "integer"
+                      },
+                      "runAsUser": {
+                        "type": "integer"
+                      }
+                    }
+                  },
+                  "kubectlImage": {
+                    "type": "object",
+                    "properties": {
+                      "registry": {
+                        "type": "string"
+                      },
+                      "name": {
+                        "type": "string"
+                      },
+                      "tag": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+    }
+}
