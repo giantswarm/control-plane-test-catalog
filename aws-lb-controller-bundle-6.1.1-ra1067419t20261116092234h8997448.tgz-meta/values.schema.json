@@ -1,0 +1,85 @@
+{
+    "$schema": "http://json-schema.org/schema#",
+    "type": "object",
+    "additionalProperties": true,
+    "properties": {
+        "bundleNameOverride": {
+            "type": "string"
+        },
+        "fullBundleNameOverride": {
+            "type": "string"
+        },
+        "ociRepositoryUrl": {
+            "type": "string"
+        },
+        "valuesFromSecret": {
+            "type": "string"
+        },
+        "image": {
+            "type": "object",
+            "additionalProperties": true,
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "pullPolicy": {
+                    "type": "string"
+                },
+                "registry": {
+                    "type": "string"
+                },
+                "tag": {
+                    "type": "string"
+                }
+            }
+        },
+        "clusterName": {
+            "type": "string"
+        },
+        "kyverno": {
+            "type": "object",
+            "additionalProperties": true,
+            "properties": {
+                "enabled": {
+                    "type": "boolean"
+                }
+            }
+        },
+        "podLogs": {
+            "type": "object",
+            "additionalProperties": true,
+            "properties": {
+                "enabled": {
+                    "type": "boolean"
+                },
+                "tenant": {
+                    "type": "string"
+                }
+            }
+        },
+        "region": {
+            "type": "string"
+        },
+        "verticalPodAutoscaler": {
+            "type": "object",
+            "additionalProperties": true,
+            "properties": {
+                "enabled": {
+                    "type": "boolean"
+                },
+                "minAllowed": {
+                    "type": "object",
+                    "additionalProperties": true,
+                    "properties": {
+                        "cpu": {
+                            "type": "string"
+                        }
+                    }
+                }
+            }
+        },
+        "vpcId": {
+            "type": "string"
+        }
+    }
+}
