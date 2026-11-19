@@ -197027,6 +197027,43 @@ entries:
           url: https://github.com/grafana/k6-operator/blob/main/charts/k6-operator
       io.giantswarm.application.audience: giantswarm
       io.giantswarm.application.managed: "false"
+      io.giantswarm.application.metadata: https://giantswarm.github.io/control-plane-test-catalog/k6-operator-0.1.8-r4c02ffect20261119214446h43570a4.tgz-meta/main.yaml
+      io.giantswarm.application.readme: https://raw.githubusercontent.com/giantswarm/k6-operator-app/refs/tags/v0.1.8-r4c02ffect20261119214446h43570a4/README.md
+      io.giantswarm.application.team: cabbage
+      io.giantswarm.application.values-schema: https://raw.githubusercontent.com/giantswarm/k6-operator-app/refs/tags/v0.1.8-r4c02ffect20261119214446h43570a4/helm/k6-operator/values.schema.json
+    apiVersion: v2
+    appVersion: 1.4.0
+    created: "2026-11-19T21:50:57.537722613Z"
+    dependencies:
+    - alias: k6operator
+      condition: k6operatorEnabled
+      name: k6-operator
+      repository: https://grafana.github.io/helm-charts
+      version: 4.7.0
+    description: A Helm chart to install the k6-operator
+    digest: a15d89b286aa6b8f846b2e3be09484dc354182513e45ac088a1ecbc62f39aeb7
+    home: https://github.com/giantswarm/k6-operator-app
+    icon: https://s.giantswarm.io/app-icons/giantswarm/1/light.svg
+    keywords:
+    - k6
+    - load-testing
+    - testing
+    name: k6-operator
+    sources:
+    - https://github.com/giantswarm/k6-operator-app
+    - https://github.com/grafana/k6-operator/blob/main/charts/k6-operator
+    urls:
+    - https://giantswarm.github.io/control-plane-test-catalog/k6-operator-0.1.8-r4c02ffect20261119214446h43570a4.tgz
+    version: 0.1.8-r4c02ffect20261119214446h43570a4
+  - annotations:
+      artifacthub.io/license: Apache-2.0
+      artifacthub.io/links: |
+        - name: Support
+          url: https://github.com/giantswarm/k6-operator-app/issues
+        - name: Upstream project
+          url: https://github.com/grafana/k6-operator/blob/main/charts/k6-operator
+      io.giantswarm.application.audience: giantswarm
+      io.giantswarm.application.managed: "false"
       io.giantswarm.application.metadata: https://giantswarm.github.io/control-plane-test-catalog/k6-operator-0.1.8-r4c02ffect20261118214723h1fd5d43.tgz-meta/main.yaml
       io.giantswarm.application.readme: https://raw.githubusercontent.com/giantswarm/k6-operator-app/refs/tags/v0.1.8-r4c02ffect20261118214723h1fd5d43/README.md
       io.giantswarm.application.team: cabbage
@@ -319624,4 +319661,4 @@ entries:
     urls:
     - https://giantswarm.github.io/control-plane-test-catalog/vertical-pod-autoscaler-crd-4.1.3-r4c02ffect20261008001756h16742b6.tgz
     version: 4.1.3-r4c02ffect20261008001756h16742b6
-generated: "2026-11-19T21:50:10.603603555Z"
+generated: "2026-11-19T21:50:57.535089083Z"
