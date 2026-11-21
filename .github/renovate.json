@@ -1,10 +1,12 @@
 {
   "extends": [
-    "config:base",
+    "config:recommended",
     ":reviewer(team:team-honeybadger)"
   ],
   "assigneesFromCodeOwners": false,
-  "dependencyDashboard": true,
+  "dependencyDashboard": {
+    "enabled": true
+  },
   "includePaths": [
     ".github/workflows/*"
   ],
