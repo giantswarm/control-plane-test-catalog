@@ -1,0 +1,175 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+        "baseDomain": {
+            "type": "string"
+        },
+        "bootstrapMode": {
+            "type": "object",
+            "additionalProperties": true
+        },
+        "chartOperator": {
+            "type": "object",
+            "additionalProperties": true
+        },
+        "ciliumNetworkPolicy": {
+            "type": "object",
+            "additionalProperties": true,
+            "properties": {
+                "enabled": {
+                    "type": "boolean"
+                }
+            }
+        },
+        "cluster": {
+            "type": "object",
+            "additionalProperties": true
+        },
+        "clusterCA": {
+            "type": "string"
+        },
+        "clusterCIDR": {
+            "type": "string"
+        },
+        "clusterDNSIP": {
+            "type": "string"
+        },
+        "clusterID": {
+            "type": "string"
+        },
+        "externalDNSIP": {
+            "type": "string"
+        },
+        "falco": {
+            "type": "object",
+            "additionalProperties": true
+        },
+        "falcosidekick": {
+            "type": "object",
+            "additionalProperties": true
+        },
+        "gcpProject": {
+            "type": "string"
+        },
+        "global": {
+            "type": "object",
+            "description": "Global values shared between all subcharts and the platform.",
+            "additionalProperties": true,
+            "properties": {
+                "podSecurityStandards": {
+                    "type": "object",
+                    "additionalProperties": true,
+                    "properties": {
+                        "enforced": {
+                            "type": "boolean"
+                        }
+                    }
+                }
+            }
+        },
+        "helm": {
+            "type": "object",
+            "additionalProperties": true
+        },
+        "k8s-metacollector": {
+            "type": "object",
+            "additionalProperties": true
+        },
+        "kyvernoPolicyExceptions": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "enabled": {
+                    "type": "boolean"
+                },
+                "namespace": {
+                    "type": "string"
+                }
+            }
+        },
+        "managementCluster": {
+            "type": "string"
+        },
+        "provider": {
+            "type": "string"
+        },
+        "serviceMonitors": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "falco": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                        "enabled": {
+                            "type": "boolean",
+                            "description": "Create the two ServiceMonitors for the Falco metrics endpoint. Needs `falco.metrics.enabled`."
+                        },
+                        "interval": {
+                            "type": "string",
+                            "description": "Scrape interval of both ServiceMonitors."
+                        },
+                        "scrapeTimeout": {
+                            "type": "string",
+                            "description": "Scrape timeout of both ServiceMonitors."
+                        },
+                        "securityMetrics": {
+                            "type": "array",
+                            "description": "Falco metric names (or regular expressions matching the whole name) that are security data. They go to `securityTenant` only, every other series goes to `operationsTenant` only. With an empty list everything goes to `operationsTenant`.",
+                            "items": {
+                                "type": "string"
+                            }
+                        }
+                    }
+                },
+                "falcosidekick": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                        "enabled": {
+                            "type": "boolean",
+                            "description": "Create the two ServiceMonitors for the Falcosidekick metrics endpoint."
+                        },
+                        "interval": {
+                            "type": "string",
+                            "description": "Scrape interval of both ServiceMonitors. Empty uses the platform default."
+                        },
+                        "scrapeTimeout": {
+                            "type": "string",
+                            "description": "Scrape timeout of both ServiceMonitors. Empty uses the platform default."
+                        },
+                        "securityMetrics": {
+                            "type": "array",
+                            "description": "Falcosidekick metric names (or regular expressions matching the whole name) that are security data, routed like `serviceMonitors.falco.securityMetrics`. The event counter names the namespace and pod of each Falco event.",
+                            "items": {
+                                "type": "string"
+                            }
+                        }
+                    }
+                },
+                "operationsTenant": {
+                    "type": "string",
+                    "description": "Observability tenant for the operational metrics: every series that the component's `securityMetrics` do not match."
+                },
+                "securityTenant": {
+                    "type": "string",
+                    "description": "Observability tenant for the security metrics. The tenant must exist, otherwise the platform drops the series."
+                }
+            }
+        },
+        "subscriptionID": {
+            "type": "string"
+        },
+        "verticalPodAutoscaler": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "enabled": {
+                    "type": "boolean"
+                }
+            }
+        }
+    }
+}
