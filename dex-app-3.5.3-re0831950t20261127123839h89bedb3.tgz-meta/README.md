@@ -1,0 +1,437 @@
+[![CircleCI](https://dl.circleci.com/status-badge/img/gh/giantswarm/dex-app/tree/main.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/giantswarm/dex-app/tree/main)
+
+# Dex
+
+[Dex](https://dexidp.io/) is an identity service that uses OpenID Connect to handle authentication for Kubernetes. It connects to third party identity providers like Active Directory, LDAP, and GitHub. While the Kubernetes API server only supports a single identity provider and OIDC token issuer, the use of Dex allows to use identities from various providers when authenticating for Kubernetes.
+
+This app is installed in Giant Swarm management clusters by default and is also ready to be deployed in workload clusters.
+
+In addition to Dex itself, this app provides [Dex K8s Authenticator](https://github.com/mintel/dex-k8s-authenticator), which helps to configure `kubectl` for clusters authenticated to via Dex.
+
+## Installing
+
+There are several ways to install this app.
+
+1. Creating a Flux HelmRelease in the management cluster, as described in [deploying an app with a HelmRelease](https://docs.giantswarm.io/tutorials/fleet-management/app-platform/deploy-app-helmrelease/).
+2. Creating the [App resource](https://docs.giantswarm.io/reference/platform-api/crd/apps.application.giantswarm.io/) in the management cluster. Check the [deploying an app](https://docs.giantswarm.io/tutorials/fleet-management/app-platform/deploy-app/) guide for details.
+
+## Configuring
+
+You provide your configration via a custom `values.yaml` file. Here is an example using the connector for Azure Active Directory. More connector examples can be found below.
+
+```yaml
+isWorkloadCluster: true
+services:
+  kubernetes:
+    api:
+      caPem: |
+        -----BEGIN CERTIFICATE-----
+        M...=
+        -----END CERTIFICATE-----
+oidc:
+  signer:
+    keysRotationPeriod: 6h
+  expiry:
+    idTokens: 30m
+  customer:
+    connectors:
+    - id: customer
+      connectorName: test
+      connectorType: microsoft
+      connectorConfig: |-
+        clientID: <CLIENT-ID-SET-IN-YOUR-IdP>
+        clientSecret: <CLIENT-SECRET-SET-IN--YOUR-IdP>
+        tenant: <TENANT-SET-SET-IN--YOUR-IdP>
+        redirectURI: https://dex.<CLUSTER>.<BASEDOMAIN>/callback
+```
+
+Some notes:
+
+- `.service.kubernetes.api.caPem` is the CA certificate of your workload cluster in PEM format. At Giant Swarm, you can retrieve this certificate via the [kubectl gs login](https://docs.giantswarm.io/reference/kubectl-gs/login/) command, when creating a client certificate for the workload cluster. It ends up in Base46-encoded form in your kubectl config file. The CA certificate is required by Dex K8s Authenticator.
+
+- The `redirectURI` in your connector configuration must contain the proper host name for Dex's own ingress. In the default form, it contains the workload cluster name (replace `<CLUSTER>` with the actual name) and a base domain (replace `<BASEDOMAIN>` with the proper base domain).
+
+- If you configure more than one connector, make sure to set a unique `id` for each one. Be aware that this version of Dex is configured to prefix all user group names with the connector ID. So if your connector's `id` is `customer`, a membership in group `devops` will appear as `customer:devops`.
+
+### Connectors and clients from several values sources
+
+Helm merges maps from several values sources (`-f` files, Flux `valuesFrom`) key by key, but a list from a later source replaces the earlier list whole. `oidc.giantswarm.connectors`, `oidc.customer.connectors` and `oidc.extraStaticClients` therefore also accept a map keyed by id, so each source can add its own entries:
+
+```yaml
+oidc:
+  giantswarm:
+    connectors:
+      giantswarm-hub:
+        connectorType: oidc
+        connectorName: Hub
+        config:
+          issuer: https://dex.hub.example.com
+          clientID: federation-spoke
+          redirectURI: https://dex.spoke.example.com/callback
+        clientSecretRef:
+          name: dex-connector-giantswarm-hub
+          key: client-secret
+  extraStaticClients:
+    federation-spoke:
+      name: Federation for spoke
+      secretRef:
+        name: dex-client-federation-spoke
+        key: secret
+      redirectURIs:
+      - https://dex.spoke.example.com/callback
+```
+
+- The key is the id: an `id` inside a map entry is ignored, and `idEnv` is refused for an extra static client.
+- Give each id a single writer. Two sources that set the same id merge field by field into one entry.
+- A list in one source and a map in another do not merge: the later source replaces the collection.
+- A connector `clientSecretRef` needs `config` (not `connectorConfig`). Dex does not start until the referenced Secret and key exist, and restarts when the Secret changes.
+- Map entries are validated strictly (type, name, configuration, no unknown fields). List entries only need an `id` and a configuration, so lists written before the map form keep rendering.
+
+### Other connector types
+
+Example connector configuration for Keycloak:
+
+```yaml
+    - id: customer
+      connectorName: test
+      connectorType: oidc
+      connectorConfig: |-
+        clientID: <CLIENT-ID-SET-IN-YOUR-IdP>
+        clientSecret: <CLIENT-SECRET-SET-IN--YOUR-IdP>
+        insecureEnableGroups: true
+        scopes:
+        - email
+        - groups
+        - profile
+        issuer: https://<IDP_ENDPOINT>/auth/realms/master
+        redirectURI: https://dex.<CLUSTERID>.<BASEDOMAIN>/callback
+```
+
+Example connector configuration for GitHub:
+
+```yaml
+    - id: customer
+      connectorName: test
+      connectorType: github
+      connectorConfig: |-
+        clientID: <CLIENT-ID-SET-IN-YOUR-IdP>
+        clientSecret: <CLIENT-SECRET-SET-IN--YOUR-IdP>
+        loadAllGroups: false
+        teamNameField: slug
+        orgs:
+        - name: <GITHUB_ORG_NAME>
+          teams:
+          - <GITHUB_TEAM_SLUG>
+        redirectURI: https://dex.<CLUSTERID>.<BASEDOMAIN>/callback
+```
+
+Note:
+
+- `<GITHUB_ORG_NAME>` is your GitHub organization name. For example, the part `myorg` in `https://github.com/myorg`.
+- `<GITHUB_TEAM_SLUG>` is the part of the team's URL representing the team name. For example, the part `my-team` in `https://github.com/orgs/myorg/teams/my-team`.
+
+### Installing the Chart in Giant Swarm workload clusters
+
+The app is installed in workload clusters, via our [app platform](https://docs.giantswarm.io/tutorials/fleet-management/app-platform/).
+Before doing so, please create the following `ConfigMap` resource in the namespace named after that workload cluster to provide the contents of your `values.yaml` file.
+
+```yaml
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: dex-app-user-values
+  namespace: <CLUSTER>
+data:
+  values: |
+    <content of values.yaml>
+```
+
+Then you either install the app via our web UI, or you'll create an App resource in the following format:
+
+```yaml
+apiVersion: application.giantswarm.io/v1alpha1
+kind: App
+metadata:
+  labels:
+    app.kubernetes.io/name: dex-app
+  name: dex-app
+  namespace: <CLUSTER>
+spec:
+  catalog: giantswarm-playground
+  name: dex-app
+  namespace: dex
+  userConfig:
+    configMap:
+      name: <CONFIGMAPNAME>
+      namespace: <CLUSTER>
+```
+
+Notes:
+
+- `<CONFIGMAPNAME>` must be replaced with the name of the ConfigMap resource shown above.
+- `<CLUSTER>` is replaced with the name of your workload cluster.
+
+As a result, you should see Dex deployed in your workload cluster.
+
+### Ingress, TLS and custom certification authorities
+
+Dex app exposes a web interface, which is accessible over https. Therefore, it creates an ingress, which needs to be configured with a TLS certificate signed by a certification authority, which needs to be trusted by the browsers.
+The app consists of several components, which also need to be able to communicate with each other internally over https. So the certification authority signing the certificates needs to be trusted by the individual app components as well.
+
+In case a custom certification authority is used, it needs to be exposed to the individual app components and set as trusted, otherwise the components will not be able to communicate with each other and the app may not work as expected.
+Based on the cluster setup, this can be achieved by providing an additional set of values to the app configuration:
+
+1. Add a base64-encoded certificate of the certification authority to the User Values configmap or secret. This option is useful when using custom, self-signed certificates in a cluster:
+
+```yaml
+ingress:
+  tls:
+    letsencrypt: false
+    caPemB64: "base64-encoded CA certificate"
+```
+
+2. Provide a reference to an existing Secret resource, which contains the custom certification authority. This option is useful for cluster setup, where TLS certificates signed by a custom certification authority are provided by an external service:
+
+```yaml
+ingress:
+  tls:
+    letsencrypt: false
+
+trustedRootCA:
+  name: "name-of-the property-in-the-secret"
+  secretName: "name-of-the-custom-ca-secret"
+```
+
+3. When disabling `letsencrypt`, a secret called `dex-tls` will be created and propagated with the b64-encoded values provided by the user.
+Alternatively, the user can manage the creation of this secret by themselves and enable its usage like so:
+
+```yaml
+ingress:
+  tls:
+    letsencrypt: false
+    externalSecret:
+      enabled: true
+```
+
+The following secret then needs to be applied to the namespace `dex` is running in:
+
+```yaml
+apiVersion: v1
+kind: Secret
+type: kubernetes.io/tls
+metadata:
+  name: dex-tls
+data:
+  ca.crt: ...
+  tls.crt: ...
+  tls.key: ...
+```
+
+### Proxy configuration
+
+In case the traffic to Dex needs to go through a proxy (for example when the app is installed in a private cluster), the individual components of the app need to be set up to use the proxy.
+
+The proxy setup can be provided to the app in a specific section of the user values configmap or secret with the app configuration:
+
+```yaml
+cluster:
+  proxy:
+    http: "https://proxy.host:4040" # hostname of the proxy for HTTP traffic
+    https: "https://proxy.host:4040" # hostname of the proxy for HTTPS traffic
+    noProxy: "kubernetes-api-ip-range" # comma-separated list of hostnames and IP ranges, whose traffic should not go through the proxy. # Kubernetes API IP range needs to be defined here in order for Dex to work correctly
+```
+
+### OAuth2 response types
+
+Dex only accepts the response types listed in `oidc.responseTypes`:
+
+```yaml
+oidc:
+  responseTypes:
+    - "code"
+```
+
+The default is `code` only (authorization code flow).
+
+`token` and `id_token` enable the OAuth2 implicit flow.
+The implicit flow is considered insecure and using it is highly discouraged.
+If a client of yours genuinely needs the implicit or hybrid flow, set this value explicitly to add them back.
+
+Note that this list is also what dex publishes as `response_types_supported` in its OIDC discovery document, so clients that pick a flow from provider metadata will follow it.
+
+### OAuth2 grant types
+
+`oidc.grantTypes` sets Dex's `oauth2.grantTypes`, the grants Dex allows. Empty, the default, leaves
+Dex's own list, which does not include `client_credentials`. A list replaces that default, so name
+every grant the installation's clients use:
+
+```yaml
+oidc:
+  grantTypes:
+    - authorization_code
+    - refresh_token
+    - urn:ietf:params:oauth:grant-type:device_code
+    - urn:ietf:params:oauth:grant-type:token-exchange
+    - client_credentials
+```
+
+Each client's `grantTypes` further restricts the server-wide list. Built-in clients always
+exclude `client_credentials`; configure an extra application client to use that grant.
+See [Client grant restrictions](docs/client-grants.md).
+
+A connector can be limited to some grants with its own `grantTypes`, for example an `oidc`
+connector used only to exchange tokens (RFC 8693), which then never appears as a login option:
+
+```yaml
+oidc:
+  giantswarm:
+    connectors:
+      applications:
+        connectorType: oidc
+        connectorName: Applications
+        grantTypes:
+          - urn:ietf:params:oauth:grant-type:token-exchange
+        config:
+          issuer: https://dex.example.com
+```
+
+`client_credentials` belongs in `oidc.grantTypes` and an extra client's `grantTypes`: it authenticates the client
+directly and uses no connector, so Dex refuses it in a connector's `grantTypes`.
+
+### Static clients
+
+In addition to a few pre-defined static clients Dex app supports the possibility to define custom static clients as well.
+They are defined in `oidc.extraStaticClients`, either as a list or as a map keyed by client id (see [Connectors and clients from several values sources](#connectors-and-clients-from-several-values-sources)).
+The structure of each custom static client object is exactly the same as in upstream Dex, plus `secretRef`:
+
+```yaml
+extraStaticClients:
+- id: "client-id"
+  secret: "client-secret"
+  trustedPeers:
+  - "https://example.com"
+  public: true
+  name: "client-name-1"
+  logoURL: "https://example.com/logo"
+- idEnv: "CLIENT_ID"
+  secretEnv: "CLIENT_SECRET"
+  redirectURIs:
+  - "https://example.com/redirect"
+  name: "client-name-2"
+- id: "client-id-3"
+  secretRef:
+    name: "dex-client-client-id-3"
+    key: "secret"
+  redirectURIs:
+  - "https://example.com/redirect"
+  name: "client-name-3"
+```
+
+**Notes:**
+
+- `id` and `idEnv` properties are mutually exclusive
+- `secret`, `secretEnv` and `secretRef` properties are mutually exclusive; a client that is not `public` needs exactly one of them, otherwise the chart fails to render naming the client
+- Required properties:
+  - `name`
+  - `id` or `idEnv`
+  - `secret`, `secretEnv` or `secretRef` (unless `public: true`)
+
+Extra static clients can also be configured as trusted peers of the pre-defined static clients:
+
+**Add the extra static client id to the list of `trustedPeers` in the pre-defined static client:**
+
+```yaml
+staticClients:
+  dexK8SAuthenticator:
+    clientAddress: "dex.installation.basedomain.io"
+    clientSecret: "default-client-dex-authenticator-secret"
+    trustedPeers:
+    - "client-id"
+extraStaticClients:
+- id: "client-id"
+  name: "client-name-1"
+  secret: "client-secret"
+```
+
+It will produce the same configuration:
+
+```yaml
+staticClients:
+- id: dex-k8s-authenticator
+  name: dex-k8s-authenticator
+  secret: default-client-dex-authenticator-secret
+  trustedPeers:
+  - client-id
+- id: client-id
+  name: client-name-1
+  secret: client-secret
+  public: true
+```
+Duplicities are prevented in case an ID of any additional trusted peer equals an automatically pre-populated trusted peer ID.
+
+#### Further redirect URIs of a pre-defined client
+
+A pre-defined client that authenticates with a secret (`gitopsui`, `muster`, `mcpKubernetes`, `mcpCapi`, `mcpPrometheus`) takes `extraRedirectURIs` next to its `redirectURI`: a list of further redirect URIs, rendered after `redirectURI` in this order, for a second application that signs in through the same client. It is empty by default.
+
+```yaml
+oidc:
+  staticClients:
+    muster:
+      clientID: muster
+      clientSecretRef:
+        name: dex-client-muster
+        key: client-secret
+      redirectURI: https://muster.example.com/oauth/callback
+      extraRedirectURIs:
+      - https://workspace-manager.example.com/signin
+```
+
+#### Client secrets from a Secret
+
+A client secret does not have to be written into the values: `secretRef: {name, key}` in an extra static client, or `clientSecretRef: {name, key}` next to `clientID` in a pre-defined one (`gitopsui`, `muster`, `mcpKubernetes`, `mcpCapi`, `mcpPrometheus`, `dexK8SAuthenticator`), names a key of a Secret in dex's namespace. The chart sets the environment variable `DEX_CLIENT_SECRET_<ID>` on the dex container from that key (`<ID>` is the client id in upper case with every character other than a letter or a digit replaced by `_`) and writes the client into the dex configuration with `secretEnv: DEX_CLIENT_SECRET_<ID>`, which dex reads when it starts. Whoever declares the client creates the Secret, so a client is added by a new Secret and a plaintext list entry, without touching the values that carry the other clients' secrets.
+
+```yaml
+oidc:
+  staticClients:
+    muster:
+      clientID: muster
+      clientSecretRef:
+        name: dex-client-muster
+        key: secret
+      redirectURI: https://muster.example.com/callback
+  extraStaticClients:
+  - id: platform-manager
+    name: Platform manager
+    secretRef:
+      name: dex-client-platform-manager
+      key: secret
+    redirectURIs:
+    - https://platform-manager.example.com/callback
+```
+
+- A pre-defined client (`gitopsui`, `muster`, `mcpKubernetes`, `mcpCapi`, `mcpPrometheus`) with both `clientSecret` and `clientSecretRef` uses the reference and ignores the inline value, so a client moves from an inline secret to a referenced Secret by adding the reference where the plaintext values live, even while the encrypted values still carry the old inline secret; the release notes (`helm get notes`) name the client until the inline value is deleted. One with a `clientID` and neither is left out of the configuration and named in the release notes, so values shared by several installations can declare a client whose secret only some of them carry. An extra static client that is not `public` needs exactly one of the inline secret and the reference; so does `dexK8SAuthenticator`, whose `clientSecret` has a chart default: its `clientSecretRef` goes together with `clientSecret: ""`. Both on one of those fails the render naming the client.
+- `secretRef` needs a literal `id` (not `idEnv`), and two client ids must not map to the same variable name.
+- A referenced Secret or key that does not exist keeps the dex pod from starting (`CreateContainerConfigError`) instead of running the client with an empty secret.
+- dex reads the environment at start-up: a rotated referenced Secret takes effect on the next roll of the dex Deployment (for example `kubectl -n <namespace> rollout restart deployment dex`).
+
+## Update Process
+
+Giant Swarm is currently building the `dex` app from [a fork](https://github.com/giantswarm/dex) of the [original project](https://github.com/dexidp/dex).
+We implement additional logic which adds the connector id as prefix to user groups.
+In order to update the image used in this chart it is currently needed to to do the following steps in our fork repo:
+
+- Fetch upstream changes.
+- Ensure that our commits with prefixing logic on token creation _and_ refresh are present on the branch we want to release from.
+- Ensure CircleCI builds are green
+- Create the version tag with -gs suffix to push the image to our registry
+
+Then in this repo:
+
+- Update `dex.dex.image.tag` in `helm/dex-app/values.yaml`. Renovate opens this pull request.
+- The chart mounts `helm/dex-app/files/web/templates/login.html` and `error.html` over the upstream pages in the image's web directory; every other page and asset comes from the image. When the new Dex version changes either upstream page, re-base ours on it and keep only the Giant Swarm changes: the connector list in `login.html` (`connector_filter`, which kubectl-gs sends, the connector ID under each name, and Giant Swarm connectors last) and the unknown-connector message in `error.html`.
+- Test the new version before releasing. Make sure to test token refresh as well.
+
+## Release Process
+
+Releases are cut by the Auto-release workflow from the conventional commit titles of merged pull requests. A minor or major change cuts a release candidate; run the workflow with `release-type: stable` to promote the latest one.
+In case of changes to `values.yaml`, ensure that `values.schema.json` is updated to reflect all values and their types correctly.
